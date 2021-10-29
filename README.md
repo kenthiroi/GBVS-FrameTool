@@ -19,7 +19,7 @@ In addition, this project will include:
 * A production README
 
 ## Wireframes ##
-![picture alt](https://imgur.com/a/PTDfpsj)
+![picture alt](https://imgur.com/a/PTDfpsj "")
 * Sandwich bar will let user navigate through all the tools available in GBVS Frame-Tool
 * Each move will be clickable, popping up a separate window and show more detail of the move, as well as GIF Animation
 * Header nav will display currently selected character
