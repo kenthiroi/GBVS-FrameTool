@@ -1,0 +1,6 @@
+
+class formPopulate {
+  constructor(container){
+    
+  }
+}
