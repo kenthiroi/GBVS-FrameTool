@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+}
+
+.sticky {
+  top: 0px;
+  display: fixed;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.cell {
+  padding: 5px;
+  border: 1px solid grey;
+}
+
+#char-movelist {
+  display: grid;
+  text-align: center;
+  /* grid-template-columns: fit-content(100%); */
+  /* grid-gap: 20px 100px; */
+  /* font-size: 16px; */
+}
+
+#header-nav {
+  overflow: hidden;
+  background-color: #00ccff;
+}

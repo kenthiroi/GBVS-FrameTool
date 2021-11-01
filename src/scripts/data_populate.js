@@ -1,28 +1,58 @@
 export function formPopulate(charData) {
   console.log("test");
+
   document.getElementById("char-name").textContent = charData[0]['char'];
   document.getElementById("char-health").textContent = `Health: ${charData[0]['health']}`;
   document.getElementById("char-backdash").textContent = `Backdash: ${charData[0]['backdash']}`;
 
-  const nameCol = document.getElementById('move-name');
-  console.log(nameCol);
-  const damageCol = document.getElementById("damage");
-  const guardCol = document.getElementById("guard");
-  const startupCol = document.getElementById("startup");
-  const activeCol = document.getElementById("active");
-  const recoveryCol = document.getElementById("recovery");
-  const onblockCol = document.getElementById("onblock");
-  const onhitCol = document.getElementById("onhit");
+  const moveList = document.getElementById('char-movelist');
+  moveList.innerHTML = '';
 
   for (let i = 1; i < charData.length; i++) {
-    nameCol.appendChild(document.createElement("LI").textContent = charData[i]['moveName']);
-    damageCol.appendChild(document.createElement("LI").textContent = charData[i]['damage']);
-    guardCol.appendChild(document.createElement("LI").textContent = charData[i]['guard']);
-    startupCol.appendChild(document.createElement("LI").textContent = charData[i]['startup']);
-    activeCol.appendChild(document.createElement("LI").textContent = charData[i]['active']);
-    recoveryCol.appendChild(document.createElement("LI").textContent = charData[i]['recovery']);
-    onblockCol.appendChild(document.createElement("LI").textContent = charData[i]['onblock']);
-    onhitCol.appendChild(document.createElement("LI").textContent = charData[i]['onhit']);
+    const moveLine = document.createElement("Div");
+
+    const moveName = document.createElement("Span");
+    moveName.setAttribute("class", "cell");
+    moveName.textContent = charData[i]['moveName'];
+    moveLine.appendChild(moveName);
+
+    const damage = document.createElement("Span");
+    damage.setAttribute("class", "cell");
+    damage.textContent = charData[i]['damage'];
+    moveLine.appendChild(damage);
+
+    const guard = document.createElement("Span");
+    guard.setAttribute("class", "cell");
+    guard.textContent = charData[i]['guard'];
+    moveLine.appendChild(guard);
+
+    const startup = document.createElement("Span");
+    startup.setAttribute("class", "cell");
+    startup.textContent = charData[i]['startup'];
+    moveLine.appendChild(startup);
+
+    const active = document.createElement("Span");
+    active.setAttribute("class", "cell");
+    active.textContent = charData[i]['active'];
+    moveLine.appendChild(active);
+
+    const recovery = document.createElement("Span");
+    recovery.setAttribute("class", "cell");
+    recovery.textContent = charData[i]['recovery'];
+    moveLine.appendChild(recovery);
+
+    const onblock = document.createElement("Span");
+    onblock.setAttribute("class", "cell");
+    onblock.textContent = charData[i]['onblock'];
+    moveLine.appendChild(onblock);
+
+    const onhit = document.createElement("Span");
+    onhit.setAttribute("class", "cell");
+    onhit.textContent = charData[i]['onhit'];
+    moveLine.appendChild(onhit);
+
+    // moveLine.addEventListener("click", )
+    moveList.appendChild(moveLine);
   }
 }
 

@@ -5,21 +5,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="./src/styles/reset.css" /> -->
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>GBVS Frame Tool</title>
 </head>
 <body>
-  <header class="header-nav">
+  <header id="header-nav">
     <h1>GBVS Frame Tool</h1>
   </header>
   <div class="sandwich-bar">
-    <li><a href="">Character Select</a></li>
-    <!-- <li><a href="">Frame Trap Calculator</a></li> -->
-    <li><a href="">About</a></li>
+    <ul>
+      <li><a href="">Character Select</a></li>
+      <!-- <li><a href="">Frame Trap Calculator</a></li> -->
+      <li><a href="">About</a></li>
+    </ul>
   </div>
   <div class="char-select">
-    <p class="char" id="gran">Gran</p>
+    <p class="char" id="gran-select">Gran</p>
+    <p class="char" id="kat-select">Katalina</p>
+    <p class="char" id="lance-select">Lancelot</p>
   </div>
   <div class="char-data">
     <div id="char-info">
@@ -28,22 +33,6 @@
       <p id="char-backdash"></p>
     </div>
     <div id="char-movelist">
-      <ul id="move-name">
-      </ul>
-      <ul id="damage">
-      </ul>
-      <ul id="guard">
-      </ul>
-      <ul id="startup">
-      </ul>
-      <ul id="active">
-      </ul>
-      <ul id="recovery">
-      </ul>
-      <ul id="onblock">
-      </ul>
-      <ul id="onhit">
-      </ul>
     </div>
   </div>
 </body>
