@@ -52,34 +52,76 @@ input[type="submit"] {
   \****************************************************************************************************/
 body {
   font-family: sans-serif;
+  font-size: 16px;
 }
 
-.sticky {
-  top: 0px;
-  display: fixed;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
+/* h1 {
+  position: fixed;
+} */
 
 .cell {
   padding: 5px;
   border: 1px solid grey;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.move-row {
+  display: contents;
+}
+
+.char-select {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.char {
+  
+}
+
+.icon-container {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  display: grid;
+  grid-template-columns: fit-content(15%) repeat(5, 1fr);
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+.move-row:hover {
+  background-color: lightblue;
 }
 
 #char-movelist {
   display: grid;
+  grid-template-columns: fit-content(33%) repeat(7, 1fr);
+  font-size: 14px;
   text-align: center;
-  /* grid-template-columns: fit-content(100%); */
-  /* grid-gap: 20px 100px; */
-  /* font-size: 16px; */
 }
 
 #header-nav {
-  overflow: hidden;
   background-color: #00ccff;
+  display: relative;
+  top: 0;
+}
+
+#sticky-row {
+  position: fixed;
+  top: 0;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

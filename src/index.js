@@ -23,12 +23,32 @@ document.addEventListener("DOMContentLoaded", () => {
   var header = document.getElementById("header-nav");
   var sticky = header.offsetTop;
 
-  function myFunction() {
+  function stickyNav() {
     if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky")
+      header.classList.add("sticky")
     } else {
-      navbar.classList.remove("sticky");
+      header.classList.remove("sticky");
     }
   }
-  window.onscroll = function() {myFunction()};
+  window.addEventListener("scroll", function() {stickyNav()});
+
+  const charselect = document.getElementsByClassName("char-select")[0];
+  const openCSS = document.getElementById("select-btn"); // opencss = openCharacterSelectScreen
+  openCSS.addEventListener("click", function(){
+    charselect.style.display = "block";
+  });
+
+  const charIcons = document.getElementsByClassName("char");
+  const charArr = [...charIcons];
+
+  window.addEventListener("click", function(event){
+    if (event.target === charselect){
+      charselect.style.display = "none";
+    }
+    if (charArr.includes(event.target)){
+      console.log("Test");
+      charselect.style.display = "none";
+    }
+  })
+
 });

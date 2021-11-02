@@ -1,6 +1,5 @@
 export function formPopulate(charData) {
-  console.log("test");
-
+  // console.log("formPopulate");
   document.getElementById("char-name").textContent = charData[0]['char'];
   document.getElementById("char-health").textContent = `Health: ${charData[0]['health']}`;
   document.getElementById("char-backdash").textContent = `Backdash: ${charData[0]['backdash']}`;
@@ -8,8 +7,15 @@ export function formPopulate(charData) {
   const moveList = document.getElementById('char-movelist');
   moveList.innerHTML = '';
 
+  const stickyLine = document.createElement("Div");
+  stickyLine.innerHTML = '<span class="cell">Move Name</span><span class="cell">Damage</span><span class="cell">Guard Point</span><span class="cell">Startup</span><span class="cell">Active</span><span class="cell">Recovery</span><span class="cell">On Block</span><span class="cell">On Hit</span>';
+  stickyLine.setAttribute("class", "move-row");
+  stickyLine.setAttribute("id", "sticky-row");
+
+  moveList.appendChild(stickyLine);
   for (let i = 1; i < charData.length; i++) {
     const moveLine = document.createElement("Div");
+    moveLine.setAttribute("class", "move-row");
 
     const moveName = document.createElement("Span");
     moveName.setAttribute("class", "cell");
