@@ -53,6 +53,8 @@ input[type="submit"] {
 body {
   font-family: sans-serif;
   font-size: 16px;
+  color: white;
+  background-color: rgb(34, 34, 34);
 }
 
 /* h1 {
@@ -60,7 +62,7 @@ body {
 } */
 
 .cell {
-  padding: 5px;
+  padding: 3px;
   border: 1px solid grey;
   cursor: pointer;
   background-color: inherit;
@@ -87,6 +89,17 @@ body {
   
 }
 
+.move-modal {
+  background-color: rgb(59, 59, 59);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  color: white;
+  white-space: pre-line;
+  text-align: center;
+}
+
 .icon-container {
   background-color: #fefefe;
   margin: 15% auto;
@@ -103,7 +116,7 @@ body {
 }
 
 .move-row:hover {
-  background-color: lightblue;
+  background-color: rgb(59, 59, 59);;
 }
 
 #char-movelist {
@@ -122,6 +135,28 @@ body {
 #sticky-row {
   position: fixed;
   top: 0;
+}
+
+#move-name {
+  background-color: rgb(105, 105, 105);
+  width: 30%;
+  text-align: center;
+  margin: -50px 0 auto;
+  padding: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #888;
+}
+
+#motion {
+  display: flex;
+  width: 30px;
+}
+
+#motion img{
+  /* float: left; */
+  display: relative;
+  flex: 30%;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
