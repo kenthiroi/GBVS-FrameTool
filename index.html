@@ -14,7 +14,9 @@
   <div class="sandwich-bar" id="sandwich">
     <a href="javascript:void(0)" id="close-btn" onclick="closeNav()">&times;</a>
     <a href="javascript:void(0)" id="select-btn">Character Select</a>
-    <a href="">About</a>
+    <!-- <a href="javascript:void(0)" id="select-btn">Frame Trap <br>Calculator</a> -->
+    <a href="javascript:void(0)" id="about-btn">About</a>
+    <a href="javascript:void(0)" id="glossary-btn">Glossary</a>
   </div>
   <div class="char-select">
     <div class="icon-container">
@@ -48,14 +50,21 @@
     <header>
       <h1 id="header-nav"><a href="javascript:void(0)" id="sandwich-icon">&#9776;</a> GBVS Frame Tool</h1>
     </header>
+    <div id="homepage">
+      <!-- <h1>Welcome to the Granblue Fantasy: Versus Frame Data Tool!</h1> -->
+      <div></div>
+    </div>
     <div id="char-info">
       <img id="char-img" src="">
       <p id="char-name"></p>
-      <p id="char-health"></p>
-      <p id="char-backdash"></p>
+      <div id="data">
+        <p id="char-health"></p>
+        <p id="char-backdash"></p>
+      </div>
     </div>
     <div id="char-movelist">
     </div>
+
   </div>
 </body>
 </html>

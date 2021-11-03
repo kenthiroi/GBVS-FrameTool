@@ -1,17 +1,30 @@
 .move-modal {
   background-color: rgb(59, 59, 59);
-  margin: 5% auto;
+  margin: 10% auto;
   padding: 25px;
   border: 1px solid #888;
-  width: 60%;
+  width: 40%;
   color: white;
   white-space: pre-line;
   text-align: center;
   display: absolute;
   align-content: left;
   /* display: inline-table; */
-  animation-name: fadein;
-  animation-duration: 0.3s;
+  animation-name: fadeinfromtop;
+  animation-duration: 0.2s;
+}
+
+.icon-container {
+  background-color: #575757;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  /* grid-template-columns: fit-content(2%) repeat(3, 1fr); */
+  animation-name: fadeinfromtop;
+  animation-duration: 0.2s;
 }
 
 #altname {
@@ -31,10 +44,6 @@
 #dmg-guard span {
   padding: 10px;
   width: 70px;
-}
-
-#damage {
-  border-right: 1px rgb(41, 41, 41) solid;
 }
 
 #description {
@@ -80,10 +89,6 @@
   font-size: 30px;
 }
 
-#onblock {
-  border-right: 1px rgb(41, 41, 41) solid;
-}
-
 #sar {
   display: flex;
   width: 30px;
@@ -93,11 +98,11 @@
   padding: 10px;
 }
 
-#startup,#active  {
+#startup, #active, #onblock, #damage {
   border-right: 1px rgb(41, 41, 41) solid;
 }
 
-@keyframes fadein {
-  from {opacity: 0}
-  to {opacity: 1}
+@keyframes fadeinfromtop {
+  from {margin-top: 4%; opacity: 0}
+  to {margin-top: 10%; opacity: 1}
 }
