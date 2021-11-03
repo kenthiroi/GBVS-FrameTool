@@ -32,6 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
   //   }
   // }
 
+  function openNav(){
+    document.getElementById("sandwich").style.width = "250px";
+    document.getElementById("char-data").style.marginLeft = "250px";
+  }
+  
+  function closeNav(){
+    document.getElementById("sandwich").style.width = "0";
+    document.getElementById("char-data").style.marginLeft = "0";
+  }
+
   window.addEventListener("scroll", function() {stickyNav()});
 
   const charselect = document.getElementsByClassName("char-select")[0];
@@ -71,5 +81,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   })
-
 });

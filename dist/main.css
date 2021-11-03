@@ -55,7 +55,7 @@ body {
   font-size: 16px;
   color: white;
   background-color: rgb(34, 34, 34);
-  padding-top: 20px;
+  padding-top: 40px;
   background-image: url(/assets/imgs/background/bg.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -121,6 +121,19 @@ body {
   background-color: rgb(59, 59, 59, 0.6);;
 }
 
+.sandwich-bar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
 .char-data {
 
 }
@@ -134,11 +147,13 @@ body {
 }
 
 #header-nav {
-  background-color: #00ccff;
+  padding: 10px;
+  background-color: rgb(59, 59, 59);
   display: relative;
   top: 0;
   position: fixed;
   z-index: 2;
+  width: 100%;
 }
 
 #sticky-row {

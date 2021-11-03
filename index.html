@@ -12,13 +12,12 @@
 </head>
 <body>
   <header>
-    <h1 id="header-nav">GBVS Frame Tool</h1>
+    <h1 id="header-nav" onclick="openNav()">GBVS Frame Tool</h1>
   </header>
-  <div class="sandwich-bar">
-    <ul>
-      <li id="select-btn">Character Select</li>
-      <li><a href="">About</a></li>
-    </ul>
+  <div class="sandwich-bar" id="sandwich">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" id="select-btn">Character Select</a>
+    <a href="">About</a>
   </div>
   <div class="char-select">
     <div class="icon-container">
