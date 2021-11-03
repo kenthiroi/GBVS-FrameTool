@@ -34,10 +34,6 @@ body {
   background-color: rgba(0,0,0,0.4);
 }
 
-.char {
-  
-}
-
 .move-modal {
   background-color: rgb(59, 59, 59);
   margin: 5% auto;
@@ -77,6 +73,7 @@ body {
   grid-template-columns: fit-content(33%) repeat(7, 1fr);
   font-size: 14px;
   text-align: center;
+  background-color: rgb(34, 34, 34);
 }
 
 #header-nav {
@@ -96,25 +93,3 @@ body {
 #sticky-row span {
   position: inherit;
 } */
-
-#move-name {
-  background-color: rgb(105, 105, 105);
-  width: 30%;
-  text-align: center;
-  margin: -50px 0 auto;
-  padding: 3px;
-  font-size: 20px;
-  font-weight: bold;
-  border: 1px solid #888;
-}
-
-#motion {
-  display: flex;
-  width: 30px;
-}
-
-#motion img{
-  /* float: left; */
-  display: relative;
-  flex: 30%;
-}

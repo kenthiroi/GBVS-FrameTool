@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   }
   // }
 
-  // window.addEventListener("scroll", function() {stickyNav()});
+  window.addEventListener("scroll", function() {stickyNav()});
 
   const charselect = document.getElementsByClassName("char-select")[0];
 

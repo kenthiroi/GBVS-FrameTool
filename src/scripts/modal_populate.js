@@ -23,7 +23,7 @@ export function modalPopulate(moveData) {
   onhit.textContent = `On Hit: \n${moveData['onhit']}`;
   const test = function (motionArr) {
     const newEle = document.createElement("span");
-    newEle.textContent = "  /  "
+    newEle.textContent = "  |  "
     motionArr.forEach(function (ele) {
       const newPic = document.createElement("img");
       if (ele === 'or') {

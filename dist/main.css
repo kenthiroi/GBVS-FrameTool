@@ -86,10 +86,6 @@ body {
   background-color: rgba(0,0,0,0.4);
 }
 
-.char {
-  
-}
-
 .move-modal {
   background-color: rgb(59, 59, 59);
   margin: 5% auto;
@@ -129,6 +125,7 @@ body {
   grid-template-columns: fit-content(33%) repeat(7, 1fr);
   font-size: 14px;
   text-align: center;
+  background-color: rgb(34, 34, 34);
 }
 
 #header-nav {
@@ -148,6 +145,59 @@ body {
 #sticky-row span {
   position: inherit;
 } */
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/modal.css ***!
+  \****************************************************************************************************/
+.move-modal {
+  background-color: rgb(59, 59, 59);
+  margin: 5% auto;
+  padding: 25px;
+  border: 1px solid #888;
+  width: 60%;
+  color: white;
+  white-space: pre-line;
+  text-align: center;
+  display: absolute;
+  align-content: left;
+  /* display: inline-table; */
+}
+
+#altname {
+  /* position: relative; */
+  text-align: left;
+  /* display: inline-block; */
+  /* padding-left: 20px; */
+  margin-left: 32px;
+}
+
+#dmg-guard {
+  display: flex;
+  /* float: left; */
+  margin-left: 20px;
+}
+
+#dmg-guard span {
+  padding: 10px;
+  width: 70px;
+}
+
+#damage {
+  border-right: 1px rgb(41, 41, 41) solid;
+}
+
+#description {
+  text-align: left;
+}
+
+#frame-adv {
+  display: flex;
+  width: 165px;
+  margin-left: 20px;
+}
+
+#frame-adv div {
+  padding: 10px;
+}
 
 #move-name {
   background-color: rgb(105, 105, 105);
@@ -163,12 +213,35 @@ body {
 #motion {
   display: flex;
   width: 30px;
+  margin-left: 20px;
 }
 
 #motion img{
   /* float: left; */
   display: relative;
   flex: 30%;
+  padding: 2px;
+}
+
+#motion span{
+  font-size: 30px;
+}
+
+#onblock {
+  border-right: 1px rgb(41, 41, 41) solid;
+}
+
+#sar {
+  display: flex;
+  width: 30px;
+}
+
+#sar div {
+  padding: 10px;
+}
+
+#startup,#active  {
+  border-right: 1px rgb(41, 41, 41) solid;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
