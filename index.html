@@ -11,11 +11,8 @@
     <title>GBVS Frame Tool</title>
 </head>
 <body>
-  <header>
-    <h1 id="header-nav" onclick="openNav()">GBVS Frame Tool</h1>
-  </header>
   <div class="sandwich-bar" id="sandwich">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" id="close-btn" onclick="closeNav()">&times;</a>
     <a href="javascript:void(0)" id="select-btn">Character Select</a>
     <a href="">About</a>
   </div>
@@ -47,8 +44,12 @@
       <div id="description"></div>
     </div>
   </div>
-  <div class="char-data">
+  <div class="char-data" id="char-body">
+    <header>
+      <h1 id="header-nav"><a href="javascript:void(0)" id="sandwich-icon">&#9776;</a> GBVS Frame Tool</h1>
+    </header>
     <div id="char-info">
+      <img id="char-img" src="">
       <p id="char-name"></p>
       <p id="char-health"></p>
       <p id="char-backdash"></p>

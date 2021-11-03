@@ -10,6 +10,8 @@
   display: absolute;
   align-content: left;
   /* display: inline-table; */
+  animation-name: fadein;
+  animation-duration: 0.3s;
 }
 
 #altname {
@@ -48,6 +50,7 @@
 #frame-adv div {
   padding: 10px;
 }
+
 
 #move-name {
   background-color: rgb(105, 105, 105);
@@ -92,4 +95,9 @@
 
 #startup,#active  {
   border-right: 1px rgb(41, 41, 41) solid;
+}
+
+@keyframes fadein {
+  from {opacity: 0}
+  to {opacity: 1}
 }

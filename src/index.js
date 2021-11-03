@@ -32,15 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
   //   }
   // }
 
-  function openNav(){
+  const sandwichIcon = document.getElementById("sandwich-icon");
+  sandwichIcon.addEventListener("click", function(){
     document.getElementById("sandwich").style.width = "250px";
-    document.getElementById("char-data").style.marginLeft = "250px";
-  }
-  
-  function closeNav(){
+    document.getElementById("char-body").style.marginLeft = "250px";
+  });
+  const closeIcon = document.getElementById("close-btn");
+  closeIcon.addEventListener("click", function(){
     document.getElementById("sandwich").style.width = "0";
-    document.getElementById("char-data").style.marginLeft = "0";
-  }
+    document.getElementById("char-body").style.marginLeft = "0";
+  })
 
   window.addEventListener("scroll", function() {stickyNav()});
 
@@ -80,5 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     }
+    // if ()
   })
 });
