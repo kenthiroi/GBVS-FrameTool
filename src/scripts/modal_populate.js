@@ -22,13 +22,16 @@ export function modalPopulate(moveData) {
   onblock.textContent = `On Block: \n${moveData['onblock']}`;
   onhit.textContent = `On Hit: \n${moveData['onhit']}`;
   const test = function (motionArr) {
-    // const newEle = document.createElement("span");
+    const newEle = document.createElement("span");
+    newEle.textContent = "  /  "
     motionArr.forEach(function (ele) {
       const newPic = document.createElement("img");
-      // if (ele === 'l'){
+      if (ele === 'or') {
+        motion.appendChild(newEle);
+      } else {
         newPic.src = `../../assets/imgs/controls/${ele}.png`;
         motion.appendChild(newPic);
-      // }
+      }
     })
     // motion.appendChild(newEle);
   }

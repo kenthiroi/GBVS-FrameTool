@@ -21,20 +21,20 @@ document.addEventListener("DOMContentLoaded", () => {
     formPopulate(lanceInfo) 
   }, false);
  
-  var header = document.getElementById("header-nav");
-  var sticky = header.offsetTop;
+  // var sticky = header.offsetTop;
+  // const header = document.getElementById("sticky-row");
 
-  function stickyNav() {
-    if (window.pageYOffset >= sticky) {
-      header.classList.add("sticky")
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-  window.addEventListener("scroll", function() {stickyNav()});
+  // function stickyNav() {
+  //   if (window.pageYOffset >= sticky) {
+  //     header.classList.add("sticky")
+  //   } else {
+  //     header.classList.remove("sticky");
+  //   }
+  // }
+
+  // window.addEventListener("scroll", function() {stickyNav()});
 
   const charselect = document.getElementsByClassName("char-select")[0];
-  // const 
 
   const openCSS = document.getElementById("select-btn"); // opencss = openCharacterSelectScreen
   openCSS.addEventListener("click", function(){
@@ -54,11 +54,20 @@ document.addEventListener("DOMContentLoaded", () => {
       charselect.style.display = "none";
     }
     if (event.target.getAttribute("class") === "cell"){ //if a move line was clicked
-      const moveArr = event.target.parentNode.getAttribute("id");
+      const moveArr = event.target.parentNode.dataset.moveid;
+      const charName = event.target.parentNode.dataset.char;
       if (moveArr !== "sticky-row" && moveArr){
         console.log(granInfo[moveArr]);
         movemodal.style.display = "block";
-        modalPopulate(granInfo[moveArr]);
+        if (charName === 'Gran'){
+          modalPopulate(granInfo[moveArr]);
+        }
+        if (charName === 'Katalina'){
+          modalPopulate(katInfo[moveArr]);
+        }
+        if (charName === 'Lancelot'){
+          modalPopulate(lanceInfo[moveArr]);
+        }
       }
     }
   })

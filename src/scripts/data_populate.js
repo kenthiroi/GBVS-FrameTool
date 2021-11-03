@@ -57,7 +57,8 @@ export function formPopulate(charData) {
     onhit.textContent = charData[i]['onhit'];
     moveLine.appendChild(onhit);
 
-    moveLine.setAttribute("id", `${i}`)
+    moveLine.setAttribute("data-moveid", `${i}`)
+    moveLine.setAttribute("data-char", `${charData[0]['char']}`)
     // moveLine.addEventListener("click", )
     moveList.appendChild(moveLine);
   }
