@@ -29,7 +29,7 @@ export function modalPopulate(moveData) {
       if (ele === 'or') {
         motion.appendChild(newEle);
       } else {
-        newPic.src = `../../assets/imgs/controls/${ele}.png`;
+        newPic.src = `../assets/imgs/controls/${ele}.png`;
         motion.appendChild(newPic);
       }
     })

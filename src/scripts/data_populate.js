@@ -1,7 +1,7 @@
 export function formPopulate(charData) {
   // console.log("formPopulate");
   document.getElementById("char-name").textContent = charData[0]['char'];
-  document.getElementById("char-img").src = `../../assets/imgs/character/GBVS_${charData[0]['char']}.png`
+  document.getElementById("char-img").src = `../assets/imgs/character/GBVS_${charData[0]['char']}.png`
   document.getElementById("char-health").textContent = `Health: ${charData[0]['health']}`;
   document.getElementById("char-backdash").textContent = `Backdash: ${charData[0]['backdash']}`;
 
