@@ -5,14 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- <link rel="stylesheet" href="./src/styles/reset.css" /> -->
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>GBVS Frame Tool</title>
 </head>
 <body>
   <div class="sandwich-bar" id="sandwich">
-    <a href="javascript:void(0)" id="close-btn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" id="close-btn">&times;</a>
     <a href="javascript:void(0)" id="select-btn">Character Select</a>
     <!-- <a href="javascript:void(0)" id="select-btn">Frame Trap <br>Calculator</a> -->
     <a href="javascript:void(0)" id="about-btn">About</a>
@@ -59,6 +58,17 @@
     </div>
     <div id="about">
       <div id="aboutbox">
+        <h2>About</h2>
+        <p>
+          This project is not only for the coding bootcamp I'm currently in, but also to provide a tool to the Granblue Versus community that we have been lacking. <br>
+          All data is currently from <a href="https://dustloop.com/wiki/index.php?title=Granblue_Fantasy_Versus">Dustloop</a>, will be adding more up-to-date data in the future. <br>
+          Data visual inspiration from <a href="https://fullmeter.com/fatonline/">FAT (Fullmeter)</a>. <br>
+          Thank you for check out my website!
+        </p>
+      </div>
+    </div>
+    <div id="glossary">
+      <div id="glosbox">
         <h2>Glossary</h2>
         <p>
           <span>Frames</span>: Mostly denoted as F (ex: 20F = 20 frames). Fighting games run at 60 frames per second, which is why learning frame data to know when you can or cannot press certain buttons in certain situations.<br>
@@ -70,7 +80,7 @@
           <span>Fireball</span>: Hadoukens, or projectile moves.<br>
           <span>UOH</span>: Universal Overhead.<br>
           <span>HKD</span>: Hard Knockdown.<br>
-          <span>Numpad Notation</span>: Commonly used in anime fighting games, denotes directional inputs into numbers to quickly interpret motions or directions for certain moves. (Ex: 2H is crouching heavy).
+          <span>Numpad Notation</span>: Commonly used in anime fighting games, denotes directional inputs into numbers to quickly interpret motions or directions for certain moves. (Ex: 2H is crouching heavy, 236 is quarter circle forward).
           <img src="/assets/imgs/icon/numpad.png">
         </p>
       </div>
@@ -82,8 +92,8 @@
         <p id="char-health"></p>
         <p id="char-backdash"></p>
       </div>
+      <div id="char-movelist">
     </div>
-    <div id="char-movelist">
     </div>
     <footer>
     </footer>
