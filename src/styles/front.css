@@ -98,6 +98,7 @@ body {
 }
 
 #char-body {
+  position: relative;
   transition: 0.5s;
 }
 
@@ -177,7 +178,30 @@ body {
 }
 
 #homepage {
-  /* margin-top: 40px; */
+  position: absolute;
+  font-size: calc(14px + 1.2vw);
+  z-index: -5;
+}
+
+#homepage h1{
+  margin-top: 1px;
+  width: 100vw;
+  text-align: center;
+  background-color: rgb(34, 34, 34, 0.7);
+}
+
+#homebox {
+  background-color: rgb(59, 59, 59);
+  font-size: calc(14px + 1.2vw);
+  margin: 1% auto;
+  padding: 25px;
+  border: 1px solid #888;
+  width: 80%;
+  color: white;
+  white-space: pre-line;
+  text-align: center;
+  display: absolute;
+  align-content: left;
 }
 
 #sandwich-icon {
@@ -194,6 +218,10 @@ body {
 #sticky-row span {
   position: inherit;
 } */
+
+#vee {
+  width: 15vw;
+}
 
 @keyframes fadein {
   from {opacity: 0}
