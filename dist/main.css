@@ -55,7 +55,7 @@ body {
   font-size: 16px;
   color: white;
   background-color: rgb(34, 34, 34);
-  padding-top: 40px;
+  padding-top: 48px;
   background-image: url(/assets/imgs/background/bg.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -120,7 +120,6 @@ body {
   transition: 0.5s;
   display: flex;
   flex-direction: column;
-
 }
 
 .sandwich-bar a{
@@ -139,6 +138,40 @@ body {
 
 .char-data {
 
+}
+
+#about {
+  position: absolute;
+  font-size: calc(14px + 1.2vw);
+  z-index: -4;
+  width: 100vw;
+  /* display: none; */
+}
+
+#aboutbox {
+  background-color: rgb(59, 59, 59);
+  font-size: calc(14px + 1.2vw);
+  margin: 1% auto;
+  padding: 25px;
+  border: 1px solid #888;
+  width: 80%;
+  color: white;
+  white-space: pre-line;
+  text-align: center;
+  display: absolute;
+  align-content: left;
+}
+
+#aboutbox span {
+  font-weight: bold;
+}
+
+#aboutbox img {
+  width: 300px;
+}
+
+#about p {
+  text-align: left;
 }
 
 #char-movelist {
@@ -219,7 +252,7 @@ body {
 }
 
 #header-nav {
-  padding: 10px;
+  padding: 12px;
   background-color: rgb(59, 59, 59);
   display: relative;
   top: 0;
@@ -227,6 +260,7 @@ body {
   z-index: 2;
   width: 100%;
   font-weight: bold;
+  font-size: 19px;
 }
 
 #homepage {

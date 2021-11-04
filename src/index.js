@@ -6,6 +6,7 @@ const { modalPopulate } = require("./scripts/modal_populate");
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  // form populate scripts
   const gran = document.getElementById('gran-select');
   gran.addEventListener('click', function() { 
     formPopulate(granInfo) 
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formPopulate(lanceInfo) 
   }, false);
 
+  // event listeners for sandwich bar
   const sandwichIcon = document.getElementById("sandwich-icon");
   sandwichIcon.addEventListener("click", function(){
     document.getElementById("sandwich").style.width = "250px";
@@ -32,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("char-body").style.marginLeft = "0";
   })
 
+  
   const charselect = document.getElementsByClassName("char-select")[0];
 
   const openCSS = document.getElementById("select-btn"); // opencss = openCharacterSelectScreen
