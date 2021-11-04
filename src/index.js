@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("sandwich").style.width = "0";
       document.getElementById("char-body").style.marginLeft = "0";
     }
-    if (event.target.getAttribute(""))
     if (event.target.getAttribute("class") === "cell"){ //if a move line was clicked
       const moveArr = event.target.parentNode.dataset.moveid;
       const charName = event.target.parentNode.dataset.char;

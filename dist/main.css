@@ -62,6 +62,23 @@ body {
   background-position: top;
 }
 
+footer {
+  bottom: 0px;
+  padding-top: 100px;
+  height: 200px;
+  background-color: black;
+  display: flex;
+}
+
+footer img{
+  width: 50px;
+  margin: 5px;
+}
+
+footer p{
+  margin-top: 20px;
+  margin-left: 40vw;
+}
 /* h1 {
   position: fixed;
 } */
@@ -141,7 +158,7 @@ body {
 }
 
 #about {
-  position: absolute;
+  position: relative;
   font-size: calc(14px + 1.2vw);
   z-index: 1;
   width: 100vw;
@@ -167,7 +184,7 @@ body {
 }
 
 #glossary {
-  position: absolute;
+  position: relative;
   font-size: calc(14px + 1.2vw);
   z-index: 1;
   width: 100vw;
