@@ -1,4 +1,7 @@
 # GBVS-FrameTool #
+
+Link to live site here: https://kenthiroi.github.io/GBVS-FrameTool/
+
 A frame data tool for the fighting game Granblue Fantasy Versus (http://granbluefantasyvs.com/).
 
 If you're unfamiliar with frame data in fighting games, check out this video: https://www.youtube.com/watch?v=_R0hbe8HZj0
