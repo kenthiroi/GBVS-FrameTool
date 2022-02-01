@@ -1,6 +1,6 @@
 // FINAL 
 
-const general = { char: "Belial", health: '10000', prejump: '4F', backdash: '22F' }
+const general = { char: "Percival", health: '10000', prejump: '4F', backdash: '22F' }
 
 // close normals
 const closeL = {
@@ -11,36 +11,42 @@ const closeL = {
   startup: '5',
   active: '3',
   recovery: '6',
-  onblock: '2',
-  onhit: '6',
+  onblock: '+2',
+  onhit: '+6',
+  oncounterhit: '+8',
+  clash: '1',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "This is where the party starts. The damage this move leads to isn't much, but being +2 on block is good enough to merit its use in combination with its speed.",
 };
 const closeM = {
   moveName: 'Close Medium',
   altName: 'cM',
   damage: '700',
   guard: 'mid',
-  startup: '6',
+  startup: '7',
   active: '3',
-  recovery: '10',
+  recovery: '12',
   onblock: '0',
-  onhit: '4',
+  onhit: '+4',
+  oncounterhit: '+8',
+  clash: '3',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "This move is Percival's pressure normal out of c.L range. It's really good vs. Charlotta, as it completely shuts down her Noble Strategy. /b Also a good button to anti air opponents when in proximity range."
 };
 const closeH = {
   moveName: 'Close Heavy',
   altName: 'cH',
   damage: '1200',
   guard: 'mid',
-  startup: '8',
-  active: '4',
-  recovery: '18',
-  onblock: '-3',
-  onhit: '1',
+  startup: '10',
+  active: '6',
+  recovery: '15',
+  onblock: '-2',
+  onhit: '+2',
+  oncounterhit: '+14',
+  clash: '5',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "This is where the damage starts. On counterhit Percival is +14; you can link it into another c.H OR f.H when not close enough. If you don't get a counterhit, you still get a beefy combo in the corner and above-average damage midscreen. Its long active frames lend it to being a decent meaty, in theory the maximum frame advantage is +3 on block and +7 on hit, enough for a c.M."
 };
 
 // auto combos
@@ -49,26 +55,30 @@ const auto1 = {
   altName: 'cXX',
   damage: '350',
   guard: 'mid',
-  startup: '-',
-  active: '-',
-  recovery: '-',
+  startup: '9',
+  active: '3',
+  recovery: '15',
   onblock: '-3',
-  onhit: '1',
+  onhit: '+1',
+  oncounterhit: '+5',
+  clash: '3',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "It's an autocombo. Useful midscreen as combo filler and sometimes useful in the corner to gain height in EX Platzen combos."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
   altName: 'cXXX',
   damage: '350',
   guard: 'mid',
-  startup: '-',
-  active: '-',
-  recovery: '-',
-  onblock: '-5',
-  onhit: '-1',
+  startup: '12',
+  active: '3',
+  recovery: '18',
+  onblock: '-4',
+  onhit: '0',
+  oncounterhit: '+8',
+  clash: '4',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "It's an autocombo. Useful midscreen as combo filler and sometimes useful in the corner to gain height in EX Platzen combos."
 };
 
 // far normals
@@ -79,37 +89,43 @@ const far5L = {
   guard: 'mid',
   startup: '6',
   active: '3',
-  recovery: '13',
-  onblock: '-3',
-  onhit: '1',
+  recovery: '15',
+  onblock: '-5',
+  onhit: '-1',
+  oncounterhit: '+1',
+  clash: '2',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "This move is a lot better than it looks. It's very fast and very long compared to most other f.L attacks. It has enough hitstun to combo into Zerreissen with stocks, which makes it very good as a whiff punish tool."
 };
 const far5M = {
   moveName: 'Far Medium',
   altName: 'f5M',
   damage: '700',
   guard: 'mid',
-  startup: '8',
-  active: '3',
-  recovery: '18',
+  startup: '9',
+  active: '5',
+  recovery: '16',
   onblock: '-6',
   onhit: '-2',
+  oncounterhit: '+2',
+  clash: '3',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "This is it. This is the button. It's fast, scooches Percival forwards, special cancels, and it has massive range. It's an excellent whiff punish and combo tool midscreen. Using this move in the corner alongside Anzünden is very tricky to get out of, and it is a cornerstone of his corner pressure."
 };
 const far5H = {
   moveName: 'Far Heavy',
   altName: 'f5H',
-  damage: '1000',
+  damage: '1100',
   guard: 'mid',
-  startup: '10',
-  active: '5',
-  recovery: '20',
-  onblock: '-9',
-  onhit: '-5',
+  startup: '12',
+  active: '6',
+  recovery: '26',
+  onblock: '-15',
+  onhit: '-11',
+  oncounterhit: '-3',
+  clash: '4',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Percy's f.H is by far his biggest button, as it hits nearly 3/4 of the screen. This button is ridiculous, but it has some downsides to complement its massive range, primarily its hurtbox. The hurtbox is active before the hitbox is, leading to some weird-looking interactions where he gets hit by a button a screen away. It's not just when the move starts up, either. The hurtbox lingers far after it looks like it would be over, allowing for easy whiff punishes by most of the cast. To counteract these weaknesses, all you have to do is make sure it doesn't whiff. If it gets blocked, you can cancel into Dodge (4G), Light Träumerei, or any version of Anzünden to stay safe."
 };
 
 // regular normals
@@ -117,14 +133,16 @@ const n2L = {
   moveName: 'Crouch Light',
   altName: '2L',
   damage: '400',
-  guard: 'mid',
+  guard: 'low',
   startup: '6',
   active: '3',
   recovery: '6',
-  onblock: '2',
-  onhit: '6',
+  onblock: '+2',
+  onhit: '+6',
+  oncounterhit: '+8',
+  clash: '1',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Percival's primary close-range pressure tool. It's plus on block and hits low, what more could you ask for?"
 };
 const n2M = {
   moveName: 'Crouch Medium',
@@ -133,24 +151,28 @@ const n2M = {
   guard: 'mid',
   startup: '7',
   active: '5',
-  recovery: '9',
-  onblock: '1',
-  onhit: '5',
+  recovery: '13',
+  onblock: '-3',
+  onhit: '+1',
+  oncounterhit: '+5',
+  clash: '3',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Percival's 2M is good on its own, but its main purpose is to act as a complement to f.M. It hits lower where f.M would whiff at the cost of less range, but f.M > 2M can catch people trying to punish f.M at a distance."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
   altName: '2H',
   damage: '1000',
   guard: 'mid',
-  startup: '10',
-  active: '6',
+  startup: '11',
+  active: '5 [2, 3]',
   recovery: '24',
-  onblock: '-13',
-  onhit: '-9',
+  onblock: '-12',
+  onhit: '-8',
+  oncounterhit: '0',
+  clash: '4',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "While it is a decent anti-air, it's a really slow one that's also cursed with a bad hurtbox. Where it really shines is in combos, as it allows 236L > 2H to loop on an airborne opponent in the corner. If you land it as a counter hit AA, canceling into 214L or 214M allows you to pick what side you want to end up on and still get a combo."
 };
 const n2U = {
   moveName: 'Crouch Unique',
@@ -161,9 +183,11 @@ const n2U = {
   active: '6',
   recovery: '21',
   onblock: '-12',
-  onhit: 'HKD',
+  onhit: 'HKD(+43)',
+  oncounterhit: 'HKD(+47)',
+  clash: '3',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Universal sweep. Decent range and speed though nothing impressive. Can be special cancelled, provides a way to safely charge up stocks with Träumerei. Also sets up for a safe jump. One of the main ways to continue a combo after Heavy Anzünden in the corner or Schneiden(with stock). His sweep got buffed in the v1.21 patch, which decreased its recovery. Its now -10 on block instead of -15, making it much safer to throw out. It then got nerfed in the v2.01 patch, which increased its recovery but not to its original state. It's now -12 on block instead of -10."
 };
 
 // jump normals
@@ -177,112 +201,70 @@ const jL = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Active until landing. Easy safejump tool and Percy's fastest air normal. Can be used as a last-minute jump-in, but j.M is better all around."
 };
 const jM = { 
   moveName: 'Jump Medium', 
   altName: 'jM', 
   damage: '550', 
   guard: 'high', 
-  startup: '6', 
-  active: '-', 
+  startup: '7', 
+  active: '6', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Can cross up. This is your main jump in as it has decent hitstun, blockstun, and it can cross up. It doesn't have great horizontal range in front of Percival, but j.H fills that niche nicely."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
   altName: 'jH', 
   damage: '800', 
   guard: 'high', 
-  startup: '7', 
-  active: '-', 
+  startup: '10', 
+  active: '6', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '3',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "Really good at catching people using far buttons to AA. The big jump in. Not useful for much outside that. Notable as Percival's longest-range air-to-air attack. Patch 1.2 improved the startup of this move, making it better as an air-to-air."
 };
 const jU = { 
   moveName: 'Jump Unique', 
   altName: 'jU', 
-  damage: '700', 
+  damage: '800', 
   guard: 'high', 
-  startup: '12', 
+  startup: '20', 
   active: '-', 
-  recovery: '-', 
+  recovery: '12', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Not an overhead, can be blocked while crouching. But can be useful for changing jump in timing and baiting out a 2H. Other than that, it's minus on block and gets you a knockdown on hit."
 };
 
 // unique action
-const lv1U = { 
-  moveName: 'Power Raise Lv1', 
-  altName: '5ULv1', 
-  damage: '1000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
+const n5U = { 
+  moveName: 'X-Seele', 
+  altName: '5U', 
+  damage: '0', 
+  guard: 'throw', 
+  startup: '14', 
+  active: '3', 
+  recovery: '41', 
+  onblock: '-', 
+  onhit: '+12',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
   description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
 };
@@ -509,11 +491,7 @@ export const percivalInfo = [
   jM,
   jH,
   jU,
-  lv1U,
-  lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
+  n5U,
   groundThrow,
   airThrow,
   uOverhead,
