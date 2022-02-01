@@ -104,6 +104,27 @@ document.addEventListener("DOMContentLoaded", () => {
         if (charName === 'Lancelot'){
           modalPopulate(lanceInfo[moveArr]);
         }
+        if (charName === 'ABel'){
+
+        }
+        if (charName === 'Belial'){
+
+        }
+        if (charName === 'Charlotta'){
+
+        }
+        if (charName === 'Narmaya'){
+
+        }
+        if (charName === 'Vira'){
+
+        }
+        if (charName === 'Percival'){
+
+        }
+        if (charName === 'Beelzebub'){
+          
+        }
       }
     }
     // if ()
