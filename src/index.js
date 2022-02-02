@@ -1,6 +1,12 @@
+const { aBelInfo } = require("./data/abelial");
+const { belInfo } = require("./data/belial");
+const { charInfo } = require("./data/charlotta");
 const { granInfo } = require("./data/gran");
 const { katInfo } = require("./data/katalina");
 const { lanceInfo } = require("./data/lancelot");
+const { narmInfo } = require("./data/narmaya");
+const { percivalInfo } = require("./data/percival");
+const { viraInfo } = require("./data/vira");
 const { formPopulate } = require("./scripts/data_populate");
 const { modalPopulate } = require("./scripts/modal_populate");
 
@@ -105,25 +111,25 @@ document.addEventListener("DOMContentLoaded", () => {
           modalPopulate(lanceInfo[moveArr]);
         }
         if (charName === 'ABel'){
-
+          modalPopulate(aBelInfo[moveArr]);
         }
         if (charName === 'Belial'){
-
+          modalPopulate(belInfo[moveArr]);
         }
         if (charName === 'Charlotta'){
-
+          modalPopulate(charInfo[moveArr]);
         }
         if (charName === 'Narmaya'){
-
+          modalPopulate(narmInfo[moveArr]);
         }
         if (charName === 'Vira'){
-
+          modalPopulate(viraInfo[moveArr]);
         }
         if (charName === 'Percival'){
-
+          modalPopulate(percivalInfo[moveArr]);
         }
         if (charName === 'Beelzebub'){
-          
+          modalPopulate(bubzInfo[moveArr]);
         }
       }
     }
