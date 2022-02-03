@@ -28,6 +28,38 @@ document.addEventListener("DOMContentLoaded", () => {
     formPopulate(lanceInfo) 
   }, false);
 
+  const abel = document.getElementById('abel-select');
+  abel.addEventListener('click', function() { 
+    formPopulate(aBelInfo) 
+  }, false);
+
+  const bel = document.getElementById('bel-select');
+  bel.addEventListener('click', function() { 
+    formPopulate(belInfo) 
+  }, false);
+
+  const char = document.getElementById('char-select');
+  char.addEventListener('click', function() { 
+    formPopulate(charInfo) 
+  }, false);
+
+  const narmaya = document.getElementById('narmaya-select');
+  narmaya.addEventListener('click', function() { 
+    formPopulate(narmInfo) 
+  }, false);
+
+  const vira = document.getElementById('vira-select');
+  vira.addEventListener('click', function() { 
+    formPopulate(viraInfo) 
+  }, false);
+
+  const percy = document.getElementById('percy-select');
+  percy.addEventListener('click', function() { 
+    formPopulate(percivalInfo) 
+  }, false);
+
+
+
   // event listeners for sandwich bar
   const sandwichIcon = document.getElementById("sandwich-icon");
   sandwichIcon.addEventListener("click", function(){
