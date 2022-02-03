@@ -1,10 +1,10 @@
-const { aBelInfo } = require("./data/abelial");
-const { belInfo } = require("./data/belial");
-const { charInfo } = require("./data/charlotta");
+const { aBelialInfo } = require("./data/abelial");
+const { belialInfo } = require("./data/belial");
+const { charlottaInfo } = require("./data/charlotta");
 const { granInfo } = require("./data/gran");
 const { katInfo } = require("./data/katalina");
 const { lanceInfo } = require("./data/lancelot");
-const { narmInfo } = require("./data/narmaya");
+const { narmayaInfo } = require("./data/narmaya");
 const { percivalInfo } = require("./data/percival");
 const { viraInfo } = require("./data/vira");
 const { formPopulate } = require("./scripts/data_populate");
@@ -30,22 +30,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const abel = document.getElementById('abel-select');
   abel.addEventListener('click', function() { 
-    formPopulate(aBelInfo) 
+    formPopulate(aBelialInfo) 
   }, false);
 
   const bel = document.getElementById('bel-select');
   bel.addEventListener('click', function() { 
-    formPopulate(belInfo) 
+    formPopulate(belialInfo) 
   }, false);
 
   const char = document.getElementById('char-select');
   char.addEventListener('click', function() { 
-    formPopulate(charInfo) 
+    formPopulate(charlottaInfo) 
   }, false);
 
   const narmaya = document.getElementById('narmaya-select');
   narmaya.addEventListener('click', function() { 
-    formPopulate(narmInfo) 
+    formPopulate(narmayaInfo) 
   }, false);
 
   const vira = document.getElementById('vira-select');
@@ -129,39 +129,39 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("char-body").style.marginLeft = "0";
     }
     if (event.target.getAttribute("class") === "cell"){ //if a move line was clicked
-      const moveArr = event.target.parentNode.dataset.moveid;
+      const moveIdx = event.target.parentNode.dataset.moveid;
       const charName = event.target.parentNode.dataset.char;
-      if (moveArr !== "sticky-row" && moveArr){
+      if (moveIdx !== "sticky-row" && moveIdx){
         movemodal.style.display = "block";
         if (charName === 'Gran'){
-          modalPopulate(granInfo[moveArr]);
+          modalPopulate(granInfo[moveIdx]);
         }
         if (charName === 'Katalina'){
-          modalPopulate(katInfo[moveArr]);
+          modalPopulate(katInfo[moveIdx]);
         }
         if (charName === 'Lancelot'){
-          modalPopulate(lanceInfo[moveArr]);
+          modalPopulate(lanceInfo[moveIdx]);
         }
         if (charName === 'ABel'){
-          modalPopulate(aBelInfo[moveArr]);
+          modalPopulate(aBelInfo[moveIdx]);
         }
         if (charName === 'Belial'){
-          modalPopulate(belInfo[moveArr]);
+          modalPopulate(belInfo[moveIdx]);
         }
         if (charName === 'Charlotta'){
-          modalPopulate(charInfo[moveArr]);
+          modalPopulate(charInfo[moveIdx]);
         }
         if (charName === 'Narmaya'){
-          modalPopulate(narmInfo[moveArr]);
+          modalPopulate(narmInfo[moveIdx]);
         }
         if (charName === 'Vira'){
-          modalPopulate(viraInfo[moveArr]);
+          modalPopulate(viraInfo[moveIdx]);
         }
         if (charName === 'Percival'){
-          modalPopulate(percivalInfo[moveArr]);
+          modalPopulate(percivalInfo[moveIdx]);
         }
         if (charName === 'Beelzebub'){
-          modalPopulate(bubzInfo[moveArr]);
+          modalPopulate(bubzInfo[moveIdx]);
         }
       }
     }

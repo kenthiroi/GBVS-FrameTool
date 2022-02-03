@@ -1,13 +1,14 @@
 export function formPopulate(charData) {
-  // console.log("formPopulate");
+  console.log("formPopulate");
+  console.log(charData);
   document.getElementById("char-name").textContent = charData[0]['char'];
   document.getElementById("char-img").src = `assets/imgs/character/GBVS_${charData[0]['char']}.png`
   document.getElementById("char-health").textContent = `Health: ${charData[0]['health']}`;
   document.getElementById("char-backdash").textContent = `Backdash: ${charData[0]['backdash']}`;
-
+  
   const moveList = document.getElementById('char-movelist');
   moveList.innerHTML = '';
-
+  
   const stickyLine = document.createElement("Div");
   stickyLine.innerHTML = '<span class="cell">Move Name</span><span class="cell">Damage</span><span class="cell">Guard Point</span><span class="cell">Startup</span><span class="cell">Active</span><span class="cell">Recovery</span><span class="cell">On Block</span><span class="cell">On Hit</span>';
   stickyLine.setAttribute("class", "move-row");
