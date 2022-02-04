@@ -22,7 +22,9 @@
   width: 80%;
   display: flex;
   flex-direction: row;
-  /* grid-template-columns: fit-content(2%) repeat(3, 1fr); */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  grid-template-columns: fit-content(2%) repeat(3, 1fr);
   animation-name: fadeinfromtop;
   animation-duration: 0.2s;
 }
