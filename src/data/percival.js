@@ -277,9 +277,9 @@ const groundThrow = {
   active: '-', 
   recovery: '-', 
   onblock: '-', 
-  onhit: '-',
+  onhit: '+49 forward throw, +32 back throw, +24 on delay tech',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "A faster but less rewarding version of 5U. Leaves the opponent pretty far away from Percival, which can be good or bad depending on the matchup. Backthrow switches sides and keep the opponent close to Percival, and allows for a meaty Macht anywhere. Forward throw in the corner allows for a safejump by super jumping immediately afterwards. Alternatively, if you want stocks you can 22M midscreen and 22L > c.H in the corner for a meaty as well."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
@@ -289,9 +289,11 @@ const airThrow = {
   active: '-', 
   recovery: '-', 
   onblock: '-', 
-  onhit: '-',
+  onhit: '+36 (HKD)',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "This move isn't seen very much as 2H CH AA combos typically deal far more damage. It's a good tool to have, but Percy has stronger ones."
 };
 
 const uOverhead = { 
@@ -303,10 +305,61 @@ const uOverhead = {
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
-  onhit: '1',
+  onhit: '+1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Percival's Universal Overhead has less range than it looks with how his sword bends, but by no means does that make it bad. Percival has a lot of ways to set up a meaty UOH, most of which involve a combo with H Platzen."
 };
+
+const lStockCharge = {
+  moveName: 'L Träumerei',
+  altName: 'L Stock charge',
+  damage: '400',
+  guard: 'mid',
+  startup: '11',
+  active: '14',
+  recovery: '12',
+  onblock: '-13',
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '2',
+  motion: ['2', '2', 'l'],
+  description: "Percival's most important move. Stores orbs that enhance M and H versions of skills. L stores one orb, M stores 3, and H stores 5. The number of orbs stored will be displayed under Percival's HP bar. These have hitbox directly above him that can be used to juggle opponents mid-combo. The L version is also a good move to cancel into off a f.H. Completes charge on frame 25."
+}
+
+const mStockCharge = {
+  moveName: 'M Träumerei',
+  altName: 'M Stock charge',
+  damage: '400',
+  guard: 'mid',
+  startup: '11',
+  active: '28',
+  recovery: '12',
+  onblock: '-27',
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '2',
+  motion: ['2', '2', 'm'],
+  description: "Percival's most important move. Stores orbs that enhance M and H versions of skills. L stores one orb, M stores 3, and H stores 5. The number of orbs stored will be displayed under Percival's HP bar. These have hitbox directly above him that can be used to juggle opponents mid-combo. The L version is also a good move to cancel into off a f.H.. Completes charge on frame 39."
+}
+
+const hStockCharge = {
+  moveName: 'H Träumerei',
+  altName: 'H Stock charge',
+  damage: '400',
+  guard: 'mid',
+  startup: '11',
+  active: '38',
+  recovery: '12',
+  onblock: '-37',
+  onhit: 'KD (+34)',
+  oncounterhit: 'KD (+36)',
+  clash: '2',
+  motion: ['2', '2', 'h'],
+  description: "Percival's most important move. Stores orbs that enhance M and H versions of skills. L stores one orb, M stores 3, and H stores 5. The number of orbs stored will be displayed under Percival's HP bar. These have hitbox directly above him that can be used to juggle opponents mid-combo. The L version is also a good move to cancel into off a f.H.. Completes charge on frame 49."
+}
+
 
 // fireballs
 const lFireball = { 
