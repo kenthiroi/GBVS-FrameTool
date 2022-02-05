@@ -302,16 +302,18 @@ const uOverhead = {
   damage: '1000', 
   guard: 'high', 
   startup: '26', 
-  active: '-', 
-  recovery: '-', 
+  active: '6', 
+  recovery: '17', 
   onblock: '-4', 
   onhit: '+1',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '+13',
+  clash: '5',
   motion: ['m', 'u'],
-  description: "Percival's Universal Overhead has less range than it looks with how his sword bends, but by no means does that make it bad. Percival has a lot of ways to set up a meaty UOH, most of which involve a combo with H Platzen."
+  description: "Percival's Universal Overhead has less range than it looks with how his sword bends, but by no means does that make it bad. Percival has a lot of ways to set up a meaty UOH, most of which involve a combo with H Platzen. \nFrames 4-40 throw invulnerable. \nFrames 11-39 considered airborne. \nForces crouch on hit."
 };
 
+
+//stock charges
 const lStockCharge = {
   moveName: 'L Träumerei',
   altName: 'L Stock charge',
@@ -324,7 +326,7 @@ const lStockCharge = {
   onhit: 'KD',
   oncounterhit: 'KD',
   clash: '2',
-  motion: ['2', '2', 'l'],
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
   description: "Percival's most important move. Stores orbs that enhance M and H versions of skills. L stores one orb, M stores 3, and H stores 5. The number of orbs stored will be displayed under Percival's HP bar. These have hitbox directly above him that can be used to juggle opponents mid-combo. The L version is also a good move to cancel into off a f.H. Completes charge on frame 25."
 }
 
@@ -340,7 +342,7 @@ const mStockCharge = {
   onhit: 'KD',
   oncounterhit: 'KD',
   clash: '2',
-  motion: ['2', '2', 'm'],
+  motion: ['2', '2', 'm', 'or', '2', 'm', 'a'],
   description: "Percival's most important move. Stores orbs that enhance M and H versions of skills. L stores one orb, M stores 3, and H stores 5. The number of orbs stored will be displayed under Percival's HP bar. These have hitbox directly above him that can be used to juggle opponents mid-combo. The L version is also a good move to cancel into off a f.H.. Completes charge on frame 39."
 }
 
@@ -356,173 +358,286 @@ const hStockCharge = {
   onhit: 'KD (+34)',
   oncounterhit: 'KD (+36)',
   clash: '2',
-  motion: ['2', '2', 'h'],
+  motion: ['2', '2', 'h', 'or', '2', 'h', 'a'],
   description: "Percival's most important move. Stores orbs that enhance M and H versions of skills. L stores one orb, M stores 3, and H stores 5. The number of orbs stored will be displayed under Percival's HP bar. These have hitbox directly above him that can be used to juggle opponents mid-combo. The L version is also a good move to cancel into off a f.H.. Completes charge on frame 49."
 }
 
 
 // fireballs
 const lFireball = { 
-  moveName: 'L Reginleiv', 
+  moveName: 'L Anzünden', 
   altName: '236L', 
-  damage: '800', 
+  damage: '900→800', 
   guard: 'all', 
-  startup: '15', 
+  startup: '22', 
   active: '-', 
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
+  oncounterhit: '-1',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Percival swings his sword and launches a projectile that travels along the ground. The slow speed and way it travels along the ground makes this a really hard move to dodge, and if there's any amount of distance between you and your opponent, it will be meaty enough to be plus. Since it has slower startup and Percival's hurtbox extends below and in front of him, it is prone to end up trading with other normals such as f.M. \nTravels to about f.H range and stops fizzles out. \nDoesn't take a stock."
 };
 const mFireball = { 
-  moveName: 'M Reginleiv', 
+  moveName: 'M Anzünden', 
   altName: '236M', 
-  damage: '400, 800', 
+  damage: '900→800', 
   guard: 'mid, all', 
-  startup: '13', 
+  startup: '22', 
   active: '-', 
   recovery: '-', 
-  onblock: '-4', 
-  onhit: '0',
+  onblock: '-7', 
+  onhit: '-3',
+  oncounterhit: '-1',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Percival swings his sword and launches a projectile that travels along the ground. The slow speed and way it travels along the ground makes this a really hard move to dodge, and if there's any amount of distance between you and your opponent, it will be meaty enough to be plus. Since it has slower startup and Percival's hurtbox extends below and in front of him, it is prone to end up trading with other normals such as f.M. \nTravels farther than the L version, and travels fullscreen with a stock. \nTakes a stock when one is available."
 };
 const hFireball = { 
-  moveName: 'H Reginleiv', 
+  moveName: 'H Anzünden', 
   altName: '236H', 
-  damage: '350 x 3', 
+  damage: '350×2+400→300×2+400', 
   guard: 'all', 
-  startup: '15', 
+  startup: '19', 
   active: '-', 
   recovery: '-', 
-  onblock: '+3', 
-  onhit: '+7',
+  onblock: '0', 
+  onhit: '+4',
+  oncounterhit: '+4',
   motion: ['236', 'h', 'or', 'a', 'h'],
   description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
 };
 
+//add powerup versions to this list and create a toggle for it like VT in FAT
+
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Rising Sword', 
+  moveName: 'L Platzen', 
   altName: '623L', 
-  damage: '700, 300', 
+  damage: '700, 400', 
   guard: 'mid, all', 
   startup: '9', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-17', 
+  active: '2(2)6', 
+  recovery: '37', 
+  onblock: '-26', 
   onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Performs a rising attack that cannot be blocked by midair foes immediately after start-up. M/H version advances Percival forward before rising. Rises higher and deals increased damage with a Träumerei orb but also makes the move more unsafe on block.",
 };
 const mUppercut = { 
-  moveName: 'M Rising Sword', 
+  moveName: 'M Platzen', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
+  damage: '300,700,400', 
   guard: 'mid, all', 
-  startup: '9', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-26', 
+  startup: '11', 
+  active: '5(2)2(2)6', 
+  recovery: '37', 
+  onblock: '-24', 
   onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "Performs a rising attack that cannot be blocked by midair foes immediately after start-up. M/H version advances Percival forward before rising. Rises higher and deals increased damage with a Träumerei orb but also makes the move more unsafe on block.",
 };
 const hUppercut = { 
-  moveName: 'H Rising Sword', 
+  moveName: 'H Platzen', 
   altName: '623H', 
-  damage: '950~1400', 
+  damage: '300,600,200×3',
   guard: 'mid, all', 
   startup: '9', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-26', 
-  onhit: 'HKD',
+  active: '8(2)2(2)6,3,3', 
+  recovery: '40', 
+  onblock: '-33', 
+  onhit: 'HKD (+55)',
+  oncounterhit: 'HKD (+56)',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Performs a rising attack that cannot be blocked by midair foes immediately after start-up. M/H version advances Percival forward before rising. Rises higher and deals increased damage with a Träumerei orb but also makes the move more unsafe on block.",
 };
 
 // rekka
-const lRekka = { 
-  moveName: 'L Overdrive Surge', 
-  altName: '214L', 
-  damage: '700', 
-  guard: 'mid', 
-  startup: '13', 
-  active: '2', 
-  recovery: '19', 
-  onblock: '-6', 
-  onhit: '-2',
-  motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
-};
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
+const cmdDash = { 
+  moveName: 'Lords Strike', 
+  altName: '214X', 
+  damage: '-', 
+  guard: '-', 
+  startup: '11', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  motion: ['214', 'l', 'or', '4', 'a'],
   description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
 };
-const mRekka = { 
-  moveName: 'M Overdrive Surge', 
-  altName: '214M', 
-  damage: '1200', 
+
+// Split these 3 into 3 different subsections (L cmd dash, M cmd dash, H cmd dash.)
+const llRekka = { 
+  moveName: 'Schneiden', 
+  altName: '214L -> L', 
+  damage: '800', 
   guard: 'mid', 
-  startup: '16', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '+2~-10', 
-  onhit: '-',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  startup: '7', 
+  active: '3', 
+  recovery: '20', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '+2',
+  clash: '3',
+  motion: ['l'],
+  description: "Performs a low slash attack during Lord's Strike. When enhanced with a Träumerei orb, it'll cause knockdown upon connecting."
 };
-const hRekka = { 
-  moveName: 'H Overdrive Surge', 
-  altName: '214H', 
-  damage: '1200', 
+const lmRekka = { 
+  moveName: 'Macht',
+  altName: '214L -> M',
+  damage: '1400', 
   guard: 'mid', 
-  startup: '13', 
-  active: '13', 
-  recovery: '37', 
-  onblock: '+4~-8', 
-  onhit: 'HKD',
-  motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  startup: '20', 
+  active: '6', 
+  recovery: '21', 
+  onblock: '+2', 
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '4',
+  motion: ['m'],
+  description: "Performs a downward slash attack during Lord's Strike. Very good frame advantage, so Percival can start his shenanigans before the opponent recovers even on block, with a guess between throw/5U and mashing. When enhanced with a Träumerei orb, causes an unrecoverable knockdown."
+};
+const lhRekka = { 
+  moveName: 'Zerreissen', 
+  altName: '214L -> H', 
+  damage: '1400', 
+  guard: 'mid', 
+  startup: '10', 
+  active: '3', 
+  recovery: '52', 
+  onblock: '-16', 
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '5',
+  motion: ['h'],
+  description: "Performs a piercing attack during Lord's Strike. When enhanced with a Träumerei orb, it'll cause more damage if it connects at close range, as indicated by a zoom-in effect. This is the move you want to combo into when you hit a far normal."
+};
+
+// medium cmd dash
+const mlRekka = { 
+  moveName: 'M Schneiden', 
+  altName: '214M -> L', 
+  damage: '800', 
+  guard: 'mid', 
+  startup: '7', 
+  active: '3', 
+  recovery: '20', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '+2',
+  clash: '3',
+  motion: ['l'],
+  description: "Performs a low slash attack during Lord's Strike. When enhanced with a Träumerei orb, it'll cause knockdown upon connecting."
+};
+const mmRekka = { 
+  moveName: 'M Macht',
+  altName: '214M -> M',
+  damage: '1400', 
+  guard: 'mid', 
+  startup: '20', 
+  active: '6', 
+  recovery: '21', 
+  onblock: '+2', 
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '4',
+  motion: ['m'],
+  description: "Performs a downward slash attack during Lord's Strike. Very good frame advantage, so Percival can start his shenanigans before the opponent recovers even on block, with a guess between throw/5U and mashing. When enhanced with a Träumerei orb, causes an unrecoverable knockdown."
+};
+const mhRekka = { 
+  moveName: 'M Zerreissen', 
+  altName: '214M -> H', 
+  damage: '1400', 
+  guard: 'mid', 
+  startup: '10', 
+  active: '3', 
+  recovery: '52', 
+  onblock: '-16', 
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '5',
+  motion: ['h'],
+  description: "Performs a piercing attack during Lord's Strike. When enhanced with a Träumerei orb, it'll cause more damage if it connects at close range, as indicated by a zoom-in effect. This is the move you want to combo into when you hit a far normal."
+};
+
+// heavy cmd dash
+const hlRekka = { 
+  moveName: 'H Schneiden', 
+  altName: '214H -> L', 
+  damage: '800', 
+  guard: 'mid', 
+  startup: '7', 
+  active: '3', 
+  recovery: '20', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '+2',
+  clash: '3',
+  motion: ['l'],
+  description: "Performs a low slash attack during Lord's Strike. When enhanced with a Träumerei orb, it'll cause knockdown upon connecting."
+};
+const hmRekka = { 
+  moveName: 'H Macht',
+  altName: '214H -> M',
+  damage: '1400', 
+  guard: 'mid', 
+  startup: '20', 
+  active: '6', 
+  recovery: '21', 
+  onblock: '+2', 
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '4',
+  motion: ['m'],
+  description: "Performs a downward slash attack during Lord's Strike. Very good frame advantage, so Percival can start his shenanigans before the opponent recovers even on block, with a guess between throw/5U and mashing. When enhanced with a Träumerei orb, causes an unrecoverable knockdown."
+};
+const hhRekka = { 
+  moveName: 'H Zerreissen', 
+  altName: '214H -> H', 
+  damage: '1400', 
+  guard: 'mid', 
+  startup: '10', 
+  active: '3', 
+  recovery: '52', 
+  onblock: '-16', 
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '5',
+  motion: ['h'],
+  description: "Performs a piercing attack during Lord's Strike. When enhanced with a Träumerei orb, it'll cause more damage if it connects at close range, as indicated by a zoom-in effect. This is the move you want to combo into when you hit a far normal."
 };
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Lohenwolf', 
   altName: '236236H', 
-  damage: '2500-3500', 
+  damage: '2600-3600', 
   guard: 'mid', 
-  startup: '6+5', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-13', 
+  startup: '6+7~147', 
+  active: '6', 
+  recovery: '30(Whiff), 44(Blocked)', 
+  onblock: '-18', 
   onhit: 'HKD',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Performs a powerful advancing attack that can be charged by holding down the button. If fully charged, this skill becomes unblockable. Since it covers a long range, it can be used as both a combo finished or a counter from afar. However, it will not hit at full-screen. The simple input version of this super makes the cinematic trigger smaller, but this typically doesn't matter when confirming out of a poke. \nMin Damage: Technical 900→650, Simple 540→390"
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Feuerrote Krone', 
   altName: '236236U', 
-  damage: '3500-4500', 
+  damage: '2900-3800', 
   guard: 'all', 
-  startup: '8+5', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-23', 
+  startup: '16', 
+  active: '9,9,9,9,9,9,9,9,9,9,1→(5)5', 
+  recovery: '51', 
+  onblock: '-18', 
   onhit: 'HKD',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Unleashes a spiral of flames from the hilt of Percival's sword that deals additional hits when holding down the button. If this skill connects at close range, Percival will perform an enhanced version for increased damage. This move can be hard to combo into from midscreen juggles because of the flame spiral causing them to fall out. This leads to it being very unsafe as the opponent will typically tech through the fireball itself. \nThis super can be charged, which increases the hits of the initial tornado from a minimum 6 hits to a maximum of 12 hits. When charged for 6-11 hits, the final hit will do 1900 but when fully charged to 12 hits, the final hit will do 2000.\nWhen not at close range, the final swing will fire a bigger version of Anzünden that travels full screen. In certain situations in the corner, you can combo off this when setup properly.\nMin Damage: Technical 950→580[1160→760], Simple 760→580[960→760]"
 };
 
 
@@ -548,16 +663,25 @@ export const percivalInfo = [
   groundThrow,
   airThrow,
   uOverhead,
+  lStockCharge,
+  mStockCharge,
+  hStockCharge,
   lFireball,
   mFireball,
   hFireball,
   lUppercut,
   mUppercut,
   hUppercut,
-  lRekka,
-  followupRekka,
-  mRekka,
-  hRekka,
+  cmdDash,
+  llRekka,
+  lmRekka,
+  lhRekka,
+  mlRekka,
+  mmRekka,
+  mhRekka,
+  hlRekka,
+  hmRekka,
+  hhRekka,
   sba,
   ssba
 ]
