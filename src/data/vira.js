@@ -220,7 +220,22 @@ const jU = {
   description: "Hits behind Vira during startup.\nVira's crossup normal. Hits primarily below her and hits behind her early on."
 };
 
-// unique action
+// unique action base form
+const cmdThrow = {
+  moveName: 'Blade of Light',
+  altName: 'Base 5U',
+  damage: '0, 100×5',
+  guard: 'throw',
+  startup: '30-39',
+  active: '3', 
+  recovery: '30',
+  onblock: '-', 
+  onhit: '-',
+  motion: ['u'],
+  description: "After startup, continues to run forward until it connects or has whiffed entirely.\nUpon conneting, transforms Vira into her Luminiera form.\nFull Counter Hit recovery.\nCan be comboed into with Summon Lumineria and Counter Hit c.H on grounded opponents.\nA very slow command grab, made only slower by the distance she has to travel. The damage is very low for the risks it requires, but provides Vira her massively enhanced Luminiera Form, with new moves and major improvements to her moveset. If it is not possible to land this grab, it may be required to instead use her Skybound Art, Luminiera Merge.\nThe startup can be faked with a pause then a short dash, due to its similar running animation. However, it is telegraphed by her arm swing before she begins running."
+}
+
+// unique action luminaire form
 const lv1U = { 
   moveName: 'Power Raise Lv1', 
   altName: '5ULv1', 
@@ -297,7 +312,7 @@ const groundThrow = {
   onblock: '-', 
   onhit: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "Basic grounded throw that sets up an easy safejump. Vira can set a Lumineria, but she's generally too far to force an opponent to block it or push them into it."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
@@ -309,7 +324,7 @@ const airThrow = {
   onblock: '-', 
   onhit: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Leaves the opponent much farther away than her forward throw, making a safejump impossible."
 };
 
 const uOverhead = { 
@@ -318,17 +333,17 @@ const uOverhead = {
   damage: '1000', 
   guard: 'high', 
   startup: '26', 
-  active: '-', 
-  recovery: '-', 
+  active: '5', 
+  recovery: '18', 
   onblock: '-4', 
-  onhit: '1',
+  onhit: '+1',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "High reward on counter hit.\nInvulnerable to lows and throws, but not instantly.\nMore dangerous than average as Vira can get a combo with a well-timed Lumineria."
 };
 
-// fireballs
-const lFireball = { 
-  moveName: 'L Reginleiv', 
+// Hands
+const lHands = { 
+  moveName: 'L Darkane', 
   altName: '236L', 
   damage: '800', 
   guard: 'all', 
@@ -338,10 +353,10 @@ const lFireball = {
   onblock: '-7', 
   onhit: '-3',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Naturally frametraps off every normal and auto-combo attack except c.L, c.H, and 2L.\nOpponent air techs on hit.\nSafe on block.\nMakes for a good pressure tool as it's safe on block. Vira can force pokes to whiff at max range, allowing her to whiff punish and get a knockdown. 236L also acts as an easy frame trap from any of her poking normals, helping her condition opponents not to mash. Be careful throwing this out in neutral as the hurtboxes are horrendus."
 };
-const mFireball = { 
-  moveName: 'M Reginleiv', 
+const mHands = { 
+  moveName: 'M Darkane', 
   altName: '236M', 
   damage: '400, 800', 
   guard: 'mid, all', 
@@ -351,10 +366,10 @@ const mFireball = {
   onblock: '-4', 
   onhit: '0',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Can frametrap off 5L and 2L.\nGood knockdown on hit.\nCan catch buttons between the stabs and final slash.\nCan be held in Luminiera to perform a dash instead of the last hit.\nNormal Vira's best combo ender for corner carry and risky complement to 236L. If her opponent has big buttons, she can risk a frame trap with 236M instead of trying to make said buttons whiff after 236L. Be careful with this though as 236M is -9 on block and advances Vira forwards. The held version gives Vira a meterless launch that combos into c.L anywhere. Be careful with this on block as it is still quite punishable."
 };
-const hFireball = { 
-  moveName: 'H Reginleiv', 
+const hHands = { 
+  moveName: 'H Darkane', 
   altName: '236H', 
   damage: '350 x 3', 
   guard: 'all', 
@@ -364,12 +379,12 @@ const hFireball = {
   onblock: '+3', 
   onhit: '+7',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Wallbounces in the corner.\nCan catch buttons between the stabs and final slash.\nCan be held in Luminiera to perform a dash instead of the last hit.\nCorner combo extender and Vira's only real launching move. The held version is less useful than 236[M] because it costs a cooldown but it is much safer on block."
 };
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Rising Sword', 
+  moveName: 'L Red Beryl Sword', 
   altName: '623L', 
   damage: '700, 300', 
   guard: 'mid, all', 
@@ -379,10 +394,10 @@ const lUppercut = {
   onblock: '-17', 
   onhit: 'KD',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Fully invincible on startup\nVira's non-Skybound invincible reversal. Like most, it is able to escape pressure easily and doubles as a strong anti-air, but can almost never combo, making it very low reward. On block and whiff it is extremely punishable and must be used with caution. Only hits forwards, making it incapable of attacking enemies directly above or behind Vira.\nAir unblockable only on frames 9 ~ 10\n500 Damage if hit on frames 13 ~ 18.\nOpponent Air Recovers if hit on frames 13 ~ 18\nBasic invincible reversal. Lower recovery makes it safer on whiff, but is extremely poor for use as an anti-air."
 };
 const mUppercut = { 
-  moveName: 'M Rising Sword', 
+  moveName: 'M Red Beryl Sword', 
   altName: '623M', 
   damage: '700, 300 x 2', 
   guard: 'mid, all', 
@@ -392,10 +407,23 @@ const mUppercut = {
   onblock: '-26', 
   onhit: 'KD',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "Fully invincible on startup\nVira's non-Skybound invincible reversal. Like most, it is able to escape pressure easily and doubles as a strong anti-air, but can almost never combo, making it very low reward. On block and whiff it is extremely punishable and must be used with caution. Only hits forwards, making it incapable of attacking enemies directly above or behind Vira.\nFirst hit is air unblockable, second is not.\nUnreasonably long active time.\nMakes for a stronger anti-air and deals slightly more damage. It is much worse on whiff, and on block will be punishable in a higher airborne state, enabling larger combos on punish. Surprisingly has a decent amount of oki as a midscreen ender (if done from autocombo), significantly moreso in the corner."
+};
+const mGrandUppercut = { 
+  moveName: 'M Red Beryl Sword', 
+  altName: '623M', 
+  damage: '700, 300 x 2', 
+  guard: 'mid, all', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-26', 
+  onhit: 'KD',
+  motion: ['623', 'm', 'or', '6', 'a', 'm'],
+  description: "Might as well be a completely different move. Instead of jumping skyward, she brings down her battleaxe upon the enemy with incredible force.\nMassive pushback, completely safe on block.\nTrue frametraps between hits, but has no invulnerability on the second hit.\nSmall anti-air range, but completely air unblockable.\nDeals only 600 damage if the first hit misses.\nBarely an anti-air and slightly slower, but in exchange becomes the best wakeup reversal in the game. It deals very solid damage, gives a nearby hard knockdown for some basic okizeme, maintains the low cooldown, and on block it is entirely safe. This move absolutely domoniates against pressure and is very difficult to challenge. The best counter-strategy on block is to wait until after the first hit, then either use an invincible move or perform a Dodge. However, Vira will be fully grounded, slightly reducing the combo potential compared to other versions of Red Beryl Sword.\nThis is also Luminiera Form Vira's best combo ending special move. Deals the most damage out of any of her special moves while also giving her a hard knockdown for further okizeme."
 };
 const hUppercut = { 
-  moveName: 'H Rising Sword', 
+  moveName: 'H Red Beryl Sword', 
   altName: '623H', 
   damage: '950~1400', 
   guard: 'mid, all', 
@@ -405,12 +433,12 @@ const hUppercut = {
   onblock: '-26', 
   onhit: 'HKD',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Fully invincible on startup\nVira's non-Skybound invincible reversal. Like most, it is able to escape pressure easily and doubles as a strong anti-air, but can almost never combo, making it very low reward. On block and whiff it is extremely punishable and must be used with caution. Only hits forwards, making it incapable of attacking enemies directly above or behind Vira.Completely air unblockable.\nExtreme meter gain, useful to transform as quickly as possible\nThe only version able to combo, and only on an anti-air hit in the corner.\nGrand: Additional 100 damage and cinematic pause if it hits on the first active frame, enabling better corner combo confirms.\nHer strongest anti-air move, it completely shuts down jump-ins while leading into okizeme. The massive cooldown, especially with the simple input, is a detriment to Vira's defensive gameplay, dramatically worsening her ability to defend herself immediately after. Particularly good late into a round, where a single shift in the momentum or increased damage can easily win the round on its own, and further defense is not nessecary."
 };
 
-// rekka
-const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+// Tackle
+const lTackle = { 
+  moveName: 'L Scarlet Oath', 
   altName: '214L', 
   damage: '700', 
   guard: 'mid', 
@@ -420,23 +448,10 @@ const lRekka = {
   onblock: '-6', 
   onhit: '-2',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
+  description: "Safe when blocked at max range.\nVira's basic poke confirm tool, best ender for oki but trades corner carry. Fast and effective for catching people in neutral beyond her f.M range. Can also act as a frametrap off f.L to further enforce her pokes."
 };
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
-};
-const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+const mTackle = { 
+  moveName: 'M Scarlet Oath', 
   altName: '214M', 
   damage: '1200', 
   guard: 'mid', 
@@ -446,10 +461,10 @@ const mRekka = {
   onblock: '+2~-10', 
   onhit: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Advantageous on block\nGrand: Visual pause on counterhit allowing for easier combo confirms.\nVira's primary pressure reset. It is slow, and easily interrupted, but always places her within a good range to threaten frametraps with 2U and c.L, while easily reaching for Throw. Even with simple inputs its cooldown is short enough to allow freely using it in pressure.\nCan also be used in neutral as an approach tool. On counter hits it scores huge combo potential, and on block begins pressure freely."
 };
-const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+const hTackle = { 
+  moveName: 'H Scarlet Oath', 
   altName: '214H', 
   damage: '1200', 
   guard: 'mid', 
@@ -459,12 +474,13 @@ const hRekka = {
   onblock: '+4~-8', 
   onhit: 'HKD',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Ground bounces on hit.\nGrand: Can combo into 5L in the corner.\nGrand: Ground bounces on counterit, being able to combo into 5M midscreen.\nEven faster, safer, and more damaging than the Light variant for catching in neutral, but the heavy cooldown will eliminate the ability to reset pressure as easily. On hit, scores a better knockdown for setting up some okizeme, and can be used as a combo extender in the corner."
 };
 
+// Tackle
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Luminiera Merge', 
   altName: '236236H', 
   damage: '2500-3500', 
   guard: 'mid', 
@@ -474,10 +490,23 @@ const sba = {
   onblock: '-13', 
   onhit: 'HKD',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Spend your Skybound Art to transform.\nMinimum damage: Shortcut: 120, Technical: 250\nUpon activation, Vira enters her Grand transformation.\nCan hit slightly above and behind Vira.\nLow damage and extremely short range, making it incredibly poor for a Skybound Art, but is your only way to access Vira's Grand transformation without landing Blade of Light (5U).\nEven when blocked you still receive the transformation and it is not as punishable as other Skybound Arts. Additionally, it is also the only invincible move in her arsenal that can hit directly above and behind her, making it viable for challenging strong crossup okizeme.\nLastly, it is possible for Vira to combo after super, as her recovery is fairly short."
 };
+const sbaGrand = {
+  moveName: 'Punishment Ray',
+  altName: '236236H', 
+  damage: '2500-3500', 
+  guard: 'mid', 
+  startup: '6+5', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-13', 
+  onhit: 'HKD',
+  motion: ['236', '236', 'h', 'or', '236', 'a'],
+  description: "A huge beam, doubling both as an invincible reversal and a zoning tool.\nReplaces Vira's Skybound Art when in her Grand transformation.\nMinimum damage: Shortcut: 480, Technical: 875\nLower frame disadvantage the more spaced it is.\nAn ironically less safe invincible reversal Skybound Art. It not only has less vertical reach and fails to hit behind her, but it's also much more punishable when blocked at close range.\nTo compensate, the move does astronomically more damage, and can work from any range. It is impossible to jump over on reaction, and the pushback is enough to make it very difficult to punish unless already close, making it decent for challenging slower pokes in neutral, without losing the round."
+}
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Affection Abyss', 
   altName: '236236U', 
   damage: '3500-4500', 
   guard: 'all', 
@@ -487,7 +516,20 @@ const ssba = {
   onblock: '-23', 
   onhit: 'HKD',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "A savage flurry of strikes.\nData in [] represent data for cinematic clean hit.\nMinimum damage: Shortcut: ?, Technical: ?\nQuickly advances until a hit lands, travelling half-screen.\nThe move is slightly unreliable. While it will chase down an opponent to better punish whiffs, the attack can only hit directly in front and is very poor at hitting enemies above, making it usually much worse than Red Beryl Sword (623X) as a tool to challenge pressure.\nMay be the worse option against Luminiera Merge (236236H), depending on the current situation. Particularly, the more health Vira and the opponent has, the more valuable her transformation becomes, while the less the opponent has the more valuable Affection Abyss becomes."
+};
+const ssbaGrand = {
+  moveName: 'Iliad Vision', 
+  altName: '236236U', 
+  damage: '3500-4500', 
+  guard: 'all', 
+  startup: '8+5', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-23', 
+  onhit: 'HKD',
+  motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
+  description: "A ceremoniously destructive attack.\nData in [] represent data for cinematic clean hit.\nMinimum damage: Shortcut: ?, Technical: ?\nQuickly advances until a hit lands, travelling full-screen.\nTied for highest damage in the game, making it a potent round ender.\nWhile the cinematic clean hit has a surprisingly forgiving range and will easily chase down an opponent to punish whiffs, the attack can only hit directly in front and is very poor at hitting enemies above. If blocked, Vira can be hit before the final strike, as she no longer has any invuln."
 };
 
 
@@ -509,6 +551,7 @@ export const viraInfo = [
   jM,
   jH,
   jU,
+  cmdThrow,
   lv1U,
   lv2U,
   lv3U,
@@ -517,16 +560,18 @@ export const viraInfo = [
   groundThrow,
   airThrow,
   uOverhead,
-  lFireball,
-  mFireball,
-  hFireball,
+  lHands,
+  mHands,
+  hHands,
   lUppercut,
   mUppercut,
+  mGrandUppercut,
   hUppercut,
-  lRekka,
-  followupRekka,
-  mRekka,
-  hRekka,
+  lTackle,
+  mTackle,
+  hTackle,
   sba,
-  ssba
+  sbaGrand,
+  ssba,
+  ssbaGrand
 ]
