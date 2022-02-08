@@ -14,7 +14,7 @@ const closeL = {
   onblock: '2',
   onhit: '6',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "Always links into c.M and f.L.\nLinks into 2M and 2U on crouching or counterhit.\nOne of Vira's main pressure normals. Excellent frame advantage and frame trap options afterwards make this a threatening button to challenge. Linking into 2U is always preferable as it allows Vira to set up L Luminaria for okizeme."
 };
 const closeM = {
   moveName: 'Close Medium',
@@ -27,7 +27,7 @@ const closeM = {
   onblock: '0',
   onhit: '4',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "Links into itself and 2U on counterhit.\nFrame trap and general pressure tool. Any close button will frame trap into c.M, which has some great linking options on counterhit. The activation range is also decently large which allows her to harass 6-frame characters."
 };
 const closeH = {
   moveName: 'Close Heavy',
@@ -40,7 +40,7 @@ const closeH = {
   onblock: '-3',
   onhit: '1',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Highest damage button that goes into autoGood anti-air.\nLinks into itself on counterhit.\nVira's hardest-hitting punish starter. combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
 };
 
 // auto combos
@@ -55,7 +55,7 @@ const auto1 = {
   onblock: '-3',
   onhit: '1',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Fully true blockstrings off any normal. Cannot be delayed into a frametrap.\nc.XX naturally frametraps into Scarlet Oath L.\nSimple combo extender and hitconfirm tool.\nOn block, every hit can cancel into Darkane frametrap punishes, or mixup into Blade of Light, making it most useful for creating unpredictable pressure timings and challenge simple fuzzy blocking."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
@@ -68,7 +68,7 @@ const auto2 = {
   onblock: '-5',
   onhit: '-1',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Fully true blockstrings off any normal. Cannot be delayed into a frametrap.\nc.XX naturally frametraps into Scarlet Oath L.\nSimple combo extender and hitconfirm tool.\nOn block, every hit can cancel into Darkane frametrap punishes, or mixup into Blade of Light, making it most useful for creating unpredictable pressure timings and challenge simple fuzzy blocking."
 };
 
 // far normals
@@ -83,7 +83,7 @@ const far5L = {
   onblock: '-3',
   onhit: '1',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "Vira's 6-frame punish.\nCombos into 214L for a knockdown.\nVira's fastest, but lowest reward whiff punish button."
 };
 const far5M = {
   moveName: 'Far Medium',
@@ -96,7 +96,7 @@ const far5M = {
   onblock: '-6',
   onhit: '-2',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "Longest range normal.\nSafe neutral poke, good for controlling space. Does not properly frametrap into Darkane from max range."
 };
 const far5H = {
   moveName: 'Far Heavy',
@@ -109,7 +109,7 @@ const far5H = {
   onblock: '-9',
   onhit: '-5',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Vira's best counterpoke.\nNoticeably less range than Vira's f.M, but has much more hitstun making it easier to confirm. It's also quite fast for an H button, making it a great whiff punisher on extended hurtboxes."
 };
 
 // regular normals
@@ -124,7 +124,7 @@ const n2L = {
   onblock: '2',
   onhit: '6',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Always links into c.M and f.L.\nLinks into 2M and 2U on crouching or counterhit.\nVira's other main pressure normal. Works well with her throw as it hits low."
 };
 const n2M = {
   moveName: 'Crouch Medium',
@@ -137,7 +137,7 @@ const n2M = {
   onblock: '1',
   onhit: '5',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Very fast and very active.\nVira's safest poke overall due to its low total duration. Combos into both 214L and 236M for a knockdown. Beats rolls cleanly where f.M does not, but 2U is a better punish thanks to its knockdown and Vira's setplay."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
@@ -150,7 +150,7 @@ const n2H = {
   onblock: '-13',
   onhit: '-9',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Strong, angled anti-air.\nAll of Vira's H buttons make for good anti-airs at different ranges. 2H is particularly good against opponents jumping right at her, where c.H is better for crossups and f.H is best for far jump-ins."
 };
 const n2U = {
   moveName: 'Crouch Unique',
@@ -163,7 +163,7 @@ const n2U = {
   onblock: '-12',
   onhit: 'HKD',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Leads straight into a 22L setup.\nVira's sweep is fast enough that she can counter hit or crouch confirm into it. Whenever it is an option, it is usually the best overall because it grants Lumineria oki. It also combos into the same things that 2M does while dealing the same damage. The only downside of 2U is that its frame advantage is much worse than 2M."
 };
 
 // jump normals
@@ -178,7 +178,7 @@ const jL = {
   onblock: '-', 
   onhit: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Active until landing.\nStrong air button overall and makes for a great air-to-air."
 };
 const jM = { 
   moveName: 'Jump Medium', 
@@ -191,7 +191,7 @@ const jM = {
   onblock: '-', 
   onhit: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Hard to hit against most crouching opponents.\nVira's other main air-to-air option. Hits higher than j.L and is great for sniping opponents above Vira."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
@@ -204,7 +204,7 @@ const jH = {
   onblock: '-', 
   onhit: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "Hits far below Vira.\nVira's best jump-in normal in terms of raw damage."
 };
 const jU = { 
   moveName: 'Jump Unique', 
@@ -217,7 +217,7 @@ const jU = {
   onblock: '-', 
   onhit: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Hits behind Vira during startup.\nVira's crossup normal. Hits primarily below her and hits behind her early on."
 };
 
 // unique action
