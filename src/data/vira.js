@@ -477,7 +477,47 @@ const hTackle = {
   description: "Ground bounces on hit.\nGrand: Can combo into 5L in the corner.\nGrand: Ground bounces on counterit, being able to combo into 5M midscreen.\nEven faster, safer, and more damaging than the Light variant for catching in neutral, but the heavy cooldown will eliminate the ability to reset pressure as easily. On hit, scores a better knockdown for setting up some okizeme, and can be used as a combo extender in the corner."
 };
 
-// Tackle
+// Luminiera
+const lLumin = { 
+  moveName: 'L Summon Luminiera', 
+  altName: '22L', 
+  damage: '800', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-7', 
+  onhit: '-3',
+  motion: ['22', 'l', 'or', 'a'],
+  description: "Summons Luminiera to attack a fixed position on the screen after a short time.\nLuminiera will disappear immediately if Vira blocks or is hit.\nThe primary tool for okizeme setplay. The extended hitstun allows Vira to combo off attacks more easily, including her Overhead, and is delayed enough to allow a normal Throw or her Blade of Light grab to land before it becomes active. However, because it disappears instantly when Vira is hit, it does not protect Vira from an opponent attacking out of pressure. (See more: Strategy: Okizeme)\nIn neutral, Luminiera can provide a ranged threat to either run in and begin pressure freely, or force the opponent into moving out of the way. However, it is very slow and open to punish.\nLuminiera spawns 40% of the screen away.\nUseful to set up after almost any knockdown cheaply. Due to its timing and position, it won't prevent jumping and backdashing on wakeup, which needs to be supported by fast okizeme. It is also spacing-sensitive, potentially whiffing (but catching backdashes) at very close positions.\nGood in neutral as a pre-emptive catch to approaches, but is too slow to be effective at its actual range."
+};
+const mLumin = { 
+  moveName: 'M Summon Luminiera', 
+  altName: '22M', 
+  damage: '400, 800', 
+  guard: 'mid, all', 
+  startup: '13', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-4', 
+  onhit: '0',
+  motion: ['22', 'm', 'or', 'a', 'm'],
+  description: "Summons Luminiera to attack a fixed position on the screen after a short time.\nLuminiera will disappear immediately if Vira blocks or is hit.\nThe primary tool for okizeme setplay. The extended hitstun allows Vira to combo off attacks more easily, including her Overhead, and is delayed enough to allow a normal Throw or her Blade of Light grab to land before it becomes active. However, because it disappears instantly when Vira is hit, it does not protect Vira from an opponent attacking out of pressure. (See more: Strategy: Okizeme)\nIn neutral, Luminiera can provide a ranged threat to either run in and begin pressure freely, or force the opponent into moving out of the way. However, it is very slow and open to punish.\nLuminiera spawns 70% of the screen away.\nSpawns too far away to use for setups, only able to catch backdashes after a non-cinematic Affection Abyss (236236H).\nA useful long-range tool for neutral."
+};
+const hLumin = { 
+  moveName: 'H Summon Luminiera', 
+  altName: '22H', 
+  damage: '350 x 3', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['22', 'h', 'or', 'a', 'h'],
+  description: "Summons Luminiera to attack a fixed position on the screen after a short time.\nLuminiera will disappear immediately if Vira blocks or is hit.\nThe primary tool for okizeme setplay. The extended hitstun allows Vira to combo off attacks more easily, including her Overhead, and is delayed enough to allow a normal Throw or her Blade of Light grab to land before it becomes active. However, because it disappears instantly when Vira is hit, it does not protect Vira from an opponent attacking out of pressure. (See more: Strategy: Okizeme)\nIn neutral, Luminiera can provide a ranged threat to either run in and begin pressure freely, or force the opponent into moving out of the way. However, it is very slow and open to punish.\nLuminiera tracks to the opponent's position.\nTravels a maximum 80% of the screen.\nThe only version that is useful in the corner, as the other two versions are summoned off-screen.\nGrand: Additional damage and blockstun. Can combo better off slow recovering moves.\nGood for any knockdown without concern for spacing, and able to threaten backdashes by following their position, at the cost of a heavy cooldown. Due to longer recovery it can make some okizeme more difficult or weaker to jump-outs, notably after a Throw where you cannot prevent a jump-out in time.\nGood in neutral to make it much more difficult to position out of, and attack from almost full-screen as a weak zoning tool."
+};
+
 // skybound art
 const sba = { 
   moveName: 'Luminiera Merge', 
