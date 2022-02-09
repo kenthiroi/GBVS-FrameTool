@@ -381,7 +381,7 @@ const hFireball = {
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Rising Sword', 
+  moveName: 'L Hien: Homuragaeshi', 
   altName: '623L', 
   damage: '700, 300', 
   guard: 'mid, all', 
@@ -391,10 +391,10 @@ const lUppercut = {
   onblock: '-17', 
   onhit: 'KD',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Pressing U will transition Yuel into Third Dance during landing\nYuel's invincible reversal. Its multiple hits make it shine in certain situations such as against Vaseraga's Soul Forge, but it has a tendency to whiff against deep jump-ins.\nGo-to reversal due to speed and not costing resources.\n623L is the least damaging version and gives the worst okizeme on hit. However, due to its low cost and quick startup, you'll see it frequently used as a reversal."  
 };
 const mUppercut = { 
-  moveName: 'M Rising Sword', 
+  moveName: 'M Hien: Homuragaeshi', 
   altName: '623M', 
   damage: '700, 300 x 2', 
   guard: 'mid, all', 
@@ -404,10 +404,10 @@ const mUppercut = {
   onblock: '-26', 
   onhit: 'KD',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "Pressing U will transition Yuel into Third Dance during landing\nYuel's invincible reversal. Its multiple hits make it shine in certain situations such as against Vaseraga's Soul Forge, but it has a tendency to whiff against deep jump-ins.\nBetter as a combo ender than a reversal.\n623M is slower and more damaging. Useful as a combo ender as it does more damage and gives better okizeme than 236M, in exchange for less corner carry. You'll however rarely see this as a reversal."  
 };
 const hUppercut = { 
-  moveName: 'H Rising Sword', 
+  moveName: 'H Hien: Homuragaeshi', 
   altName: '623H', 
   damage: '950~1400', 
   guard: 'mid, all', 
@@ -417,12 +417,12 @@ const hUppercut = {
   onblock: '-26', 
   onhit: 'HKD',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Pressing U will transition Yuel into Third Dance during landing\nYuel's invincible reversal. Its multiple hits make it shine in certain situations such as against Vaseraga's Soul Forge, but it has a tendency to whiff against deep jump-ins.\nInvincible reversal.\nBuilds a ton of meter on hit.\nHard knockdown on hit.\n623H is the most damaging version and gives the best okizeme, giving Yuel enough time to dash up and do a crossup j.H safejump. Sometimes used as a combo ender and sometimes as a reversal." 
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+  moveName: 'L Hanaarashi', 
   altName: '214L', 
   damage: '700', 
   guard: 'mid', 
@@ -432,23 +432,10 @@ const lRekka = {
   onblock: '-6', 
   onhit: '-2',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
-};
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "The lunge forward can be cancelling by pressing 5U, Yuel will instead enter her stance.\nThe L and H versions are plus on block and combo on hit.\nThe M and H~M versions can be made safe if spaced\nFlipping back can be used to create space and let Yuel reset to neutral after an approach Yuel can 214L after a 236L on block and the opponent can't hit her out of it. Forcing the opponent to run up and challenge with a low on a read, which in turn loses to her flipping forward.\n214L and 214M are invulnerable on frame 3, and 214H is invulnerable on frame 1. Don't abuse these moves too much, however, as the followups can be easily caught with long pokes, or blown through with DPs or SBAs."
 };
 const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+  moveName: 'M Hanaarashi', 
   altName: '214M', 
   damage: '1200', 
   guard: 'mid', 
@@ -458,10 +445,10 @@ const mRekka = {
   onblock: '+2~-10', 
   onhit: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "The lunge forward can be cancelling by pressing 5U, Yuel will instead enter her stance.\nThe L and H versions are plus on block and combo on hit.\nThe M and H~M versions can be made safe if spaced\nFlipping back can be used to create space and let Yuel reset to neutral after an approach Yuel can 214L after a 236L on block and the opponent can't hit her out of it. Forcing the opponent to run up and challenge with a low on a read, which in turn loses to her flipping forward.\n214L and 214M are invulnerable on frame 3, and 214H is invulnerable on frame 1. Don't abuse these moves too much, however, as the followups can be easily caught with long pokes, or blown through with DPs or SBAs."
 };
 const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+  moveName: 'H Hanaarashi', 
   altName: '214H', 
   damage: '1200', 
   guard: 'mid', 
@@ -471,12 +458,23 @@ const hRekka = {
   onblock: '+4~-8', 
   onhit: 'HKD',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "The lunge forward can be cancelling by pressing 5U, Yuel will instead enter her stance.\nThe L and H versions are plus on block and combo on hit.\nThe M and H~M versions can be made safe if spaced\nFlipping back can be used to create space and let Yuel reset to neutral after an approach Yuel can 214L after a 236L on block and the opponent can't hit her out of it. Forcing the opponent to run up and challenge with a low on a read, which in turn loses to her flipping forward.\n214L and 214M are invulnerable on frame 3, and 214H is invulnerable on frame 1. Don't abuse these moves too much, however, as the followups can be easily caught with long pokes, or blown through with DPs or SBAs."
+};
+
+//
+const lFlame = {
+  description: "Pressing U will transition Yuel to Third Dance during the recovery.\nLots of active frames, making it good as a meaty against characters without meterless reversals.\n22L will frame trap from full autocombo, but it's only +5 on counter hit and will put you just outside of c.L's activation range, meaning your reward for hitting it on a standing opponent is minimal, and you'll lose your turn if it's blocked. It also frame traps from 2H(1), which does leave you close enough for a c.L combo, but only at point blank range."
+};
+const mFlame = {
+  description: "Pressing U will transition Yuel to Third Dance during the recovery.\nLots of active frames, making it good as a meaty against characters without meterless reversals.\n22M is the slowest but most advantageous version. It will never frame trap, but because Yuel moves forward during its startup, it can be used as a disrespectful pressure extension once your opponent starts respecting your actual frame traps. If your opponent somehow gets hit by this, you can follow up with a c.H combo."
+};
+const hFlame = {
+  description: "Pressing U will transition Yuel to Third Dance during the recovery.\nLots of active frames, making it good as a meaty against characters without meterless reversals.\n22H frame traps from c.H and grants a c.H combo on CH. If your opponent doesn't mash, you can continue pressure due to it being advantageous on block. In addition, it will always combo from an air hit of 2H, making it useful for anti-air combos and certain punishes."
 };
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Crimson Dance: Rinnen-aratame', 
   altName: '236236H', 
   damage: '2500-3500', 
   guard: 'mid', 
@@ -486,10 +484,10 @@ const sba = {
   onblock: '-13', 
   onhit: 'HKD',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Minimum damage: 800\nSimple input (236S) damage: 3000\nSimple input minimum damage: 450\nLoses invincibility after the startup but regains it on hit when the cinematic animation begins to play"
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Sapphire Dance: Gentiana', 
   altName: '236236U', 
   damage: '3500-4500', 
   guard: 'all', 
@@ -499,7 +497,7 @@ const ssba = {
   onblock: '-23', 
   onhit: 'HKD',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Vacuums even on whiff, but the cinematic will only play if the opponent is drawn in and hit during the first few moments of the animation. The long animation will catch attempted Evades."
 };
 
 
@@ -536,9 +534,11 @@ export const yuelInfo = [
   mUppercut,
   hUppercut,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
+  lFlame,
+  mFlame,
+  hFlame,
   sba,
   ssba
 ]
