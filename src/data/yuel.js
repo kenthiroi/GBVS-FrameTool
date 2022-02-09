@@ -262,6 +262,8 @@ const stance = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['u'],
   description: "Completes stance animation at 21F. Stance changes all of Yuel's normals and movement options. She retains access to her throws, though they perform an auto-dash before performing the throw (see Throw section).\nIf struck while in stance, Yuel does an automatic counter (Eye of the Sparrow).\nCounters mids (referred to in game as highs).\nLoses to projectiles despite projectiles being classified as mids.\nLoses to lows, overheads, and throws.\nYuel cannot block during stance, but can perform Evade. She cannot perform Cross Over.\nYuel cannot walk forwards nor backwards during stance.\nYuel cannot run during stance. Run and backdash are replaced with a unique forward and backwards hop.\nBeats standard reversals such as DP\ns and strike-supers, but will not protect against projectile based supers such as GBVS Gran Icon.png Gran's Catastrophe. This can be used to encourage enemies to mash low attacks and allow you to structure frame traps with her stance buttons."
 }
@@ -275,6 +277,8 @@ const lv1U = {
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['u'],
   description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
 };
@@ -288,6 +292,8 @@ const lv2U = {
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['u'],
   description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
 };
@@ -301,6 +307,8 @@ const lv3U = {
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['u'],
   description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
 };
@@ -314,6 +322,8 @@ const lv4U = {
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['u'],
   description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
 };
@@ -327,6 +337,8 @@ const lv5U = {
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['u'],
   description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
 };
@@ -370,6 +382,8 @@ const uOverhead = {
   recovery: '-', 
   onblock: '-4', 
   onhit: '1',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['m', 'u'],
   description: ""
 };
@@ -385,6 +399,8 @@ const lFireball = {
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['236', 'l', 'or', 'a'],
   description: "Pressing U will transition Yuel into Third Dance during recovery.\nAn advancing special that trades priority and velocity for safety. Due to 236L's and 236H's extremely quick startups, they won't leave a gap when cancelled into from M or H normals on block unless they are delay cancelled and spaced at the tip of f5m.\nFast startup and safe on block.\nSince M knocks down on hit, people might get counterhit after 236L on hit as they tried to tech.\nL Starlit Sky is a safe way to transition into stance offense, as Yuel is +1 on hit."
 };
@@ -398,6 +414,8 @@ const mFireball = {
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['236', 'm', 'or', 'a', 'm'],
   description: "Pressing U will transition Yuel into Third Dance during recovery.\nAn advancing special that trades priority and velocity for safety. Due to 236L's and 236H's extremely quick startups, they won't leave a gap when cancelled into from M or H normals on block unless they are delay cancelled and spaced at the tip of f5m.\nSlow startup and unsafe on block.\nSoft knockdown\n236M frame traps from almost any normal, but is easily punishable on block."
 };
@@ -411,6 +429,8 @@ const hFireball = {
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['236', 'h', 'or', 'a', 'h'],
   description: "Pressing U will transition Yuel into Third Dance during recovery.\nAn advancing special that trades priority and velocity for safety. Due to 236L's and 236H's extremely quick startups, they won't leave a gap when cancelled into from M or H normals on block unless they are delay cancelled and spaced at the tip of f5m.\nBest of both worlds.\nWallbounces in the corner.\nYuel's main juggle starter."
 };
@@ -426,6 +446,8 @@ const lUppercut = {
   recovery: '-', 
   onblock: '-17', 
   onhit: 'KD',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['623', 'l', 'or', '6', 'a'],
   description: "Pressing U will transition Yuel into Third Dance during landing\nYuel's invincible reversal. Its multiple hits make it shine in certain situations such as against Vaseraga's Soul Forge, but it has a tendency to whiff against deep jump-ins.\nGo-to reversal due to speed and not costing resources.\n623L is the least damaging version and gives the worst okizeme on hit. However, due to its low cost and quick startup, you'll see it frequently used as a reversal."  
 };
@@ -439,6 +461,8 @@ const mUppercut = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'KD',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
   description: "Pressing U will transition Yuel into Third Dance during landing\nYuel's invincible reversal. Its multiple hits make it shine in certain situations such as against Vaseraga's Soul Forge, but it has a tendency to whiff against deep jump-ins.\nBetter as a combo ender than a reversal.\n623M is slower and more damaging. Useful as a combo ender as it does more damage and gives better okizeme than 236M, in exchange for less corner carry. You'll however rarely see this as a reversal."  
 };
@@ -452,6 +476,8 @@ const hUppercut = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
   description: "Pressing U will transition Yuel into Third Dance during landing\nYuel's invincible reversal. Its multiple hits make it shine in certain situations such as against Vaseraga's Soul Forge, but it has a tendency to whiff against deep jump-ins.\nInvincible reversal.\nBuilds a ton of meter on hit.\nHard knockdown on hit.\n623H is the most damaging version and gives the best okizeme, giving Yuel enough time to dash up and do a crossup j.H safejump. Sometimes used as a combo ender and sometimes as a reversal." 
 };
@@ -467,6 +493,8 @@ const lRekka = {
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['214', 'l', 'or', '2', 'a'],
   description: "The lunge forward can be cancelling by pressing 5U, Yuel will instead enter her stance.\nThe L and H versions are plus on block and combo on hit.\nThe M and H~M versions can be made safe if spaced\nFlipping back can be used to create space and let Yuel reset to neutral after an approach Yuel can 214L after a 236L on block and the opponent can't hit her out of it. Forcing the opponent to run up and challenge with a low on a read, which in turn loses to her flipping forward.\n214L and 214M are invulnerable on frame 3, and 214H is invulnerable on frame 1. Don't abuse these moves too much, however, as the followups can be easily caught with long pokes, or blown through with DPs or SBAs."
 };
@@ -480,6 +508,8 @@ const mRekka = {
   recovery: '29', 
   onblock: '+2~-10', 
   onhit: '-',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['214', 'm', 'or', '4', 'a'],
   description: "The lunge forward can be cancelling by pressing 5U, Yuel will instead enter her stance.\nThe L and H versions are plus on block and combo on hit.\nThe M and H~M versions can be made safe if spaced\nFlipping back can be used to create space and let Yuel reset to neutral after an approach Yuel can 214L after a 236L on block and the opponent can't hit her out of it. Forcing the opponent to run up and challenge with a low on a read, which in turn loses to her flipping forward.\n214L and 214M are invulnerable on frame 3, and 214H is invulnerable on frame 1. Don't abuse these moves too much, however, as the followups can be easily caught with long pokes, or blown through with DPs or SBAs."
 };
@@ -493,6 +523,8 @@ const hRekka = {
   recovery: '37', 
   onblock: '+4~-8', 
   onhit: 'HKD',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
   description: "The lunge forward can be cancelling by pressing 5U, Yuel will instead enter her stance.\nThe L and H versions are plus on block and combo on hit.\nThe M and H~M versions can be made safe if spaced\nFlipping back can be used to create space and let Yuel reset to neutral after an approach Yuel can 214L after a 236L on block and the opponent can't hit her out of it. Forcing the opponent to run up and challenge with a low on a read, which in turn loses to her flipping forward.\n214L and 214M are invulnerable on frame 3, and 214H is invulnerable on frame 1. Don't abuse these moves too much, however, as the followups can be easily caught with long pokes, or blown through with DPs or SBAs."
 };
@@ -519,6 +551,8 @@ const sba = {
   recovery: '-', 
   onblock: '-13', 
   onhit: 'HKD',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
   description: "Minimum damage: 800\nSimple input (236S) damage: 3000\nSimple input minimum damage: 450\nLoses invincibility after the startup but regains it on hit when the cinematic animation begins to play"
 };
@@ -532,6 +566,8 @@ const ssba = {
   recovery: '-', 
   onblock: '-23', 
   onhit: 'HKD',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
   description: "Vacuums even on whiff, but the cinematic will only play if the opponent is drawn in and hit during the first few moments of the animation. The long animation will catch attempted Evades."
 };
