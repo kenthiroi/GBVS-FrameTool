@@ -118,10 +118,12 @@ const far5H = {
   damage: '1000',
   guard: 'mid',
   startup: '10',
-  active: '5',
-  recovery: '20',
-  onblock: '-9',
-  onhit: '-5',
+  active: '6',
+  recovery: '19',
+  onblock: '-8',
+  onhit: '-4',
+  oncounterhit: '+4',
+  clash: '4',
   motion: ['h'],
   description: "A somewhat strange normal, but not entirely without purpose. Yuel retracts her hurtbox slightly and sticks out a very active, heavy priority hitbox, so it is decent as an anticipatory counterpoke to stuff weaker normals or forward movement. Can kind of be used as an AA but the hitbox got lowered and it is now not as useful for that. Combined with how far forward f5m reaches it can be tough to be ready to whiff punish this button."
 };
@@ -135,8 +137,10 @@ const n2L = {
   startup: '6',
   active: '3',
   recovery: '6',
-  onblock: '2',
-  onhit: '6',
+  onblock: '+2',
+  onhit: '+6',
+  oncounterhit: '+8',
+  clash: '1',
   motion: ['2', 'l'],
   description: "Standard Granblue 2L. Has all of the same linking options and similar frame data to c.L, but hits low and has more range. 2L > f.L is generally a good string for a basic frametrap or punish starter."
 };
@@ -146,10 +150,12 @@ const n2M = {
   damage: '700',
   guard: 'mid',
   startup: '7',
-  active: '5',
-  recovery: '9',
-  onblock: '1',
-  onhit: '5',
+  active: '3',
+  recovery: '15',
+  onblock: '-3',
+  onhit: '+1',
+  oncounterhit: '+5',
+  clash: '3',
   motion: ['2', 'm'],
   description: "Frame traps from f.L and even combos on counter hit.\nThe crouching complement to f.M. While it doesn't sport some of that normal's better qualities, its speed and deceptive range make it strong for neutral and punishing in its own right. Good to use as a supplement if people are trying to hit you out of f.M with crouching buttons."
 };
@@ -158,11 +164,13 @@ const n2H = {
   altName: '2H',
   damage: '1000',
   guard: 'mid',
-  startup: '10',
-  active: '6',
+  startup: '11',
+  active: '3,3',
   recovery: '24',
-  onblock: '-13',
-  onhit: '-9',
+  onblock: '-10',
+  onhit: '-6',
+  oncounterhit: '-6',
+  clash: '4',
   motion: ['2', 'h'],
   description: "Good hitbox even though the animation can look strange. Since its 2 hits, the counter hit property does not transfer from hit 1 to hit 2. Counter hit combos need the first hit to be cancelled. For example via 5U into Yugetsu. Regardless, non-counterhit 2H (both hits) combos into 22H. This means Yuel does not need a counterhit to do a damaging anti air combo."
 };
@@ -172,10 +180,12 @@ const n2U = {
   damage: '700',
   guard: 'mid',
   startup: '7',
-  active: '6',
-  recovery: '21',
+  active: '3',
+  recovery: '24',
   onblock: '-12',
-  onhit: 'HKD',
+  onhit: 'HKD (+43)',
+  oncounterhit: 'HKD (+47)',
+  clash: '3',
   motion: ['2', 'u'],
   description: "Special cancellable\nYuel's highest range low outside of stance, pretty solid at beating people walking around thanks to Yuel's speed."
 };
@@ -191,6 +201,8 @@ const jL = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['l'],
   description: "Active until landing.\nYuel's biggest air normal in terms of the X axis, making it her go-to air-to-air normal. Since it's Yuel's only non multi hit aerial it's the only one with a chance of comboing on counter hit off an air to air."
 };
@@ -200,10 +212,12 @@ const jM = {
   damage: '550', 
   guard: 'high', 
   startup: '6', 
-  active: '-', 
+  active: '3,3', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['m'],
   description: "Only the first hit is an overhead.\nCan be crushed by lights though it's a rare occurance."
 };
@@ -212,11 +226,13 @@ const jH = {
   altName: 'jH', 
   damage: '800', 
   guard: 'high', 
-  startup: '7', 
-  active: '-', 
+  startup: '8', 
+  active: '4(3)3', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['h'],
   description: "Unique for a j.H, it can hit crossup.\nBoth hits are overheads.\nCan be crushed by lights though it's a rare occurance."
 };
@@ -225,11 +241,13 @@ const jU = {
   altName: 'jU', 
   damage: '700', 
   guard: 'high', 
-  startup: '12', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-', 
-  onhit: '-',
+  startup: '19', 
+  active: '3,3,3...->1', 
+  recovery: '14', 
+  onblock: '-2', 
+  onhit: '+2',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['u'],
   description: "Hits multiple times on the way down.\nCan pass behind opponent during the roll but will not need to be blocked crossup.\nNot a high.\nRecovery frame count starts when Yuel touches the ground.\nMOSTLY safe and plus on hit. Sometimes the very last hit can miss due to spacing making her punishable. Anti-air bait that beats regularly timed 2Hs but not DPs. Does not knock down, but is safe on block and plus on hit."
 };
@@ -245,7 +263,7 @@ const stance = {
   onblock: '-', 
   onhit: '-',
   motion: ['u'],
-  description: "Stance changes all of Yuel's normals and movement options. She retains access to her throws, though they perform an auto-dash before performing the throw (see Throw section).\nIf struck while in stance, Yuel does an automatic counter (Eye of the Sparrow).\nCounters mids (referred to in game as highs).\nLoses to projectiles despite projectiles being classified as mids.\nLoses to lows, overheads, and throws.\nYuel cannot block during stance, but can perform Evade. She cannot perform Cross Over.\nYuel cannot walk forwards nor backwards during stance.\nYuel cannot run during stance. Run and backdash are replaced with a unique forward and backwards hop.\nBeats standard reversals such as DP\ns and strike-supers, but will not protect against projectile based supers such as GBVS Gran Icon.png Gran's Catastrophe. This can be used to encourage enemies to mash low attacks and allow you to structure frame traps with her stance buttons."
+  description: "Completes stance animation at 21F. Stance changes all of Yuel's normals and movement options. She retains access to her throws, though they perform an auto-dash before performing the throw (see Throw section).\nIf struck while in stance, Yuel does an automatic counter (Eye of the Sparrow).\nCounters mids (referred to in game as highs).\nLoses to projectiles despite projectiles being classified as mids.\nLoses to lows, overheads, and throws.\nYuel cannot block during stance, but can perform Evade. She cannot perform Cross Over.\nYuel cannot walk forwards nor backwards during stance.\nYuel cannot run during stance. Run and backdash are replaced with a unique forward and backwards hop.\nBeats standard reversals such as DP\ns and strike-supers, but will not protect against projectile based supers such as GBVS Gran Icon.png Gran's Catastrophe. This can be used to encourage enemies to mash low attacks and allow you to structure frame traps with her stance buttons."
 }
 const lv1U = { 
   moveName: 'Power Raise Lv1', 
@@ -318,10 +336,12 @@ const groundThrow = {
   damage: '1500', 
   guard: 'throw', 
   startup: '7', 
-  active: '-', 
-  recovery: '-', 
+  active: '3', 
+  recovery: '31', 
   onblock: '-', 
-  onhit: '-',
+  onhit: 'Late (+24), Forward (+44), Back(+34)',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
   description: "Standard throw. Third Dance version performs an automatic stance hop forward before performing the throw, making sure you're always close to the opponent first. This increases the startup significantly, however.\nForward throw allows for a DP-safe meaty low in the corner: LM~U > td.5M (whiff) > td.2M\nAlternatively, you can set up a safejump with microwalk jump j.H\nYou can press 5U during the throw animation and enter/leave stance."
 };
@@ -333,7 +353,9 @@ const airThrow = {
   active: '-', 
   recovery: '-', 
   onblock: '-', 
-  onhit: '-',
+  onhit: '+48',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
   description: ""
 };
