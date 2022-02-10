@@ -660,6 +660,7 @@ export const yuelInfo = [
   lRekka,
   mRekka,
   hRekka,
+  hMRekka,
   lFlame,
   mFlame,
   hFlame,
