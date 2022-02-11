@@ -8,7 +8,7 @@ const { narmayaInfo } = require("./data/narmaya");
 const { percivalInfo } = require("./data/percival");
 const { viraInfo } = require("./data/vira");
 const { modalPopulate } = require("./scripts/modal_populate");
-const { characterSelectEventListeners } = require("./scripts/event_listeners");
+const { characterSelectEventListeners, moveSelectEventListeners } = require("./scripts/event_listeners");
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -83,43 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("sandwich").style.width = "0";
       document.getElementById("char-body").style.marginLeft = "0";
     }
-    if (event.target.getAttribute("class") === "cell"){ //if a move line was clicked
-      const moveIdx = event.target.parentNode.dataset.moveid;
-      const charName = event.target.parentNode.dataset.char;
-      if (moveIdx !== "sticky-row" && moveIdx){
-        movemodal.style.display = "block";
-        if (charName === 'Gran'){
-          modalPopulate(granInfo[moveIdx]);
-        }
-        if (charName === 'Katalina'){
-          modalPopulate(katInfo[moveIdx]);
-        }
-        if (charName === 'Lancelot'){
-          modalPopulate(lanceInfo[moveIdx]);
-        }
-        if (charName === 'ABel'){
-          modalPopulate(aBelInfo[moveIdx]);
-        }
-        if (charName === 'Belial'){
-          modalPopulate(belInfo[moveIdx]);
-        }
-        if (charName === 'Charlotta'){
-          modalPopulate(charInfo[moveIdx]);
-        }
-        if (charName === 'Narmaya'){
-          modalPopulate(narmInfo[moveIdx]);
-        }
-        if (charName === 'Vira'){
-          modalPopulate(viraInfo[moveIdx]);
-        }
-        if (charName === 'Percival'){
-          modalPopulate(percivalInfo[moveIdx]);
-        }
-        if (charName === 'Beelzebub'){
-          modalPopulate(bubzInfo[moveIdx]);
-        }
-      }
-    }
-    // if ()
+    moveSelectEventListeners();
   })
 });
