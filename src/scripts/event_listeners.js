@@ -1,31 +1,30 @@
-const { formPopulate } = require("./scripts/data_populate");
-const { aBelialInfo } = require("./data/abelial");
-const { bubzInfo } = require("./data/beelzebub")
-const { belialInfo } = require("./data/belial");
-const { cagliostroInfo } = require("./data/cagliostro");
-const { charlottaInfo } = require("./data/charlotta");
-const { djeetaInfo } = require("./data/djeeta");
-const { eustaceInfo } = require("./data/eustace");
-const { fastivaInfo } = require("./data/fastiva");
-const { ferryInfo } = require("./data/ferry");
-const { granInfo } = require("./data/gran");
-const { katInfo } = require("./data/katalina");
-const { lanceInfo } = require("./data/lancelot");
-const { lowainInfo } = require("./data/lowain");
-const { meteraInfo } = require("./data/metera");
-const { narmayaInfo } = require("./data/narmaya");
-const { percivalInfo } = require("./data/percival");
-const { sixInfo } = require("./data/six");
-const { sorizInfo } = require("./data/soriz");
-const { unoInfo } = require("./data/uno");
-const { vaseragaInfo } = require("./data/vaseraga");
-const { viraInfo } = require("./data/vira");
-const { yuelInfo } = require("./data/yuel");
-const { zetaInfo } = require("./data/zeta");
-const { zooeyInfo } = require("./data/zooey");
+const { formPopulate } = require("./data_populate");
+const { aBelialInfo } = require("../data/abelial");
+const { bubzInfo } = require("../data/beelzebub")
+const { belialInfo } = require("../data/belial");
+const { cagliostroInfo } = require("../data/cagliostro");
+const { charlottaInfo } = require("../data/charlotta");
+const { djeetaInfo } = require("../data/djeeta");
+const { eustaceInfo } = require("../data/eustace");
+const { fastivaInfo } = require("../data/fastiva");
+const { ferryInfo } = require("../data/ferry");
+const { granInfo } = require("../data/gran");
+const { katInfo } = require("../data/katalina");
+const { lanceInfo } = require("../data/lancelot");
+const { lowainInfo } = require("../data/lowain");
+const { meteraInfo } = require("../data/metera");
+const { narmayaInfo } = require("../data/narmaya");
+const { percivalInfo } = require("../data/percival");
+const { sixInfo } = require("../data/six");
+const { sorizInfo } = require("../data/soriz");
+const { unoInfo } = require("../data/uno");
+const { vaseragaInfo } = require("../data/vaseraga");
+const { viraInfo } = require("../data/vira");
+const { yuelInfo } = require("../data/yuel");
+const { zetaInfo } = require("../data/zeta");
+const { zooeyInfo } = require("../data/zooey");
 
 export function characterSelectEventListeners() {
-  console.log("working");
 
   const abel = document.getElementById('abel-select');
   abel.addEventListener('click', function() { 
@@ -47,7 +46,7 @@ export function characterSelectEventListeners() {
     formPopulate(cagliostroInfo)
   })
   
-  const charlotta = document.getElementById('charlotta-select');
+  const charlotta = document.getElementById('char-select');
   charlotta.addEventListener('click', function() { 
     formPopulate(charlottaInfo) 
   }, false);

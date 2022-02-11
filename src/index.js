@@ -8,11 +8,12 @@ const { narmayaInfo } = require("./data/narmaya");
 const { percivalInfo } = require("./data/percival");
 const { viraInfo } = require("./data/vira");
 const { modalPopulate } = require("./scripts/modal_populate");
+const { characterSelectEventListeners } = require("./scripts/event_listeners");
 
 
 document.addEventListener("DOMContentLoaded", () => {
   // form populate scripts
-
+  characterSelectEventListeners();
 
   // event listeners for sandwich bar
   const sandwichIcon = document.getElementById("sandwich-icon");
