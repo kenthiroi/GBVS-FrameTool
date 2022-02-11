@@ -7,57 +7,11 @@ const { lanceInfo } = require("./data/lancelot");
 const { narmayaInfo } = require("./data/narmaya");
 const { percivalInfo } = require("./data/percival");
 const { viraInfo } = require("./data/vira");
-const { formPopulate } = require("./scripts/data_populate");
 const { modalPopulate } = require("./scripts/modal_populate");
 
 
 document.addEventListener("DOMContentLoaded", () => {
   // form populate scripts
-  const gran = document.getElementById('gran-select');
-  gran.addEventListener('click', function() { 
-    formPopulate(granInfo) 
-  }, false);
-
-  const kat = document.getElementById('kat-select');
-  kat.addEventListener('click', function() { 
-    formPopulate(katInfo) 
-  }, false);
-
-  const lance = document.getElementById('lance-select');
-  lance.addEventListener('click', function() { 
-    formPopulate(lanceInfo) 
-  }, false);
-
-  const abel = document.getElementById('abel-select');
-  abel.addEventListener('click', function() { 
-    formPopulate(aBelialInfo) 
-  }, false);
-
-  const bel = document.getElementById('bel-select');
-  bel.addEventListener('click', function() { 
-    formPopulate(belialInfo) 
-  }, false);
-
-  const char = document.getElementById('char-select');
-  char.addEventListener('click', function() { 
-    formPopulate(charlottaInfo) 
-  }, false);
-
-  const narmaya = document.getElementById('narmaya-select');
-  narmaya.addEventListener('click', function() { 
-    formPopulate(narmayaInfo) 
-  }, false);
-
-  const vira = document.getElementById('vira-select');
-  vira.addEventListener('click', function() { 
-    formPopulate(viraInfo) 
-  }, false);
-
-  const percy = document.getElementById('percy-select');
-  percy.addEventListener('click', function() { 
-    formPopulate(percivalInfo) 
-  }, false);
-
 
 
   // event listeners for sandwich bar

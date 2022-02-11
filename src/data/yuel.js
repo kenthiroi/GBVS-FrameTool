@@ -1,4 +1,4 @@
-// FINAL 
+// MISSING SPECIFIC PARTS FOR YUELS PARRY STANCE
 
 const general = { char: "Yuel", health: '10000', prejump: '4F', backdash: '17F' }
 
