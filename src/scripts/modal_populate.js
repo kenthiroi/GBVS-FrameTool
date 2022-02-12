@@ -11,7 +11,6 @@ export function modalPopulate(moveData) {
   const motion = document.getElementById("motion");
   const description = document.getElementById("description");
 
-  console.log(moveData);
   moveName.textContent = moveData['moveName'];
   altName.textContent = `Common Name: ${moveData['altName']}`;
   damage.textContent = `Damage: \n${moveData['damage']}`;

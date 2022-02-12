@@ -1,15 +1,4 @@
-const { aBelialInfo } = require("./data/abelial");
-const { belialInfo } = require("./data/belial");
-const { charlottaInfo } = require("./data/charlotta");
-const { granInfo } = require("./data/gran");
-const { katInfo } = require("./data/katalina");
-const { lanceInfo } = require("./data/lancelot");
-const { narmayaInfo } = require("./data/narmaya");
-const { percivalInfo } = require("./data/percival");
-const { viraInfo } = require("./data/vira");
-const { modalPopulate } = require("./scripts/modal_populate");
 const { characterSelectEventListeners, moveSelectEventListeners } = require("./scripts/event_listeners");
-
 
 document.addEventListener("DOMContentLoaded", () => {
   // form populate scripts
@@ -27,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("sandwich").style.width = "0";
     document.getElementById("char-body").style.marginLeft = "0";
   })
-
 
   const charselect = document.getElementsByClassName("char-select")[0];
 
