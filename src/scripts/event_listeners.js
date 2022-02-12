@@ -151,59 +151,85 @@ export function characterSelectEventListeners() {
 export function moveSelectEventListeners() {
   window.addEventListener("click", function(event){
     if (event.target.getAttribute("class") === "cell"){ //if a move line was clicked
+      const movemodal = document.getElementsByClassName("move-modal")[0].parentNode
       const moveIdx = event.target.parentNode.dataset.moveid;
       const charName = event.target.parentNode.dataset.char;
+      // debugger
       if (moveIdx !== "sticky-row" && moveIdx){
         movemodal.style.display = "block";
         switch (charName){
         case ('ABel'):
           modalPopulate(aBelialInfo[moveIdx]);
+          break;
         case ('Beelzebub'):
           modalPopulate(bubzInfo[moveIdx]);
+          break;
         case ('Belial'):
           modalPopulate(belialInfo[moveIdx]);
+          break;
         case ('Cagliostro'):
           modalPopulate(cagliostroInfo[moveIdx]);
+          break;
         case ('Charlotta'):
           modalPopulate(charlottaInfo[moveIdx]);
+          break;
         case ('Djeeta'):
           modalPopulate(djeetaInfo[moveIdx]);
+          break;
         case ('Eustace'):
           modalPopulate(eustaceInfo[moveIdx]);
+          break;
         case ('Ladiva'):
           modalPopulate(fastivaInfo[moveIdx]);
+          break;
         case ('Ferry'):
           modalPopulate(ferryInfo[moveIdx]);
+          break;
         case ('Gran'):
           modalPopulate(granInfo[moveIdx]);
+          break;
         case ('Katalina'):
           modalPopulate(katInfo[moveIdx]);
+          break;
         case ('Lancelot'):
           modalPopulate(lanceInfo[moveIdx]);
+          break;
         case ('Lowain'):
           modalPopulate(lowainInfo[moveIdx]);
+          break;
         case ('Metera'):
           modalPopulate(meteraInfo[moveIdx]);
+          break;
         case ('Narmaya'):
-          modalPopulate(narmayaInfo[moveIdx]);  
+          modalPopulate(narmayaInfo[moveIdx]);
+          break;
         case ('Percival'):
           modalPopulate(percivalInfo[moveIdx]);
+          break;
         case ('Seox'):
           modalPopulate(sixInfo[moveIdx]);
+          break;
         case ('Soriz'):
           modalPopulate(sorizInfo[moveIdx]);
+          break;
         case ('Uno'):
           modalPopulate(unoInfo[moveIdx]);
+          break;
         case ('Vaseraga'):
           modalPopulate(vaseragaInfo[moveIdx]);
+          break;
         case ('Vira'):
           modalPopulate(viraInfo[moveIdx]);
+          break;
         case ('Yuel'):
           modalPopulate(yuelInfo[moveIdx]);
+          break;
         case ('Zeta'):
           modalPopulate(zetaInfo[moveIdx]);
+          break;
         case ('Zooey'):
           modalPopulate(zooeyInfo[moveIdx]);
+          break;
       }
     }
   }

@@ -558,7 +558,7 @@ const lFlame = {
   onhit: '+1',
   oncounterhit: '+5',
   clash: '3',
-  motion: ['22', 'l', 'or', '2', 'a'],
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
   description: "Pressing U will transition Yuel to Third Dance during the recovery.\nLots of active frames, making it good as a meaty against characters without meterless reversals.\n22L will frame trap from full autocombo, but it's only +5 on counter hit and will put you just outside of c.L's activation range, meaning your reward for hitting it on a standing opponent is minimal, and you'll lose your turn if it's blocked. It also frame traps from 2H(1), which does leave you close enough for a c.L combo, but only at point blank range."
 };
 const mFlame = {
@@ -573,7 +573,7 @@ const mFlame = {
   onhit: '+9',
   oncounterhit: '+13',
   clash: '3',
-  motion: ['22', 'm', 'or', '2', 'a', 'm'],
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
   description: "Pressing U will transition Yuel to Third Dance during the recovery.\nLots of active frames, making it good as a meaty against characters without meterless reversals.\n22M is the slowest but most advantageous version. It will never frame trap, but because Yuel moves forward during its startup, it can be used as a disrespectful pressure extension once your opponent starts respecting your actual frame traps. If your opponent somehow gets hit by this, you can follow up with a c.H combo."
 };
 const hFlame = {
@@ -588,7 +588,7 @@ const hFlame = {
   onhit: '+5',
   oncounterhit: '+9',
   clash: '3',
-  motion: ['22', 'h', 'or', '2', 'a', 'h'],
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
   description: "Pressing U will transition Yuel to Third Dance during the recovery.\nLots of active frames, making it good as a meaty against characters without meterless reversals.\n22H frame traps from c.H and grants a c.H combo on CH. If your opponent doesn't mash, you can continue pressure due to it being advantageous on block. In addition, it will always combo from an air hit of 2H, making it useful for anti-air combos and certain punishes."
 };
 

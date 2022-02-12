@@ -14,6 +14,7 @@ const { characterSelectEventListeners, moveSelectEventListeners } = require("./s
 document.addEventListener("DOMContentLoaded", () => {
   // form populate scripts
   characterSelectEventListeners();
+  moveSelectEventListeners();
 
   // event listeners for sandwich bar
   const sandwichIcon = document.getElementById("sandwich-icon");
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   openCSS.addEventListener("click", function(){
     charselect.style.display = "block";
   });
-
+  
   glossaryBtn.addEventListener("click", function(){
     homeDiv.style.display = "none";
     charselect.style.display = "none";
@@ -63,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("char-body").style.marginLeft = "0";
   });
 
-  const movemodal = document.getElementsByClassName("move-modal")[0].parentNode
   const charIcons = document.getElementsByClassName("char");
   const charArr = [...charIcons];
 
@@ -83,6 +83,5 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("sandwich").style.width = "0";
       document.getElementById("char-body").style.marginLeft = "0";
     }
-    moveSelectEventListeners();
   })
 });
