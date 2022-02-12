@@ -3,7 +3,7 @@ const { modalPopulate } = require("./modal_populate");
 const { aBelialInfo } = require("../data/abelial");
 const { bubzInfo } = require("../data/beelzebub")
 const { belialInfo } = require("../data/belial");
-const { cagliostroInfo } = require("../data/cagliostro");
+const { cagInfo } = require("../data/cagliostro");
 const { charlottaInfo } = require("../data/charlotta");
 const { djeetaInfo } = require("../data/djeeta");
 const { eustaceInfo } = require("../data/eustace");
@@ -44,7 +44,7 @@ export function characterSelectEventListeners() {
 
   const cag = document.getElementById('cag-select');
   cag.addEventListener('click', function() {
-    formPopulate(cagliostroInfo)
+    formPopulate(cagInfo)
   })
   
   const charlotta = document.getElementById('char-select');
@@ -168,7 +168,7 @@ export function moveSelectEventListeners() {
           modalPopulate(belialInfo[moveIdx]);
           break;
         case ('Cagliostro'):
-          modalPopulate(cagliostroInfo[moveIdx]);
+          modalPopulate(cagInfo[moveIdx]);
           break;
         case ('Charlotta'):
           modalPopulate(charlottaInfo[moveIdx]);
