@@ -251,7 +251,7 @@ footer p{
 }
 
 #char-name {
-  top: 37vw;
+  top: 62vh;
   left: 40px;
   font-size: 10vw;
   font-style: italic;
@@ -384,7 +384,7 @@ footer p{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   grid-template-columns: fit-content(2%) repeat(3, 1fr);
   animation-name: fadeinfromtop;
   animation-duration: 0.2s;
@@ -437,6 +437,7 @@ footer p{
 
 #motion {
   display: flex;
+  height: 30px;
   width: 30px;
   margin-left: 20px;
 }

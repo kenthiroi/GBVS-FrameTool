@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   grid-template-columns: fit-content(2%) repeat(3, 1fr);
   animation-name: fadeinfromtop;
   animation-duration: 0.2s;
@@ -76,6 +76,7 @@
 
 #motion {
   display: flex;
+  height: 30px;
   width: 30px;
   margin-left: 20px;
 }
