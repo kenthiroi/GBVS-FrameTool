@@ -67,6 +67,7 @@ footer {
   height: 200px;
   background-color: black;
   display: flex;
+  position: relative;
 }
 
 footer img{
@@ -230,12 +231,12 @@ footer p{
 }
 
 #char-img {
-  height: 100%;
-  margin-left: -13%;
+  height: 100vh;
+  /* margin-left: -13%; */
 }
 
 #char-info {
-  height: 50vw;
+  /* height: 50vw; */
   animation-name: fadein;
   animation-duration: 0.5s;
   position: relative;
@@ -305,7 +306,8 @@ footer p{
 }
 
 #homepage {
-  position: absolute;
+  position: relative;
+  height: 50vh;
   font-size: calc(14px + 1.2vw);
   z-index: -5;
 }
