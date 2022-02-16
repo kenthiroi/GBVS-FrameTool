@@ -158,7 +158,7 @@ export function moveSelectEventListeners() {
       if (moveIdx !== "sticky-row" && moveIdx){
         movemodal.style.display = "block";
         switch (charName){
-        case ('ABel'):
+        case ('Avatar Belial'):
           modalPopulate(aBelialInfo[moveIdx]);
           break;
         case ('Beelzebub'):
