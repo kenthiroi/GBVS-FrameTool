@@ -168,7 +168,7 @@ footer p{
 
 #char-movelist {
   display: grid;
-  grid-template-columns: fit-content(33%) repeat(7, 1fr);
+  grid-template-columns: fit-content(20%) repeat(9, 1fr);
   font-size: 16px;
   text-align: center;
   background-color: rgb(34, 34, 34, 0.7);

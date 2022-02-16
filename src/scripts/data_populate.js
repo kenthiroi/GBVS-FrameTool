@@ -10,7 +10,7 @@ export function formPopulate(charData) {
   moveList.innerHTML = '';
   
   const stickyLine = document.createElement("Div");
-  stickyLine.innerHTML = '<span class="cell">Move Name</span><span class="cell">Damage</span><span class="cell">Guard Point</span><span class="cell">Startup</span><span class="cell">Active</span><span class="cell">Recovery</span><span class="cell">On Block</span><span class="cell">On Hit</span>';
+  stickyLine.innerHTML = '<span class="cell">Move Name</span><span class="cell">Damage</span><span class="cell">Guard Point</span><span class="cell">Startup</span><span class="cell">Active</span><span class="cell">Recovery</span><span class="cell">On Block</span><span class="cell">On Hit</span><span class="cell">On Counterhit</span><span class="cell">Clash LVL</span>';
   stickyLine.setAttribute("class", "move-row");
   stickyLine.setAttribute("id", "sticky-row");
 
@@ -58,6 +58,16 @@ export function formPopulate(charData) {
     onhit.setAttribute("class", "cell");
     onhit.textContent = charData[i]['onhit'];
     moveLine.appendChild(onhit);
+
+    const oncounterhit = document.createElement("Span");
+    oncounterhit.setAttribute("class", "cell");
+    oncounterhit.textContent = charData[i]['oncounterhit'];
+    moveLine.appendChild(oncounterhit);
+
+    const clashlvl = document.createElement("Span");
+    clashlvl.setAttribute("class", "cell");
+    clashlvl.textContent = charData[i]['clash'];
+    moveLine.appendChild(clashlvl);
 
     moveLine.setAttribute("data-moveid", `${i}`)
     moveLine.setAttribute("data-char", `${charData[0]['char']}`)
