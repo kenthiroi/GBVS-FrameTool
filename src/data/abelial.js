@@ -1,6 +1,6 @@
 // FINAL 
 
-const general = { char: "Belial", health: '10000', prejump: '4F', backdash: '26F' }
+const general = { char: "Avatar Belial", health: '10000', prejump: '4F', backdash: '26F' }
 
 // close normals
 const closeL = {
@@ -249,6 +249,34 @@ const laserBeamCharged = {
   description: "Whiffs against crouching opponents.\nCharged version knocks down on hit.\nThe first of Avatar Belial's three projectiles. Stops opponents from counterzoning due to the beam having negligable travel time. Charging the beam can also catch Rolls during their recovery."
 };
 
+const ABelCancel5U = { 
+  moveName: 'Pact (Neutral)', 
+  altName: '5U Follow Up', 
+  damage: '1500', 
+  guard: 'All', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-11', 
+  onhit: 'KD',
+  motion: ['u'],
+  description: "Usable after any special move connects except for Blind Devotion.\nCosts 500 health upon use.\nAvatar Belial's unique special move follow-ups. They both have different uses but complement his gameplan equally well.\nTeleports in front of the opponent.\nLaunches upwards.\nInvincible during startup and active frames.\nWhile Belial can't get a combo from this follow-up normally, it links into f.M on counterhit. The invincibility allows him to call out mashing and force respect after his special moves, but the health cost also adds to the potential punish if it is blocked. Better to threaten with than to use in most cases."
+};
+
+const ABelCancel8U = { 
+  moveName: 'Pact (Up)', 
+  altName: '8U Follow Up', 
+  damage: '700', 
+  guard: 'All', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+2', 
+  onhit: 'HKD',
+  motion: ['u'],
+  description: "Usable after any special move connects except for Blind Devotion.\nCosts 500 health upon use.\nAvatar Belial's unique special move follow-ups. They both have different uses but complement his gameplan equally well.\nTeleports above the opponent and stomps down.\nForces a hard knockdown on hit.\nAvatar Belial's other follow-up makes for an excellent combo ender. It will always give a hard knockdown on hit, allowing for consistent setplay."
+};
+
 const groundThrow = { 
   moveName: 'Ground Throw', 
   damage: '1500', 
@@ -259,7 +287,7 @@ const groundThrow = {
   onblock: '-', 
   onhit: 'HKD',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Same animation as Belial's.\nAllows for a safejump with j.H anywhere on the screen."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
@@ -290,9 +318,9 @@ const uOverhead = {
 
 // fireballs
 const lFireball = { 
-  moveName: 'L Goetia', 
+  moveName: 'L Rejected Truth', 
   altName: '236L', 
-  damage: '800', 
+  damage: '500, 100×3', 
   guard: 'All', 
   startup: '15', 
   active: '-', 
@@ -300,12 +328,12 @@ const lFireball = {
   onblock: '-10', 
   onhit: '-6',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Belial's projectile. Overall an extremely versatile tool.\nGoes forward and is used like a standard projectile, or to control space by transitioning into Everyone's A Little Crooked."
+  description: "Projectile travels until it hits the opponent, then turns into a three-hit projectile before de-spawning.\nL Version is unsafe at close range, safe at half max range, and plus at max range.\nH Version costs 500 health upon use.\nBelial creates an earthquake that travels around half the screen's length. The H version has enough hitstun to start a combo and enough blockstun to be plus at close range."
 };
 const mFireball = { 
-  moveName: 'M Goetia', 
+  moveName: 'Destructive Delusions', 
   altName: '236M', 
-  damage: '800', 
+  damage: '500, 200, 100×3', 
   guard: 'All', 
   startup: '17', 
   active: '-', 
@@ -313,12 +341,12 @@ const mFireball = {
   onblock: '-10', 
   onhit: '-6',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Belial's projectile. Overall an extremely versatile tool.\nGoes upward at about a 40 degree angle from Belial. Used to control air space occasionally, and sometimes to reset pressure, but never without the follow-up."
+  description: "Belial flings five Goetia projectiles in an arc. The bottom projectile does the most damage, followed by the second lowest, then the rest deal 100. Excellent complement to 236L/H as it covers a massive amount of air space."
 };
 const hFireball = { 
-  moveName: 'H Goetia', 
+  moveName: 'H Rejected Truth', 
   altName: '236H', 
-  damage: '300x3', 
+  damage: '600, 100×4', 
   guard: 'All', 
   startup: '15', 
   active: '-', 
@@ -326,7 +354,7 @@ const hFireball = {
   onblock: '+2', 
   onhit: '+6',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "Belial's projectile. Overall an extremely versatile tool.\nFollows the same trajectory as 236L, and has three hits instead of one. What makes it unique to the other two versions is its ability to transition into Everyone's A Little Crooked even on hit and block, making it an extremely strong tool for midscreen combos and extending pressure from a frame trap. The H followup only combos on crouching opponents."
+  description: "Projectile travels until it hits the opponent, then turns into a three-hit projectile before de-spawning.\nL Version is unsafe at close range, safe at half max range, and plus at max range.\nH Version costs 500 health upon use.\nBelial creates an earthquake that travels around half the screen's length. The H version has enough hitstun to start a combo and enough blockstun to be plus at close range."
 };
 
 const lFireballFollowUp = {
@@ -373,151 +401,270 @@ const hFireballFollowUp = {
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Notoria', 
+  moveName: 'L Blind Devotion', 
   altName: '623L', 
-  damage: '700, 300', 
+  damage: '1000',
   guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
-  onblock: '-20', 
+  onblock: '-23', 
   onhit: 'KD',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Belial's reversal. One of the best DPs in the game. A standard DP with less air time than others, giving characters who thrive on air combos worse punishes."
+  description: "Air blockable and quite unsafe.\nPray this counterhits, otherwise it's gonna hurt Belial a lot."  
 };
 const mUppercut = { 
-  moveName: 'M Notoria', 
+  moveName: 'M Blind Devotion', 
   altName: '623M', 
-  damage: '1000, 500', 
-  guard: 'All', 
-  startup: '38', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '+2', 
-  onhit: 'KD',
-  motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Belial's reversal. One of the best DPs in the game. Has no invulnerability and only hits on the way down, but is plus on block. Can be used as a fakeout for people expecting the L version, but don't expect a good player to fall for it, as it can quite easily be interrupted with DP or even 2H on reaction. It can also be meatied to be a maximum of +7 on block while having 11 frames of recovery."
-};
-const hUppercut = { 
-  moveName: 'H Notoria', 
-  altName: '623H', 
-  damage: '600, 300, 500', 
+  damage: '700, 200, 100×4', 
   guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
-  onblock: '-12', 
+  onblock: '-24', 
+  onhit: 'KD',
+  motion: ['623', 'm', 'or', '6', 'a', 'm'],
+  description: "First hit is air unblockable.\nPretty good last-minute anti-air, but generally outclassed in reward by his 2H."
+};
+const hUppercut = { 
+  moveName: 'H Blind Devotion', 
+  altName: '623H', 
+  damage: '700, 200, 50×4, 800', 
+  guard: 'All', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-24', 
   onhit: 'HKD',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Belial's reversal. One of the best DPs in the game. Reintroduces the invulnerability and adds a follow-up hit for significantly stronger okizeme and damage, making it a strong combo ender in many situations."
+  description: "Entirely air unblockable.\nCosts 500 health upon use.\nHigh damage and air unblockable throughout make this Belial's most consistent anti-air. It does not come cheap though, as it costs health and is very unsafe on block."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Asmodeus', 
+  moveName: 'L Carnal Passion', 
   altName: '214L', 
-  damage: '700, 500', 
+  damage: '400', 
   guard: 'All', 
-  startup: '15', 
+  startup: '14', 
   active: '-', 
   recovery: '-', 
   onblock: '-6', 
   onhit: 'KD',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "An advancing strike. If it hits from close range, it will grab the opponent and do more damage. A combo ender that sees usage when you're too far for 236H/623H to hit, or if those specials are on cooldown. Can also be used as a frame trap, but it'll lose you your turn."
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders\nFast and combos from 2M.\nStandard combo ender special. Provides a good enough knockdown, but really shines in its corner carry."
 };
 const mRekka = { 
-  moveName: 'M Asmodeus', 
+  moveName: 'M Carnal Passion', 
   altName: '214M', 
-  damage: '700, 700', 
+  damage: '600', 
   guard: 'All', 
-  startup: '21', 
+  startup: '22', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: 'KD',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "An advancing strike. If it hits from close range, it will grab the opponent and do more damage. A lso a combo ender, but can only be comboed into from c.H or full autocombo on crouching hit."
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders.\nMuch larger range at the cost of speed.\nLow crushes.\nWhile this version generally cannot be combo'd into without a counter hit, its extended range and low crush make it a better neutral tool. Avatar Belial can also catch people trying to punish it with Pact."
 };
 const hRekka = { 
-  moveName: 'H Asmodeus', 
+  moveName: 'H Carnal Passion', 
   altName: '214H', 
-  damage: '700, 600', 
+  damage: '500', 
   guard: 'All', 
-  startup: '14', 
+  startup: '16', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: 'HKD',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "An advancing strike. If it hits from close range, it will grab the opponent and do more damage. Launches the opponent and combos from basically any normal, leading to massive damage in corner. Post-236H nerf it's undoubtedly your best corner combo starter."
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders.\nCauses follow-up 2 to wallbounce.\nCosts 500 health upon use.\nCorner combo launcher. It's generally a better idea to use other specials first but Belial can still get basic knockdowns without this special using 623M or 623H."
 };
 
-const lCmdThrow = {
-  moveName: "L Vassago",
-  altName: '632146L',
-  damage: '2000',
-  guard: 'Throw',
-  startup: '35',
+const rekka2 = { 
+  moveName: 'Carnal Passion Follow Up', 
+  altName: '214X > 4X', 
+  damage: '400', 
+  guard: 'All', 
+  startup: '14', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-8', 
+  onhit: 'KD',
+  motion: ['214', 'l', 'or', '2', 'a'],
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders."
+};
+
+const rekka3 = { 
+  moveName: 'Carnal Passion Ender', 
+  altName: '214X > 4X > 4X', 
+  damage: '700', 
+  guard: 'All', 
+  startup: '14', 
+  active: '-',
+  recovery: '-', 
+  onblock: '-16', 
+  onhit: 'KD',
+  motion: ['214', 'l', 'or', '2', 'a'],
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders."
+};
+
+const lHop = {
+  moveName: "L Wings Bestowed",
+  altName: '22L',
+  damage: '-',
+  guard: '-',
+  startup: '16',
   active: '-', 
   recovery: '-', 
   onblock: '-', 
-  onhit: 'HKD',
-  description: "A forward walk that ends in a command throw. Moves a short distance, but won't activate until Belial has walked its full length."
+  onhit: '-',
+  description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
-const mCmdThrow = {
-  moveName: "M Vassago",
-  altName: '632146M',
+const mHop = {
+  moveName: "M Wings Bestowed",
+  altName: '22M',
+  damage: '-',
+  guard: '-',
+  startup: '23',
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
+}
+
+const hHop = {
+  moveName: "H Wings Bestowed",
+  altName: '22H',
+  damage: '-',
+  guard: '-',
+  startup: '13',
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  description: "Costs 500 health\nBelial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
+}
+
+const stolas = {
+  moveName: 'Stolas',
+  altName: '22X -> L',
+  damage: '700',
+  guard: '-',
+  startup: '15',
+  active: '-',
+  recovery: '-',
+  onblock: '+2/+4(Crouch)',
+  onhit: '+3',
+  description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
+}
+
+const beleth = {
+  moveName: 'Beleth',
+  altName: '22X -> M',
+  damage: '600, 100x5',
+  guard: '-',
+  startup: '21',
+  active: '-',
+  recovery: '-',
+  onblock: '+2',
+  onhit: 'KD',
+  description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
+}
+
+const lBarbatos = {
+  moveName: 'L Barbatos',
+  altName: '22L -> H',
+  damage: '2000',
+  guard: 'Throw',
+  startup: '31',
+  active: '-',
+  recovery: '-',
+  onblock: '-',
+  onhit: 'HKD',
+  description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
+}
+
+const mBarbatos = {
+  moveName: 'M Barbatos',
+  altName: '22M -> H',
   damage: '2500',
   guard: 'Throw',
-  startup: '53',
-  active: '-', 
-  recovery: '-', 
-  onblock: '-', 
+  startup: '31',
+  active: '-',
+  recovery: '-',
+  onblock: '-',
   onhit: 'HKD',
-  description: "A forward walk that ends in a command throw. Moves further. You probably won't use this at all due to its absurd startup."
+  description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
 }
 
-const hCmdThrow = {
-  moveName: "H Vassago",
-  altName: '632146H',
+const hBarbatos = {
+  moveName: 'H Barbatos',
+  altName: '22H -> H',
   damage: '2000',
   guard: 'Throw',
-  startup: '26',
-  active: '-', 
-  recovery: '-', 
-  onblock: '-', 
+  startup: '-',
+  active: '-',
+  recovery: '-',
+  onblock: '-',
   onhit: 'HKD',
-  description: "A forward walk that ends in a command throw. Will automatically activate once Belial is close, making it by far the most practical version, despite the EX flash being an additional telegraph."
+  description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
+}
+
+const airLaser = {
+  moveName: 'Habakkuk (Midair)',
+  altName: '22X -> U',
+  damage: '1000',
+  guard: '-',
+  startup: '27',
+  active: '-',
+  recovery: '-',
+  onblock: '-4',
+  onhit: 'KD',
+  description: 'Uncharged version has a small hitbox.\nCharged version sweeps the screen.\nAvatar Belials long-range option while in Wings Bestowed. Knocks down on hit and deals respectable damage.'
+}
+
+const airLaserCharged = {
+  moveName: 'Habakkuk Charged (Midair)',
+  altName: '22X -> U',
+  damage: '1100',
+  guard: '-',
+  startup: '27',
+  active: '-',
+  recovery: '-',
+  onblock: '-9',
+  onhit: 'KD',
+  description: 'Uncharged version has a small hitbox.\nCharged version sweeps the screen.\nAvatar Belials long-range option while in Wings Bestowed. Knocks down on hit and deals respectable damage.'
 }
 
 // skybound art
 const sba = { 
-  moveName: 'Legemeton', 
+  moveName: 'Diafthora', 
   altName: '236236H', 
-  damage: '2500-3500', 
+  damage: '3200', 
   guard: 'All', 
-  startup: '8+5', 
+  startup: '-', 
   active: '-', 
   recovery: '-', 
-  onblock: '-19', 
+  onblock: '-', 
   onhit: 'HKD',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "An invulnerable move that strikes first, then dashes forward with another strike, so it can be used against distant enemies too. The gap between the two hits is just long enough that if they input 4G during the flash, the second hit'll catch its recovery.\nAbsurdly short range for full damage if you use the simple input, so try not to do that."
+  description: "Belial performs a rising attack, followed by a downwards lunge."
 };
 const ssba = { 
-  moveName: 'Anagenesis', 
+  moveName: 'Wild Sin', 
   altName: '236236U', 
   damage: '3500-4500', 
-  guard: 'All', 
-  startup: '8+5', 
+  guard: 'Throw/All', 
+  startup: '13', 
   active: '-', 
   recovery: '-', 
   onblock: '-29', 
   onhit: 'HKD',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Invulnerable. Kicks the enemy into the air, then finishes them off with Anagenesis. Useful for close combos, or to interrupt/punish the enemy."
+  description: "Belial's invincible command throw super. Can be combo'd into like a strike and turns into a projectile if the grab portion whiffs."
 };
 
 
@@ -541,6 +688,8 @@ export const belialInfo = [
   jU,
   laserBeam,
   laserBeamCharged,
+  ABelCancel5U,
+  ABelCancel8U,
   groundThrow,
   airThrow,
   uOverhead,
@@ -556,9 +705,16 @@ export const belialInfo = [
   lRekka,
   mRekka,
   hRekka,
-  lCmdThrow,
-  mCmdThrow,
-  hCmdThrow,
+  rekka2,
+  rekka3,
+  lBarbatos,
+  mBarbatos,
+  hBarbatos,
+  lHop,
+  mHop,
+  hHop,
+  airLaser,
+  airLaserCharged,
   sba,
   ssba
 ]
