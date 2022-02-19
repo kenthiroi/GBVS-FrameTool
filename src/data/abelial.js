@@ -13,6 +13,8 @@ const closeL = {
   recovery: '6',
   onblock: '+2',
   onhit: '+6',
+  oncounterhit: '+8',
+  clash: '1',
   motion: ['l'],
   description: "+2 on block, excellent for pressure.\nLinks into c.M on hit.\nBelial's main pressure normal alongside 2L."
 };
@@ -26,6 +28,8 @@ const closeM = {
   recovery: '12',
   onblock: '0',
   onhit: '+4',
+  oncounterhit: '+8',
+  clash: '3',
   motion: ['m'],
   description: "Links into 2L and c.L on crouching hit.\nLinks into c.H on counterhit."  
 };
@@ -34,11 +38,13 @@ const closeH = {
   altName: 'cH',
   damage: '700,500',
   guard: 'All',
-  startup: '9',
-  active: '5',
-  recovery: '19',
-  onblock: '-5',
-  onhit: '-1',
+  startup: '8',
+  active: '2,4',
+  recovery: '18',
+  onblock: '-3',
+  onhit: '+1',
+  oncounterhit: '+1',
+  clash: '5',
   motion: ['h'],
   description: "Two hits means counterhit links are limited.\nAvatar Belial's highest damage punish starter."
 };
@@ -49,11 +55,13 @@ const auto1 = {
   altName: 'cXX',
   damage: '350',
   guard: 'All',
-  startup: '-',
-  active: '-',
-  recovery: '-',
+  startup: '9',
+  active: '3',
+  recovery: '15',
   onblock: '-3',
   onhit: '+1',
+  oncounterhit: '+5',
+  clash: '3',
   motion: ['l', 'l'],
   description: "Standard combo filler. Be careful with this on block as the last hit is punishable unlike other autocombos."
 };
@@ -62,11 +70,13 @@ const auto2 = {
   altName: 'cXXX',
   damage: '350',
   guard: 'All',
-  startup: '-',
-  active: '-',
-  recovery: '-',
-  onblock: '-5',
+  startup: '9',
+  active: '3',
+  recovery: '18',
+  onblock: '-4',
   onhit: '0',
+  oncounterhit: '+8',
+  clash: '4',
   motion: ['l', 'l', 'l'],
   description: "Standard combo filler. Be careful with this on block as the last hit is punishable unlike other autocombos."
 };
@@ -82,6 +92,8 @@ const far5L = {
   recovery: '12',
   onblock: '-4',
   onhit: '0',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['l'],
   description: "Belial's fastest button to stop people from running in on him. Always links out of 2L and c.L but should only really be used if no other options work. Also functions as a frame trap, but will lose to 5-frame normals if used after 2L."
 };
@@ -90,11 +102,13 @@ const far5M = {
   altName: 'f5M',
   damage: '300, 500',
   guard: 'All',
-  startup: '6(8)',
-  active: '5',
-  recovery: '14',
-  onblock: '-2',
-  onhit: '+2',
+  startup: '7',
+  active: '1,3',
+  recovery: '18',
+  onblock: '-6',
+  onhit: '-2',
+  oncounterhit: '-2',
+  clash: '3',
   motion: ['m'],
   description: "Two-hit far medium. Unsafe on block unlike normal Belial's version of the move."
 };
@@ -104,10 +118,12 @@ const far5H = {
   damage: '1000',
   guard: 'All',
   startup: '9',
-  active: '2,X',
-  recovery: '10',
-  onblock: '-5',
-  onhit: '-1',
+  active: '4',
+  recovery: '22',
+  onblock: '-9',
+  onhit: '-5',
+  oncounterhit: '+3',
+  clash: '4',
   motion: ['h'],
   description: "Shorter than it looks.\nAvatar Belial's longest range poke next to 2U. Always combos into 214L."
 };
@@ -120,9 +136,11 @@ const n2L = {
   guard: 'All',
   startup: '5',
   active: '3',
-  recovery: '6',
+  recovery: '8',
   onblock: '0',
-  onhit: '+6',
+  onhit: '+4',
+  oncounterhit: '+6',
+  clash: '1',
   motion: ['2', 'l'],
   description: "Only 0 on block, use c.L when possible.\nAvatar Belial's version of a mid jab. Has some issues frame trapping due to being less plus than average, but it is a 5-frame crouching jab."
 };
@@ -131,11 +149,13 @@ const n2M = {
   altName: '2M',
   damage: '700',
   guard: 'Low',
-  startup: '7',
-  active: '3',
-  recovery: '11',
-  onblock: '+1',
-  onhit: '+5',
+  startup: '6',
+  active: '5',
+  recovery: '13',
+  onblock: '-3',
+  onhit: 'KD',
+  oncounterhit: 'KD(+6)',
+  clash: '2',
   motion: ['2', 'm'],
   description: "Knocks opponent down on hit.\nAvatar Belial's fastest low at 6 frames. Does not combo into anything but special moves due to its knockdown properties and only consistently combos into 214L."
 };
@@ -144,11 +164,13 @@ const n2H = {
   altName: '2H',
   damage: '1000',
   guard: 'All',
-  startup: '10',
-  active: '6',
+  startup: '11',
+  active: '6[3,3]',
   recovery: '23',
   onblock: '-12',
   onhit: '-8',
+  oncounterhit: '0',
+  clash: '4',
   motion: ['2', 'h'],
   description: "Avatar Belial's highest reward anti-air."
 };
@@ -161,7 +183,9 @@ const n2U = {
   active: '6',
   recovery: '20',
   onblock: '-11',
-  onhit: 'HKD',
+  onhit: 'HKD(+44)',
+  oncounterhit: 'HKD(+48)',
+  clash: '3',
   motion: ['2', 'u'],
   description: "Hard knockdown on hit."
 };
@@ -177,6 +201,8 @@ const jL = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['l'],
   description: "Active until landing.\nHits entirely below and in front of Avatar Belial, making it a poor air-to-air option."
 };
@@ -186,10 +212,12 @@ const jM = {
   damage: '550', 
   guard: 'High', 
   startup: '7', 
-  active: '-', 
+  active: '6[2,4]', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['m'],
   description: "Early active frames can cross up.\nAvatar Belial's longest range air normal and the most useful if you don't know which side he'll land on."
 };
@@ -198,11 +226,13 @@ const jH = {
   altName: 'jH', 
   damage: '700', 
   guard: 'High', 
-  startup: '10', 
-  active: '-', 
+  startup: '9', 
+  active: '6', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '3',
   motion: ['h'],
   description: "Avatar Belial's biggest jump-in."
 };
@@ -211,11 +241,13 @@ const jU = {
   altName: 'jU', 
   damage: '900', 
   guard: 'All', 
-  startup: '23', 
+  startup: '20', 
   active: '-', 
-  recovery: '-', 
+  recovery: '21', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['u'],
   description: "Sends Belial downwards at a 40° angle.\nBounces off opponent on hit or block.\nAvatar Belial's divekick."
 };
@@ -227,10 +259,12 @@ const laserBeam = {
   damage: '700', 
   guard: 'All', 
   startup: '28', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '+2', 
+  active: '2', 
+  recovery: '26', 
+  onblock: '+4', 
   onhit: '+8',
+  oncounterhit: '+12',
+  clash: '-',
   motion: ['u'],
   description: "Whiffs against crouching opponents.\nCharged version knocks down on hit.\nThe first of Avatar Belial's three projectiles. Stops opponents from counterzoning due to the beam having negligable travel time. Charging the beam can also catch Rolls during their recovery."
 };
@@ -241,10 +275,12 @@ const laserBeamCharged = {
   damage: '700', 
   guard: 'All', 
   startup: '49', 
-  active: '-', 
-  recovery: '-', 
+  active: '2', 
+  recovery: '14', 
   onblock: '+10', 
   onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '-',
   motion: ['u'],
   description: "Whiffs against crouching opponents.\nCharged version knocks down on hit.\nThe first of Avatar Belial's three projectiles. Stops opponents from counterzoning due to the beam having negligable travel time. Charging the beam can also catch Rolls during their recovery."
 };
