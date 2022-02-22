@@ -563,7 +563,7 @@ const lHop = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
-  motion: ['2', '2', 'l'],
+  motion: ['2', '2', 'l', 'or', '2', 's'],
   description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -579,6 +579,7 @@ const mHop = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'm', 's'],
   description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -594,6 +595,7 @@ const hHop = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'h', 's'],
   description: "Costs 500 health\nBelial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -609,6 +611,7 @@ const lStolas = {
   onhit: '+2 -> +3',
   oncounterhit: 'KD',
   clash: '3',
+  motion: ['2', '2', 'l', 'l'],
   description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
 }
 
@@ -624,6 +627,7 @@ const mStolas = {
   onhit: '+3 -> +4',
   oncounterhit: 'KD',
   clash: '3',
+  motion: ['2', '2', 'm', 'l'],
   description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
 }
 
@@ -639,21 +643,55 @@ const hStolas = {
   onhit: '+2 -> +3',
   oncounterhit: 'HKD(+55)',
   clash: '3',
+  motion: ['2', '2', 'h', 'l'],
   description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
 }
 
-const beleth = {
+const lBeleth = {
   moveName: 'Beleth',
-  altName: '22X -> M',
+  altName: '22L -> M',
   damage: '600, 100x5',
   guard: '-',
   startup: '21',
-  active: '-',
-  recovery: '-',
+  active: '8 -> 10',
+  recovery: '11',
   onblock: '+2',
   onhit: 'KD',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: 'KD',
+  clash: '2',
+  motion: ['2', '2', 'l', 'm'],
+  description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
+}
+
+const mBeleth = {
+  moveName: 'Beleth',
+  altName: '22M -> M',
+  damage: '600, 100x5',
+  guard: '-',
+  startup: '21',
+  active: '8 -> 12',
+  recovery: '11',
+  onblock: '+2',
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '2',
+  motion: ['2', '2', 'm', 'm'],
+  description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
+}
+
+const hBeleth = {
+  moveName: 'Beleth',
+  altName: '22H -> M',
+  damage: '600, 100x5',
+  guard: '-',
+  startup: '21',
+  active: '8 -> 13',
+  recovery: '11',
+  onblock: '+2',
+  onhit: 'HKD (+60)',
+  oncounterhit: 'HKD (+60)',
+  clash: '2',
+  motion: ['2', '2', 'h', 'm'],
   description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
 }
 
@@ -662,13 +700,14 @@ const lBarbatos = {
   altName: '22L -> H',
   damage: '2000',
   guard: 'Throw',
-  startup: '31',
+  startup: '30 -> 31',
   active: '-',
   recovery: '-',
   onblock: '-',
   onhit: 'HKD',
   oncounterhit: '-',
   clash: '-',
+  motion: ['2', '2', 'l', 'h'],
   description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
 }
 
@@ -677,13 +716,14 @@ const mBarbatos = {
   altName: '22M -> H',
   damage: '2500',
   guard: 'Throw',
-  startup: '31',
+  startup: '29 -> 33',
   active: '-',
   recovery: '-',
   onblock: '-',
   onhit: 'HKD',
   oncounterhit: '-',
   clash: '-',
+  motion: ['2', '2', 'm', 'h'],
   description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
 }
 
@@ -692,13 +732,14 @@ const hBarbatos = {
   altName: '22H -> H',
   damage: '2000',
   guard: 'Throw',
-  startup: '-',
+  startup: '30 -> 35',
   active: '-',
   recovery: '-',
   onblock: '-',
   onhit: 'HKD',
   oncounterhit: '-',
   clash: '-',
+  motion: ['2', '2', 'h', 'h'],
   description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
 }
 
