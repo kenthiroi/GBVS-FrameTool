@@ -290,13 +290,15 @@ const ABelCancel5U = {
   altName: '5U Follow Up', 
   damage: '1500', 
   guard: 'All', 
-  startup: '-', 
-  active: '-', 
-  recovery: '-', 
+  startup: '20?', 
+  active: '3?', 
+  recovery: '27?', 
   onblock: '-11', 
-  onhit: 'KD',
+  onhit: 'KD (+18)',
+  oncounterhit: 'KD',
+  clash: '-',
   motion: ['u'],
-  description: "Usable after any special move connects except for Blind Devotion.\nCosts 500 health upon use.\nAvatar Belial's unique special move follow-ups. They both have different uses but complement his gameplan equally well.\nTeleports in front of the opponent.\nLaunches upwards.\nInvincible during startup and active frames.\nWhile Belial can't get a combo from this follow-up normally, it links into f.M on counterhit. The invincibility allows him to call out mashing and force respect after his special moves, but the health cost also adds to the potential punish if it is blocked. Better to threaten with than to use in most cases."
+  description: "Invincible from 11?~20?. Startup/Active/Recovery are rough estimates.\nUsable after any special move connects except for Blind Devotion.\nCosts 500 health upon use.\nAvatar Belial's unique special move follow-ups. They both have different uses but complement his gameplan equally well.\nTeleports in front of the opponent.\nLaunches upwards.\nInvincible during startup and active frames.\nWhile Belial can't get a combo from this follow-up normally, it links into f.M on counterhit. The invincibility allows him to call out mashing and force respect after his special moves, but the health cost also adds to the potential punish if it is blocked. Better to threaten with than to use in most cases."
 };
 
 const ABelCancel8U = { 
@@ -304,27 +306,47 @@ const ABelCancel8U = {
   altName: '8U Follow Up', 
   damage: '700', 
   guard: 'All', 
-  startup: '-', 
-  active: '-', 
-  recovery: '-', 
+  startup: '37?', 
+  active: '8?', 
+  recovery: '11', 
   onblock: '+2', 
-  onhit: 'HKD',
+  onhit: 'HKD (+35)',
+  oncounterhit: 'HKD (+55)',
+  clash: '3',
   motion: ['u'],
-  description: "Usable after any special move connects except for Blind Devotion.\nCosts 500 health upon use.\nAvatar Belial's unique special move follow-ups. They both have different uses but complement his gameplan equally well.\nTeleports above the opponent and stomps down.\nForces a hard knockdown on hit.\nAvatar Belial's other follow-up makes for an excellent combo ender. It will always give a hard knockdown on hit, allowing for consistent setplay."
+  description: "Invincible from 11?~23, airborne from 24~43? Startup/Active are rough estimates.\nUsable after any special move connects except for Blind Devotion.\nCosts 500 health upon use.\nAvatar Belial's unique special move follow-ups. They both have different uses but complement his gameplan equally well.\nTeleports above the opponent and stomps down.\nForces a hard knockdown on hit.\nAvatar Belial's other follow-up makes for an excellent combo ender. It will always give a hard knockdown on hit, allowing for consistent setplay."
 };
 
 const groundThrow = { 
-  moveName: 'Ground Throw', 
+  moveName: 'Forward Throw', 
   damage: '1500', 
   guard: 'Throw', 
   startup: '7', 
-  active: '-', 
-  recovery: '-', 
+  active: '3', 
+  recovery: '31', 
   onblock: '-', 
-  onhit: 'HKD',
+  onhit: 'HKD (+44), +24 after delay tech',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
   description: "Same animation as Belial's.\nAllows for a safejump with j.H anywhere on the screen."
 };
+
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'Throw', 
+  startup: '7', 
+  active: '3', 
+  recovery: '31', 
+  onblock: '-', 
+  onhit: 'HKD (+38), 24 after delay tech',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['l', 'm', 'or', 'l', 'u'],
+  description: "Same animation as Belial's.\nAllows for a safejump with j.H anywhere on the screen."
+};
+
 const airThrow = { 
   moveName: 'Air Throw', 
   damage: '1500', 
@@ -335,6 +357,8 @@ const airThrow = {
   onblock: '-', 
   onhit: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
+  oncounterhit: '-',
+  clash: '-',
   description: ""
 };
 
@@ -349,6 +373,8 @@ const uOverhead = {
   onblock: '-4', 
   onhit: '+1',
   motion: ['m', 'u'],
+  oncounterhit: '-',
+  clash: '-',
   description: ""
 };
 
@@ -363,6 +389,8 @@ const lFireball = {
   recovery: '-', 
   onblock: '-10', 
   onhit: '-6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'l', 'or', 'a'],
   description: "Projectile travels until it hits the opponent, then turns into a three-hit projectile before de-spawning.\nL Version is unsafe at close range, safe at half max range, and plus at max range.\nH Version costs 500 health upon use.\nBelial creates an earthquake that travels around half the screen's length. The H version has enough hitstun to start a combo and enough blockstun to be plus at close range."
 };
@@ -376,6 +404,8 @@ const mFireball = {
   recovery: '-', 
   onblock: '-10', 
   onhit: '-6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'm', 'or', 'a', 'm'],
   description: "Belial flings five Goetia projectiles in an arc. The bottom projectile does the most damage, followed by the second lowest, then the rest deal 100. Excellent complement to 236L/H as it covers a massive amount of air space."
 };
@@ -389,6 +419,8 @@ const hFireball = {
   recovery: '-', 
   onblock: '+2', 
   onhit: '+6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'h', 'or', 'a', 'h'],
   description: "Projectile travels until it hits the opponent, then turns into a three-hit projectile before de-spawning.\nL Version is unsafe at close range, safe at half max range, and plus at max range.\nH Version costs 500 health upon use.\nBelial creates an earthquake that travels around half the screen's length. The H version has enough hitstun to start a combo and enough blockstun to be plus at close range."
 };
@@ -403,6 +435,8 @@ const lFireballFollowUp = {
   recovery: '-',
   onblock: '+1',
   onhit: '+5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'l', '4', 'l'],
   description: "Goetia followup which transforms the projectile into a spinning scythe that hits multiple times. The scythe takes a (very short) moment to spin up after transforming, during which the projectile does not have a hitbox. L followup causes the scythe to move forward, M followup causes the scythe to move backward, and H followup causes the scythe to decelerate and eventually spin in place.\nIn addition to the universal forward/backwards/stop commands, the L and M followups cause the scythe to move vertically up or down depending on which version of Goetia was initially used. For example, the forward moving L Goetia cancelled into L followup will cause the scythe to move up as well as forwards, while M Goetia into L followup will cause the scythe to move down as well as forwards. The specifics are as follows:\nThe L and M followups to L and H Goetia cause the projectile to move forwards & up and backwards & up respectively\nThe L and M followups to M Goetia cause the projectile to move forwards & down and backwards & down respectively\nThe H followups to all versions of Goetia do not affect the scythe's vertical positioning\nThe L and H followups push the opponent slightly on hit and block, while the M followup vacuums opponents towards Belial. The L and M followups hit 3 times, while the H followup hits 5 times."
 }
@@ -417,6 +451,8 @@ const mFireballFollowUp = {
   recovery: '-',
   onblock: '+1',
   onhit: '+5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'l', '4', 'm'],
   description: "Goetia followup which transforms the projectile into a spinning scythe that hits multiple times. The scythe takes a (very short) moment to spin up after transforming, during which the projectile does not have a hitbox. L followup causes the scythe to move forward, M followup causes the scythe to move backward, and H followup causes the scythe to decelerate and eventually spin in place.\nIn addition to the universal forward/backwards/stop commands, the L and M followups cause the scythe to move vertically up or down depending on which version of Goetia was initially used. For example, the forward moving L Goetia cancelled into L followup will cause the scythe to move up as well as forwards, while M Goetia into L followup will cause the scythe to move down as well as forwards. The specifics are as follows:\nThe L and M followups to L and H Goetia cause the projectile to move forwards & up and backwards & up respectively\nThe L and M followups to M Goetia cause the projectile to move forwards & down and backwards & down respectively\nThe H followups to all versions of Goetia do not affect the scythe's vertical positioning\nThe L and H followups push the opponent slightly on hit and block, while the M followup vacuums opponents towards Belial. The L and M followups hit 3 times, while the H followup hits 5 times."
 }
@@ -431,6 +467,8 @@ const hFireballFollowUp = {
   recovery: '-',
   onblock: '+1',
   onhit: '+5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'l', '4', 'h'],
   description: "Goetia followup which transforms the projectile into a spinning scythe that hits multiple times. The scythe takes a (very short) moment to spin up after transforming, during which the projectile does not have a hitbox. L followup causes the scythe to move forward, M followup causes the scythe to move backward, and H followup causes the scythe to decelerate and eventually spin in place.\nIn addition to the universal forward/backwards/stop commands, the L and M followups cause the scythe to move vertically up or down depending on which version of Goetia was initially used. For example, the forward moving L Goetia cancelled into L followup will cause the scythe to move up as well as forwards, while M Goetia into L followup will cause the scythe to move down as well as forwards. The specifics are as follows:\nThe L and M followups to L and H Goetia cause the projectile to move forwards & up and backwards & up respectively\nThe L and M followups to M Goetia cause the projectile to move forwards & down and backwards & down respectively\nThe H followups to all versions of Goetia do not affect the scythe's vertical positioning\nThe L and H followups push the opponent slightly on hit and block, while the M followup vacuums opponents towards Belial. The L and M followups hit 3 times, while the H followup hits 5 times."
 }
@@ -446,6 +484,8 @@ const lUppercut = {
   recovery: '-', 
   onblock: '-23', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
   description: "Air blockable and quite unsafe.\nPray this counterhits, otherwise it's gonna hurt Belial a lot."  
 };
@@ -459,6 +499,8 @@ const mUppercut = {
   recovery: '-', 
   onblock: '-24', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
   description: "First hit is air unblockable.\nPretty good last-minute anti-air, but generally outclassed in reward by his 2H."
 };
@@ -472,6 +514,8 @@ const hUppercut = {
   recovery: '-', 
   onblock: '-24', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
   description: "Entirely air unblockable.\nCosts 500 health upon use.\nHigh damage and air unblockable throughout make this Belial's most consistent anti-air. It does not come cheap though, as it costs health and is very unsafe on block."
 };
@@ -487,6 +531,8 @@ const lRekka = {
   recovery: '-', 
   onblock: '-6', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
   description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders\nFast and combos from 2M.\nStandard combo ender special. Provides a good enough knockdown, but really shines in its corner carry."
 };
@@ -500,6 +546,8 @@ const mRekka = {
   recovery: '-', 
   onblock: '-', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
   description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders.\nMuch larger range at the cost of speed.\nLow crushes.\nWhile this version generally cannot be combo'd into without a counter hit, its extended range and low crush make it a better neutral tool. Avatar Belial can also catch people trying to punish it with Pact."
 };
@@ -513,6 +561,8 @@ const hRekka = {
   recovery: '-', 
   onblock: '-', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
   description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders.\nCauses follow-up 2 to wallbounce.\nCosts 500 health upon use.\nCorner combo launcher. It's generally a better idea to use other specials first but Belial can still get basic knockdowns without this special using 623M or 623H."
 };
@@ -527,6 +577,8 @@ const rekka2 = {
   recovery: '-', 
   onblock: '-8', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
   description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders."
 };
@@ -541,6 +593,8 @@ const rekka3 = {
   recovery: '-', 
   onblock: '-16', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
   description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders."
 };
@@ -555,6 +609,8 @@ const lHop = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -568,6 +624,8 @@ const mHop = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -581,6 +639,8 @@ const hHop = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   description: "Costs 500 health\nBelial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -594,6 +654,8 @@ const stolas = {
   recovery: '-',
   onblock: '+2/+4(Crouch)',
   onhit: '+3',
+  oncounterhit: '-',
+  clash: '-',
   description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
 }
 
@@ -607,6 +669,8 @@ const beleth = {
   recovery: '-',
   onblock: '+2',
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
 }
 
@@ -620,6 +684,8 @@ const lBarbatos = {
   recovery: '-',
   onblock: '-',
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
 }
 
@@ -633,6 +699,8 @@ const mBarbatos = {
   recovery: '-',
   onblock: '-',
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
 }
 
@@ -646,6 +714,8 @@ const hBarbatos = {
   recovery: '-',
   onblock: '-',
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
 }
 
@@ -659,6 +729,8 @@ const airLaser = {
   recovery: '-',
   onblock: '-4',
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   description: 'Uncharged version has a small hitbox.\nCharged version sweeps the screen.\nAvatar Belials long-range option while in Wings Bestowed. Knocks down on hit and deals respectable damage.'
 }
 
@@ -672,6 +744,8 @@ const airLaserCharged = {
   recovery: '-',
   onblock: '-9',
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   description: 'Uncharged version has a small hitbox.\nCharged version sweeps the screen.\nAvatar Belials long-range option while in Wings Bestowed. Knocks down on hit and deals respectable damage.'
 }
 
@@ -686,6 +760,8 @@ const sba = {
   recovery: '-', 
   onblock: '-', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
   description: "Belial performs a rising attack, followed by a downwards lunge."
 };
@@ -699,6 +775,8 @@ const ssba = {
   recovery: '-', 
   onblock: '-29', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
   description: "Belial's invincible command throw super. Can be combo'd into like a strike and turns into a projectile if the grab portion whiffs."
 };
