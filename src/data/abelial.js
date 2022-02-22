@@ -563,6 +563,7 @@ const lHop = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
+  motion: ['2', '2', 'l'],
   description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -596,18 +597,48 @@ const hHop = {
   description: "Costs 500 health\nBelial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
-const stolas = {
-  moveName: 'Stolas',
-  altName: '22X -> L',
+const lStolas = {
+  moveName: 'L Stolas',
+  altName: '22L -> L',
   damage: '700',
   guard: '-',
   startup: '15',
-  active: '-',
-  recovery: '-',
-  onblock: '+2/+4(Crouch)',
-  onhit: '+3',
-  oncounterhit: '-',
-  clash: '-',
+  active: '6 -> 7',
+  recovery: '11',
+  onblock: '+1 -> +2',
+  onhit: '+2 -> +3',
+  oncounterhit: 'KD',
+  clash: '3',
+  description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
+}
+
+const mStolas = {
+  moveName: 'M Stolas',
+  altName: '22M -> L',
+  damage: '700',
+  guard: '-',
+  startup: '15',
+  active: '6 -> 10',
+  recovery: '11',
+  onblock: '+2 -> +3',
+  onhit: '+3 -> +4',
+  oncounterhit: 'KD',
+  clash: '3',
+  description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
+}
+
+const hStolas = {
+  moveName: 'H Stolas',
+  altName: '22H -> L',
+  damage: '700',
+  guard: '-',
+  startup: '15',
+  active: '6 -> 10',
+  recovery: '11',
+  onblock: '+1 -> +2',
+  onhit: '+2 -> +3',
+  oncounterhit: 'HKD(+55)',
+  clash: '3',
   description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
 }
 
