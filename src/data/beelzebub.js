@@ -1,74 +1,84 @@
 // FINAL 
 
-const general = { char: "Beelzebub", health: '10000', prejump: '4F', backdash: '22F' }
+const general = { char: "Beelzebub", health: '10000', prejump: '4F', backdash: '26F' }
 
 // close normals
 const closeL = {
   moveName: 'Close Light',
   altName: 'cL',
   damage: '400',
-  guard: 'mid',
+  guard: 'All',
   startup: '5',
   active: '3',
   recovery: '6',
-  onblock: '2',
-  onhit: '6',
+  onblock: '+2',
+  onhit: '+6',
+  oncounterhit: '+8',
+  clash: '1',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "Average c.L, good for pressure.\nVery solid jab, plus on block, combos into itself, 2L, and also c.M on crouchers. c.L > walk throw and c.L > walk c.L are strong options on block."
 };
 const closeM = {
   moveName: 'Close Medium',
   altName: 'cM',
   damage: '700',
-  guard: 'mid',
+  guard: 'All',
   startup: '6',
   active: '3',
-  recovery: '10',
+  recovery: '12',
   onblock: '0',
-  onhit: '4',
+  onhit: '+4',
+  oncounterhit: '+8',
+  clash: '3',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "Very short reach horizontally and vertically.\nBetter starter than c.L but worse frame advantage makes it a rather underwhelming pressure tool. Combos into c.L on crouchers."
 };
 const closeH = {
   moveName: 'Close Heavy',
   altName: 'cH',
-  damage: '1200',
-  guard: 'mid',
-  startup: '8',
-  active: '4',
-  recovery: '18',
+  damage: '800,200x2',
+  guard: 'All',
+  startup: '10',
+  active: '6',
+  recovery: '19',
   onblock: '-3',
-  onhit: '1',
+  onhit: '+1',
+  oncounterhit: '+1',
+  clash: '5',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "One of Bubs' best combo starters.\nHigh damage juggle filler.\nMostly used for punishes and combos. Decent frame advantage but worse than c.L or even c.M."
 };
 
 // auto combos
 const auto1 = {
   moveName: 'Auto Combo 2nd hit',
   altName: 'cXX',
-  damage: '350',
-  guard: 'mid',
-  startup: '-',
-  active: '-',
-  recovery: '-',
+  damage: '200, 150',
+  guard: 'All',
+  startup: '9',
+  active: '3',
+  recovery: '15',
   onblock: '-3',
-  onhit: '1',
+  onhit: '+1',
+  oncounterhit: '+5',
+  clash: '3',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "If delayed, can frame trap from c.L.\nMoves you forward a good bit allowing for better combo options usually.\nOnly -2 while other XXs are -3.\nXX(2) > 214M is a frame trap.\nIt's an autocombo. c.XX is notable for being one frame better on block than average, but other than that it's pretty standard."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
   altName: 'cXXX',
   damage: '350',
-  guard: 'mid',
-  startup: '-',
-  active: '-',
-  recovery: '-',
-  onblock: '-5',
-  onhit: '-1',
+  guard: 'All',
+  startup: '9',
+  active: '3',
+  recovery: '18',
+  onblock: '-4',
+  onhit: '0',
+  oncounterhit: '+8',
+  clash: '4',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "If delayed, can frame trap from c.L.\nMoves you forward a good bit allowing for better combo options usually.\nOnly -2 while other XXs are -3.\nXX(2) > 214M is a frame trap.\nIt's an autocombo. c.XX is notable for being one frame better on block than average, but other than that it's pretty standard."
 };
 
 // far normals
@@ -76,40 +86,46 @@ const far5L = {
   moveName: 'Far Light',
   altName: 'f5L',
   damage: '400',
-  guard: 'mid',
+  guard: 'All',
   startup: '6',
-  active: '3',
-  recovery: '13',
-  onblock: '-3',
-  onhit: '1',
+  active: '5',
+  recovery: '12',
+  onblock: '-4',
+  onhit: '0',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "Bubs' only light normal that combos into 214L.\nHas trouble reaching crouchers, making it a bad poke overall."
 };
 const far5M = {
   moveName: 'Far Medium',
   altName: 'f5M',
   damage: '700',
-  guard: 'mid',
-  startup: '8',
-  active: '3',
+  guard: 'All',
+  startup: '7',
+  active: '1,3',
   recovery: '18',
   onblock: '-6',
   onhit: '-2',
+  oncounterhit: '-2',
+  clash: '3',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "Fast startup for its range.\nPretty much as good as it looks.\nSolid poke from further ranges. Always combos into 214H. Combos into 214L if you're close enough and at any range on crouchers."
 };
 const far5H = {
   moveName: 'Far Heavy',
   altName: 'f5H',
   damage: '1000',
-  guard: 'mid',
-  startup: '10',
-  active: '5',
-  recovery: '20',
+  guard: 'All',
+  startup: '9',
+  active: '4',
+  recovery: '22',
   onblock: '-9',
   onhit: '-5',
+  oncounterhit: '+3',
+  clash: '4',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Good long-range anti-air.\nVery good reward on counter hit thanks to 22H.\nSlow startup and somewhat short hitbox against grounded opponents make it a bad poke and whiff punish tool. Has 3 points it can hit. point blank 10 frame startup, midrange 12 frame startup, and the most common range it will be hit or blocked will be 14 frame startup. because of this more often than not it will be -12 on block and -8 on hit"
 };
 
 // regular normals
@@ -117,53 +133,61 @@ const n2L = {
   moveName: 'Crouch Light',
   altName: '2L',
   damage: '400',
-  guard: 'mid',
-  startup: '6',
+  guard: 'Low',
+  startup: '5',
   active: '3',
-  recovery: '6',
-  onblock: '2',
-  onhit: '6',
+  recovery: '8',
+  onblock: '0',
+  onhit: '+4',
+  oncounterhit: '+6',
+  clash: '1',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Decent reach for a 2L.\nStrong pressure and confirm tool.\n2L > 2L, 2L > c.L and 2L > 2M are frame traps. 2L > 2M and 2L > c.M combo on crouchers, making it a good confirm if you're not in range for c.L anymore."
 };
 const n2M = {
   moveName: 'Crouch Medium',
   altName: '2M',
   damage: '700',
-  guard: 'mid',
-  startup: '7',
+  guard: 'All',
+  startup: '6',
   active: '5',
-  recovery: '9',
-  onblock: '1',
-  onhit: '5',
+  recovery: '13',
+  onblock: '-3',
+  onhit: 'KD',
+  oncounterhit: 'KD(+6)',
+  clash: '2',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Great range for the startup.\nLots of active frames and disjointed towards the later parts of the move.\nGreat poke, but slightly lower range than f.M. Ending a blockstring with 2M leaves you safe and in a good position to special cancel. Always combos into 214H. Combos into 214L if you're close enough and at any range on crouchers."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
   altName: '2H',
   damage: '1000',
-  guard: 'mid',
-  startup: '10',
-  active: '6',
-  recovery: '24',
-  onblock: '-13',
-  onhit: '-9',
+  guard: 'All',
+  startup: '11',
+  active: '6[3,3]',
+  recovery: '23',
+  onblock: '-12',
+  onhit: '-8',
+  oncounterhit: '0',
+  clash: '4',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Hits in the back too.\nVery vertical but poor horizontal reach, the latter being better covered by f.H.\nBubs' primary anti-air with a massive hitbox, combos into 22L/H on counter hit, and without counter hit at very low heights. Used to combo into 22L/H during corner juggles."
 };
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
   damage: '700',
-  guard: 'mid',
-  startup: '7',
+  guard: 'Low',
+  startup: '10',
   active: '6',
-  recovery: '21',
-  onblock: '-12',
-  onhit: 'HKD',
+  recovery: '20',
+  onblock: '-11',
+  onhit: 'HKD(+44)',
+  oncounterhit: 'HKD(+48)',
+  clash: '3',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Sets up for a safejump: on a grounded opponent 2U > regular jump forward + button/ during juggles 2U > super jump forward + button."
 };
 
 // jump normals
@@ -171,323 +195,665 @@ const jL = {
   moveName: 'Jump Light', 
   altName: 'jL', 
   damage: '400', 
-  guard: 'high', 
+  guard: 'High', 
   startup: '5', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Active until landing.\nUseful during air-to-air scrambles.\nShrinks Bubs' hurtbox pretty well."
 };
 const jM = { 
   moveName: 'Jump Medium', 
   altName: 'jM', 
-  damage: '550', 
-  guard: 'high', 
-  startup: '6', 
-  active: '-', 
+  damage: '600', 
+  guard: 'High', 
+  startup: '7', 
+  active: '6[2,4]', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Does not cross up.\nVery good horizontal reach and active frames, making it your go-to air-to-air poke."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
   altName: 'jH', 
-  damage: '800', 
-  guard: 'high', 
-  startup: '7', 
-  active: '-', 
+  damage: '400, 200x2', 
+  guard: 'High', 
+  startup: '9', 
+  active: '6', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '3',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "3-hit air normal. Once a hit has been blocked, the remaining hits can be blocked low.\nBetter than j.M as a long range jjump-in.\nEasy to confirm into j.214H thanks to the multi hit."
 };
 const jU = { 
   moveName: 'Jump Unique', 
   altName: 'jU', 
-  damage: '700', 
-  guard: 'high', 
-  startup: '12', 
+  damage: '800', 
+  guard: 'All', 
+  startup: '20', 
   active: '-', 
-  recovery: '-', 
+  recovery: '21', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '2',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Still good as an air-to-air sometimes.\nBy far Bubs' best jump-in. Somewhat awkward horizontal reach but amazing vertical reach and active frames, making it extremely hard to anti-air. Won't be plus if used at the very crest of its range, requiring a cancel into j.214X to keep being plus."
 };
 
 // unique action
-const lv1U = { 
-  moveName: 'Power Raise Lv1', 
-  altName: '5ULv1', 
-  damage: '1000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
+const teleport = { 
+  moveName: 'Shadowstep', 
+  altName: '5U Teleport', 
+  damage: '-', 
+  guard: '-', 
+  startup: '12', 
+  active: '13', 
+  recovery: '11', 
+  onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Invul starts at frame 12 and ends on frame 28.\nBubs does a teleport forwards. The distance traveled is fixed, but it's fast enough to be plus after landing a throw or an EX move. A good escape tool out of the corner when properly spaced. Can be punished when reappearing by 5L auto-combo if opponent is at its travelled distance."
 };
 
 const groundThrow = { 
-  moveName: 'Ground Throw', 
+  moveName: 'Forward Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '7', 
-  active: '-', 
-  recovery: '-', 
+  active: '3', 
+  recovery: '31', 
   onblock: '-', 
-  onhit: '-',
+  onhit: 'HKD (+44), +24 after delay tech',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "You can run after both throws and meaty the opponent with a 2L.\nForward throw > 5U leaves you at an advantage right next to the opponent at the cost of a sideswitch. Forward throw also leads into a safejump with regular jump + button in the corner."
 };
+
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'Throw', 
+  startup: '7', 
+  active: '3', 
+  recovery: '31', 
+  onblock: '-', 
+  onhit: 'HKD (+38), 24 after delay tech',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['l', 'm', 'or', 'l', 'u'],
+  description: "You can run after both throws and meaty the opponent with a 2L.\nBack throw has less frame advantage than forward throw so you can't safejump after that one."
+};
+
 const airThrow = { 
   moveName: 'Air Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '5', 
-  active: '-', 
-  recovery: '-', 
+  active: '5', 
+  recovery: '6F after landing', 
   onblock: '-', 
-  onhit: '-',
+  onhit: 'HKD (+50)',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Fast air-to-air leading to a very solid knockdown which lets you dash in and meaty."
 };
 
 const uOverhead = { 
   moveName: 'Overhead', 
   altName: 'UOH', 
   damage: '1000', 
-  guard: 'high', 
+  guard: 'High', 
   startup: '26', 
-  active: '-', 
-  recovery: '-', 
+  active: '6', 
+  recovery: '17', 
   onblock: '-4', 
-  onhit: '1',
+  onhit: '+1',
+  oncounterhit: '+13',
+  clash: '5',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Dodges low hitboxes very well.\nGood reach.\nPositive if blocked late enough into the active frames.\nOne of the better universal overheads. Extremely high reward on counter hit with c.H. Also useful to counter hit opponents anticipating a throw thanks to its airborne property. You can even combo into it after 22H."
 };
 
 // fireballs
-const lFireball = { 
-  moveName: 'L Reginleiv', 
+const lFireballLvl1 = { 
+  moveName: 'L Black Flies Lvl 1', 
   altName: '236L', 
   damage: '800', 
-  guard: 'all', 
-  startup: '15', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-7', 
-  onhit: '-3',
+  guard: 'All', 
+  startup: '18', 
+  active: '18', 
+  recovery: '53', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '-2',
+  clash: '-',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Beelzebub's projectile. All versions can be charged and made plus, making it a cornerstone in Bubs' ground pressure game. Having access to plus frames at a distance also helps his poking game, as he can continue pressure with M buttons and f.H while fishing for counterhits.\nFires 1 feather.\nCan be charged to make it hit twice."
 };
-const mFireball = { 
-  moveName: 'M Reginleiv', 
+
+const lFireballLvl2 = { 
+  moveName: 'L Black Flies Lvl 2', 
+  altName: '236L', 
+  damage: '800, 100', 
+  guard: 'All', 
+  startup: '18', 
+  active: '18', 
+  recovery: '53', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '-2',
+  clash: '-',
+  motion: ['236', 'l', 'or', 'a'],
+  description: "Beelzebub's projectile. All versions can be charged and made plus, making it a cornerstone in Bubs' ground pressure game. Having access to plus frames at a distance also helps his poking game, as he can continue pressure with M buttons and f.H while fishing for counterhits.\nFires 1 feather.\nCan be charged to make it hit twice."
+};
+
+const mFireballLvl1 = { 
+  moveName: 'M Black Flies Lvl 1', 
   altName: '236M', 
-  damage: '400, 800', 
-  guard: 'mid, all', 
-  startup: '13', 
+  damage: '900, 100', 
+  guard: 'All', 
+  startup: '20', 
   active: '-', 
-  recovery: '-', 
-  onblock: '-4', 
-  onhit: '0',
+  recovery: '53', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '-2',
+  clash: '-',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Beelzebub's projectile. All versions can be charged and made plus, making it a cornerstone in Bubs' ground pressure game. Having access to plus frames at a distance also helps his poking game, as he can continue pressure with M buttons and f.H while fishing for counterhits.\nFires 7 feathers stacked vertically dealing 2 hits.\nCan partially charge for 3 hits and fully charge for 5 hits."
 };
-const hFireball = { 
-  moveName: 'H Reginleiv', 
-  altName: '236H', 
-  damage: '350 x 3', 
-  guard: 'all', 
-  startup: '15', 
+
+const mFireballLvl2 = { 
+  moveName: 'M Black Flies Lvl 2', 
+  altName: '236M', 
+  damage: '900, 100x2', 
+  guard: 'All', 
+  startup: '20', 
   active: '-', 
-  recovery: '-', 
-  onblock: '+3', 
-  onhit: '+7',
+  recovery: '53', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '-2',
+  clash: '-',
+  motion: ['236', 'm', 'or', 'a', 'm'],
+  description: "Beelzebub's projectile. All versions can be charged and made plus, making it a cornerstone in Bubs' ground pressure game. Having access to plus frames at a distance also helps his poking game, as he can continue pressure with M buttons and f.H while fishing for counterhits.\nFires 7 feathers stacked vertically dealing 2 hits.\nCan partially charge for 3 hits and fully charge for 5 hits."
+};
+
+const mFireballLvl3 = { 
+  moveName: 'M Black Flies Lvl 3', 
+  altName: '236M', 
+  damage: '900, 100x4', 
+  guard: 'All', 
+  startup: '20', 
+  active: '-', 
+  recovery: '53', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '-2',
+  clash: '-',
+  motion: ['236', 'm', 'or', 'a', 'm'],
+  description: "Beelzebub's projectile. All versions can be charged and made plus, making it a cornerstone in Bubs' ground pressure game. Having access to plus frames at a distance also helps his poking game, as he can continue pressure with M buttons and f.H while fishing for counterhits.\nFires 7 feathers stacked vertically dealing 2 hits.\nCan partially charge for 3 hits and fully charge for 5 hits."
+};
+
+const hFireballLvl1 = { 
+  moveName: 'H Black Flies Lvl 1', 
+  altName: '236H', 
+  damage: '500x2, 100', 
+  guard: 'All', 
+  startup: '16', 
+  active: '-', 
+  recovery: '55', 
+  onblock: '+2', 
+  onhit: '+6',
+  oncounterhit: '+6',
+  clash: '-',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Beelzebub's projectile. All versions can be charged and made plus, making it a cornerstone in Bubs' ground pressure game. Having access to plus frames at a distance also helps his poking game, as he can continue pressure with M buttons and f.H while fishing for counterhits.\nFires 1 feather dealing 1 hit then 7 feathers stacked vertically dealing 2 hits.\nCan partially charge for 5 hits, and fully charge for 8 hits."
+};
+
+const hFireballLvl2 = { 
+  moveName: 'H Black Flies Lvl 2', 
+  altName: '236H', 
+  damage: '500, 100x2, 500, 100x2', 
+  guard: 'All', 
+  startup: '16', 
+  active: '-', 
+  recovery: '55', 
+  onblock: '+2', 
+  onhit: '+6',
+  oncounterhit: '+6',
+  clash: '-',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "Beelzebub's projectile. All versions can be charged and made plus, making it a cornerstone in Bubs' ground pressure game. Having access to plus frames at a distance also helps his poking game, as he can continue pressure with M buttons and f.H while fishing for counterhits.\nFires 1 feather dealing 1 hit then 7 feathers stacked vertically dealing 2 hits.\nCan partially charge for 5 hits, and fully charge for 8 hits."
+};
+
+const hFireballLvl3 = { 
+  moveName: 'H Black Flies Lvl 3', 
+  altName: '236H', 
+  damage: '500, 100x2, 500, 100x4', 
+  guard: 'All', 
+  startup: '16', 
+  active: '-', 
+  recovery: '55', 
+  onblock: '+2', 
+  onhit: '+6',
+  oncounterhit: '+6',
+  clash: '-',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "Beelzebub's projectile. All versions can be charged and made plus, making it a cornerstone in Bubs' ground pressure game. Having access to plus frames at a distance also helps his poking game, as he can continue pressure with M buttons and f.H while fishing for counterhits.\nFires 1 feather dealing 1 hit then 7 feathers stacked vertically dealing 2 hits.\nCan partially charge for 5 hits, and fully charge for 8 hits."
 };
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Rising Sword', 
+  moveName: 'L Blind Devotion', 
   altName: '623L', 
-  damage: '700, 300', 
-  guard: 'mid, all', 
+  damage: '1000',
+  guard: 'All', 
   startup: '9', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-17', 
+  active: '6', 
+  recovery: '33', 
+  onblock: '-23', 
   onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Air blockable and quite unsafe.\nPray this counterhits, otherwise it's gonna hurt Belial a lot."  
 };
 const mUppercut = { 
-  moveName: 'M Rising Sword', 
+  moveName: 'M Blind Devotion', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
-  guard: 'mid, all', 
+  damage: '700, 200, 100×4', 
+  guard: 'All', 
   startup: '9', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-26', 
+  active: '2, 3x4, 4', 
+  recovery: '34', 
+  onblock: '-30', 
   onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "First hit is air unblockable.\nPretty good last-minute anti-air, but generally outclassed in reward by his 2H."
 };
 const hUppercut = { 
-  moveName: 'H Rising Sword', 
+  moveName: 'H Blind Devotion', 
   altName: '623H', 
-  damage: '950~1400', 
-  guard: 'mid, all', 
+  damage: '700, 200, 50×4, 800', 
+  guard: 'All', 
   startup: '9', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-26', 
-  onhit: 'HKD',
+  active: '2, 3x5', 
+  recovery: '35', 
+  onblock: '-30', 
+  onhit: 'HKD (+38)',
+  oncounterhit: 'HKD (+38)',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Entirely air unblockable.\nCosts 500 health upon use.\nHigh damage and air unblockable throughout make this Belial's most consistent anti-air. It does not come cheap though, as it costs health and is very unsafe on block."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+  moveName: 'L Carnal Passion', 
   altName: '214L', 
-  damage: '700', 
-  guard: 'mid', 
-  startup: '13', 
-  active: '2', 
-  recovery: '19', 
+  damage: '400', 
+  guard: 'All', 
+  startup: '14', 
+  active: '4', 
+  recovery: '17', 
   onblock: '-6', 
   onhit: '-2',
+  oncounterhit: '0',
+  clash: '3',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
-};
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders\nFast and combos from 2M.\nStandard combo ender special. Provides a good enough knockdown, but really shines in its corner carry."
 };
 const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+  moveName: 'M Carnal Passion', 
   altName: '214M', 
-  damage: '1200', 
-  guard: 'mid', 
-  startup: '16', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '+2~-10', 
-  onhit: '-',
+  damage: '600', 
+  guard: 'All', 
+  startup: '22', 
+  active: '6', 
+  recovery: '15', 
+  onblock: '-4', 
+  onhit: '0',
+  oncounterhit: '+2',
+  clash: '5',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders.\nMuch larger range at the cost of speed.\nLow crushes.\nWhile this version generally cannot be combo'd into without a counter hit, its extended range and low crush make it a better neutral tool. Avatar Belial can also catch people trying to punish it with Pact."
 };
 const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+  moveName: 'H Carnal Passion', 
   altName: '214H', 
-  damage: '1200', 
-  guard: 'mid', 
-  startup: '13', 
-  active: '13', 
-  recovery: '37', 
-  onblock: '+4~-8', 
-  onhit: 'HKD',
+  damage: '500', 
+  guard: 'All', 
+  startup: '16', 
+  active: '4', 
+  recovery: '15', 
+  onblock: '-4', 
+  onhit: '0',
+  oncounterhit: '+2',
+  clash: '4',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders.\nCauses follow-up 2 to wallbounce.\nCosts 500 health upon use.\nCorner combo launcher. It's generally a better idea to use other specials first but Belial can still get basic knockdowns without this special using 623M or 623H."
 };
+
+const rekka2 = { 
+  moveName: 'Carnal Passion Follow Up', 
+  altName: '214X > 4X', 
+  damage: '400', 
+  guard: 'All', 
+  startup: '9?', 
+  active: '3?', 
+  recovery: '22?', 
+  onblock: '-8', 
+  onhit: 'KD (+21)',
+  oncounterhit: 'HKD',
+  clash: '4',
+  motion: ['214', 'l', 'or', '2', 'a'],
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders."
+};
+
+const rekka3 = { 
+  moveName: 'Carnal Passion Ender', 
+  altName: '214X > 4X > 4X', 
+  damage: '700', 
+  guard: 'All', 
+  startup: '13?', 
+  active: '6?',
+  recovery: '29?', 
+  onblock: '-16', 
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '5',
+  motion: ['214', 'l', 'or', '2', 'a'],
+  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders."
+};
+
+const lHop = {
+  moveName: "L Wings Bestowed",
+  altName: '22L',
+  damage: '-',
+  guard: '-',
+  startup: '16',
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
+}
+
+const mHop = {
+  moveName: "M Wings Bestowed",
+  altName: '22M',
+  damage: '-',
+  guard: '-',
+  startup: '23',
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'm', 'a'],
+  description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
+}
+
+const hHop = {
+  moveName: "H Wings Bestowed",
+  altName: '22H',
+  damage: '-',
+  guard: '-',
+  startup: '13',
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'h', 'a'],
+  description: "Costs 500 health\nBelial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
+}
+
+const lStolas = {
+  moveName: 'L Stolas',
+  altName: '22L -> L',
+  damage: '700',
+  guard: '-',
+  startup: '15',
+  active: '6 -> 7',
+  recovery: '11',
+  onblock: '+1 -> +2',
+  onhit: '+2 -> +3',
+  oncounterhit: 'KD',
+  clash: '3',
+  motion: ['2', '2', 'l', 'l'],
+  description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
+}
+
+const mStolas = {
+  moveName: 'M Stolas',
+  altName: '22M -> L',
+  damage: '700',
+  guard: '-',
+  startup: '15',
+  active: '6 -> 10',
+  recovery: '11',
+  onblock: '+2 -> +3',
+  onhit: '+3 -> +4',
+  oncounterhit: 'KD',
+  clash: '3',
+  motion: ['2', '2', 'm', 'l'],
+  description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
+}
+
+const hStolas = {
+  moveName: 'H Stolas',
+  altName: '22H -> L',
+  damage: '700',
+  guard: '-',
+  startup: '15',
+  active: '6 -> 10',
+  recovery: '11',
+  onblock: '+1 -> +2',
+  onhit: '+2 -> +3',
+  oncounterhit: 'HKD(+55)',
+  clash: '3',
+  motion: ['2', '2', 'h', 'l'],
+  description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
+}
+
+const lBeleth = {
+  moveName: 'Beleth',
+  altName: '22L -> M',
+  damage: '600, 100x5',
+  guard: '-',
+  startup: '21',
+  active: '8 -> 10',
+  recovery: '11',
+  onblock: '+2',
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '2',
+  motion: ['2', '2', 'l', 'm'],
+  description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
+}
+
+const mBeleth = {
+  moveName: 'Beleth',
+  altName: '22M -> M',
+  damage: '600, 100x5',
+  guard: '-',
+  startup: '21',
+  active: '8 -> 12',
+  recovery: '11',
+  onblock: '+2',
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: '2',
+  motion: ['2', '2', 'm', 'm'],
+  description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
+}
+
+const hBeleth = {
+  moveName: 'Beleth',
+  altName: '22H -> M',
+  damage: '600, 100x5',
+  guard: '-',
+  startup: '21',
+  active: '8 -> 13',
+  recovery: '11',
+  onblock: '+2',
+  onhit: 'HKD (+60)',
+  oncounterhit: 'HKD (+60)',
+  clash: '2',
+  motion: ['2', '2', 'h', 'm'],
+  description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
+}
+
+const lBarbatos = {
+  moveName: 'L Barbatos',
+  altName: '22L -> H',
+  damage: '2000',
+  guard: 'Throw',
+  startup: '30 -> 31',
+  active: '2',
+  recovery: '34',
+  onblock: '-',
+  onhit: 'HKD (+39)',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'h'],
+  description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
+}
+
+const mBarbatos = {
+  moveName: 'M Barbatos',
+  altName: '22M -> H',
+  damage: '2500',
+  guard: 'Throw',
+  startup: '29 -> 33',
+  active: '2',
+  recovery: '34',
+  onblock: '-',
+  onhit: 'HKD (+39)',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'h'],
+  description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
+}
+
+const hBarbatos = {
+  moveName: 'H Barbatos',
+  altName: '22H -> H',
+  damage: '2000',
+  guard: 'Throw',
+  startup: '30 -> 35',
+  active: '2',
+  recovery: '34',
+  onblock: '-',
+  onhit: 'HKD (+39)',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h', 'h'],
+  description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
+}
+
+const airLaser = {
+  moveName: 'Habakkuk (Midair)',
+  altName: '22X -> U',
+  damage: '1000',
+  guard: '-',
+  startup: '27',
+  active: '-',
+  recovery: '-',
+  onblock: '-4',
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  description: 'Uncharged version has a small hitbox.\nCharged version sweeps the screen.\nAvatar Belials long-range option while in Wings Bestowed. Knocks down on hit and deals respectable damage.'
+}
+
+const airLaserCharged = {
+  moveName: 'Habakkuk Charged (Midair)',
+  altName: '22X -> U',
+  damage: '1100',
+  guard: '-',
+  startup: '27',
+  active: '-',
+  recovery: '-',
+  onblock: '-9',
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  description: 'Uncharged version has a small hitbox.\nCharged version sweeps the screen.\nAvatar Belials long-range option while in Wings Bestowed. Knocks down on hit and deals respectable damage.'
+}
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Diafthora', 
   altName: '236236H', 
-  damage: '2500-3500', 
-  guard: 'mid', 
-  startup: '6+5', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-13', 
-  onhit: 'HKD',
+  damage: '3200', 
+  guard: 'All', 
+  startup: '12', 
+  active: '7', 
+  recovery: '32', 
+  onblock: '-', 
+  onhit: 'HKD (T:+43, S:+33)',
+  oncounterhit: 'HKD (T:+43, S:+33)',
+  clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "+43 KD advantage on technical input, +33 on simple.\nBelial performs a rising attack, followed by a downwards lunge."
 };
+
+const airSba = { 
+  moveName: 'Diafthora (Air)', 
+  altName: '236236H', 
+  damage: '3200', 
+  guard: 'All', 
+  startup: '15', 
+  active: 'til landing', 
+  recovery: '31', 
+  onblock: '-', 
+  onhit: 'HKD (T:+43, S:+33)',
+  oncounterhit: 'HKD (T:+43, S:+33)',
+  clash: '-',
+  motion: ['236', '236', 'h', 'or', '236', 'a'],
+  description: "+43 KD advantage on technical input, +33 on simple.\nBelial performs a rising attack, followed by a downwards lunge."
+};
+
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Wild Sin', 
   altName: '236236U', 
   damage: '3500-4500', 
-  guard: 'all', 
-  startup: '8+5', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-23', 
-  onhit: 'HKD',
+  guard: 'Throw/All', 
+  startup: '13', 
+  active: '2,2', 
+  recovery: '100', 
+  onblock: '-32', 
+  onhit: 'HKD (T: +41, S: +31)',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "+41 KD advantage on technical input, +31 on simple.\nBelial's invincible command throw super. Can be combo'd into like a strike and turns into a projectile if the grab portion whiffs."
 };
 
 
@@ -509,12 +875,9 @@ export const bubzInfo = [
   jM,
   jH,
   jU,
-  lv1U,
-  lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
+  teleport,
   groundThrow,
+  backThrow,
   airThrow,
   uOverhead,
   lFireball,
@@ -524,9 +887,25 @@ export const bubzInfo = [
   mUppercut,
   hUppercut,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
+  rekka2,
+  rekka3,
+  lBarbatos,
+  mBarbatos,
+  hBarbatos,
+  lBeleth,
+  mBeleth,
+  hBeleth,
+  lStolas,
+  mStolas,
+  hStolas,
+  lHop,
+  mHop,
+  hHop,
+  airLaser,
+  airLaserCharged,
   sba,
+  airSba,
   ssba
 ]
