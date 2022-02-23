@@ -563,7 +563,7 @@ const lHop = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
-  motion: ['2', '2', 'l', 'or', '2', 's'],
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
   description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -579,7 +579,7 @@ const mHop = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
-  motion: ['2', '2', 'm', 'or', '2', 'm', 's'],
+  motion: ['2', '2', 'm', 'or', '2', 'm', 'a'],
   description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -595,7 +595,7 @@ const hHop = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
-  motion: ['2', '2', 'h', 'or', '2', 'h', 's'],
+  motion: ['2', '2', 'h', 'or', '2', 'h', 'a'],
   description: "Costs 500 health\nBelial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
 }
 
@@ -823,7 +823,7 @@ const ssba = {
 };
 
 
-export const belialInfo = [
+export const aBelialInfo = [
   general,
   closeL,
   closeM,
