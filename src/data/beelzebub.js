@@ -461,7 +461,7 @@ const hFireballLvl3 = {
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Blind Devotion', 
+  moveName: 'L Langelaan Field', 
   altName: '623L', 
   damage: '1000',
   guard: 'All', 
@@ -473,12 +473,12 @@ const lUppercut = {
   oncounterhit: 'KD',
   clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Air blockable and quite unsafe.\nPray this counterhits, otherwise it's gonna hurt Belial a lot."  
+  description: "Bubs' invincible reversal. Hits all around him but doesn't have much horizontal range in front of him. Has poor speed, smaller hitbox than visual, and very punishable. The field can hit opponents jumping over him, and if it does, it throws the opponent over and in front of him.\nFastest non-EX version."
 };
 const mUppercut = { 
-  moveName: 'M Blind Devotion', 
+  moveName: 'M Langelaan Field', 
   altName: '623M', 
-  damage: '700, 200, 100×4', 
+  damage: '1000', 
   guard: 'All', 
   startup: '9', 
   active: '2, 3x4, 4', 
@@ -488,12 +488,12 @@ const mUppercut = {
   oncounterhit: 'KD',
   clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "First hit is air unblockable.\nPretty good last-minute anti-air, but generally outclassed in reward by his 2H."
+  description: "Bubs' invincible reversal. Hits all around him but doesn't have much horizontal range in front of him. Has poor speed, smaller hitbox than visual, and very punishable. The field can hit opponents jumping over him, and if it does, it throws the opponent over and in front of him.\nDelayed, which has its own upsides and downsides."
 };
 const hUppercut = { 
-  moveName: 'H Blind Devotion', 
+  moveName: 'H Langelaan Field', 
   altName: '623H', 
-  damage: '700, 200, 50×4, 800', 
+  damage: '1200', 
   guard: 'All', 
   startup: '9', 
   active: '2, 3x5', 
@@ -503,14 +503,14 @@ const hUppercut = {
   oncounterhit: 'HKD (+38)',
   clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Entirely air unblockable.\nCosts 500 health upon use.\nHigh damage and air unblockable throughout make this Belial's most consistent anti-air. It does not come cheap though, as it costs health and is very unsafe on block."
+  description: "Bubs' invincible reversal. Hits all around him but doesn't have much horizontal range in front of him. Has poor speed, smaller hitbox than visual, and very punishable. The field can hit opponents jumping over him, and if it does, it throws the opponent over and in front of him.\nAs fast as the L version.\nAir unblockable, which makes it a guaranteed anti-air depending on the opponent's character. Can lead to a corner safejump if you hit the opponent high enough with it."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Carnal Passion', 
+  moveName: 'L Chaoscalibur', 
   altName: '214L', 
-  damage: '400', 
+  damage: '200x2, 600', 
   guard: 'All', 
   startup: '14', 
   active: '4', 
@@ -520,13 +520,14 @@ const lRekka = {
   oncounterhit: '0',
   clash: '3',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders\nFast and combos from 2M.\nStandard combo ender special. Provides a good enough knockdown, but really shines in its corner carry."
+  description: "Bubs' combo filler special. Good to space with and provides a knockdown anywhere.\nHits mid.\nBasic combo ender.\nHits in front of Bubs, great for ending combos and controlling space, chips a surprising amount of health and a good pressure ender since it is safe. Can be rolled through if the opponent is far enough. as well if you 5U after and they backtech or don't tech you are plus."
 };
+
 const mRekka = { 
-  moveName: 'M Carnal Passion', 
+  moveName: 'M Chaoscalibur', 
   altName: '214M', 
-  damage: '600', 
-  guard: 'All', 
+  damage: '250, 300, 700', 
+  guard: 'Low', 
   startup: '22', 
   active: '6', 
   recovery: '15', 
@@ -535,13 +536,14 @@ const mRekka = {
   oncounterhit: '+2',
   clash: '5',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders.\nMuch larger range at the cost of speed.\nLow crushes.\nWhile this version generally cannot be combo'd into without a counter hit, its extended range and low crush make it a better neutral tool. Avatar Belial can also catch people trying to punish it with Pact."
+  description: "Bubs' combo filler special. Good to space with and provides a knockdown anywhere.\nHits low.\nWall bounces on counterhit.\nA frame trap to be respected thanks to its wallbounce. Safe on block."
 };
+
 const hRekka = { 
-  moveName: 'H Carnal Passion', 
+  moveName: 'H Chaoscalibur', 
   altName: '214H', 
-  damage: '500', 
-  guard: 'All', 
+  damage: '200x6', 
+  guard: 'Low*3, Mid*3', 
   startup: '16', 
   active: '4', 
   recovery: '15', 
@@ -550,45 +552,13 @@ const hRekka = {
   oncounterhit: '+2',
   clash: '4',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders.\nCauses follow-up 2 to wallbounce.\nCosts 500 health upon use.\nCorner combo launcher. It's generally a better idea to use other specials first but Belial can still get basic knockdowns without this special using 623M or 623H."
+  description: "Bubs' combo filler special. Good to space with and provides a knockdown anywhere.\nFastest version.\nHits low.\nWall bounces on hit.\nSafe on block and a combo extender to boot. Bear in mind that using this will also make your divekick go into cooldown."
 };
 
-const rekka2 = { 
-  moveName: 'Carnal Passion Follow Up', 
-  altName: '214X > 4X', 
-  damage: '400', 
-  guard: 'All', 
-  startup: '9?', 
-  active: '3?', 
-  recovery: '22?', 
-  onblock: '-8', 
-  onhit: 'KD (+21)',
-  oncounterhit: 'HKD',
-  clash: '4',
-  motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders."
-};
-
-const rekka3 = { 
-  moveName: 'Carnal Passion Ender', 
-  altName: '214X > 4X > 4X', 
-  damage: '700', 
-  guard: 'All', 
-  startup: '13?', 
-  active: '6?',
-  recovery: '29?', 
-  onblock: '-16', 
-  onhit: 'KD',
-  oncounterhit: 'KD',
-  clash: '5',
-  motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Belial's rekka series. The follow-ups are all the same and combo into Pact enders."
-};
-
-const lHop = {
+const lVacuum = {
   moveName: "L Wings Bestowed",
   altName: '22L',
-  damage: '-',
+  damage: '100',
   guard: '-',
   startup: '16',
   active: '-', 
@@ -598,13 +568,13 @@ const lHop = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', '2', 'l', 'or', '2', 'a'],
-  description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
+  description: "GRAVITY ORB. Pulls grounded opponents towards Bubs, and plus if spaced. Active frames also destroy projectiles, but has to be used preemptively because of its slow startup. Also pulls in aerial opponents in hitstun, so it's good for juggles. This move goes on cooldown for non-EX and EX moves for a period of time as well even if you use the technical inputs. Has about an 5 second cooldown for regular, non-EX input and a 12 second cooldown for EX.\nHits right in front of Bubs and pull from about 1/3 of the screen.\nHas to hit a little late to be plus."
 }
 
-const mHop = {
+const mVacuum = {
   moveName: "M Wings Bestowed",
   altName: '22M',
-  damage: '-',
+  damage: '100',
   guard: '-',
   startup: '23',
   active: '-', 
@@ -614,13 +584,13 @@ const mHop = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', '2', 'm', 'or', '2', 'm', 'a'],
-  description: "Belial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
+  description: "GRAVITY ORB. Pulls grounded opponents towards Bubs, and plus if spaced. Active frames also destroy projectiles, but has to be used preemptively because of its slow startup. Also pulls in aerial opponents in hitstun, so it's good for juggles. This move goes on cooldown for non-EX and EX moves for a period of time as well even if you use the technical inputs. Has about an 5 second cooldown for regular, non-EX input and a 12 second cooldown for EX.\nPulls from about 2/3 of the screen.\nHas to hit a little late to be plus."
 }
 
-const hHop = {
+const hVacuum = {
   moveName: "H Wings Bestowed",
   altName: '22H',
-  damage: '-',
+  damage: '100',
   guard: '-',
   startup: '13',
   active: '-', 
@@ -630,12 +600,12 @@ const hHop = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', '2', 'h', 'or', '2', 'h', 'a'],
-  description: "Costs 500 health\nBelial begins to float in the air using his wings. His hurtbox is quite large during this move, making it risky to use. Belial can pick between four follow-ups while he floats."
+  description: "GRAVITY ORB. Pulls grounded opponents towards Bubs, and plus if spaced. Active frames also destroy projectiles, but has to be used preemptively because of its slow startup. Also pulls in aerial opponents in hitstun, so it's good for juggles. This move goes on cooldown for non-EX and EX moves for a period of time as well even if you use the technical inputs. Has about an 5 second cooldown for regular, non-EX input and a 12 second cooldown for EX.\nSame speed as L version and same range as the M version.\nAlways plus on block.\nBe aware that if the grounded opponent happens to have any hitbox active, they can hit you with it as you reel them in. Overall a bad special to throw out, but can turn the tides as a hard callout. Mainly used in combos."
 }
 
-const lStolas = {
-  moveName: 'L Stolas',
-  altName: '22L -> L',
+const lDivekick = {
+  moveName: 'L Unisonic',
+  altName: 'j214L',
   damage: '700',
   guard: '-',
   startup: '15',
@@ -645,13 +615,13 @@ const lStolas = {
   onhit: '+2 -> +3',
   oncounterhit: 'KD',
   clash: '3',
-  motion: ['2', '2', 'l', 'l'],
-  description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
+  motion: ['214', 'l', 'or', 'a'],
+  description: 'Mid-hitting divekick. Cooldown is also tied to ground 214X.\nHas to be spaced to leave Bubs at advantage.\nSomewhat fast but reactable, has to be blocked at knee level to be plus.'
 }
 
-const mStolas = {
-  moveName: 'M Stolas',
-  altName: '22M -> L',
+const mDivekick = {
+  moveName: 'M Unisonic',
+  altName: 'j214M',
   damage: '700',
   guard: '-',
   startup: '15',
@@ -661,13 +631,13 @@ const mStolas = {
   onhit: '+3 -> +4',
   oncounterhit: 'KD',
   clash: '3',
-  motion: ['2', '2', 'm', 'l'],
-  description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
+  motion: ['214', 'm', 'or', 'm', 'a'],
+  description: 'Mid-hitting divekick. Cooldown is also tied to ground 214X.\nMuch slower than the L version.\nMuch easier to make plus.\nMostly used to bait 2H anti-airs.'
 }
 
-const hStolas = {
-  moveName: 'H Stolas',
-  altName: '22H -> L',
+const hDivekick = {
+  moveName: 'H Unisonic',
+  altName: 'j214H',
   damage: '700',
   guard: '-',
   startup: '15',
@@ -677,134 +647,8 @@ const hStolas = {
   onhit: '+2 -> +3',
   oncounterhit: 'HKD(+55)',
   clash: '3',
-  motion: ['2', '2', 'h', 'l'],
-  description: 'Plus on block.\nOnly hits the area directly below Belial, limiting its use.'
-}
-
-const lBeleth = {
-  moveName: 'Beleth',
-  altName: '22L -> M',
-  damage: '600, 100x5',
-  guard: '-',
-  startup: '21',
-  active: '8 -> 10',
-  recovery: '11',
-  onblock: '+2',
-  onhit: 'KD',
-  oncounterhit: 'KD',
-  clash: '2',
-  motion: ['2', '2', 'l', 'm'],
-  description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
-}
-
-const mBeleth = {
-  moveName: 'Beleth',
-  altName: '22M -> M',
-  damage: '600, 100x5',
-  guard: '-',
-  startup: '21',
-  active: '8 -> 12',
-  recovery: '11',
-  onblock: '+2',
-  onhit: 'KD',
-  oncounterhit: 'KD',
-  clash: '2',
-  motion: ['2', '2', 'm', 'm'],
-  description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
-}
-
-const hBeleth = {
-  moveName: 'Beleth',
-  altName: '22H -> M',
-  damage: '600, 100x5',
-  guard: '-',
-  startup: '21',
-  active: '8 -> 13',
-  recovery: '11',
-  onblock: '+2',
-  onhit: 'HKD (+60)',
-  oncounterhit: 'HKD (+60)',
-  clash: '2',
-  motion: ['2', '2', 'h', 'm'],
-  description: 'Plus on block.\nBelial dives at a shallower angle downwards, allowing him to hit opponents farther away. Hits at about the same angle as his command grab from Wings Bestowed.'
-}
-
-const lBarbatos = {
-  moveName: 'L Barbatos',
-  altName: '22L -> H',
-  damage: '2000',
-  guard: 'Throw',
-  startup: '30 -> 31',
-  active: '2',
-  recovery: '34',
-  onblock: '-',
-  onhit: 'HKD (+39)',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['2', '2', 'l', 'h'],
-  description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
-}
-
-const mBarbatos = {
-  moveName: 'M Barbatos',
-  altName: '22M -> H',
-  damage: '2500',
-  guard: 'Throw',
-  startup: '29 -> 33',
-  active: '2',
-  recovery: '34',
-  onblock: '-',
-  onhit: 'HKD (+39)',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['2', '2', 'm', 'h'],
-  description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
-}
-
-const hBarbatos = {
-  moveName: 'H Barbatos',
-  altName: '22H -> H',
-  damage: '2000',
-  guard: 'Throw',
-  startup: '30 -> 35',
-  active: '2',
-  recovery: '34',
-  onblock: '-',
-  onhit: 'HKD (+39)',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['2', '2', 'h', 'h'],
-  description: 'Fast command grab.\nSurprise option from Wings Bestowed. Does the most damage from the M version, but 2K from the others is nothing to sneeze at.'
-}
-
-const airLaser = {
-  moveName: 'Habakkuk (Midair)',
-  altName: '22X -> U',
-  damage: '1000',
-  guard: '-',
-  startup: '27',
-  active: '-',
-  recovery: '-',
-  onblock: '-4',
-  onhit: 'KD',
-  oncounterhit: '-',
-  clash: '-',
-  description: 'Uncharged version has a small hitbox.\nCharged version sweeps the screen.\nAvatar Belials long-range option while in Wings Bestowed. Knocks down on hit and deals respectable damage.'
-}
-
-const airLaserCharged = {
-  moveName: 'Habakkuk Charged (Midair)',
-  altName: '22X -> U',
-  damage: '1100',
-  guard: '-',
-  startup: '27',
-  active: '-',
-  recovery: '-',
-  onblock: '-9',
-  onhit: 'KD',
-  oncounterhit: '-',
-  clash: '-',
-  description: 'Uncharged version has a small hitbox.\nCharged version sweeps the screen.\nAvatar Belials long-range option while in Wings Bestowed. Knocks down on hit and deals respectable damage.'
+  motion: ['214', 'h', 'or', 'h', 'a'],
+  description: 'Mid-hitting divekick. Cooldown is also tied to ground 214X.\nAlmost always plus.\nVery fast.\nVery solid neutral and combo tool used for whiff punishing and skipping neutral in general. On hit, this dive is automatically Followed with a launching wing slice which can combo into 236236H for big damage in the corner. Can help push opponents into the corner from mid-field.'
 }
 
 // skybound art
@@ -816,22 +660,6 @@ const sba = {
   startup: '12', 
   active: '7', 
   recovery: '32', 
-  onblock: '-', 
-  onhit: 'HKD (T:+43, S:+33)',
-  oncounterhit: 'HKD (T:+43, S:+33)',
-  clash: '-',
-  motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "+43 KD advantage on technical input, +33 on simple.\nBelial performs a rising attack, followed by a downwards lunge."
-};
-
-const airSba = { 
-  moveName: 'Diafthora (Air)', 
-  altName: '236236H', 
-  damage: '3200', 
-  guard: 'All', 
-  startup: '15', 
-  active: 'til landing', 
-  recovery: '31', 
   onblock: '-', 
   onhit: 'HKD (T:+43, S:+33)',
   oncounterhit: 'HKD (T:+43, S:+33)',
@@ -880,31 +708,26 @@ export const bubzInfo = [
   backThrow,
   airThrow,
   uOverhead,
-  lFireball,
-  mFireball,
-  hFireball,
+  lFireballLvl1,
+  lFireballLvl2,
+  mFireballLvl1,
+  mFireballLvl2,
+  mFireballLvl3,
+  hFireballLvl1,
+  hFireballLvl2,
+  hFireballLvl3,
   lUppercut,
   mUppercut,
   hUppercut,
   lRekka,
   mRekka,
   hRekka,
-  rekka2,
-  rekka3,
-  lBarbatos,
-  mBarbatos,
-  hBarbatos,
-  lBeleth,
-  mBeleth,
-  hBeleth,
-  lStolas,
-  mStolas,
-  hStolas,
-  lHop,
-  mHop,
-  hHop,
-  airLaser,
-  airLaserCharged,
+  lVacuum,
+  mVacuum,
+  hVacuum,
+  lDivekick,
+  mDivekick,
+  hDivekick,
   sba,
   airSba,
   ssba
