@@ -653,11 +653,11 @@ const hDivekick = {
 
 // skybound art
 const sba = { 
-  moveName: 'Diafthora', 
+  moveName: 'Black Spear', 
   altName: '236236H', 
-  damage: '3200', 
+  damage: '2000-2500', 
   guard: 'All', 
-  startup: '12', 
+  startup: '11', 
   active: '7', 
   recovery: '32', 
   onblock: '-', 
@@ -665,11 +665,27 @@ const sba = {
   oncounterhit: 'HKD (T:+43, S:+33)',
   clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "+43 KD advantage on technical input, +33 on simple.\nBelial performs a rising attack, followed by a downwards lunge."
+  description: "Can be held for increased damage at close range.\nLeads into okizeme in the corner.\nCan anti-air and catch a jumping opponent, in range of the super being held."
+};
+
+const cmdGrabSba = { 
+  moveName: 'Anthem', 
+  altName: '236236H', 
+  damage: '2500-3000', 
+  guard: 'All', 
+  startup: '13', 
+  active: '7', 
+  recovery: '32', 
+  onblock: '-', 
+  onhit: 'HKD (T:+43, S:+33)',
+  oncounterhit: 'HKD (T:+43, S:+33)',
+  clash: '-',
+  motion: ['214', '214', 'h', 'or', '214', 'a'],
+  description: "Command grab super which happens 0 frames post super flash, meaning the opponent cannot jump it on reaction.\nOpponent is absorbed and then carried across the screen.\nBest done after safejumps and dash 2L/c.L.\nInvulnerable and can be used as a very short range reversal the opponent cannot escape post super flash.\nCan be used on your wake-up if opponent is right next to you, is risky."
 };
 
 const ssba = { 
-  moveName: 'Wild Sin', 
+  moveName: 'Chaos Legion', 
   altName: '236236U', 
   damage: '3500-4500', 
   guard: 'Throw/All', 
@@ -681,7 +697,7 @@ const ssba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "+41 KD advantage on technical input, +31 on simple.\nBelial's invincible command throw super. Can be combo'd into like a strike and turns into a projectile if the grab portion whiffs."
+  description: "Summons forth pillars of thorns from the ground in a linear fashion, starting from close to Bubs and reaching until the end of the screen.\nHits the entire height of the stage.\nSlow and can be dodged, making it a bad reversal.\nOn cinematic hit, leads into okizeme."
 };
 
 
@@ -729,6 +745,6 @@ export const bubzInfo = [
   mDivekick,
   hDivekick,
   sba,
-  airSba,
+  cmdGrabSba,
   ssba
 ]
