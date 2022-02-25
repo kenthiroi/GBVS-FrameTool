@@ -13,6 +13,8 @@ const closeL = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
   description: "The Granblue c.L™. Use in pressure."
 };
@@ -26,6 +28,8 @@ const closeM = {
   recovery: '10',
   onblock: '0',
   onhit: '4',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
   description: "More minus than average at -3 instead of 0.\nThe Granblue c.M™. Also used in pressure and combos, especially as a frametrap."
 };
@@ -39,6 +43,8 @@ const closeH = {
   recovery: '18',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: "Unique 4-hitting c.H that can used as a situational anti-air. Causes troubles mid combo as it pushes the opponent fairly high up, but can be useful to allow Cagliostro to combo from 214H in the corner if this attack lands on an airborne target."
 };
@@ -54,6 +60,8 @@ const auto1 = {
   recovery: '-',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l'],
   description: "An autocombo like any other. Used to extend confirms, get closer or generate extra height in juggles."
 };
@@ -67,6 +75,8 @@ const auto2 = {
   recovery: '-',
   onblock: '-5',
   onhit: '-1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l', 'l'],
   description: "An autocombo like any other. Used to extend confirms, get closer or generate extra height in juggles."
 };
@@ -82,6 +92,8 @@ const far5L = {
   recovery: '13',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
   description: "A far L with decent range. Good for converting off L pressure."
 };
@@ -95,6 +107,8 @@ const far5M = {
   recovery: '18',
   onblock: '-6',
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
   description: "Longest range normal poke. Usually gets no conversions on hit, but using Cagliostro's varied special cancels between 5U, Trap, Spear or Teleport can still keep the opponent guessing and generate advantage."
 };
@@ -108,6 +122,8 @@ const far5H = {
   recovery: '20',
   onblock: '-9',
   onhit: '-5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: "Less minus than f.M but way worse on whiff.\nImportant poke and your whiff punish of choice. Less range and higher recovery than f.M, but has high hitstun and three hits, allowing for easy 1-hit confirms into knockdown at nearly any range."
 };
@@ -123,6 +139,8 @@ const n2L = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'l'],
   description: "A Granblue 2L - a plus on block low with moderate range that chains into itself. This is Cagliostro's only low outside of sweep, and the cornerstone of her pressure game."
 };
@@ -136,6 +154,8 @@ const n2M = {
   recovery: '9',
   onblock: '1',
   onhit: '5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'm'],
   description: "Similar to 5M, with less range but less startup, less recovery and a lower to the ground hitbox. Not a low, but stuffs rolls."
 };
@@ -149,6 +169,8 @@ const n2H = {
   recovery: '24',
   onblock: '-13',
   onhit: '-9',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'h'],
   description: "Average anti-air with high reward on anti-air CHs. Hits slightly behind Cagliostro."
 };
@@ -162,6 +184,8 @@ const n2U = {
   recovery: '21',
   onblock: '-12',
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'u'],
   description: "The Granblue Sweep™. A low that causes hard knockdown on hit. Useful combo ender that gets you a safejump and trap setup. Can also be used in neutral to clip the shins of walk-happy opponents."
 };
@@ -177,6 +201,8 @@ const jL = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
   description: "Fastest air attack. Can be used for f-shiki (fuzzy) setups as it hits the standing guard of some characters on the way up."
 };
@@ -190,6 +216,8 @@ const jM = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
   description: "Has the longest range of all her air buttons, making it Cagliostro's go-to air to air."
 };
@@ -203,6 +231,8 @@ const jH = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: "Cagliostro's jump in tool."
 };
@@ -217,6 +247,8 @@ const jU = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
   description: "Cagliostro poses, charging up a rock for as long as you hold U. The rock levels up once with the initial press, and then approximately once every 30 frames while U is held.\n5U can absorb one projectile hit while it is deployed, and the rock comes out fast enough to absorb fireballs in neutral on reaction. The rock also has an attack hitbox when it initially spawns. This can be used to push yourself out safely in blockstrings.\nThe air version stalls her air momentum almost completely while it is deployed."
 };
@@ -231,6 +263,8 @@ const s5U = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
   description: "Cagliostro poses, charging up a rock for as long as you hold U. The rock levels up once with the initial press, and then approximately once every 30 frames while U is held.\n5U can absorb one projectile hit while it is deployed, and the rock comes out fast enough to absorb fireballs in neutral on reaction. The rock also has an attack hitbox when it initially spawns. This can be used to push yourself out safely in blockstrings.\nThe air version stalls her air momentum almost completely while it is deployed."
 };
@@ -240,12 +274,14 @@ const lv1U = {
   moveName: 'Collapse (Fire) Lv1', 
   altName: '6U Lv1', 
   damage: '400', 
-  guard: 'mid', 
+  guard: 'All', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['6', 'u'],
   description: "Cagliostro fires the rock she charged with 5U. If no rock was charged prior, Cagliostro will simply use level 1 rock.\nAt low levels it mostly acts as a low-risk low-reward cancel option off pokes, but as it gains levels it becomes more rewarding, gains more hits and higher advantage.\nThe air version has two different angles with j.2U and j.6U. j.2U fires close to her, j.6U fires further away.\nLevel 1: 1 hit, basic projectile.\nLevel 2: 2 hits, will eat normal projectiles and continue with one hit.\nLevel 3: 3 hits, cancels out EX projectiles.\nLevel 4: 4 hits, will eat EX projectiles and continue to travel with a single hit.\nLevel 5: 5 hits, will eat EX projectiles and continue to travel with two hits, launches on hit. Moves more slowly than the other versions, so if Cag gets enough space to charge and throw a LV5 rock she can move in behind it and win neutral for free."
 };
@@ -253,12 +289,14 @@ const lv2U = {
   moveName: 'Collapse (Fire) Lv2', 
   altName: '6U Lv2', 
   damage: '600', 
-  guard: 'mid', 
+  guard: 'All', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['6', 'u'],
   description: "Cagliostro fires the rock she charged with 5U. If no rock was charged prior, Cagliostro will simply use level 1 rock.\nAt low levels it mostly acts as a low-risk low-reward cancel option off pokes, but as it gains levels it becomes more rewarding, gains more hits and higher advantage.\nThe air version has two different angles with j.2U and j.6U. j.2U fires close to her, j.6U fires further away.\nLevel 1: 1 hit, basic projectile.\nLevel 2: 2 hits, will eat normal projectiles and continue with one hit.\nLevel 3: 3 hits, cancels out EX projectiles.\nLevel 4: 4 hits, will eat EX projectiles and continue to travel with a single hit.\nLevel 5: 5 hits, will eat EX projectiles and continue to travel with two hits, launches on hit. Moves more slowly than the other versions, so if Cag gets enough space to charge and throw a LV5 rock she can move in behind it and win neutral for free."
 };
@@ -266,12 +304,14 @@ const lv3U = {
   moveName: 'Collapse (Fire) Lv3', 
   altName: '6U Lv3', 
   damage: '700', 
-  guard: 'mid', 
+  guard: 'All', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['6', 'u'],
   description: "Cagliostro fires the rock she charged with 5U. If no rock was charged prior, Cagliostro will simply use level 1 rock.\nAt low levels it mostly acts as a low-risk low-reward cancel option off pokes, but as it gains levels it becomes more rewarding, gains more hits and higher advantage.\nThe air version has two different angles with j.2U and j.6U. j.2U fires close to her, j.6U fires further away.\nLevel 1: 1 hit, basic projectile.\nLevel 2: 2 hits, will eat normal projectiles and continue with one hit.\nLevel 3: 3 hits, cancels out EX projectiles.\nLevel 4: 4 hits, will eat EX projectiles and continue to travel with a single hit.\nLevel 5: 5 hits, will eat EX projectiles and continue to travel with two hits, launches on hit. Moves more slowly than the other versions, so if Cag gets enough space to charge and throw a LV5 rock she can move in behind it and win neutral for free."
 };
@@ -279,12 +319,14 @@ const lv4U = {
   moveName: 'Collapse (Fire) Lv4', 
   altName: '6U Lv4', 
   damage: '800', 
-  guard: 'mid', 
+  guard: 'All', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['6', 'u'],
   description: "Cagliostro fires the rock she charged with 5U. If no rock was charged prior, Cagliostro will simply use level 1 rock.\nAt low levels it mostly acts as a low-risk low-reward cancel option off pokes, but as it gains levels it becomes more rewarding, gains more hits and higher advantage.\nThe air version has two different angles with j.2U and j.6U. j.2U fires close to her, j.6U fires further away.\nLevel 1: 1 hit, basic projectile.\nLevel 2: 2 hits, will eat normal projectiles and continue with one hit.\nLevel 3: 3 hits, cancels out EX projectiles.\nLevel 4: 4 hits, will eat EX projectiles and continue to travel with a single hit.\nLevel 5: 5 hits, will eat EX projectiles and continue to travel with two hits, launches on hit. Moves more slowly than the other versions, so if Cag gets enough space to charge and throw a LV5 rock she can move in behind it and win neutral for free."
 };
@@ -292,12 +334,14 @@ const lv5U = {
   moveName: 'Collapse (Fire) Lv5', 
   altName: '6U Lv5', 
   damage: '1000', 
-  guard: 'mid', 
+  guard: 'All', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['6', 'u'],
   description: "Cagliostro fires the rock she charged with 5U. If no rock was charged prior, Cagliostro will simply use level 1 rock.\nAt low levels it mostly acts as a low-risk low-reward cancel option off pokes, but as it gains levels it becomes more rewarding, gains more hits and higher advantage.\nThe air version has two different angles with j.2U and j.6U. j.2U fires close to her, j.6U fires further away.\nLevel 1: 1 hit, basic projectile.\nLevel 2: 2 hits, will eat normal projectiles and continue with one hit.\nLevel 3: 3 hits, cancels out EX projectiles.\nLevel 4: 4 hits, will eat EX projectiles and continue to travel with a single hit.\nLevel 5: 5 hits, will eat EX projectiles and continue to travel with two hits, launches on hit. Moves more slowly than the other versions, so if Cag gets enough space to charge and throw a LV5 rock she can move in behind it and win neutral for free."
 };
@@ -305,204 +349,267 @@ const lv5U = {
 const groundThrow = { 
   moveName: 'Ground Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '7', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "A regular throw that becomes very scary thanks to Cagliostro's traps. If an opponent is thrown into an active ground or air trap, it triggers, allowing for strong combo conversions."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '5', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Spikes the opponent into the ground. Like ground throw, allows for conversions if the opponent is launched into a trap this way, although this will not come up as often."
 };
 
 const uOverhead = { 
   moveName: 'Overhead', 
   altName: 'UOH', 
   damage: '1000', 
-  guard: 'high', 
+  guard: 'High', 
   startup: '26', 
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Regular universal overhead that can lead to trap conversions if a ground trap is behind the opponent. Hops backwards after the hit, limiting CH conversion quality at times. Doesn't hit nearly as far up as it looks like."
 };
 
 // fireballs
-const lFireball = { 
-  moveName: 'L Reginleiv', 
+const lTrap = { 
+  moveName: 'L Mehen', 
   altName: '236L', 
   damage: '800', 
-  guard: 'all', 
+  guard: 'All', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Cagliostro's character defining tool, with neutral, setplay and pressure uses as long as you understand its limitations. Performing this special will cause Cagliostro to place a trap in the following locations:\n236L: Directly at Cagliostro's feet\n236M: A character length and a half in front of Cagliostro\nj.236L: Approximately a character length away from Cagliostro\nj.236M: About two character lengths away from Cagliostro\nThe H version of these places both traps at the same time with the startup of the L version. They also are placed faster, have unlimited untechable time and after air H version Cagliostro retains her air options.\nWhen used in neutral, traps force the opponent to hit them with a normal or move around them. You want to exploit that opening with your normals. They are usually ineffective against advancing specials, however.\nAs a setplay tool:\nGround traps beneath the opponent will trigger on their wakeup with a short delay. They will not protect you from reversals, but still give you free pressure. When combined with a safejump from 2U 236M forward jump H, you get f-shiki setups with rejump jL.\nGround traps behind the opponent will trigger as soon as your pressure pushes your opponent into the trap, or give you a throw conversion instead.\nAir traps above the opponent will prevent the opponent from jumping out, and gives Cagliostro a conversion of throw. This massively increases the reward of throws while also removing its biggest counterplay.\nExtremely easy to convert from if the opponent gets caught or is otherwise hit into a trap with another one of your moves. Hitting an opponent into an air trap allows you to loop air traps, which doesn't do much damage but is great at stalling for cooldowns.\nUnusually for a Granblue tool, non-EX traps have nearly no cooldown even with easy input."
 };
-const mFireball = { 
-  moveName: 'M Reginleiv', 
+const mTrap = { 
+  moveName: 'M Mehen', 
   altName: '236M', 
   damage: '400, 800', 
-  guard: 'mid, all', 
+  guard: 'All', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Cagliostro's character defining tool, with neutral, setplay and pressure uses as long as you understand its limitations. Performing this special will cause Cagliostro to place a trap in the following locations:\n236L: Directly at Cagliostro's feet\n236M: A character length and a half in front of Cagliostro\nj.236L: Approximately a character length away from Cagliostro\nj.236M: About two character lengths away from Cagliostro\nThe H version of these places both traps at the same time with the startup of the L version. They also are placed faster, have unlimited untechable time and after air H version Cagliostro retains her air options.\nWhen used in neutral, traps force the opponent to hit them with a normal or move around them. You want to exploit that opening with your normals. They are usually ineffective against advancing specials, however.\nAs a setplay tool:\nGround traps beneath the opponent will trigger on their wakeup with a short delay. They will not protect you from reversals, but still give you free pressure. When combined with a safejump from 2U 236M forward jump H, you get f-shiki setups with rejump jL.\nGround traps behind the opponent will trigger as soon as your pressure pushes your opponent into the trap, or give you a throw conversion instead.\nAir traps above the opponent will prevent the opponent from jumping out, and gives Cagliostro a conversion of throw. This massively increases the reward of throws while also removing its biggest counterplay.\nExtremely easy to convert from if the opponent gets caught or is otherwise hit into a trap with another one of your moves. Hitting an opponent into an air trap allows you to loop air traps, which doesn't do much damage but is great at stalling for cooldowns.\nUnusually for a Granblue tool, non-EX traps have nearly no cooldown even with easy input."
 };
-const hFireball = { 
-  moveName: 'H Reginleiv', 
+const hTrap = { 
+  moveName: 'H Mehen', 
   altName: '236H', 
   damage: '350 x 3', 
-  guard: 'all', 
+  guard: 'All', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Cagliostro's character defining tool, with neutral, setplay and pressure uses as long as you understand its limitations. Performing this special will cause Cagliostro to place a trap in the following locations:\n236L: Directly at Cagliostro's feet\n236M: A character length and a half in front of Cagliostro\nj.236L: Approximately a character length away from Cagliostro\nj.236M: About two character lengths away from Cagliostro\nThe H version of these places both traps at the same time with the startup of the L version. They also are placed faster, have unlimited untechable time and after air H version Cagliostro retains her air options.\nWhen used in neutral, traps force the opponent to hit them with a normal or move around them. You want to exploit that opening with your normals. They are usually ineffective against advancing specials, however.\nAs a setplay tool:\nGround traps beneath the opponent will trigger on their wakeup with a short delay. They will not protect you from reversals, but still give you free pressure. When combined with a safejump from 2U 236M forward jump H, you get f-shiki setups with rejump jL.\nGround traps behind the opponent will trigger as soon as your pressure pushes your opponent into the trap, or give you a throw conversion instead.\nAir traps above the opponent will prevent the opponent from jumping out, and gives Cagliostro a conversion of throw. This massively increases the reward of throws while also removing its biggest counterplay.\nExtremely easy to convert from if the opponent gets caught or is otherwise hit into a trap with another one of your moves. Hitting an opponent into an air trap allows you to loop air traps, which doesn't do much damage but is great at stalling for cooldowns.\nUnusually for a Granblue tool, non-EX traps have nearly no cooldown even with easy input."
 };
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Rising Sword', 
+  moveName: 'L Calculated', 
   altName: '623L', 
-  damage: '700, 300', 
-  guard: 'mid, all', 
+  damage: '1000', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-17', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Cagliostro poses, causing a spear to erupt from the ground. A zoning and combo tool that synergizes well with traps. All versions are slow and don't track fast-moving opponents well, but will launch the opponent on hit and lead to high damage or free pressure when knocking opponents into traps.\nTracks from point blank to about one character width away.\nHits the opponent away from Cagliostro."
 };
 const mUppercut = { 
-  moveName: 'M Rising Sword', 
+  moveName: 'M Calculated', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
-  guard: 'mid, all', 
+  damage: '1000', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "Cagliostro poses, causing a spear to erupt from the ground. A zoning and combo tool that synergizes well with traps. All versions are slow and don't track fast-moving opponents well, but will launch the opponent on hit and lead to high damage or free pressure when knocking opponents into traps.\nTracks from about one character width away to about 3/4 screen away\nHits the opponent towards Cagliostro.\nThis also turns the opponent around, so the opponent can back-roll towards Cagliostro. Trades favorably with fireballs and other zoning attempts."
 };
 const hUppercut = { 
-  moveName: 'H Rising Sword', 
+  moveName: 'H Calculated', 
   altName: '623H', 
-  damage: '950~1400', 
-  guard: 'mid, all', 
+  damage: '1200', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Cagliostro poses, causing a spear to erupt from the ground. A zoning and combo tool that synergizes well with traps. All versions are slow and don't track fast-moving opponents well, but will launch the opponent on hit and lead to high damage or free pressure when knocking opponents into traps.\nTracks from point blank to about half-screen.\nHits the opponent away from Cagliostro.\nEX spear allows for corner conversions even without traps."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+  moveName: 'L Alexandria', 
   altName: '214L', 
   damage: '700', 
-  guard: 'mid', 
+  guard: 'All', 
   startup: '13', 
   active: '2', 
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
   description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
 };
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
-};
 const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+  moveName: 'M Alexandria', 
   altName: '214M', 
   damage: '1200', 
-  guard: 'mid', 
+  guard: 'All', 
   startup: '16', 
   active: '13', 
   recovery: '29', 
   onblock: '+2~-10', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
   description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
 };
 const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+  moveName: 'H Alexandria', 
   altName: '214H', 
   damage: '1200', 
-  guard: 'mid', 
+  guard: 'All', 
   startup: '13', 
   active: '13', 
   recovery: '37', 
   onblock: '+4~-8', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
   description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
 };
 
+const lTeleport = {
+  moveName: 'L Spare Body', 
+  altName: '22L', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: 'Cagliostro creates a fake body and teleports somewhere. All versions of this move have some invuln while Cagliostro isn\'t on the screen, but none of them start at frame one. You can perform this move instantly in the air by performing it as 282X, 272X, or 292x, depending on if you want to do it out of a neutral, backward, or forward jump. Neither the M or H versions of this move will allow you to cross up the opponent if they are in the corner.\nCagliostro teleports backwards around backdash length.\nMainly used as a fakeout tool to bait the opponent into pressing something after using 22M.'
+};
+
+const mTeleport = {
+  moveName: 'M Spare Body', 
+  altName: '22M', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
+  description: 'Cagliostro creates a fake body and teleports somewhere. All versions of this move have some invuln while Cagliostro isn\'t on the screen, but none of them start at frame one. You can perform this move instantly in the air by performing it as 282X, 272X, or 292x, depending on if you want to do it out of a neutral, backward, or forward jump. Neither the M or H versions of this move will allow you to cross up the opponent if they are in the corner.\nCagliostro teleports a set distance forward.\nThis move can cross up depending on how close or far away the opponent is.'
+};
+
+const hTeleport = {
+  moveName: 'H Spare Body', 
+  altName: '22H', 
+  damage: '1000', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: 'Cagliostro creates a fake body and teleports somewhere. All versions of this move have some invuln while Cagliostro isn\'t on the screen, but none of them start at frame one. You can perform this move instantly in the air by performing it as 282X, 272X, or 292x, depending on if you want to do it out of a neutral, backward, or forward jump. Neither the M or H versions of this move will allow you to cross up the opponent if they are in the corner.\nCagliostro performs a hit before teleporting forward, directly behind the opponent.\nThe hit has extremely short range, but is +1 on block and launches straight up on hit. Can also be used as a reversal-safe meaty.'
+};
+
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Ars Magna', 
   altName: '236236H', 
-  damage: '2500-3500', 
-  guard: 'mid', 
+  damage: '2000, 300x5', 
+  guard: 'Mid', 
   startup: '6+5', 
   active: '-', 
   recovery: '-', 
   onblock: '-13', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Solid Skybound Art that shines as a conversion tool with long range and synergy with air traps.\nIf an air trap is placed appropriately, Cagliostro can hit the opponent into the trap from this super, allowing follow-ups for huge damage. If the opponent remains grounded or close to the ground in the corner, Cagliostro can get a much longer combo, leading to even more damage."
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Everything\'s Coming Up Cagliostro', 
   altName: '236236U', 
   damage: '3500-4500', 
-  guard: 'all', 
+  guard: 'All', 
   startup: '8+5', 
   active: '-', 
   recovery: '-', 
   onblock: '-23', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Cagliostro creates a landslide of gold on the floor in front of her that moves near full-screen, and then encases the opponent in gold if the move connects at close range. Safe on block if the opponent forgets to spot dodge.\nBecause the move travels nearly full-screen, you can use this to tack on some extra damage to random trap hits from just about anywhere, though because the hitbox is so low to the ground it can be difficult to convert off the air traps, possibly making the regular super preferable in those situations.\nThe range on the cinematic hitbox is rather small, meaning you're not likely to get the full animation and damage outside of the corner or auto combos."
 };
 
 
@@ -524,6 +631,7 @@ export const cagInfo = [
   jM,
   jH,
   jU,
+  s5U,
   lv1U,
   lv2U,
   lv3U,
@@ -532,16 +640,18 @@ export const cagInfo = [
   groundThrow,
   airThrow,
   uOverhead,
-  lFireball,
-  mFireball,
-  hFireball,
+  lTrap,
+  mTrap,
+  hTrap,
   lUppercut,
   mUppercut,
   hUppercut,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
+  lTeleport,
+  mTeleport,
+  hTeleport,
   sba,
   ssba
 ]
