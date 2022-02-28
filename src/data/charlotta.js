@@ -13,6 +13,8 @@ const closeL = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
   description: "Strong pressure option that both frame-traps with and combos into itself, 2L, f.L, and c.M."
 };
@@ -26,6 +28,8 @@ const closeM = {
   recovery: '10',
   onblock: '0',
   onhit: '4',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
   description: "Self-advancing normal that is often used to continue pressure because it has a large activation range, is as fast as her other fastest normals besides c.L, and catches rolls and often jumps."
 };
@@ -39,6 +43,8 @@ const closeH = {
   recovery: '18',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: "Situational use as an anti-air, otherwise useful as her highest damage grounded punish starter."
 };
@@ -54,6 +60,8 @@ const auto1 = {
   recovery: '-',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l'],
   description: ""
 };
@@ -67,6 +75,8 @@ const auto2 = {
   recovery: '-',
   onblock: '-5',
   onhit: '-1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l', 'l'],
   description: ""
 };
@@ -82,6 +92,8 @@ const far5L = {
   recovery: '13',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
   description: "Can be used to confirm 2L hitting someone low when it pushes you out of range of another 2L as it combos into [4]6H. Also valuable as a crouch confirm combo option after 214M."
 };
@@ -95,6 +107,8 @@ const far5M = {
   recovery: '18',
   onblock: '-6',
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
   description: "Useful for maintaining pressure and forcing respect after 214M on the opponent's block. Also very valuable as combo filler when linked into from 214H. Can now be comboed into from 2L on crouching opponents."
 };
@@ -108,6 +122,8 @@ const far5H = {
   recovery: '20',
   onblock: '-9',
   onhit: '-5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: "Has larger range than it looks because it moves Charlotta forward. It's useful for counter-poking particularly because it has a higher Attack Level than most other f.Hs in the game with the exception of Vaseraga's, meaning it crushes them outright instead of clashing."
 };
@@ -123,6 +139,8 @@ const n2L = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'l'],
   description: "2L is Charlotta's traditional low option. It has a decent amount of range for a 2L. Links into f.L on standing hit and f.M on crouching hit."
 };
@@ -136,6 +154,8 @@ const n2M = {
   recovery: '9',
   onblock: '1',
   onhit: '5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'm'],
   description: "2M sees a lot of use in pressure, since it is a self-advancing normal that is very safe on block while only having one more frame of startup than f.M has."
 };
@@ -149,6 +169,8 @@ const n2H = {
   recovery: '24',
   onblock: '-13',
   onhit: '-9',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'h'],
   description: "2H is decent for catching extended buttons when f.H is too slow. Does more damage and moves Charlotta forward slightly when charged."
 };
@@ -162,6 +184,8 @@ const n2U = {
   recovery: '21',
   onblock: '-12',
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'u'],
   description: "Self-advancing sweep. Gives you a hard knockdown but you can't link into it without a counterhit or a launch."
 };
@@ -177,6 +201,8 @@ const jL = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
   description: "Can very occasionally hit cross-up."
 };
@@ -190,6 +216,8 @@ const jM = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
   description: "Charlotta's established cross-up jump normal."
 };
@@ -203,6 +231,8 @@ const jH = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: "Can occasionally hit cross-up."
 };
@@ -216,6 +246,8 @@ const jU = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
   description: "Slashes diagonally above Charlotta, making this a useful air-to-air tool. This can hit standing opponents (tall opponents can even be hit by both hits), but it will whiff against all crouchers."
 };
@@ -231,6 +263,8 @@ const parry5U = {
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
   description: "5U has two parts, the Parry and the Counter:\nParry: Parries all moves on frames 6-23 except for throws and (Super) Skybound Arts, and reduces the incoming damage by 50%. The damage is affected by Guts, but is not considered chip damage so if you don't have enough HP to take the attack you will still die. Even if the Counter does not come out on a successful parry, Charlotta is still invulnerable for the rest of the duration and +39 as the opponent is staggered.\nCounter: If the opponent is close enough when their move is parried, a Counter slash automatically activates for damage, a side switch, and a hard knockdown. If the opponent had a normal move parried, they cannot cancel it with anything to retaliate.\n5U is a fairly reliable anti-air option, as it will trigger even against jump normals from far above you. However, its horizontal activation range is poor. Regardless, the move can still be used to counter fireballs, as they will activate the Counter If you're close enough."  
 };
@@ -244,6 +278,8 @@ const groundThrow = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
   description: ""
 };
@@ -256,6 +292,8 @@ const airThrow = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
   description: ""
 };
@@ -270,6 +308,8 @@ const uOverhead = {
   recovery: '-', 
   onblock: '-4', 
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m', 'u'],
   description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
 };
@@ -285,6 +325,8 @@ const lBall = {
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['4', '6', 'l', 'or', '6', 'a'],
   description: "Advancing move. Performs a rolling attack which causes a knockback animation if the move is hit or blocked. Very fast on whiff which can let her sneak in.\nShortest travel distance and safe on block.\nLeaves standing on hit."
 };
@@ -298,6 +340,8 @@ const mBall = {
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['4', '6', 'm', 'or', '6', 'a', 'm'],
   description: "Advancing move. Performs a rolling attack which causes a knockback animation if the move is hit or blocked. Very fast on whiff which can let her sneak in.\nLonger travel distance.\nKnocks down on hit, and wallbounces on counterhit.\nIn exchange, it's punishable on block but can be hard to punish on block if spaced properly."
 };
@@ -311,6 +355,8 @@ const hBall = {
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['4', '6', 'h', 'or', '6', 'a', 'h'],
   description: "Advancing move. Performs a rolling attack which causes a knockback animation if the move is hit or blocked. Very fast on whiff which can let her sneak in.\nBest of both worlds.\nSame range/damage as M, but now with faster startup than L and safe on block. Wallbounces, allowing for combo extensions."
 };
@@ -326,6 +372,8 @@ const lUppercut = {
   recovery: '-', 
   onblock: '-17', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', '8', 'l', 'or', 'a'],
   description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
 };
@@ -339,6 +387,8 @@ const mUppercut = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', '8', 'm', 'or', 'm', 'a'],
   description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
 };
@@ -352,6 +402,8 @@ const hUppercut = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', '8', 'h', 'or', 'h', 'a'],
   description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
 };
@@ -366,7 +418,9 @@ const lFlip = {
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
-  motion: ['22', 'l', 'or', 'a'],
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['22', 'l', 'or', '2', 'a'],
   description: "Movement and pressure tool. Can be followed up by various additional actions.\nJumps upwards at a sharp arc that does not cross-up in most cases."
 };
 const mFlip = { 
@@ -379,7 +433,9 @@ const mFlip = {
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
-  motion: ['22', 'm', 'or', 'a', 'm'],
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['22', 'm', 'or', '2', 'a', 'm'],
   description: "Movement and pressure tool. Can be followed up by various additional actions.\nJumps lower but farther in order to cross-up."
 };
 const hFlip = { 
@@ -392,25 +448,71 @@ const hFlip = {
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
-  motion: ['22', 'h', 'or', 'a', 'h'],
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['22', 'h', 'or', '2', 'a', 'h'],
   description: "Movement and pressure tool. Can be followed up by various additional actions.\nJumps much faster and at same height as M version.\nGreat for closing distance or extending pressure, but is very vulnerable to anti-airs."
 };
 
 const flipSweep = {
   moveName: 'With Surest Strike!',
+  altName: '22H -> No Input', 
+  damage: '1200', 
+  guard: 'Low', 
+  startup: '7 (After landing)', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-4', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['22', 'l', 'or', '2', 'a'],
   description: "22H into this move allows for a combo afterwards.\nLow-hitting slash follow up. Extremely long active frames, working as a meaty off of 2U where it is plus on block."
 }
 
 const flipDive = {
   moveName: "With Flying Nobility!",
+  altName: '22H -> L', 
+  damage: '800', 
+  guard: 'All', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+1', 
+  onhit: '+3',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['22', 'l', 'l', 'or', '2', 'a', 'l'],
   description: "Can be used as a crossup, but does not have a crossup hitbox.\nAir dive follow up. Used to both combo on a deep hit and continue pressure on a block. Not an overhead, but recovers quickly, so the lower to the ground you are when making contact with an opponent the more plus you are on block.",
 }
 const flipSlam = {
   moveName: "With Purest Bravery",
+  altName: '22H', 
+  damage: '1200', 
+  guard: 'High', 
+  startup: '17', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-3', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['22', 'l', 'm', 'or', '2', 'a', 'm'],
   description: "22H into this move makes it +1 on block\nAir overhead slash attack followup. Stalls momentum for a bit in the air, which can bait out short-reaching anti-airs.",
 }
 const flipThrow = {
   moveName: "With Sweetest Skills!",
+  altName: '22H', 
+  damage: '1500', 
+  guard: 'Throw', 
+  startup: '5', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['22', 'l', 'h', 'or', '2', 'a', 'h'],
   description: "Air command grab follow up. Whiffs on crouching opponents. Landing this off 22H in the corner allows for extremely damaging corner combos.",
 }
 
@@ -425,6 +527,8 @@ const lRekka = {
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
   description: "Unleashes consecutive slashes while moving forward slightly. Safe on block and keeps you close to your opponent.\nHits 3 times.\nSlightly minus on block.\nLeaves Charlotta fairly close to the opponent, oftentimes close enough to perform c.M."
 };
@@ -438,6 +542,8 @@ const mRekka = {
   recovery: '29', 
   onblock: '+2~-10', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
   description: "Unleashes consecutive slashes while moving forward slightly. Safe on block and keeps you close to your opponent.\nHits 5 times.\nPlus on block.\nCan be interrupted due to its longer startup and leaves Charlotta much further away from the opponent. Links to f.L on crouching hit for combo extensions."
 };
@@ -451,6 +557,8 @@ const hRekka = {
   recovery: '37', 
   onblock: '+4~-8', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
   description: "Unleashes consecutive slashes while moving forward slightly. Safe on block and keeps you close to your opponent.\nHits 5 times.\nMore plus than the M version.\nEven more plus on block than the M version. Links to f.M on hit for combo extensions and 2U on crouching hit for hard knockdown."
 };
@@ -459,30 +567,34 @@ const hRekka = {
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Brilliant Moon', 
   altName: '236236H', 
   damage: '2500-3500', 
-  guard: 'mid', 
-  startup: '6+5', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-13', 
-  onhit: 'HKD',
-  motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
-};
-const ssba = { 
-  moveName: 'Catastrophe', 
-  altName: '236236U', 
-  damage: '3500-4500', 
-  guard: 'all', 
+  guard: 'All', 
   startup: '8+5', 
   active: '-', 
   recovery: '-', 
-  onblock: '-23', 
+  onblock: '-20', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', '236', 'h', 'or', '236', 'a'],
+  description: "Charlotta winds up and launches herself forward with a multi-hit attack that deals more damage the closer it hits. Invulnerable on startup, so useful for punishing fireballs and other whiffed moves on reaction."
+};
+const ssba = { 
+  moveName: 'Noble Execution', 
+  altName: '236236U', 
+  damage: '3500-4500', 
+  guard: 'All', 
+  startup: '6+2', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-18', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Invulnerable. Perform an upward slash followed by a powerful downward swing. Damage will be enhanced when connected from the first strike. The upwards swing actually reaches the top of the screen, so it can be used as an anti-air. It will always trigger the full-damage cinematic when it lands this way."
 };
 
 
