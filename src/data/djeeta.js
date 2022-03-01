@@ -1,6 +1,7 @@
-// FINAL 
+// DESCRIPTIONS DONE
+// FRAME DATA UNFINISHED 
 
-const general = { char: "Djeeta", health: '10000', prejump: '4F', backdash: '22F' }
+const general = { char: "Djeeta", health: '10000', prejump: '4F', backdash: '24F' }
 
 // close normals
 const closeL = {
@@ -13,8 +14,10 @@ const closeL = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "Djeeta's fastest button and one of her primary pressure tools.\nLinks into itself, 2L and c.M on normal hit.\nLinks into 2M or 2U on crouching hit.\nFrametraps into c.H on 6F normals only."
 };
 const closeM = {
   moveName: 'Close Medium',
@@ -26,8 +29,10 @@ const closeM = {
   recovery: '10',
   onblock: '0',
   onhit: '4',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "Standard close medium. Good for autocombo pressure when used in tandem with Vorpal Blade to catch people challenging after your autocombo hits on block. Also your best link out of c.L or 2L without crouching or counter hit.\nLinks into itself, 2M, and c.H on counter hit."
 };
 const closeH = {
   moveName: 'Close Heavy',
@@ -39,8 +44,10 @@ const closeH = {
   recovery: '18',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Djeeta makes an upwards swipe with her sword. This normal is actually quite strong in a number of ways.\nCan act as a delayed frametrap from c.L or 2L to catch throw teching or jump outs.\nLinks into itself or f.H on counter hit, depending on how close you are to the opponent.\nAt close range, is actually a more consistent anti-air than 2H and leads to higher damage."
 };
 
 // auto combos
@@ -54,8 +61,10 @@ const auto1 = {
   recovery: '-',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Pretty standard autocombo normals. Generally used for confirm and blockstring filler.In general, one should minimize the use of autocombos in confirms and juggles in order to maximize damage.\nCancels into M Vorpal Blade on block will frametrap an opponent attempting to mash after Djeeta's autocombo, though this cancel can be dodged and punished.\nHer 5XX is one of the the few auto combos in the game that can cancel later than normal into it's recovery, making it a formidable mixup and stagger tool."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
@@ -67,8 +76,10 @@ const auto2 = {
   recovery: '-',
   onblock: '-5',
   onhit: '-1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Pretty standard autocombo normals. Generally used for confirm and blockstring filler.In general, one should minimize the use of autocombos in confirms and juggles in order to maximize damage.\nCancels into M Vorpal Blade on block will frametrap an opponent attempting to mash after Djeeta's autocombo, though this cancel can be dodged and punished.\nHer 5XX is one of the the few auto combos in the game that can cancel later than normal into it's recovery, making it a formidable mixup and stagger tool."
 };
 
 // far normals
@@ -82,8 +93,10 @@ const far5L = {
   recovery: '13',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "Djeeta kicks at about head height. Like Gran's, can be confirmed into from 2 2Ls, and buffers into her L and H confirm special.\nReally good range for its speed, at the cost of whiffing on crouchers at max range.\nCombos into L or H Vorpal Blade."
 };
 const far5M = {
   moveName: 'Far Medium',
@@ -95,8 +108,10 @@ const far5M = {
   recovery: '18',
   onblock: '-6',
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "Djeeta swings her sword out in front of her. f.M is one of Djeeta's prime pokes, and behaves very similar to Gran's, while boasting slightly better range.\nGreat range for its speed.\nCombos into L and H Vorpal Blade on normal hit, and M Vorpal Blade on counter hit.\nCancels into M Vorpal Blade on block will frametrap an opponent pressing buttons, but this cancel can be dodged and punished.\nSpaced cancels into a charged fireball (Reginleiv: Recidive) can punish opponent trying to dodge cancels into Vorpal Blade.\nTip range f.M into L Reginleiv can typically leave Djeeta +1 or higher."
 };
 const far5H = {
   moveName: 'Far Heavy',
@@ -108,8 +123,10 @@ const far5H = {
   recovery: '20',
   onblock: '-9',
   onhit: '-5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Djeeta swings her sword in an arc in front of her in a nearly identical manner to Gran. One frame slower overall than his, but seems to have slightly more range.\nCombos into all versions of Vorpal Blade.\nCan be used as a far anti-air option for further jumps that 2H won't be able to hit.\nCan frametrap with M Vorpal Blade on block, like with f.M.\nAt max range, a cancel into a charged light fireball will be plus on block.\nExcellent for crushing an opponent attempting to poke out after a spaced blockstring.\nUseful to keep an opponent locked in the corner while scouting jumps or dashes."
 };
 
 // regular normals
@@ -123,8 +140,10 @@ const n2L = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Djeeta's other plus on block normal, and her main stagger pressure tool. The myriad of links out of this normal on crouching and counter hit allow her to run relatively safe and rewarding blockstrings.\nLinks into itself, c.L, f.L and c.M on normal hit.\nLinks into 2M or 2U on crouching hit. Since f.L will whiff on crouchers, confirming crouching hit and using 2M or 2U instead is important for her offense.\nFrametraps into c.H on 6F normals only."
 };
 const n2M = {
   moveName: 'Crouch Medium',
@@ -136,8 +155,10 @@ const n2M = {
   recovery: '9',
   onblock: '1',
   onhit: '5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Probably Djeeta's best normal overall, and a candidate for one of the best medium pokes in the game. While it may look unassuming and even a bit stubby, you will eventually find this being one of the cornerstones of Djeeta's neutral.\nIncredibly fast poke, and very difficult to whiff punish. Can be useful for some abare situations.\nDeceptively good range, despite the somewhat stubby looking animation.\nDjeeta's best normal for checking Cross Overs, with 2U being the next strongest.\nCombos into L and H Vorpal Blade on normal hit, and M Vorpal Blade on counter hit. Like with f.M and f.H, cancels into M Vorpal Blade on block will frametrap, at the risk of your cancel being dodged."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
@@ -149,21 +170,25 @@ const n2H = {
   recovery: '24',
   onblock: '-13',
   onhit: '-9',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Djeeta's main non-special move anti-air. Does not lower her profile as much as Gran and Katalina's 2Hs, so it can occasionally lose in situations where their anti-airs would be more consistent. Still quite strong overall.\nForward range is not as far as it looks, but hits very far behind Djeeta. Excellent for dealing with crossups.\nCan be stuffed by some early jump normals, or very close range jumps. For these angles, c.H or Rising Sword can be better anti-airs.\nCombos into 5U or Rising Sword on normal hit.\nCounter hit conversions can be awkward. Juggles into f.M, f.H, or c.H depending on the height and distance the opponent was hit. You'll have to judge the situation on reaction based on where your opponent is.\nNo conversions that work consistently on normal and counter hit, forcing Djeeta to confirm normal vs counter hit to optimize her anti-air damage."
 };
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
   damage: '700',
-  guard: 'mid',
+  guard: 'Low',
   startup: '7',
   active: '6',
   recovery: '21',
   onblock: '-12',
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Similar to Gran's 2U, though not quite as ignorant. Still a very excellent sweep.\nIs stubbier than Gran's 2U.\nFast startup makes this relatively strong in abare or fuzzy mash, like 2M.\nCan low profile some projectiles and high-hitting normals, like Gran's 2U but not as early.\nCombos into L and H Vorpal Blade on hit, and M Vorpal Blade on counter hit. Frametrap cancels can also be performed on block with this normal.\nCancelling this normal into spot dodge grants a very easy safejump in the corner, which can be useful for ending Djeeta's corner combos.\nHas a low-profile hurtbox on frames 5-27."
 };
 
 // jump normals
@@ -177,8 +202,10 @@ const jL = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Active until landing like every other j.L. This property can create some inconsistent, if not amusing interactions with some anti-airs in the game, but generally not your best option in the air.\nCrosses up slightly."
 };
 const jM = { 
   moveName: 'Jump Medium', 
@@ -190,8 +217,10 @@ const jM = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Another one of Djeeta's crossup normals. Reaches farther back than j.L. Can be useful for speed since it is faster than j.U, but overall, j.U will be a better option in plenty of situations you might want to use this normal.\nDue to its faster startup compared to jU, you can use this later in the jump-in to avoid counter-hit from preemptive anti-airs.\nUseful for ambiguous jump-in mixups."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
@@ -203,8 +232,10 @@ const jH = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "Djeeta's furthest reaching jump normal. Mainly useful for far jump-ins where j.U won't reach, or for safejumps in the corner."
 };
 const jU = { 
   moveName: 'Jump Unique', 
@@ -216,14 +247,31 @@ const jU = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Very familiar looking jump normal. Djeeta swings below her in an arc in a nearly identical manner to Gran and Katalina's j.Us. The hitbox is not quite as large as these normals, but the purpose remains the same.\nDjeeta's best jump normal, period. Hits in a wide arc below her and is very active, allowing her to use it at different points in her jump arc for different purposes.\nVery good safe jump normal along with j.H.\nCan stuff some poorly timed or weaker anti-airs if done at the correct timing during her jump arc.\nGrants juggles on air-to-air hit without counter hit if low enough to the ground.\nNormal jump j.U can be used in close range as a throwbait that won't give up your pressure, or to surprise an opponent to try and escape the corner.\nThis is Djeeta's slowest jump normal, so can it can lose to some pre-emptive air-to-airs and is prone getting counter-hit due to it's high amount of active frames.\nCan clash with M button anti-airs due to its higher than normal hurtbox and M level clash priority. Useful vs the Ferry or Metera matchup as it creates an almost certain losing situation for them."  
 };
 
 // unique action
 const lv1U = { 
-  moveName: 'Power Raise Lv1', 
+  moveName: 'Overdrive Surge Lv1', 
   altName: '5ULv1', 
+  damage: '800', 
+  guard: 'mid', 
+  startup: '22', 
+  active: '9', 
+  recovery: '13', 
+  onblock: '-5', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['u'],
+  description: "A heel kick that can be strengthened up to 5 levels, becoming fully invincible at the maximum level. Behaves very similarly to Gran's Power Raise, but is not nearly as useful.\nCan be charged by holding U. Cancel the charge by pressing L, M, or H.\nCanceled at its earliest point, the move is 26 frames total.\nFully held, the move is 178 frames long, though Djeeta does not have to wait for the fully held move to reach level 4.\nCan hop over some low hitting moves, but high-profile ability is generally quite difficult to exploit due to the slow startup.\nCan ground-bounce on any counter-hit whether grounded or airborne. Requires level 1 charge or higher to ground-bounce on juggled opponents mid-combo.\nCan be used to punish projectiles when fully charged, but this situation will be incredibly rare in a match.\nCan be used as a throw-bait like universal overhead, but is not nearly as rewarding without counter-hit, nor does it have the additional property of hitting overhead + earlier throw invincibility.\nCan add an additional layer of offense to her pressure by canceling the stance itself for baiting whiffed buttons and mixing the cancel options off a normal between letting 5U rip, rekkas, fireballs, etc.\nCan be spaced to be a maximum +2 on block and up to +7 on hit for a 2M follow-up. The range to perform this is a bit outside fM range and only the tip of Djeeta's flip kick hits the opponent's foot."
+};
+const lv2U = { 
+  moveName: 'Overdrive Surge Lv2', 
+  altName: '5ULv2', 
   damage: '1000', 
   guard: 'mid', 
   startup: '22', 
@@ -231,12 +279,14 @@ const lv1U = {
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "A heel kick that can be strengthened up to 5 levels, becoming fully invincible at the maximum level. Behaves very similarly to Gran's Power Raise, but is not nearly as useful.\nCan be charged by holding U. Cancel the charge by pressing L, M, or H.\nCanceled at its earliest point, the move is 26 frames total.\nFully held, the move is 178 frames long, though Djeeta does not have to wait for the fully held move to reach level 4.\nCan hop over some low hitting moves, but high-profile ability is generally quite difficult to exploit due to the slow startup.\nCan ground-bounce on any counter-hit whether grounded or airborne. Requires level 1 charge or higher to ground-bounce on juggled opponents mid-combo.\nCan be used to punish projectiles when fully charged, but this situation will be incredibly rare in a match.\nCan be used as a throw-bait like universal overhead, but is not nearly as rewarding without counter-hit, nor does it have the additional property of hitting overhead + earlier throw invincibility.\nCan add an additional layer of offense to her pressure by canceling the stance itself for baiting whiffed buttons and mixing the cancel options off a normal between letting 5U rip, rekkas, fireballs, etc.\nCan be spaced to be a maximum +2 on block and up to +7 on hit for a 2M follow-up. The range to perform this is a bit outside fM range and only the tip of Djeeta's flip kick hits the opponent's foot."
 };
-const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
+const lv3U = { 
+  moveName: 'Overdrive Surge Lv3', 
+  altName: '5ULv3', 
   damage: '1200', 
   guard: 'mid', 
   startup: '22', 
@@ -244,12 +294,14 @@ const lv2U = {
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "A heel kick that can be strengthened up to 5 levels, becoming fully invincible at the maximum level. Behaves very similarly to Gran's Power Raise, but is not nearly as useful.\nCan be charged by holding U. Cancel the charge by pressing L, M, or H.\nCanceled at its earliest point, the move is 26 frames total.\nFully held, the move is 178 frames long, though Djeeta does not have to wait for the fully held move to reach level 4.\nCan hop over some low hitting moves, but high-profile ability is generally quite difficult to exploit due to the slow startup.\nCan ground-bounce on any counter-hit whether grounded or airborne. Requires level 1 charge or higher to ground-bounce on juggled opponents mid-combo.\nCan be used to punish projectiles when fully charged, but this situation will be incredibly rare in a match.\nCan be used as a throw-bait like universal overhead, but is not nearly as rewarding without counter-hit, nor does it have the additional property of hitting overhead + earlier throw invincibility.\nCan add an additional layer of offense to her pressure by canceling the stance itself for baiting whiffed buttons and mixing the cancel options off a normal between letting 5U rip, rekkas, fireballs, etc.\nCan be spaced to be a maximum +2 on block and up to +7 on hit for a 2M follow-up. The range to perform this is a bit outside fM range and only the tip of Djeeta's flip kick hits the opponent's foot."
 };
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
+const lv4U = { 
+  moveName: 'Overdrive Surge Lv4', 
+  altName: '5ULv4', 
   damage: '1400', 
   guard: 'mid', 
   startup: '22', 
@@ -257,34 +309,25 @@ const lv3U = {
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "A heel kick that can be strengthened up to 5 levels, becoming fully invincible at the maximum level. Behaves very similarly to Gran's Power Raise, but is not nearly as useful.\nCan be charged by holding U. Cancel the charge by pressing L, M, or H.\nCanceled at its earliest point, the move is 26 frames total.\nFully held, the move is 178 frames long, though Djeeta does not have to wait for the fully held move to reach level 4.\nCan hop over some low hitting moves, but high-profile ability is generally quite difficult to exploit due to the slow startup.\nCan ground-bounce on any counter-hit whether grounded or airborne. Requires level 1 charge or higher to ground-bounce on juggled opponents mid-combo.\nCan be used to punish projectiles when fully charged, but this situation will be incredibly rare in a match.\nCan be used as a throw-bait like universal overhead, but is not nearly as rewarding without counter-hit, nor does it have the additional property of hitting overhead + earlier throw invincibility.\nCan add an additional layer of offense to her pressure by canceling the stance itself for baiting whiffed buttons and mixing the cancel options off a normal between letting 5U rip, rekkas, fireballs, etc.\nCan be spaced to be a maximum +2 on block and up to +7 on hit for a 2M follow-up. The range to perform this is a bit outside fM range and only the tip of Djeeta's flip kick hits the opponent's foot."
 };
 const lv5U = { 
-  moveName: 'Power Raise Lv5', 
+  moveName: 'Overdrive Surge Lv5', 
   altName: '5ULv5', 
-  damage: '2000', 
+  damage: '1800', 
   guard: 'mid', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "A heel kick that can be strengthened up to 5 levels, becoming fully invincible at the maximum level. Behaves very similarly to Gran's Power Raise, but is not nearly as useful.\nCan be charged by holding U. Cancel the charge by pressing L, M, or H.\nCanceled at its earliest point, the move is 26 frames total.\nFully held, the move is 178 frames long, though Djeeta does not have to wait for the fully held move to reach level 4.\nCan hop over some low hitting moves, but high-profile ability is generally quite difficult to exploit due to the slow startup.\nCan ground-bounce on any counter-hit whether grounded or airborne. Requires level 1 charge or higher to ground-bounce on juggled opponents mid-combo.\nCan be used to punish projectiles when fully charged, but this situation will be incredibly rare in a match.\nCan be used as a throw-bait like universal overhead, but is not nearly as rewarding without counter-hit, nor does it have the additional property of hitting overhead + earlier throw invincibility.\nCan add an additional layer of offense to her pressure by canceling the stance itself for baiting whiffed buttons and mixing the cancel options off a normal between letting 5U rip, rekkas, fireballs, etc.\nCan be spaced to be a maximum +2 on block and up to +7 on hit for a 2M follow-up. The range to perform this is a bit outside fM range and only the tip of Djeeta's flip kick hits the opponent's foot."
 };
 
 const groundThrow = { 
@@ -296,8 +339,10 @@ const groundThrow = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "Djeeta's ground throw. A necessary part of her offense as she lacks many other options other than staggers and frametraps. Use this once your opponent is respecting your blockstrings heavily, or try to bait them to tech with her universal overhead.\nSuperjump j.H or j.U after forward throw in the corner will grant a pretty easy safe jump.\nAfter a forward throw directly at the wall, whiffing c.L into whiff 2M into 2L grants her a DP safejab. Automatically links into c.H on hit. You can delay each button or use the recovery of the 2M as she stands up to hide a throw attempt.\nAfter a forward throw very close to the wall, whiffing 2L into the universal Overhead Attack grants Djeeta a meaty combo-able overhead."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
@@ -308,8 +353,10 @@ const airThrow = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Standard air throw. Useful for calling out jump arc changing moves or someone trying to escape her corner pressure by jumping."
 };
 
 const uOverhead = { 
@@ -322,8 +369,10 @@ const uOverhead = {
   recovery: '-', 
   onblock: '-4', 
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Links into c.H on counter hit, allowing Djeeta to start her max damage combos on a proper throwbait.\nCan hit meaty to link after without counter hit. Whiffing 2L, then inputting overhead after forward throw is a simple framekill to enable this. Links into c.L or 2L in this situation."
 };
 
 // fireballs
@@ -337,34 +386,86 @@ const lFireball = {
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Djeeta's projectile. One of the best projectiles in the game, and significantly more versatile than Gran's counterpart.\nProjectile speed has two variations. L being the slower and M/H being faster.\nH version hits 3 times and is plus on block, making it very strong for winning fireball wars or resetting her pressure.\nSpaced blockstrings ending with a fireball in the corner can leave the opponent in position to have their counterpoke crushed by her f.H."
 };
 const mFireball = { 
   moveName: 'M Reginleiv', 
   altName: '236M', 
-  damage: '400, 800', 
+  damage: '800', 
   guard: 'mid, all', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Djeeta's projectile. One of the best projectiles in the game, and significantly more versatile than Gran's counterpart.\nProjectile speed has two variations. L being the slower and M/H being faster.\nH version hits 3 times and is plus on block, making it very strong for winning fireball wars or resetting her pressure.\nSpaced blockstrings ending with a fireball in the corner can leave the opponent in position to have their counterpoke crushed by her f.H."
 };
 const hFireball = { 
   moveName: 'H Reginleiv', 
   altName: '236H', 
-  damage: '350 x 3', 
+  damage: '300x2, 400', 
   guard: 'all', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Djeeta's projectile. One of the best projectiles in the game, and significantly more versatile than Gran's counterpart.\nProjectile speed has two variations. L being the slower and M/H being faster.\nH version hits 3 times and is plus on block, making it very strong for winning fireball wars or resetting her pressure.\nSpaced blockstrings ending with a fireball in the corner can leave the opponent in position to have their counterpoke crushed by her f.H."
+};
+
+const lChargedFireball = { 
+  moveName: 'L Reginleiv (Charged)', 
+  altName: '236L', 
+  damage: '900', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-7', 
+  onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'l', 'or', 'a'],
+  description: "Djeeta charges her fireball, giving it an extra hit and much better frame advantage. This aspect of her fireball is what really sets it apart from the other shotos' projectiles.\nNot that useful for winning fireball wars due to the long charge time. Will also still lose to most H fireballs.\nCan bait people trying to dodge or Cross Over through projectiles by delaying the projectile timing.\nHas better frame data on hit and block than an uncharged fireball, and can be easily spaced to be plus on block. For example, max range f.H cancelled into a charged fireball will generally be plus on block.\nKnocks down on counter hit. Spaced cancels into a charged fireball will potentially punish dodges, which can lead to very beefy punishes in the corner.\nCharged version of H fireball has some use in some height specific anti-air conversions and in corner juggles.\nDjeeta is not in counter-hit state once she hits frame 40 in the animation. Therefore, L and M hold fireballs are never in counter-hit state once launched."
+};
+const mChargedFireball = { 
+  moveName: 'M Reginleiv (Charged)', 
+  altName: '236M', 
+  damage: '900', 
+  guard: 'mid, all', 
+  startup: '13', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-4', 
+  onhit: '0',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'm', 'or', 'a', 'm'],
+  description: "Djeeta charges her fireball, giving it an extra hit and much better frame advantage. This aspect of her fireball is what really sets it apart from the other shotos' projectiles.\nNot that useful for winning fireball wars due to the long charge time. Will also still lose to most H fireballs.\nCan bait people trying to dodge or Cross Over through projectiles by delaying the projectile timing.\nHas better frame data on hit and block than an uncharged fireball, and can be easily spaced to be plus on block. For example, max range f.H cancelled into a charged fireball will generally be plus on block.\nKnocks down on counter hit. Spaced cancels into a charged fireball will potentially punish dodges, which can lead to very beefy punishes in the corner.\nCharged version of H fireball has some use in some height specific anti-air conversions and in corner juggles.\nDjeeta is not in counter-hit state once she hits frame 40 in the animation. Therefore, L and M hold fireballs are never in counter-hit state once launched."
+};
+const hChargedFireball = { 
+  moveName: 'H Reginleiv (Charged)', 
+  altName: '236H', 
+  damage: '300x2, 500', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "Djeeta charges her fireball, giving it an extra hit and much better frame advantage. This aspect of her fireball is what really sets it apart from the other shotos' projectiles.\nNot that useful for winning fireball wars due to the long charge time. Will also still lose to most H fireballs.\nCan bait people trying to dodge or Cross Over through projectiles by delaying the projectile timing.\nHas better frame data on hit and block than an uncharged fireball, and can be easily spaced to be plus on block. For example, max range f.H cancelled into a charged fireball will generally be plus on block.\nKnocks down on counter hit. Spaced cancels into a charged fireball will potentially punish dodges, which can lead to very beefy punishes in the corner.\nCharged version of H fireball has some use in some height specific anti-air conversions and in corner juggles.\nDjeeta is not in counter-hit state once she hits frame 40 in the animation. Therefore, L and M hold fireballs are never in counter-hit state once launched."
 };
 
 // dragon punches
@@ -378,39 +479,45 @@ const lUppercut = {
   recovery: '-', 
   onblock: '-17', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "An invulnerable anti-air technique. Djeeta's DP is effectively identical to Gran's, with each version gaining progressively more hits and damage.\nDue to her somewhat less consistent 2H, Djeeta is somewhat more reliant on her DP for anti-airing than other shotos.\nL and M versions are air unblockable on the first hit only. H version is air unblockable for the first part of the move, but not the second.\nL version keeps her in place during the startup, useful for anti-airing certain cross up moves that have a hurtbox behind them. (EX: Katalina jU)\nM version advances her forward during the startup, with a large horizontal range to goes upward. It's because of the horizontal range that makes this move a key factor in some matchups that can enable her offense.\nH version grants a hard knockdown and a safejump, which can be useful for reversing a sticky situation.\nSome of Djeeta's corner combo routes will automatically leave the opponent at the proper height to combo after her H Rising Sword, allowing her to juggle into a 2U or c.H into Skybound Art or safejump afterwards."
 };
 const mUppercut = { 
   moveName: 'M Rising Sword', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
+  damage: '700, 300x2', 
   guard: 'mid, all', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "An invulnerable anti-air technique. Djeeta's DP is effectively identical to Gran's, with each version gaining progressively more hits and damage.\nDue to her somewhat less consistent 2H, Djeeta is somewhat more reliant on her DP for anti-airing than other shotos.\nL and M versions are air unblockable on the first hit only. H version is air unblockable for the first part of the move, but not the second.\nL version keeps her in place during the startup, useful for anti-airing certain cross up moves that have a hurtbox behind them. (EX: Katalina jU)\nM version advances her forward during the startup, with a large horizontal range to goes upward. It's because of the horizontal range that makes this move a key factor in some matchups that can enable her offense.\nH version grants a hard knockdown and a safejump, which can be useful for reversing a sticky situation.\nSome of Djeeta's corner combo routes will automatically leave the opponent at the proper height to combo after her H Rising Sword, allowing her to juggle into a 2U or c.H into Skybound Art or safejump afterwards."
 };
 const hUppercut = { 
   moveName: 'H Rising Sword', 
   altName: '623H', 
-  damage: '950~1400', 
+  damage: '1400', 
   guard: 'mid, all', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "An invulnerable anti-air technique. Djeeta's DP is effectively identical to Gran's, with each version gaining progressively more hits and damage.\nDue to her somewhat less consistent 2H, Djeeta is somewhat more reliant on her DP for anti-airing than other shotos.\nL and M versions are air unblockable on the first hit only. H version is air unblockable for the first part of the move, but not the second.\nL version keeps her in place during the startup, useful for anti-airing certain cross up moves that have a hurtbox behind them. (EX: Katalina jU)\nM version advances her forward during the startup, with a large horizontal range to goes upward. It's because of the horizontal range that makes this move a key factor in some matchups that can enable her offense.\nH version grants a hard knockdown and a safejump, which can be useful for reversing a sticky situation.\nSome of Djeeta's corner combo routes will automatically leave the opponent at the proper height to combo after her H Rising Sword, allowing her to juggle into a 2U or c.H into Skybound Art or safejump afterwards."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+  moveName: 'L Vorpal Blade', 
   altName: '214L', 
   damage: '700', 
   guard: 'mid', 
@@ -419,11 +526,13 @@ const lRekka = {
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
+  description: "Two advancing slashes that can be rekka'd into additional followups. Djeeta's main confirm special, granting her excellent corner carry on hit. This move is also extremely strong in her offense due to its frametrap ability and relative safety.\nThe L version comes out quickly, while the M version is slower, but reaches further and is safer on block.\nThe L and M versions will immediately perform the ender with a second 214 input, while the H version will perform a second set of slashes before the knockdown ender.\nThe ender can frametrap an opponent attempting to challenge the first part of the rekka on block. The ender is always unsafe on block, so perform with caution.\nAdditionally, H rekka ender can now wall bounce within proximity of the corner. Allowing potentially bigger combos from midscreen to corner.\nDjeeta cannot follow up with anything if the ender frametraps the opponent when directly at the corner. Even on counter-hit.\nM version launches on counter-hit. Allowing full combo confirms when near the corner.\nM version is safe on block and will frametrap in cancels from auto combo and nearly all of Djeeta's far normals, making it a strong option to use to end a blockstring with some free chip. This cancel can be dodged and punished, though this comes with risk to the opponent as this dodge can be baited by simply blocking or using a charged fireball to punish it.\nBoth the M and H versions see staple use in Djeeta's corner combos as she can juggle into normals after the initial followups if she does not perform the ender.\nThe H version can have a gap between the first and second follow-up. Allowing a potentially large reward for punish attempts on the first part at the compromise that the risk is greater for Djeeta afterward due to being closer to the opponent for a punish if they decide to continue blocking.\nDue to the advancing nature of this move, the L and H version are viable alternatives to Djeeta's poor whiff punishing options against longer normals and play a key role in her neutral gameplan."
 };
 const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
+  moveName: 'M Vorpal Blade(follow up)', 
   altName: '214L -> 214M', 
   damage: '500', 
   guard: 'mid', 
@@ -432,11 +541,13 @@ const followupRekka = {
   recovery: '29', 
   onblock: '-10', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Two advancing slashes that can be rekka'd into additional followups. Djeeta's main confirm special, granting her excellent corner carry on hit. This move is also extremely strong in her offense due to its frametrap ability and relative safety.\nThe L version comes out quickly, while the M version is slower, but reaches further and is safer on block.\nThe L and M versions will immediately perform the ender with a second 214 input, while the H version will perform a second set of slashes before the knockdown ender.\nThe ender can frametrap an opponent attempting to challenge the first part of the rekka on block. The ender is always unsafe on block, so perform with caution.\nAdditionally, H rekka ender can now wall bounce within proximity of the corner. Allowing potentially bigger combos from midscreen to corner.\nDjeeta cannot follow up with anything if the ender frametraps the opponent when directly at the corner. Even on counter-hit.\nM version launches on counter-hit. Allowing full combo confirms when near the corner.\nM version is safe on block and will frametrap in cancels from auto combo and nearly all of Djeeta's far normals, making it a strong option to use to end a blockstring with some free chip. This cancel can be dodged and punished, though this comes with risk to the opponent as this dodge can be baited by simply blocking or using a charged fireball to punish it.\nBoth the M and H versions see staple use in Djeeta's corner combos as she can juggle into normals after the initial followups if she does not perform the ender.\nThe H version can have a gap between the first and second follow-up. Allowing a potentially large reward for punish attempts on the first part at the compromise that the risk is greater for Djeeta afterward due to being closer to the opponent for a punish if they decide to continue blocking.\nDue to the advancing nature of this move, the L and H version are viable alternatives to Djeeta's poor whiff punishing options against longer normals and play a key role in her neutral gameplan."
 };
 const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+  moveName: 'M Vorpal Blade', 
   altName: '214M', 
   damage: '1200', 
   guard: 'mid', 
@@ -445,11 +556,13 @@ const mRekka = {
   recovery: '29', 
   onblock: '+2~-10', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Two advancing slashes that can be rekka'd into additional followups. Djeeta's main confirm special, granting her excellent corner carry on hit. This move is also extremely strong in her offense due to its frametrap ability and relative safety.\nThe L version comes out quickly, while the M version is slower, but reaches further and is safer on block.\nThe L and M versions will immediately perform the ender with a second 214 input, while the H version will perform a second set of slashes before the knockdown ender.\nThe ender can frametrap an opponent attempting to challenge the first part of the rekka on block. The ender is always unsafe on block, so perform with caution.\nAdditionally, H rekka ender can now wall bounce within proximity of the corner. Allowing potentially bigger combos from midscreen to corner.\nDjeeta cannot follow up with anything if the ender frametraps the opponent when directly at the corner. Even on counter-hit.\nM version launches on counter-hit. Allowing full combo confirms when near the corner.\nM version is safe on block and will frametrap in cancels from auto combo and nearly all of Djeeta's far normals, making it a strong option to use to end a blockstring with some free chip. This cancel can be dodged and punished, though this comes with risk to the opponent as this dodge can be baited by simply blocking or using a charged fireball to punish it.\nBoth the M and H versions see staple use in Djeeta's corner combos as she can juggle into normals after the initial followups if she does not perform the ender.\nThe H version can have a gap between the first and second follow-up. Allowing a potentially large reward for punish attempts on the first part at the compromise that the risk is greater for Djeeta afterward due to being closer to the opponent for a punish if they decide to continue blocking.\nDue to the advancing nature of this move, the L and H version are viable alternatives to Djeeta's poor whiff punishing options against longer normals and play a key role in her neutral gameplan."
 };
 const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+  moveName: 'H Vorpal Blade', 
   altName: '214H', 
   damage: '1200', 
   guard: 'mid', 
@@ -458,26 +571,30 @@ const hRekka = {
   recovery: '37', 
   onblock: '+4~-8', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Two advancing slashes that can be rekka'd into additional followups. Djeeta's main confirm special, granting her excellent corner carry on hit. This move is also extremely strong in her offense due to its frametrap ability and relative safety.\nThe L version comes out quickly, while the M version is slower, but reaches further and is safer on block.\nThe L and M versions will immediately perform the ender with a second 214 input, while the H version will perform a second set of slashes before the knockdown ender.\nThe ender can frametrap an opponent attempting to challenge the first part of the rekka on block. The ender is always unsafe on block, so perform with caution.\nAdditionally, H rekka ender can now wall bounce within proximity of the corner. Allowing potentially bigger combos from midscreen to corner.\nDjeeta cannot follow up with anything if the ender frametraps the opponent when directly at the corner. Even on counter-hit.\nM version launches on counter-hit. Allowing full combo confirms when near the corner.\nM version is safe on block and will frametrap in cancels from auto combo and nearly all of Djeeta's far normals, making it a strong option to use to end a blockstring with some free chip. This cancel can be dodged and punished, though this comes with risk to the opponent as this dodge can be baited by simply blocking or using a charged fireball to punish it.\nBoth the M and H versions see staple use in Djeeta's corner combos as she can juggle into normals after the initial followups if she does not perform the ender.\nThe H version can have a gap between the first and second follow-up. Allowing a potentially large reward for punish attempts on the first part at the compromise that the risk is greater for Djeeta afterward due to being closer to the opponent for a punish if they decide to continue blocking.\nDue to the advancing nature of this move, the L and H version are viable alternatives to Djeeta's poor whiff punishing options against longer normals and play a key role in her neutral gameplan."
 };
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Eternal Ascendancy', 
   altName: '236236H', 
-  damage: '2500-3500', 
+  damage: '2500-3700', 
   guard: 'mid', 
   startup: '6+5', 
   active: '-', 
   recovery: '-', 
   onblock: '-13', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Has some invulnerability. On simple input, it will unleash Reginleiv Azimuth (the Conqueror of the Eternals skin CA) when hit close. With technical input, you can Reginleiv Zenith (the Guiders to the Eternal Edge skin CA) from any hit by doing a rave-style input.\nThe rave input is L, L, M, M, H, H, L, M, H, 214U. This CAN be done on block, but doing so will not make the super any safer; each hit is still punishable on block. When done using the simple input, the rave will automatically be executed on hit at close range, but not on block.\nAllows Djeeta to confirm into her max damage Skybound Art from much further than most characters due to the technical input granting the full super animation as long as the first hit of the lunge collides with ANY hurtbox, including extended hurtboxes, well outside of it's intended clean hit window. Confirm this from f.M, 2M, or f.H for great returns on a single hit confirm.\nThis super doubles as a utility for punishing the opponent's projectiles at range, though it is not as consistent as some other supers at doing this due to it's lunge speed. Easy input is quick and great for reacting to close projectiles, while technical input is harder to do but rewards even greater damage from further out as long as the first hit of the lunge connects.\nGreat for heavily discouraging the opponent's projectiles, potentially putting the opposing character at a noticeable disadvantage in the neutral.\nThis super outside of SSBAs is the hardest hitting super in the game.\nBase damage for Reginleiv Azimuth (easy input) is 3500; minimum damage is 513. Base damage for Reginleiv Zenith (technical input) is 3700; minimum damage is 935.\nIn close to point-blank scenarios, delaying the 1st follow up as long as possible after the first is blocked can create a frame trap.\nSimple input super never grants a safe jump.\nDjeeta is +4 if she fails to complete the deadly rave at any follow-up."
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Skyfall', 
   altName: '236236U', 
   damage: '3500-4500', 
   guard: 'all', 
@@ -486,8 +603,10 @@ const ssba = {
   recovery: '-', 
   onblock: '-23', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Djeeta performs a rising uppercut like Katalina's SSBA (contrast with Gran's projectile SSBA). If it hits properly, the attack finishes with Proto Bahamut. If the cinematic doesn't connect, the attack finishes with a big sword slice that sends the opponent back to the ground.\nNot a good reversal; can be option selected with meaty lights.\nNot a bad option as a raw anti-air, though Djeeta moves quite far forward during the uppercut, making the effective range somewhat awkward. Will combo consistently from 2H regardless of counter hit.\nUppercut nature of the super makes it highly unsafe on block and more or less impossible to confirm into from max range pokes. Generally sees use to end her corner combos when Djeeta is below 30% health.\nMinimum Damage:\nTechnical Input: 1350→1050\nSimple Input: 900→700"
 };
 
 
@@ -520,6 +639,9 @@ export const djeetaInfo = [
   lFireball,
   mFireball,
   hFireball,
+  lChargedFireball,
+  mChargedFireball,
+  hChargedFireball,
   lUppercut,
   mUppercut,
   hUppercut,
