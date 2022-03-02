@@ -13,21 +13,25 @@ const closeL = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "With c.L, f.L, and 2L all being tied for your fastest button at 6f, there will be times where Ladiva can't punish specific moves or contest certain frametraps. To compensate, all of them have fantastic range for Light buttons and high frame advantage letting Ladiva pressure on block with strong blockstrings. They make excellent tick throws into command grab as well.\nCan combo into 2U on crouching opponents, CH link into 2U for knockdown on standing, c.M for damage (but try going for 2U for oki)."
 };
 const closeM = {
   moveName: 'Close Medium',
   altName: 'cM',
-  damage: '700',
+  damage: '800',
   guard: 'mid',
   startup: '6',
   active: '3',
   recovery: '10',
   onblock: '0',
   onhit: '4',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "A fast, special cancelable kick with a large downward hitbox. Has farther range than c.L, letting Ladiva get Auto Combo in situations where c.L doesn't come out. With only 1 active frame, Ladiva will not get any extra frame advantage as a meaty, but thanks to it's speed and good hitbox it can be used as a frame trap and will also hit the opponent out of Cross-Over. On block, it's not the worst but anyone with a 5f Light will be able to beat any move that is not invul and Light Headbutt can be interrupted if canceled into it. EX Headbutt works as a frametrap, however. Against 6f moves, Light and EX Screwdriver will beat them.\nOn CH it's +8 on hit, letting Ladiva link into another c.M, f.M, 2M, or 2U."
 };
 const closeH = {
   moveName: 'Close Heavy',
@@ -39,36 +43,42 @@ const closeH = {
   recovery: '18',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Slow, but very high damage starter. With a high number of active frames and only being -2 on block, it's suitable as a meaty on the opponents wake-up capable of being up to +3 on block if timed correctly, which can lead into an unmashable M SPD in the corner. It can also frametrap into Light Headbutt with only a 2f gap that can be delayed. c.H will, however, not hit Cross-Over.\nOn CH it's at a extremely high +14 on hit, letting Ladiva link into a second c.H or M lariat vs standing opponents for very high damage. It also lets c.H combo into Medium Headbutt for high meterless damage."
 };
 
 // auto combos
 const auto1 = {
   moveName: 'Auto Combo 2nd hit',
   altName: 'cXX',
-  damage: '350',
+  damage: '400',
   guard: 'mid',
   startup: '-',
   active: '-',
   recovery: '-',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Primarily only for hit confirming or combos routes that don't use EX specials. If you have no specials available, Ladiva would rather combo into 2U to set up stronger offense. c.X have enough blockstun to make canceling into EX Headbutt be frametrap, and c.XX have enough to make both Light and EX Headbutt a frametrap.\nAuto Combo can mostly be used for utility purposes. Even if it will lessen the damage by small amounts, using Auto Combo can let you buy time to get specials off cooldown if needed."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
   altName: 'cXXX',
-  damage: '350',
+  damage: '400',
   guard: 'mid',
   startup: '-',
   active: '-',
   recovery: '-',
   onblock: '-5',
   onhit: '-1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Primarily only for hit confirming or combos routes that don't use EX specials. If you have no specials available, Ladiva would rather combo into 2U to set up stronger offense. c.X have enough blockstun to make canceling into EX Headbutt be frametrap, and c.XX have enough to make both Light and EX Headbutt a frametrap.\nAuto Combo can mostly be used for utility purposes. Even if it will lessen the damage by small amounts, using Auto Combo can let you buy time to get specials off cooldown if needed."
 };
 
 // far normals
@@ -82,8 +92,10 @@ const far5L = {
   recovery: '13',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "A fairly long range Light with high + frames. At 6f, it's a valuable tool to check the opponent in neutral, during their pressure, and confirming into 2U vs crouchers gets your offense started. Unlike c.L and 2L, f.L is a lvl 2 normal, which gives it frame advantage on CH and lets it crush other lvl 1 moves. Can be used as a hit confirm into 236236H\nOn CH it's +8 on hit, letting Ladiva link into a f.M, 2M, and 2U even at max range. It can also combo into Light and EX Lariat on CH."
 };
 const far5M = {
   moveName: 'Far Medium',
@@ -95,21 +107,25 @@ const far5M = {
   recovery: '18',
   onblock: '-6',
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "A decently fast, long range Medium. One of Ladiva's best normals for poking and whiff punishing. Combos into Light and EX Lariat at any range, as well as EX Headbutt but not on max range. Does not hit Cross-Over.\nWhile not as strong as other more notorious mid range moves, such as Katalina's f.M, it's still a staple and strong move in neutral. What Ladiva truly lacks are specials that are suitable to be canceled into, however. All Lariats can be ducked and won't combo on crouching hit, making them all very punishable, and only EX Headbutt has the range, speed, and frame advantage to make it a strong special to cancel into. Even tho it may not combo on hit at max range, it's still a frametrap if canceled into on block. However, as expected, that means you forgo using Headbutt for a while.\nAs a whiff punish, it's very strong but do make sure you don't cancel into Lariat in case you catch them crouching."
 };
 const far5H = {
   moveName: 'Far Heavy',
   altName: 'f5H',
-  damage: '1000',
+  damage: '1100',
   guard: 'mid',
   startup: '10',
   active: '5',
   recovery: '20',
   onblock: '-9',
   onhit: '-5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Long range but high damage poke with high active frames. Due to slow speed and high hitbox, it's a difficult move to use in neutral and almost impossible to whiff punish with. However, due to it's forward momentum it will almost always combo into Light Headbutt or frame trap into it. Overall, it has more limited uses compared to her other normals.\nIf you manage to land a CH you can link into c.L or c.M (spacing withstanding) for some intense corner carry."
 };
 
 // regular normals
@@ -123,88 +139,102 @@ const n2L = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "A good range Light with the same frame advantage as c.L and f.L.\nc.L sees use as a hit confirm and tick throw normal, altho in both aspects it's less effective than the other options. It can only link into itself and other Light normals, and because it's a lvl 1 attack it gains no additional frame advantage on CH.\nHowever due to being a crouching normal you will always get this normal no matter the range giving you some stability in that frame advantage, and it will let you whiff punish or stuff certain moves that Ladiva's other Lights will not hit due to it's lower hitbox. It also hits cross-over 2L."
 };
 const n2M = {
   moveName: 'Crouch Medium',
   altName: '2M',
   damage: '700',
-  guard: 'mid',
+  guard: 'Low',
   startup: '7',
   active: '5',
   recovery: '9',
   onblock: '1',
   onhit: '5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "A long range low hitting Medium. Complements f.M in neutral by hitting low and can whiff punish certain attacks and hitboxes that f.M can't hit, at the cost of having slightly shorter range and more whiff recovery.\n2M and f.M are very similar with having same speed, damage, can combo into the same specials, and attack level. Both share similar uses in neutral with small differences to make them cover different angles. 2M is safer on block and hit, and is one of the few moves Ladiva has that can hit Cross-Over. It's also the best option Ladiva has of hitting moves low to the ground, such as Ferry's 2M that f.M can't hit.\nTogether with f.M makes up the bread and butter of Ladiva's neutral and poking game.\nCounter hitting this vs a crouching opponent enables you to combo into 2U."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
   altName: '2H',
-  damage: '1000',
+  damage: '600, 500',
   guard: 'mid',
   startup: '10',
   active: '6',
   recovery: '24',
   onblock: '-13',
   onhit: '-9',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Two hits\nOn anti-air counter hit, can do 214M from first hit\nDespite the animation, does not launch on grounded hit, but will lift airborne opponents a bit.\nLow profile, can go under some ground attack with high hitbox like her 214X.\nWill force the opponent to stand up on hit"
 };
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
-  damage: '700',
-  guard: 'mid',
+  damage: '900',
+  guard: 'Low',
   startup: '7',
   active: '6',
   recovery: '21',
   onblock: '-12',
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "A very fast good range sweep. Ladiva does a dropkick that actually leaves her airborne, meaning on clash she can cancel into air moves.\nAn essential move for Ladiva. Being able to combo into sweep is a valuable tool to have, and is a good start for Ladiva's offense. She can also safe-jump 11f DPs such as Charlotta Holy Ladder and Ferry's DP if you jump immediately after 2U and if it's a counter-hit then you can safe-jump even those 9f DPs. hitting 2U at max range also nets a safejump vs 9f DPs.2U is also a valuable whiff punish as well, and due to it's speed and good range it's very adept at that."
 };
 
 // jump normals
 const jL = { 
   moveName: 'Jump Light', 
   altName: 'jL', 
-  damage: '400', 
+  damage: '500', 
   guard: 'high', 
   startup: '5', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Fastest air normal and the normal with the shortest range. Unlike some other j.L normals it is not active for the entire duration of the jump. Can cross-up.\nj.L sees use the most when you intentionally don't want the opponent to stay in hitstun for long, leaving them open for a regular throw or Screwdriver earlier than what they might expect. It's short range and active frames works to its advantage at times when you intentionally want a jump-in normal to whiff, again leaving the opponent open for a grab or simply want to bait their Anti-Air.\nUnsuitable for air-to-airs however, due to it's aforementioned poor range and it's downward facing hitbox."
 };
 const jM = { 
   moveName: 'Jump Medium', 
   altName: 'jM', 
-  damage: '550', 
+  damage: '700', 
   guard: 'high', 
   startup: '6', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "A jumping Medium with a very deep hitbox. Has the longest Vertical reach of all Ladiva's jumping normals letting it hit earlier than expected, and also hit Cross-Over where other air normals will whiff.\nClever use of this normal can let Ladiva beat out anti-airs that would normally beat her other jumping normals. In safe-jumps, it also acts as her only jumping normal that can hit wake-up Cross-Over, further reducing their defensive options against her oki."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
   altName: 'jH', 
-  damage: '800', 
+  damage: '900', 
   guard: 'high', 
   startup: '7', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "Air normal with the longest horizontal reach. Highest damage air normal. Have no cross-up hitbox.\nAs the longest reaching air normal, it acts as Ladiva's best long range jump-in. It's lack of cross-up hitbox works to it's advantage by letting Ladiva fake a cross-up and immediately go for a grab."
 };
 const jU = { 
   moveName: 'Jump Unique', 
@@ -216,75 +246,27 @@ const jU = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "The Grappler body splash. Has shorter horizontal reach than j.M. Very strong cross-up hitbox.\nAn essential normal for many reasons. The opposite in function to j.H, this normal is a powerful cross-up and is the normal to condition the opponent to block to make j.L and j.H work as grab mixups. Due to it's poor horizontal reach, it can be used to fake out the opponent believing that you are going for a j.H but instead land and go for something else."
 };
 
 // unique action
-const lv1U = { 
-  moveName: 'Power Raise Lv1', 
+const throw5U = { 
+  moveName: 'Love Grapple', 
   altName: '5ULv1', 
   damage: '1000', 
-  guard: 'mid', 
+  guard: 'Throw', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Ladiva charges forward before performing a command grab on the opponent. Very slow to start.\nDespite the similarities in concept to the classic Running Bear Grab, Ladiva will not grab until the end of the animation.\nCan do a follow-up toss that Ladiva can perform after connecting Love Grapple. M sends the opponent forward, H sends the opponent upward.\nNote that using the M version in or near the corner will actually cause a side-switch, as the opponent will bounce off the wall and then through Ladiva. Pressing nothing or using the H followup will keep the opponent on the same side."
 };
 
 const groundThrow = { 
@@ -296,18 +278,38 @@ const groundThrow = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "Leaves the opponent standing, right in your face, with you at the advantage. Exactly what you want.\nLvl 0 character knowledge check.\nForms a guessing game between a jab, a low, or another throw."  
 };
+
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'Throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['4', 'l', 'm', 'or', '4', 'l', 'u'],
+  description: "Leads to a superjump safejump if your in the corner, or a dash in meaty(not reversal safe) midscreen. Do 214L into 2L for a safejab anywhere on the screen"
+};
+
 const airThrow = { 
   moveName: 'Air Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '5', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
   description: ""
 };
@@ -322,172 +324,244 @@ const uOverhead = {
   recovery: '-', 
   onblock: '-4', 
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Move can hit very high in the air which can be good if opponent is scared of command grabs and the move is air unblockable."
 };
 
-// fireballs
-const lFireball = { 
-  moveName: 'L Reginleiv', 
-  altName: '236L', 
-  damage: '800', 
-  guard: 'all', 
+// SPDs
+const lSPD = { 
+  moveName: 'L Jewel Resort Screwdriver', 
+  altName: '360L', 
+  damage: '2000', 
+  guard: 'Throw', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
-  motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '6', '8', '4', 'l', 'or', 'a'],
+  description: "Command grab. Has a farther grab distance and does more damage than Ladiva's regular grab. Using the shortcut input will reduce the damage for all versions by 500. (Note; None of Ladiva's SPDs are throw invuln).\nL version is faster, has less range, and does less damage.\nTaunt follow-ups with L or M on hit, sacrificing some advantage. Working the crowd enables her next SPD to do more damage (200 more on true input and 100 for simple.) Taunts also enable mindgames on wakeup. Doing taunts on an L SPD leaves you minus but sets up a perfect timing for a supergrab. L taunt on M SPD sets up a perfect H meaty. M taunt on M SPD gives you time for a 2m framekill in the corner."
 };
-const mFireball = { 
-  moveName: 'M Reginleiv', 
-  altName: '236M', 
-  damage: '400, 800', 
-  guard: 'mid, all', 
+const mSPD = { 
+  moveName: 'M Jewel Resort Screwdriver', 
+  altName: '360M', 
+  damage: '2500', 
+  guard: 'Throw', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
-  motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '6', '8', '4', 'm', 'or', 'a', 'm'],
+  description: "Command grab. Has a farther grab distance and does more damage than Ladiva's regular grab. Using the shortcut input will reduce the damage for all versions by 500. (Note; None of Ladiva's SPDs are throw invuln).\nM version is slower, has more range, and does more damage.\nTaunt follow-ups with L or M on hit, sacrificing some advantage. Working the crowd enables her next SPD to do more damage (200 more on true input and 100 for simple.) Taunts also enable mindgames on wakeup. Doing taunts on an L SPD leaves you minus but sets up a perfect timing for a supergrab. L taunt on M SPD sets up a perfect H meaty. M taunt on M SPD gives you time for a 2m framekill in the corner."
 };
-const hFireball = { 
-  moveName: 'H Reginleiv', 
-  altName: '236H', 
-  damage: '350 x 3', 
-  guard: 'all', 
+const hSPD = { 
+  moveName: 'H Jewel Resort Screwdriver', 
+  altName: '360H', 
+  damage: '3000', 
+  guard: 'Throw', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
-  motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '6', '8', '4', 'h', 'or', 'a', 'h'],
+  description: "Command grab. Has a farther grab distance and does more damage than Ladiva's regular grab. Using the shortcut input will reduce the damage for all versions by 500. (Note; None of Ladiva's SPDs are throw invuln).\nSimilar reach and startup to the L version, but does the most damage.\nYou can follow up with a immediate foward jump for a safejump with the L version, and whiffed 5L into forward jump for a safejump with the M and H version"
 };
 
-// dragon punches
-const lUppercut = { 
-  moveName: 'L Rising Sword', 
+const lAirSPD = { 
+  moveName: 'Leg Drop of Adoration', 
+  altName: 'j360L', 
+  damage: '2000', 
+  guard: 'Throw', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '6', '8', '4', 'or', 'a'],
+  description: "Midair command grab. Has a farther grab range and does more damage than Ladiva's regular air grab.\nUsing the shortcut input will reduce the damage for all versions by 500."
+};
+const mAirSPD = { 
+  moveName: 'Leg Drop of Adoration', 
+  altName: 'j360M', 
+  damage: '2500', 
+  guard: 'Throw', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '6', '8', '4', 'm', 'or', 'a', 'm'],
+  description: "Midair command grab. Has a farther grab range and does more damage than Ladiva's regular air grab.\nUsing the shortcut input will reduce the damage for all versions by 500."
+};
+const hAirSPD = { 
+  moveName: 'Leg Drop of Adoration', 
+  altName: 'j360H', 
+  damage: '3000', 
+  guard: 'Throw', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '6', '8', '4', 'h', 'or', 'a', 'h'],
+  description: "Midair command grab. Has a farther grab range and does more damage than Ladiva's regular air grab.\nUsing the shortcut input will reduce the damage for all versions by 500."
+};
+
+// ground airthrow
+const lAirThrow = { 
+  moveName: 'L Devoted Body Slam', 
   altName: '623L', 
-  damage: '700, 300', 
-  guard: 'mid, all', 
+  damage: '1500',
+  guard: 'Throw', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-17', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Ladiva's antiair command grab. Will not work on opponents on the ground, but can be used against an opponent in hitstun who is in the air. Too short to anti-air usually, but can catch jump outs in pressure or work as a combo ender. Using 623L can score combo pickups that 623H cannot."
 };
-const mUppercut = { 
-  moveName: 'M Rising Sword', 
+const mAirThrow = { 
+  moveName: 'M Devoted Body Slam', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
-  guard: 'mid, all', 
+  damage: '2000', 
+  guard: 'Throw', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "Ladiva's antiair command grab. Will not work on opponents on the ground, but can be used against an opponent in hitstun who is in the air. Too short to anti-air usually, but can catch jump outs in pressure or work as a combo ender. Using 623L can score combo pickups that 623H cannot."
 };
-const hUppercut = { 
-  moveName: 'H Rising Sword', 
+const hAirThrow = { 
+  moveName: 'H Devoted Body Slam', 
   altName: '623H', 
-  damage: '950~1400', 
-  guard: 'mid, all', 
+  damage: '2500', 
+  guard: 'Throw', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Ladiva's antiair command grab. Will not work on opponents on the ground, but can be used against an opponent in hitstun who is in the air. Too short to anti-air usually, but can catch jump outs in pressure or work as a combo ender. Using 623L can score combo pickups that 623H cannot."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+  moveName: 'L Elegant Lariat', 
   altName: '214L', 
-  damage: '700', 
-  guard: 'mid', 
+  damage: '1200', 
+  guard: 'All', 
   startup: '13', 
   active: '2', 
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
-  motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
-};
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'or', '4', 'a'],
+  description: "An advancing lariat that has the ability to guard crush an opponent who is stand-guarding. Has higher damage and faster startup if done while in the middle of a run. All versions whiff against crouching opponents who are not currently doing an attack.\nIf the M or H version lands, you can link into either 2U or 2M xx SBA when mid-screen, or go into your extended corner combos."
 };
 const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+  moveName: 'M Elegant Lariat', 
   altName: '214M', 
-  damage: '1200', 
-  guard: 'mid', 
+  damage: '1500', 
+  guard: 'All', 
   startup: '16', 
   active: '13', 
   recovery: '29', 
   onblock: '+2~-10', 
   onhit: '-',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'm', 'or', '4', 'a', 'm'],
+  description: "An advancing lariat that has the ability to guard crush an opponent who is stand-guarding. Has higher damage and faster startup if done while in the middle of a run. All versions whiff against crouching opponents who are not currently doing an attack.\nIf the M or H version lands, you can link into either 2U or 2M xx SBA when mid-screen, or go into your extended corner combos."
 };
 const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+  moveName: 'H Elegant Lariat', 
   altName: '214H', 
-  damage: '1200', 
-  guard: 'mid', 
+  damage: '1300', 
+  guard: 'All', 
   startup: '13', 
   active: '13', 
   recovery: '37', 
   onblock: '+4~-8', 
   onhit: 'HKD',
-  motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'h', 'or', '4', 'a', 'h'],
+  description: "An advancing lariat that has the ability to guard crush an opponent who is stand-guarding. Has higher damage and faster startup if done while in the middle of a run. All versions whiff against crouching opponents who are not currently doing an attack.\nIf the M or H version lands, you can link into either 2U or 2M xx SBA when mid-screen, or go into your extended corner combos."
 };
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Maximum Love Bomb (Strike)', 
   altName: '236236H', 
-  damage: '2500-3500', 
-  guard: 'mid', 
+  damage: '3300-3600', 
+  guard: 'All', 
   startup: '6+5', 
   active: '-', 
   recovery: '-', 
   onblock: '-13', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "",
+};
+const throwsba = { 
+  moveName: 'Maximum Love Bomb (Throw)', 
+  altName: '214214H', 
+  damage: '4000', 
+  guard: 'Throw', 
+  startup: '6+5', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-13', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', '214', 'h', 'or', '214', 'a'],
+  description: "Frame 0 grab post super flash. Range is more than L SPD but less than M SPD.\nIf done with the shortcut motion, it will do 3000 instead of 4000.\nAlso, technical input give you a better oki (opponent wake up closer to you).",
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
-  altName: '236236U', 
-  damage: '3500-4500', 
-  guard: 'all', 
+  moveName: 'The Shape of Love', 
+  altName: '720U', 
+  damage: '5000', 
+  guard: 'Throw', 
   startup: '8+5', 
   active: '-', 
   recovery: '-', 
   onblock: '-23', 
   onhit: 'HKD',
-  motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '6', '8', '4', '2', '6', '8', '4', 'u', 'or', '236', 'a', 'u'],
+  description: "Ladiva press the opponent down on the floor, slowly reducing their HP.\nThis one grab farther than her SBA, slightly further than her M SPD's range.\nThis will grab opponents who are blocking, in grounded hitstun, or are being juggled close to the ground.\nIf done with shortcut motion, the super will do 4000 damage instead of 5000.\nAlso, technical input give you a better oki (opponent wake up closer to you)."
 };
 
 
@@ -509,24 +583,24 @@ export const fastivaInfo = [
   jM,
   jH,
   jU,
-  lv1U,
-  lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
+  throw5U,
   groundThrow,
+  backThrow,
   airThrow,
   uOverhead,
-  lFireball,
-  mFireball,
-  hFireball,
-  lUppercut,
-  mUppercut,
-  hUppercut,
+  lSPD,
+  mSPD,
+  hSPD,
+  lAirSPD,
+  mAirSPD,
+  hAirSPD,
+  lAirThrow,
+  mAirThrow,
+  hAirThrow,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
+  throwsba,
   sba,
   ssba
 ]
