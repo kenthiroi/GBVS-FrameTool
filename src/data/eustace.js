@@ -350,7 +350,7 @@ const lFireball = {
   moveName: 'L Flamek Thunder', 
   altName: '[4]6L', 
   damage: '800', 
-  guard: 'all', 
+  guard: 'All', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
@@ -364,8 +364,8 @@ const lFireball = {
 const mFireball = { 
   moveName: 'M Flamek Thunder', 
   altName: '[4]6M', 
-  damage: '400, 800', 
-  guard: 'mid, all', 
+  damage: '800', 
+  guard: 'All', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
@@ -379,8 +379,8 @@ const mFireball = {
 const hFireball = { 
   moveName: 'H Flamek Thunder', 
   altName: '[4]6H', 
-  damage: '350 x 3', 
-  guard: 'all', 
+  damage: '300, 300, 400', 
+  guard: 'All', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
@@ -394,9 +394,9 @@ const hFireball = {
 
 const lChargedFireball = { 
   moveName: 'L Flamek Thunder (Charged)', 
-  altName: '[4]6L', 
-  damage: '800', 
-  guard: 'all', 
+  altName: '[4]6[L]', 
+  damage: '1000', 
+  guard: 'All', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
@@ -405,13 +405,13 @@ const lChargedFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['4', '6', 'l', 'or', '6', 'a'],
-  description: "Sets off H Rat Race grenade. Values in [] indicate advantage when 623H is triggered.\nCan be charged for an extra hit and more damage.\nA faster-than average fireball in both startup and velocity. Both [4]6L and [4]6M are very spammable and good at winning fireball wars, but are both very unsafe on block. [4]6H, on the other hand, grants some frame advantage, and can be used to extend combos and pressure. Both [4]6L and [4]6H will combo from literally any normal."
+  description: "[4]6[X] is effectively a laser. All versions will pierce through and destroy other projectiles to hit the opponent, though multi-hit projectiles won't be completely destroyed even by [4]6[H]. All versions of [4]6[X] gain exactly one frame of advantage over their uncharged counterparts, [4]6[M] will grant a soft knockdown on hit, and [4]6[H] grants a hard knockdown and wallbounces."
 };
 const mChargedFireball = { 
   moveName: 'M Flamek Thunder (Charged)', 
-  altName: '[4]6M', 
-  damage: '400, 800', 
-  guard: 'mid, all', 
+  altName: '[4]6[M]', 
+  damage: '1000', 
+  guard: 'All', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
@@ -420,13 +420,13 @@ const mChargedFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['4', '6', 'm', 'or', '6', 'a', 'm'],
-  description: "Sets off H Rat Race grenade. Values in [] indicate advantage when 623H is triggered.\nCan be charged for an extra hit and more damage.\nA faster-than average fireball in both startup and velocity. Both [4]6L and [4]6M are very spammable and good at winning fireball wars, but are both very unsafe on block. [4]6H, on the other hand, grants some frame advantage, and can be used to extend combos and pressure. Both [4]6L and [4]6H will combo from literally any normal."
+  description: "[4]6[X] is effectively a laser. All versions will pierce through and destroy other projectiles to hit the opponent, though multi-hit projectiles won't be completely destroyed even by [4]6[H]. All versions of [4]6[X] gain exactly one frame of advantage over their uncharged counterparts, [4]6[M] will grant a soft knockdown on hit, and [4]6[H] grants a hard knockdown and wallbounces."
 };
 const hChargedFireball = { 
-  moveName: 'H Flamek Thunder  (Charged)', 
-  altName: '[4]6H', 
-  damage: '350 x 3', 
-  guard: 'all', 
+  moveName: 'H Flamek Thunder (Charged)', 
+  altName: '[4]6[H]', 
+  damage: '1200', 
+  guard: 'All', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
@@ -435,15 +435,109 @@ const hChargedFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['4', '6', 'h', 'or', '6', 'a', 'h'],
-  description: "Sets off H Rat Race grenade. Values in [] indicate advantage when 623H is triggered.\nCan be charged for an extra hit and more damage.\nA faster-than average fireball in both startup and velocity. Both [4]6L and [4]6M are very spammable and good at winning fireball wars, but are both very unsafe on block. [4]6H, on the other hand, grants some frame advantage, and can be used to extend combos and pressure. Both [4]6L and [4]6H will combo from literally any normal."
+  description: "[4]6[X] is effectively a laser. All versions will pierce through and destroy other projectiles to hit the opponent, though multi-hit projectiles won't be completely destroyed even by [4]6[H]. All versions of [4]6[X] gain exactly one frame of advantage over their uncharged counterparts, [4]6[M] will grant a soft knockdown on hit, and [4]6[H] grants a hard knockdown and wallbounces."
+};
+
+
+// fireballs
+const lAntiAirBall = { 
+  moveName: 'L Slow Kill', 
+  altName: '[2]8L', 
+  damage: '800', 
+  guard: 'All', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-7', 
+  onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '8', 'l', 'or', 'a'],
+  description: "Sets off H Rat Race grenade. Values in [] indicate advantage when 623H is triggered.\nCan be charged for an extra hit and more damage.\nEustace is in CH state during recovery.\nEustace aims his gun downward and ricochets a shot off of the ground. One of Eustace's myriad ways to extend his pressure, as all three versions of [2]8[X] grant great frame advantage if blocked. Although it's not too difficult to react to it due to its unique animation, Eustace can release the projectile early in the charge for to bait a mash out. Also somewhat useful in neutral to control space, but ironically, none of its versions are good at catching jumps. Best used to mix up your timing between all of Eustace's other projectiles."
+};
+const mAntiAirBall = { 
+  moveName: 'M Slow Kill', 
+  altName: '[2]8M', 
+  damage: '800', 
+  guard: 'All', 
+  startup: '13', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-4', 
+  onhit: '0',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '8', 'm', 'or', 'a', 'm'],
+  description: "Sets off H Rat Race grenade. Values in [] indicate advantage when 623H is triggered.\nCan be charged for an extra hit and more damage.\nEustace is in CH state during recovery.\nEustace aims his gun downward and ricochets a shot off of the ground. One of Eustace's myriad ways to extend his pressure, as all three versions of [2]8[X] grant great frame advantage if blocked. Although it's not too difficult to react to it due to its unique animation, Eustace can release the projectile early in the charge for to bait a mash out. Also somewhat useful in neutral to control space, but ironically, none of its versions are good at catching jumps. Best used to mix up your timing between all of Eustace's other projectiles."
+};
+const hAntiAirBall = { 
+  moveName: 'H Slow Kill', 
+  altName: '[2]8H', 
+  damage: '300, 300, 400', 
+  guard: 'All', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '8', 'h', 'or', 'a', 'h'],
+  description: "Sets off H Rat Race grenade. Values in [] indicate advantage when 623H is triggered.\nCan be charged for an extra hit and more damage.\nEustace is in CH state during recovery.\nEustace aims his gun downward and ricochets a shot off of the ground. One of Eustace's myriad ways to extend his pressure, as all three versions of [2]8[X] grant great frame advantage if blocked. Although it's not too difficult to react to it due to its unique animation, Eustace can release the projectile early in the charge for to bait a mash out. Also somewhat useful in neutral to control space, but ironically, none of its versions are good at catching jumps. Best used to mix up your timing between all of Eustace's other projectiles."
+};
+
+const lChargedAntiAirBall = { 
+  moveName: 'L Slow Kill (Charged)', 
+  altName: '[2]8[L]', 
+  damage: '1000', 
+  guard: 'All', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-7', 
+  onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '8', 'l', 'or', 'a'],
+  description: "Sets off H Rat Race grenade. Values in [] indicate advantage when 623H is triggered.\nCan be charged for an extra hit and more damage.\nEustace is in CH state during recovery.\nEustace aims his gun downward and ricochets a shot off of the ground. One of Eustace's myriad ways to extend his pressure, as all three versions of [2]8[X] grant great frame advantage if blocked. Although it's not too difficult to react to it due to its unique animation, Eustace can release the projectile early in the charge for to bait a mash out. Also somewhat useful in neutral to control space, but ironically, none of its versions are good at catching jumps. Best used to mix up your timing between all of Eustace's other projectiles."
+};
+const mChargedAntiAirBall = { 
+  moveName: 'M Slow Kill (Charged)', 
+  altName: '[2]8[M]', 
+  damage: '1000', 
+  guard: 'All', 
+  startup: '13', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-4', 
+  onhit: '0',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '8', 'm', 'or', 'a', 'm'],
+  description: "Sets off H Rat Race grenade. Values in [] indicate advantage when 623H is triggered.\nCan be charged for an extra hit and more damage.\nEustace is in CH state during recovery.\nEustace aims his gun downward and ricochets a shot off of the ground. One of Eustace's myriad ways to extend his pressure, as all three versions of [2]8[X] grant great frame advantage if blocked. Although it's not too difficult to react to it due to its unique animation, Eustace can release the projectile early in the charge for to bait a mash out. Also somewhat useful in neutral to control space, but ironically, none of its versions are good at catching jumps. Best used to mix up your timing between all of Eustace's other projectiles."
+};
+const hChargedAntiAirBall = { 
+  moveName: 'H Slow Kill (Charged)', 
+  altName: '[2]8[H]', 
+  damage: '1200', 
+  guard: 'All', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '8', 'h', 'or', 'a', 'h'],
+  description: "Sets off H Rat Race grenade. Values in [] indicate advantage when 623H is triggered.\nCan be charged for an extra hit and more damage.\nEustace is in CH state during recovery.\nEustace aims his gun downward and ricochets a shot off of the ground. One of Eustace's myriad ways to extend his pressure, as all three versions of [2]8[X] grant great frame advantage if blocked. Although it's not too difficult to react to it due to its unique animation, Eustace can release the projectile early in the charge for to bait a mash out. Also somewhat useful in neutral to control space, but ironically, none of its versions are good at catching jumps. Best used to mix up your timing between all of Eustace's other projectiles."
 };
 
 // dragon punches
-const lUppercut = { 
-  moveName: 'L Rising Sword', 
+const lGrenade = { 
+  moveName: 'L Rat Race', 
   altName: '623L', 
-  damage: '700, 300', 
-  guard: 'mid, all', 
+  damage: '200, 600', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -451,14 +545,14 @@ const lUppercut = {
   onhit: 'KD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  motion: ['623', 'l', 'or', '2', 'a'],
+  description: "Eustace tosses a grenade. The grenade has different properties depending on what version is used, with the H version sticking to the opponent. Mostly useful as a setplay tool, but can see some use in neutral to control space.\nExplodes on impact.\nSlow and loses you your turn."
 };
-const mUppercut = { 
-  moveName: 'M Rising Sword', 
+const mGrenade = { 
+  moveName: 'M Rat Race', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
-  guard: 'mid, all', 
+  damage: '200, 600', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -466,14 +560,14 @@ const mUppercut = {
   onhit: 'KD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  motion: ['623', 'm', 'or', '2', 'a', 'm'],
+  description: "Eustace tosses a grenade. The grenade has different properties depending on what version is used, with the H version sticking to the opponent. Mostly useful as a setplay tool, but can see some use in neutral to control space.\nHits once, then explodes.\nUseful on oki to bait your opponent into trying something. It's usable from pretty far, so what they'll do depends on how far away you are when you set it. When they're close, you want to look out for mashing or reversals, and from afar, keep jumps in mind."
 };
-const hUppercut = { 
-  moveName: 'H Rising Sword', 
+const hGrenade = { 
+  moveName: 'H Rat Race', 
   altName: '623H', 
-  damage: '950~1400', 
-  guard: 'mid, all', 
+  damage: '400, 400', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -481,16 +575,16 @@ const hUppercut = {
   onhit: 'HKD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  motion: ['623', 'h', 'or', '2', 'a', 'h'],
+  description: "Eustace tosses a grenade. The grenade has different properties depending on what version is used, with the H version sticking to the opponent. Mostly useful as a setplay tool, but can see some use in neutral to control space.\nSticks to the enemy on impact.\nCan be set off by Eustace's projectile attacks.\nAmazing move. Frame traps from full autocombo and H normals while granting advantage on block, and if you open them up while they've a grenade stuck to them, they eat brutal amounts of damage from anywhere on screen. Allows conversions from UOH, forward throw, air throw, any far normal, any close normal. Can only be combo'd into with c.H on standers and 2H or full autocombo on crouchers."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+  moveName: 'L Close Combat', 
   altName: '214L', 
-  damage: '700', 
-  guard: 'mid', 
+  damage: '-', 
+  guard: 'All', 
   startup: '13', 
   active: '2', 
   recovery: '19', 
@@ -499,28 +593,13 @@ const lRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
-};
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Eustace's command dash.\nThe L version only moves and can be cancelled into 5 follow-up actions (see below).\nThe M version ends in a knife attack and then allows follow-ups, apart from Brake which can only be used before the strike. Startup varies based on distance travelled.\nThe H version can be cancelled before or after the knife strike, but Brake must be used before the strike. Startup varies based on distance travelled."
 };
 const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+  moveName: 'M Close Combat', 
   altName: '214M', 
-  damage: '1200', 
-  guard: 'mid', 
+  damage: '500', 
+  guard: 'All', 
   startup: '16', 
   active: '13', 
   recovery: '29', 
@@ -529,13 +608,13 @@ const mRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Eustace's command dash.\nThe L version only moves and can be cancelled into 5 follow-up actions (see below).\nThe M version ends in a knife attack and then allows follow-ups, apart from Brake which can only be used before the strike. Startup varies based on distance travelled.\nThe H version can be cancelled before or after the knife strike, but Brake must be used before the strike. Startup varies based on distance travelled."
 };
 const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+  moveName: 'H Close Combat', 
   altName: '214H', 
-  damage: '1200', 
-  guard: 'mid', 
+  damage: '500', 
+  guard: 'All', 
   startup: '13', 
   active: '13', 
   recovery: '37', 
@@ -544,15 +623,93 @@ const hRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Eustace's command dash.\nThe L version only moves and can be cancelled into 5 follow-up actions (see below).\nThe M version ends in a knife attack and then allows follow-ups, apart from Brake which can only be used before the strike. Startup varies based on distance travelled.\nThe H version can be cancelled before or after the knife strike, but Brake must be used before the strike. Startup varies based on distance travelled."
 };
+
+const lRekkaFollowUp = {
+  moveName: 'Stunlight',
+  altName: '214X -> L',
+  damage: '700',
+  guard: 'All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'l', 'or', '2', 'a', 'l'],
+  description: 'Eustace stops in place and fires a quick flash. Useful for ending pressure in a frame trap, and combos on crouching CH. During a juggle 214H~L is also very useful for combo extensions. Is very advantageous if it sets off a 623H set, so feel free to continue pressure if that happens. Using this follow-up from 214H grants slightly more advantage than the normal versions.',
+}
+const mRekkaFollowUp = {
+  moveName: 'Takedown',
+  altName: '214X -> M',
+  damage: '800',
+  guard: 'All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'm', 'or', '2', 'a', 'm'],
+  description: 'A low slide. Leaves Eustace very vulnerable but travels far.',
+}
+const hRekkaFollowUp = {
+  moveName: 'Assault Knife',
+  altName: '214X -> H',
+  damage: '800/1000',
+  guard: 'All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'h', 'or', '2', 'a', 'h'],
+  description: 'Eustace\'s anti-air attack. Has some invuln. Highest damaging combo ender from 214M and 214H, and if used from 214H, grants a combo extension in the corner on opponents juggled high enough. Slightly less disadvantageous on block if used from 214H',
+}
+const uRekkaFollowUp = {
+  moveName: 'Spreadshot',
+  altName: '214X -> U',
+  damage: '400*X',
+  guard: 'All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'u', 'or', '2', 'a', 'u'],
+  description: 'Eustace hops backward and shoots downward. Has some invuln. The attack is slow, but can be used to create distance. Slightly advantageous on block but puts Eustace too far to take advantage of it. Likely the lowest commitment of all follow-ups, but if overused, your opponent can air throw you on prediction. If it sets off a 623H set, it\'s advantageous enough for you to continue pressure, or even pick up for a combo if it hits.',
+}
+const gRekkaFollowUp = {
+  moveName: 'Brake',
+  altName: '214X -> G',
+  damage: '',
+  guard: 'All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'g', 'or', '2', 'a', 'g'],
+  description: 'By pressing G, Eustace will stop the dash. This has to be done before the strike of the M or H version. To guarantee an empty 214X, use 214L instead.\nValues in [] indicate advantage when 623H is triggered.',
+}
+
+
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Acidrage Howl', 
   altName: '236236H', 
-  damage: '2500-3500', 
-  guard: 'mid', 
+  damage: '3200', 
+  guard: 'All', 
   startup: '6+5', 
   active: '-', 
   recovery: '-', 
@@ -561,14 +718,14 @@ const sba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Eustace rushes forward with invulnerability. On hit or block, he unleashes a flurry of shots. Very good range, gets the full animation no matter the distance, like Lancelot and Yuel's SBAs."
 };
 const ssba = { 
   moveName: 'Catastrophe', 
   altName: '236236U', 
-  damage: '3500-4500', 
-  guard: 'all', 
-  startup: '8+5', 
+  damage: '4468', 
+  guard: 'All', 
+  startup: '-', 
   active: '-', 
   recovery: '-', 
   onblock: '-23', 
@@ -576,7 +733,7 @@ const ssba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Eustace scorches the heavens with Flamek Thunder. The shot fires upward, so it will miss grounded opponents if they're far enough away from Eustace. Best used against airborne opponents or in short range combos. Note that only the first hit of the super is air unblockable."
 };
 
 
@@ -603,19 +760,29 @@ export const eustaceInfo = [
   groundThrow,
   airThrow,
   uOverhead,
+  lAntiAirBall,
+  mAntiAirBall,
+  hAntiAirBall,
+  lChargedAntiAirBall,
+  mChargedAntiAirBall,
+  hChargedAntiAirBall,
   lFireball,
   mFireball,
   hFireball,
   lChargedFireball,
   mChargedFireball,
   hChargedFireball,
-  lUppercut,
-  mUppercut,
-  hUppercut,
+  lGrenade,
+  mGrenade,
+  hGrenade,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
+  lRekkaFollowUp,
+  mRekkaFollowUp,
+  hRekkaFollowUp,
+  uRekkaFollowUp,
+  gRekkaFollowUp,
   sba,
   ssba
 ]
