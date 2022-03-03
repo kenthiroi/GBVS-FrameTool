@@ -1,6 +1,7 @@
-// FINAL 
+// DESCRIPTIONS DONE
+// FRAME DATA UNFINISHED 
 
-const general = { char: "Ferry", health: '10000', prejump: '4F', backdash: '22F' }
+const general = { char: "Ferry", health: '9500', prejump: '5F', backdash: '22F' }
 
 // close normals
 const closeL = {
@@ -13,8 +14,10 @@ const closeL = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "Slightly slower than average jab that is a solid button to mash out of pressure with when the opponent is up close, as well as having nice utility when used in stagger pressure up close (i.e 2L>c.L). It has a tendency to whiff at the tip of its range rather than turn into f.L, beware. Low recovery lets you use this move on an opponent's knockdown and still recover to block slow reversals like Charlotta's flashkick."
 };
 const closeM = {
   moveName: 'Close Medium',
@@ -26,90 +29,104 @@ const closeM = {
   recovery: '10',
   onblock: '0',
   onhit: '4',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "c.M can serve as situational anti-air for deep jump ins or opponents directly overhead."
 };
 const closeH = {
   moveName: 'Close Heavy',
   altName: 'cH',
-  damage: '1200',
+  damage: '1000',
   guard: 'mid',
   startup: '8',
   active: '4',
   recovery: '18',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Preferred starter for combos in most cases. +3 on block, allowing you to do things like c.H>Hinrichten and be able to capitalize on the + frames afterwards. Also great as combo filler in juggles. Combos into itself on counterhit for great damage."
 };
 
 // auto combos
 const auto1 = {
   moveName: 'Auto Combo 2nd hit',
   altName: 'cXX',
-  damage: '350',
+  damage: '300',
   guard: 'mid',
   startup: '-',
   active: '-',
   recovery: '-',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Both of these moves are combo filler primarily. You can use them during block pressure to end your turn safely. Not much else to say about these moves."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
   altName: 'cXXX',
-  damage: '350',
+  damage: '300',
   guard: 'mid',
   startup: '-',
   active: '-',
   recovery: '-',
   onblock: '-5',
   onhit: '-1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Both of these moves are combo filler primarily. You can use them during block pressure to end your turn safely. Not much else to say about these moves."
 };
 
 // far normals
 const far5L = {
   moveName: 'Far Light',
   altName: 'f5L',
-  damage: '400',
+  damage: '350',
   guard: 'mid',
   startup: '6',
   active: '3',
   recovery: '13',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "Solid poke in the midrange, and your primary button to jail the opponent after the opponent ends their pressure. When used to jail, you want to mix in the threat of f.L>214L vs f.L>nothing to keep them honest. Only combos into 623M at range."
 };
 const far5M = {
   moveName: 'Far Medium',
   altName: 'f5M',
-  damage: '700',
+  damage: '650',
   guard: 'mid',
   startup: '8',
   active: '3',
   recovery: '18',
   onblock: '-6',
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "This is your main poke at longer distances, and is a staple move of Ferry’s strong keep out game. You’ll want to use this to control the screen horizontally, eventually conditioning the opponent to try to roll or jump over it, both of which can be baited and punished. The whip is NOT disjointed, so the opponent can hit the whip to hurt you, thus exercising restraint with this move is very important. This move can be low profiled, in which, you can use 2M or 2U to thwart that."
 };
 const far5H = {
   moveName: 'Far Heavy',
   altName: 'f5H',
-  damage: '1000',
+  damage: '900',
   guard: 'mid',
   startup: '10',
   active: '5',
   recovery: '20',
   onblock: '-9',
   onhit: '-5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Similiar to f.M with more range and damage, but slower startup and higher recovery. Ferry steps forwards as she uses this move, so it can be useful in keeping up pressure on a retreating foe."
 };
 
 // regular normals
@@ -117,53 +134,61 @@ const n2L = {
   moveName: 'Crouch Light',
   altName: '2L',
   damage: '400',
-  guard: 'mid',
+  guard: 'Low',
   startup: '6',
   active: '3',
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Main button to mash out of pressure with, thanks to it not having a range limit unlike c.L. It has low range for a 2L though, so it can whiff against decently spaced close normals and specials. Also the preferred normal to start stagger pressure with up close. Low recovery lets you use this move on an opponent's knockdown and still recover to block slow reversals like Charlotta's flashkick. Hits low."
 };
 const n2M = {
   moveName: 'Crouch Medium',
   altName: '2M',
-  damage: '700',
-  guard: 'mid',
+  damage: '600',
+  guard: 'Low',
   startup: '7',
   active: '5',
   recovery: '9',
   onblock: '1',
   onhit: '5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "This move complements f.M very well. While f.M can be low profiled, 2M can stop this outright, as well as having the added utility of hitting low. Compared to f.M, it is slower so you really only want to use this to stop them from low profiling f.M, punish rolls, or poke at their feet. You can also go under projectiles with this, punishing people who try to fireball in the midrange. This move also often serves as the low complement of Ferry's high/low oki."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
   altName: '2H',
-  damage: '1000',
+  damage: '900',
   guard: 'mid',
   startup: '10',
   active: '6',
   recovery: '24',
   onblock: '-13',
   onhit: '-9',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Ferry’s dedicated anti air normal. Can convert into 236X on air hit. This move is good for controlling the air space in front of her, but is not reliable when the opponent is directly above your head, as well as being air blockable. In that case, consider another anti air option such as EX DP, c.M, or rising j.L. Great combo filler, especially in juggles and Hinrichten routes."
 };
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
   damage: '700',
-  guard: 'mid',
+  guard: 'Low',
   startup: '7',
   active: '6',
   recovery: '21',
   onblock: '-12',
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Incredible sweep. One of her better pokes, and one of the best sweeps in the game. Grants a hard knockdown on hit. You can use the hard knockdown to go for a safejump with j.H or set up Geegee oki with 22X. Preferred meterless ender when in Liechten. This move also is often used as an alternative to 2M as the low complement in Ferry's high/low oki."
 };
 
 // jump normals
@@ -177,317 +202,476 @@ const jL = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Primary use of this move is in Ferry’s mixup game, as rising j.L is instant overhead that can hit the entire cast, even when crouching. To convert off of it, you will need to set it up with Geegee or Vergiften. Alternatively, if you are in Liechten, you can convert off of it without the need of a setup, by chaining j.L into j.4U. Without a proper setup or Liechten, using j.L as an instant overhead is unsafe, even on hit. This move is also useful as an air to air up close."
 };
 const jM = { 
   moveName: 'Jump Medium', 
   altName: 'jM', 
-  damage: '550', 
+  damage: '400', 
   guard: 'high', 
   startup: '6', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Horizontal whip attack that is useful for checking opponents in the air from a distance. You can also use it to hit a standing opponent at the tip, just before landing far from them. The whip does have a hurtbox so be careful when throwing it out. This move is also useful for whiff-cancelling from jU during Liechten."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
   altName: 'jH', 
-  damage: '800', 
+  damage: '750', 
   guard: 'high', 
   startup: '7', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
 };
 const jU = { 
-  moveName: 'Jump Unique', 
-  altName: 'jU', 
-  damage: '700', 
-  guard: 'high', 
+  moveName: 'Spectral Dive', 
+  altName: 'j4U/j5U/j6U', 
+  damage: '600', 
+  guard: 'All', 
   startup: '12', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Dive kick. Performs a midair dive attack. If this move hits close to the opponent's feet, it's possible to be plus. The angle the move goes in can be altered by inputting j.4U or j.6U, for a total of 3 different angles. j.5/6U have 2 hits which makes them easier to be positioned so that they are plus on block. When cornered, you can jump and input j.6U as a way to escape out (however, the opponent can smack you for this if they read it). In Liechten, you can use j.4U to convert off of instant overhead j.L. You can also use j.4/5/6U as a way to set up pressure in general and high/low mix on opponents in Liechten."
 };
 
+const j8U = { 
+  moveName: 'Ghostswing', 
+  altName: 'j7U/j8U', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['u'],
+  description: "Hooks Ferry's whip to the stage ceiling and swings her forward. Primarily used as a mobility option to get around the stage. You can cancel your air momentum after the swing by inputting an air normal immediately, with the most preferable button being j.L for that purpose. You can also swing backwards by inputting j.7U. You do turn around for air normals after crossing up the opponent with this, unlike a regular jump."
+};
+
+
 // unique action
-const lv1U = { 
-  moveName: 'Power Raise Lv1', 
-  altName: '5ULv1', 
-  damage: '1000', 
+const s5U = { 
+  moveName: 'Ein Ball', 
+  altName: '5U', 
+  damage: '100x15', 
   guard: 'mid', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Performs a multi-hit attack that deals a substantial amount of chip damage if blocked close. It also gains a good chunk of meter if all hits are blocked and is only -2 on block. This skill has a short reach at first, so you’ll want to dash up to them prior, but it is mostly disjointed so it can serve as a counterpoke. Its multi-hit property makes it extremely effective against armor moves with limited number of hits, such as Vaseraga's empowered tackle, by shredding through the armor and punishing it. The low recovery of this move makes it pretty safe to whiff. Surprisingly, it prorates really well, making it useful in some combos."
 };
 
 const groundThrow = { 
-  moveName: 'Ground Throw', 
+  moveName: 'Forward Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '7', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "Forward throw slams the opponent to the ground, giving a hard knockdown afterwards. Midscreen, you can set up 22X to apply more pressure afterwards. If you have Geegee placed beforehand, he can be used to convert off of the throw.\nBoth throws can set up safejumps as well."
+};
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'Throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['l', 'm', 'or', 'l', 'u'],
+  description: "Back throw has Beppo slam them to the other side, leaving them very close to Ferry. This is the preferred throw for okizeme afterwards midscreen due to this property, allowing for 22H oki.\nBoth throws can set up safejumps as well."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '5', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Grabs the opponent and slams them back into the ground. Good air to air option. If Geegee was was set up prior, you can convert off of it afterwards."
 };
 
 const uOverhead = { 
   moveName: 'Overhead', 
   altName: 'UOH', 
   damage: '1000', 
-  guard: 'high', 
+  guard: 'High', 
   startup: '26', 
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Probably one of the worse universal overhead attacks in the game, due to it moving Ferry back as opposed to forward, making it hard to utilize in pressure. Luckily, it isn’t that big of a deal, as Ferry has a better overhead mixup anyway."
 };
 
 // fireballs
 const lFireball = { 
-  moveName: 'L Reginleiv', 
+  moveName: 'L Gespenst', 
   altName: '236L', 
-  damage: '800', 
+  damage: '400', 
   guard: 'all', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Performs a whip attack. It has a slow start-up, but it has a long reach and negates projectiles. Can be followed up by Whip It Good and Heel. This move is very good at punishing reckless run ins from the opponent in neutral.\nFastest version, but lowest reach."
 };
 const mFireball = { 
-  moveName: 'M Reginleiv', 
+  moveName: 'M Gespenst', 
   altName: '236M', 
-  damage: '400, 800', 
+  damage: '400', 
   guard: 'mid, all', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Performs a whip attack. It has a slow start-up, but it has a long reach and negates projectiles. Can be followed up by Whip It Good and Heel. This move is very good at punishing reckless run ins from the opponent in neutral.\nM version has longer startup but also has more reach than the L version."
 };
 const hFireball = { 
-  moveName: 'H Reginleiv', 
+  moveName: 'H Gespenst', 
   altName: '236H', 
-  damage: '350 x 3', 
+  damage: '400', 
   guard: 'all', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Performs a whip attack. It has a slow start-up, but it has a long reach and negates projectiles. Can be followed up by Whip It Good and Heel. This move is very good at punishing reckless run ins from the opponent in neutral.\nH version has the same range as M version but is much faster and plus on block."
 };
+
+const lFireballExpode = {
+  moveName: 'L Whip It Good', 
+  altName: '236L -> X', 
+  damage: '600-800', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'l', 'l', 'or', 'a'],
+  description: 'Deals additional damage after connecting Gespenst (automatically triggers with less damage if no other commands are input). If H version of Genspenst was used, Whip It Good will grant a hard knockdown. After M Genspenst, the enemy is popped up high enough for a followup hit, which can lead to a combo in the corner.'
+}
+const mFireballExpode = {
+  moveName: 'M Whip It Good', 
+  altName: '236M -> X', 
+  damage: '1000-1200', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'm', 'l', 'or', 'a'],
+  description: 'Deals additional damage after connecting Gespenst (automatically triggers with less damage if no other commands are input). If H version of Genspenst was used, Whip It Good will grant a hard knockdown. After M Genspenst, the enemy is popped up high enough for a followup hit, which can lead to a combo in the corner.'
+}
+const hFireballExpode = {
+  moveName: 'H Whip It Good', 
+  altName: '236H -> X', 
+  damage: '1000-1200', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'h', 'l', 'or', 'a'],
+  description: 'Deals additional damage after connecting Gespenst (automatically triggers with less damage if no other commands are input). If H version of Genspenst was used, Whip It Good will grant a hard knockdown. After M Genspenst, the enemy is popped up high enough for a followup hit, which can lead to a combo in the corner.'
+}
+
+const lFireballPull = {
+  moveName: 'L Heel', 
+  altName: '236L -> 4X', 
+  damage: '600-800', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'l', '4', 'l', 'or', '4', 'a'],
+  description: 'Pulls the foe near after connecting Gespenst. This skill doesn\'t deal any damage, but causes hard knockdown regardless of the version of Genspent used. This move is a key part of setting up her midscreen oki game, as you can do 22L and go for a hit/throw/shimmy mixup that can be looped into itself. If you do 22H, you can add additional layers to the mixup, such as instant overhead j.L or low, albeit sacrificing the ability to loop the oki. If 236M was used and you are close enough, after the pull in, Ferry can follow up with a normal and continue with a combo or setup. If 236L or 236H are used, Ferry cannot combo after the pull.\nGran wakes up 52 frames after pulling.\nNarmaya wakes up 54 frames after pulling.\nEveryone else wakes up in 51 frames'
+}
+const mFireballPull = {
+  moveName: 'M Heel', 
+  altName: '236M -> 4X', 
+  damage: '1000-1200', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'm', '4', 'l', 'or', '4', 'a'],
+  description: 'Pulls the foe near after connecting Gespenst. This skill doesn\'t deal any damage, but causes hard knockdown regardless of the version of Genspent used. This move is a key part of setting up her midscreen oki game, as you can do 22L and go for a hit/throw/shimmy mixup that can be looped into itself. If you do 22H, you can add additional layers to the mixup, such as instant overhead j.L or low, albeit sacrificing the ability to loop the oki. If 236M was used and you are close enough, after the pull in, Ferry can follow up with a normal and continue with a combo or setup. If 236L or 236H are used, Ferry cannot combo after the pull.\nGran wakes up 52 frames after pulling.\nNarmaya wakes up 54 frames after pulling.\nEveryone else wakes up in 51 frames'
+}
+const hFireballPull = {
+  moveName: 'H Heel', 
+  altName: '236H -> 4X', 
+  damage: '1000-1200', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'h', '4', 'l', 'or', '4', 'a'],
+  description: 'Pulls the foe near after connecting Gespenst. This skill doesn\'t deal any damage, but causes hard knockdown regardless of the version of Genspent used. This move is a key part of setting up her midscreen oki game, as you can do 22L and go for a hit/throw/shimmy mixup that can be looped into itself. If you do 22H, you can add additional layers to the mixup, such as instant overhead j.L or low, albeit sacrificing the ability to loop the oki. If 236M was used and you are close enough, after the pull in, Ferry can follow up with a normal and continue with a combo or setup. If 236L or 236H are used, Ferry cannot combo after the pull.\nGran wakes up 52 frames after pulling.\nNarmaya wakes up 54 frames after pulling.\nEveryone else wakes up in 51 frames'
+}
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Rising Sword', 
+  moveName: 'L Beppo, Sic \'Em!', 
   altName: '623L', 
-  damage: '700, 300', 
-  guard: 'mid, all', 
+  damage: '1000', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-17', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Summons Beppo to perform a rising attack. Ferry's main juggle ender and reversal (granted, the H version is the only real one).\nStrikes near Ferry's head, making it a useful anti-air attack."
 };
 const mUppercut = { 
-  moveName: 'M Rising Sword', 
+  moveName: 'M Beppo, Sic \'Em!', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
-  guard: 'mid, all', 
+  damage: '800, 500', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "Summons Beppo to perform a rising attack. Ferry's main juggle ender and reversal (granted, the H version is the only real one).\nSummons Beppo a little lower vertically and further ahead compared to the L version.\nCovers different air angles as well as be utilized as combo filler in grounded confirms when compared to the L version. It's much slower and thus bad to use as reaction anti-air, but it's surprisingly good as a prediction \"poke\"."
 };
 const hUppercut = { 
-  moveName: 'H Rising Sword', 
+  moveName: 'H Beppo, Sic \'Em!', 
   altName: '623H', 
-  damage: '950~1400', 
-  guard: 'mid, all', 
+  damage: '450x3', 
+  guard: 'Mid', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Summons Beppo to perform a rising attack. Ferry's main juggle ender and reversal (granted, the H version is the only real one).\nFrame 1 invincible. Yep, you read that right.\nSlower than the average reversal.\nUnlike the L and M versions, it is also completely air unblockable. Grants hard knockdown. Can be low profiled."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+  moveName: 'L Trombe', 
   altName: '214L', 
-  damage: '700', 
+  damage: '750, 150x2', 
   guard: 'mid', 
   startup: '13', 
   active: '2', 
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
-};
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Safe on block.\nDoesn't knock down, causes a flipout instead.\nMainly used to end your block pressure safely, as well as having some utility as a frametrap tool during block pressure. Can also be used as an alternative ender if 623X is not available due to cooldown."
 };
 const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+  moveName: 'M Trombe', 
   altName: '214M', 
-  damage: '1200', 
+  damage: '550, 150x5', 
   guard: 'mid', 
   startup: '16', 
   active: '13', 
   recovery: '29', 
   onblock: '+2~-10', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Wallbounce on counterhit.\nSlower than L version, but does more damage and hits and is safer on block. On counter hit, causes a wall bounce in corner, making it a very scary move to get punished by in corner."
 };
 const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+  moveName: 'H Trombe', 
   altName: '214H', 
-  damage: '1200', 
+  damage: '550, 150x5', 
   guard: 'mid', 
   startup: '13', 
   active: '13', 
   recovery: '37', 
   onblock: '+4~-8', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Wallbounces on hit.\nGreat setplay starter midscreen and combo extender in the corner."
 };
+
+// trap
+const lTrap = {
+  moveName: ' Geegee, Get \'Em!', 
+  altName: '22L', 
+  damage: '500, 200x5', 
+  guard: 'All', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: 'Projectile that disappears if Ferry blocks or gets hit. Sends Geegee at the foe for a multi-hit attack. The attack can be delayed by holding any button except U or G. You can switch which button you use to delay Geegee by holding down a different button immediately after inputting it. Geegee defines Ferry’s amazing okizeme game, as you can go for many ambiguous mixups such as hit/throw/shimmy or even a high/low with 2M and rising j.L, and have Geegee help you convert off of it afterwards. Geegee persists after a throw which allows for a combo, but any kind of tech will make it vanish.\nJumps out in an arc.\nCan be useful as an anti air in some cases. In corner, Geegee can go offscreen when using the L or M version. If you’re too close to the corner, use 22H.'
+}
+const mTrap = {
+  moveName: ' Geegee, Get \'Em!', 
+  altName: '22M', 
+  damage: '500, 200x5', 
+  guard: 'All', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
+  description: 'Projectile that disappears if Ferry blocks or gets hit. Sends Geegee at the foe for a multi-hit attack. The attack can be delayed by holding any button except U or G. You can switch which button you use to delay Geegee by holding down a different button immediately after inputting it. Geegee defines Ferry’s amazing okizeme game, as you can go for many ambiguous mixups such as hit/throw/shimmy or even a high/low with 2M and rising j.L, and have Geegee help you convert off of it afterwards. Geegee persists after a throw which allows for a combo, but any kind of tech will make it vanish.\nJumps out in an arc.\nCan be useful as an anti air in some cases. In corner, Geegee can go offscreen when using the L or M version. If you’re too close to the corner, use 22H.'
+}
+const hTrap = {
+  moveName: 'H Geegee, Get \'Em!', 
+  altName: '22H', 
+  damage: '200x5', 
+  guard: 'All', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: 'Projectile that disappears if Ferry blocks or gets hit. Sends Geegee at the foe for a multi-hit attack. The attack can be delayed by holding any button except U or G. You can switch which button you use to delay Geegee by holding down a different button immediately after inputting it. Geegee defines Ferry’s amazing okizeme game, as you can go for many ambiguous mixups such as hit/throw/shimmy or even a high/low with 2M and rising j.L, and have Geegee help you convert off of it afterwards. Geegee persists after a throw which allows for a combo, but any kind of tech will make it vanish.\nRuns across the ground stopping in front of the foe.\nThis is usually the version you want to use to set up the high/low mixup with rising j.L and 2M. Can occasionally be used at neutral or in long-range pressure to attempt to force an advantageous situation for Ferry.'
+}
+
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Vergiften', 
   altName: '236236H', 
-  damage: '2500-3500', 
-  guard: 'mid', 
+  damage: '400x5', 
+  guard: 'All', 
   startup: '6+5', 
   active: '-', 
   recovery: '-', 
   onblock: '-13', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Skybound Art that launches a projectile. Releases a powerful orb that slowly bounces across the stage. Chase the projectile down to apply pressure and restrict the foe's movement options. Also serves as amazing combo filler when you have the meter to spend. Won't dissappear even if you get hit after it has come out. DOES NOT HAVE INVINCIBILITY FRAME 1 SO DO NOT USE IT AS A REVERSAL! Since the orb is guaranteed to come out after the super flash, it also serves as a very strong reactionary anti-air option. It will trade even with deep jump-ins while dispensing the full damage."
+};
+const installSba = { 
+  moveName: 'Hinrichten', 
+  altName: '214214H', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', '214', 'h', 'or', '214', 'a'],
+  description: "Install super that lasts for 600F (10 seconds).\nWhen active, allows Ferry to chain her normals into each other in any order, but cannot repeat a normal in the chain and she can only cancel up to 3 times i.e (5H > 5M > 2U). Each hit of an autocombo contributes to this 3-move limit. Hinrichten allows you to do a multitude of things, such as reverse beat your pokes into 2L to cut down their recovery, convert off of rising j.L instant overhead without a setup prior, and combo into 2U naturally for a hard knockdown. DOES NOT HAVE INVINCIBILITY FRAME 1 SO DO NOT USE IT AS A REVERSAL!\nWhile in install, specials will not recharge until install finishes. Recharging specials used before install became active will have their timers paused and will resume recharging once the install is over.\nThis can also be used as a pseudo chainshift/YRC. Buffering this input in neutral while in range can be good to start pressure or catch them during fireball startup.\nThere is currently no known difference between the easy input (214S) and the hard input (214214H)"
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Aetheryte Requiescat', 
   altName: '236236U', 
   damage: '3500-4500', 
-  guard: 'all', 
+  guard: 'Mid', 
   startup: '8+5', 
   active: '-', 
   recovery: '-', 
   onblock: '-23', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Invincible reversal. Performs a powerful whip attack that deals additional hits upon connecting. This skill's long reach is useful for punishing foes throwing out pokes or projectiles at a distance. You can hitconfirm into this after successfully hitting f.M, f.H or 2M, by buffering 236236 and then hitting U when you see they got hit. It’s really easy so it’s highly recommended to learn it.\nThe easy input only affects the distance at which the cinematic occurs, and the cinematic does provide extra damage. At certain ranges where 236S+U and 236236U both won't activate the cinematic, there is no damage difference between the two inputs."
 };
 
 
@@ -509,24 +693,31 @@ export const ferryInfo = [
   jM,
   jH,
   jU,
-  lv1U,
-  lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
+  j8U,
+  s5U,
   groundThrow,
+  backThrow,
   airThrow,
   uOverhead,
   lFireball,
   mFireball,
   hFireball,
+  lFireballExpode,
+  mFireballExpode,
+  hFireballExpode,
+  lFireballPull,
+  mFireballPull,
+  hFireballPull,
   lUppercut,
   mUppercut,
   hUppercut,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
+  lTrap,
+  mTrap,
+  hTrap,
   sba,
+  installSba,
   ssba
 ]
