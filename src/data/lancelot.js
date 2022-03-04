@@ -190,7 +190,7 @@ const jL = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Pretty standard air light. Good horizontal hitbox, not so good vertical. Probably Lancelot's best air-to-air button as his other air normals are better at hitting grounded opponents. If it counterhits in the air you often have time to land and combo from it."
 };
 const jM = {
   moveName: 'Jump Medium', 
@@ -205,12 +205,12 @@ const jM = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Lancelot slashes beneath him. Contrasting j.L, this attack has shorter horizontal range in exchange for being his only air normal that can be used to cross-up the opponent. It's primarily used in safe jumps after a 22X/5~2/8U cross-up teleport or low walljump, and loses in the air against other aerial attacks."
 };
 const jH = {
   moveName: 'Jump Heavy', 
   altName: 'jH', 
-  damage: '800', 
+  damage: '400x2', 
   guard: 'high', 
   startup: '7', 
   active: '-', 
@@ -220,28 +220,13 @@ const jH = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
-};
-const jU = {
-  moveName: 'Jump Unique', 
-  altName: 'jU', 
-  damage: '700', 
-  guard: 'high', 
-  startup: '12', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['2', 'l'],
-  description: ''
+  description: "A 2-hit falling overhead. This move is really good. Varying your timing makes the opponent guess if both strikes will hit overhead or if you'll land after one overhead and do a low 2L. On hit, combos into 2L even if only one hit lands. The hitbox is poor directly beneath Lancelot so if he's even a pixel distance to cross up someone it will whiff.\nThe good horizontal hitbox also makes this move decent at stuffing people air-to-air, but it's slower than j.L and because it's two hits you won't get a combo if you counter them."
 };
 
 // unique action
 const lv1U = {
   moveName: 'Wirbelwind', 
-  altName: '5ULv1', 
+  altName: '5U', 
   damage: '1000', 
   guard: 'mid', 
   startup: '22', 
@@ -252,11 +237,11 @@ const lv1U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Performs a dashing maneuver that can be canceled on the ground into various followups. The dash covers a pretty good distance but has a lot of recovery, even when you quick stop."
 };
 const lv2U = {
   moveName: 'Air Wirbelwind', 
-  altName: '5ULv2', 
+  altName: 'jU', 
   damage: '1200', 
   guard: 'mid', 
   startup: '22', 
@@ -267,11 +252,11 @@ const lv2U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Performs a dashing maneuver that can be canceled on the ground into various followups. The dash covers a pretty good distance but has a lot of recovery, even when you quick stop.\nFastfalls diagonally towards the ground. Lancelot cannot act until he reaches the ground and also has some landing recovery. A versatile movement tool with many applications that increase after a hard knockdown or when 236H is forcing the opponent to block, including baiting anti-airs and reversals. Altering the fastfall timing during a jump makes which side he lands on extremely ambiguous."
 };
 const lv3U = {
   moveName: 'Wirbelwind (Stop)', 
-  altName: '5ULv3', 
+  altName: '5U -> 5U', 
   damage: '1400', 
   guard: 'mid', 
   startup: '22', 
@@ -282,11 +267,11 @@ const lv3U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Performs a dashing maneuver that can be canceled on the ground into various followups. The dash covers a pretty good distance but has a lot of recovery, even when you quick stop.\nUsed to bait whiffs in neutral when well-spaced, but the recovery can prevent you from getting a proper punish. Also used in some anti-air combo routes."
 };
 const lv4U = {
   moveName: 'Wirbelwind (Feint)', 
-  altName: '5ULv4', 
+  altName: '5U -> 4U', 
   damage: '1600', 
   guard: 'mid', 
   startup: '22', 
@@ -297,11 +282,11 @@ const lv4U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Performs a dashing maneuver that can be canceled on the ground into various followups. The dash covers a pretty good distance but has a lot of recovery, even when you quick stop.\nAlso used to bait moves in neutral, with less risk than quick stop. Using this to bait forward-moving reversals can reward you with a huge punish."
 };
 const lv5U = {
   moveName: 'Wirbelwind (Crossup)', 
-  altName: '5ULv4', 
+  altName: '5U -> 6U', 
   damage: '1600', 
   guard: 'mid', 
   startup: '22', 
@@ -312,11 +297,11 @@ const lv5U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Performs a dashing maneuver that can be canceled on the ground into various followups. The dash covers a pretty good distance but has a lot of recovery, even when you quick stop.\nCan cross through opponents, but its recovery and the presence of the Guard button doesn't make it a strong mixup just by itself."
 };
 const lv6U = {
   moveName: 'Wirbelwind (Jump)', 
-  altName: '5ULv5', 
+  altName: '5U -> 2/8U', 
   damage: '2000', 
   guard: 'mid', 
   startup: '22', 
@@ -327,7 +312,7 @@ const lv6U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Performs a dashing maneuver that can be canceled on the ground into various followups. The dash covers a pretty good distance but has a lot of recovery, even when you quick stop.\nSame as the teleport from 22L/M. Used in safe jumps after forward throw or 66H knockdown. The diagonal angle makes it possible to force many wakeup DPs to whiff after a midscreen knockdown, at the risk of losing to regular anti-airs."
 };
 
 const groundThrow = {
@@ -342,7 +327,21 @@ const groundThrow = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Lancelot's forward throw leaves him point blank and at enough advantage to set up a 236X for pressure afterwards. Any DP will punish 236L, but 236H is safe against reversals with startups longer than 9f. The hard knockdown allows for all shades of setups, not just limited to 236X, but that's by far the easiest."
+};
+const backThrow = {
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', 'l'],
+  description: "Lancelot's back throw sends the opponent half screen, which is too far for 236X to work as a meaty."
 };
 const airThrow = {
   moveName: 'Air Throw', 
@@ -356,7 +355,7 @@ const airThrow = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Sets up a hard knockdown not too far in front of Lancelot.\nLancelot's airthrow is similar to his forward throw in that you get a 236X setup for continued pressure.\nIf your reactions are on point, you can catch people jumping out of your rekka pressure with this. Just be warned you cannot do anything else until you land if it whiffs, so if you mess up your read you're going to get punished."
 };
 
 const uOverhead = {
@@ -372,7 +371,7 @@ const uOverhead = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Airborne on frame 4, making it a good anti-throw option.\nLow crush on frame 9, tied with Gran for the fastest.\nThe can opener. Because Lancelot's Universal Overhead has 6 active frames, the right meaty setup will allow for a combo without a counterhit."
 };
 
 // fireballs
@@ -389,7 +388,7 @@ const lFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Fires a projectile that travels across the stage. Very advantageous on contact and very important for his okizeme game. This skill has slow startup but fast recovery, so Lancelot can move and go on the offensive while the projectile is still onscreen. Keep in mind that in a neutral fireball fight you're likely to get hit out of the startup. Comboing into this from CH c.H(1) is possible and adds a good chunk of damage if you use 236H as it has enough hitstun for you to jump and land a j.H.\nFaster startup but also fast travel time.\nTravels fullscreen."
 };
 const mFireball = {
   moveName: 'M Wogenstrom', 
@@ -404,7 +403,7 @@ const mFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Fires a projectile that travels across the stage. Very advantageous on contact and very important for his okizeme game. This skill has slow startup but fast recovery, so Lancelot can move and go on the offensive while the projectile is still onscreen. Keep in mind that in a neutral fireball fight you're likely to get hit out of the startup. Comboing into this from CH c.H(1) is possible and adds a good chunk of damage if you use 236H as it has enough hitstun for you to jump and land a j.H.\nSlower startup but also much slower travel time.\nTravels fullscreen.\nVery good to cover your approach because of how slow it travels."
 };
 const hFireball = {
   moveName: 'H Wogenstrom', 
@@ -419,14 +418,14 @@ const hFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Fires a projectile that travels across the stage. Very advantageous on contact and very important for his okizeme game. This skill has slow startup but fast recovery, so Lancelot can move and go on the offensive while the projectile is still onscreen. Keep in mind that in a neutral fireball fight you're likely to get hit out of the startup. Comboing into this from CH c.H(1) is possible and adds a good chunk of damage if you use 236H as it has enough hitstun for you to jump and land a j.H.\nHits 3 times.\nOnly travels 3/4 of the screen.\nHard knockdown on air hit.\nHits 3 times on both hit and block, making easy to confirm on hit and incredibly plus on block. If the opponent is caught blocking the projectile in the air, they can be hit with any other grounded move since mids are air-unblockable."
 };
 
 // dragon punches
 const lUppercut = {
   moveName: 'L Blade Impulse', 
   altName: '66L', 
-  damage: '700, 300', 
+  damage: '800', 
   guard: 'mid, all', 
   startup: '9', 
   active: '-', 
@@ -435,13 +434,13 @@ const lUppercut = {
   onhit: 'KD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['2', 'l'],
-  description: ''
+  motion: ['6', '6', 'l'],
+  description: "A sliding lunge attack. Depending on distance you're very likely to cross through the opponent on both hit and block. If spaced correctly every version can be safe on block.\nTravels about half screen.\nWhen used as a combo ender midscreen, it not only switches sides but the opponent recovers point blank so further pressure can be applied. Also used in high damage anti-air combos as it can be linked off of if it hits high enough."
 };
 const mUppercut = {
   moveName: 'M Blade Impulse', 
   altName: '66M', 
-  damage: '700, 300 x 2', 
+  damage: '1000', 
   guard: 'mid, all', 
   startup: '9', 
   active: '-', 
@@ -451,12 +450,12 @@ const mUppercut = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "A sliding lunge attack. Depending on distance you're very likely to cross through the opponent on both hit and block. If spaced correctly every version can be safe on block.\nTravels about 3/4ths screen.\nSafe on block from most ranges and plus at the tip like 66H, albeit with much slower startup. Can be used to close the distance in neutral, as an anti-air/reversal punish combo tool, and as a niche meaty on far hard knockdowns or throws in the corner. If it counterhits at tip range, you can link into 5L for a brief combo extension off the mini-launch."
 };
 const hUppercut = {
   moveName: 'H Blade Impulse', 
   altName: '66H', 
-  damage: '950~1400', 
+  damage: '1000', 
   guard: 'mid, all', 
   startup: '9', 
   active: '-', 
@@ -466,7 +465,7 @@ const hUppercut = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "A sliding lunge attack. Depending on distance you're very likely to cross through the opponent on both hit and block. If spaced correctly every version can be safe on block.\nTravels the same distance as 66M.\nLaunches the opponent straight up on hit, allowing further combos on both far-spaced hits and in the corner where you remain close enough to link into c.H afterwards. Midscreen, it gives a hard knockdown and usually gives 236H oki or 5U~8U safe jump setups afterwards. If it hits at the very tip of its range, it leaves you plus on block as opposed to just safe."
 };
 
 // rekka
@@ -482,8 +481,8 @@ const lRekka = {
   onhit: '-2',
   oncounterhit: '-',
   clash: '-',
-  motion: ['2', 'l'],
-  description: ''
+  motion: ['214', 'l'],
+  description: "Technical inputs only require 214X for the first attack, while 4X is used for the follow-ups.\nMulti-part advancing slash attacks, colloquially known as \"rekkas\". The initial attack and first follow-ups are safe on block, allowing for pressure resets if you can scare your opponent with the frametrap properties of delayed follow-ups. Additionally, the initial attacks themselves can be spaced to be even or plus on block the further out they make contact. If they hit at the absolute max range, both 214L and 214M can be +1 on block. The enders have a small gap from the previous parts, which makes them a risky way to catch people mashing the follow-ups.\nCan hit up to 3 times.\n214L links into 5L on standing counterhit and c.M on crouching counterhit\n214L~4L links into c.M on crouching counterhit only\nStaple follow-up after hitting with farther-ranged normals such as f.M/f.H/2M. Using a sequence like c.M > 5L > f.M > 214L to condition your opponent to block can open them up for further pressure, or a throw. Keep in mind that strings like 2L > 5L > f.M > 214L actually leave you slightly negative, and while c.M > c.M > f.M > 214L can still set up plus rekkas it leaves massive gaps in your pressure.\n214L being +1 on hit allows you to attempt a crush reset with c.M against opponents pressing 5L. Against characters whose fastest normal is 6f startup, c.H can be used instead."
 };
 const mRekka = {
   moveName: 'M Southern Cross', 
@@ -497,8 +496,8 @@ const mRekka = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
-  motion: ['2', 'l'],
-  description: ''
+  motion: ['214', 'm'],
+  description: "Technical inputs only require 214X for the first attack, while 4X is used for the follow-ups.\nMulti-part advancing slash attacks, colloquially known as \"rekkas\". The initial attack and first follow-ups are safe on block, allowing for pressure resets if you can scare your opponent with the frametrap properties of delayed follow-ups. Additionally, the initial attacks themselves can be spaced to be even or plus on block the further out they make contact. If they hit at the absolute max range, both 214L and 214M can be +1 on block. The enders have a small gap from the previous parts, which makes them a risky way to catch people mashing the follow-ups.\nCan hit up to 3 times.\nBoth 214M and 214M~4M link into 5L on crouching counterhit only\nSlower startup and farther travel distance than 214L. Staple combo ender after c.H or autocombo for damage and corner carry. The increased startup makes it decent as a frame trap out of autocombo and most normals, but this gap is large enough to be vulnerable to reversals. Since it travels farther than 214L, using this successfully on block when pushed out of 214L range maintains your frame advantage."
 };
 const hRekka = {
   moveName: 'H Southern Cross', 
@@ -512,15 +511,107 @@ const hRekka = {
   onhit: 'HKD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['2', 'l'],
-  description: ''
+  motion: ['214', 'h'],
+  description: "Technical inputs only require 214X for the first attack, while 4X is used for the follow-ups.\nMulti-part advancing slash attacks, colloquially known as \"rekkas\". The initial attack and first follow-ups are safe on block, allowing for pressure resets if you can scare your opponent with the frametrap properties of delayed follow-ups. Additionally, the initial attacks themselves can be spaced to be even or plus on block the further out they make contact. If they hit at the absolute max range, both 214L and 214M can be +1 on block. The enders have a small gap from the previous parts, which makes them a risky way to catch people mashing the follow-ups.\nCan hit up to 5 times.\nBecause 214X is a critical part of Lancelot's pressure and combos, putting the special on cooldown this way should be used sparingly, but can still be done to get a hard knockdown and a safe jump anywhere on screen. Delaying the follow-ups can be used to secure rounds against very low health opponents via chip damage, but this is still vulnerable to reversals."
+};
+
+const lTeleport = {
+  moveName: 'L Turbulenz', 
+  altName: '22L', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l'],
+  description: "Lancelot teleports into the air. The horizontal distance depends on the button strength used. All versions can be held which will make Lancelot followup with a overhead plunging attack which is invincible on the way down, but extremely unsafe on block. On counter hit the opponent will bounce, allowing a high damage combo afterwards. Airborne on frame 4.\nTeleports about the distance of Lancelot's backdash.\nUnlikely to cross-up unless performed point-blank."
+};
+const mTeleport = {
+  moveName: 'M Turbulenz', 
+  altName: '22M', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm'],
+  description: "Lancelot teleports into the air. The horizontal distance depends on the button strength used. All versions can be held which will make Lancelot followup with a overhead plunging attack which is invincible on the way down, but extremely unsafe on block. On counter hit the opponent will bounce, allowing a high damage combo afterwards. Airborne on frame 4.\nTeleports about the distance of two of Lancelot's backdashes.\nMore likely to crossup due to the distance it travels."
+};
+const hTeleport = {
+  moveName: 'H Turbulenz', 
+  altName: '22H', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h'],
+  description: "Lancelot teleports into the air. The horizontal distance depends on the button strength used. All versions can be held which will make Lancelot followup with a overhead plunging attack which is invincible on the way down, but extremely unsafe on block. On counter hit the opponent will bounce, allowing a high damage combo afterwards. Airborne on frame 4.\nTeleports farther than L/M version, but does not cross up.\nH teleport is the only invulnerable reversal Lancelot has other than his Skybound Arts, but it's often very risky to go for the full plunge because of the very slow startup. You can get by with just doing the teleport portion and either do a falling attack or fastfall to the ground with j.U, but either way leaves you vulnerable to anti-airs, including air throw."
+};
+
+const lChargedTeleport = {
+  moveName: 'L Turbulenz (Charged)', 
+  altName: '22[L]', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l'],
+  description: "Lancelot teleports into the air. The horizontal distance depends on the button strength used. All versions can be held which will make Lancelot followup with a overhead plunging attack which is invincible on the way down, but extremely unsafe on block. On counter hit the opponent will bounce, allowing a high damage combo afterwards. Airborne on frame 4.\nTeleports about the distance of Lancelot's backdash.\nUnlikely to cross-up unless performed point-blank."
+};
+const mChargedTeleport = {
+  moveName: 'M Turbulenz (Charged)', 
+  altName: '22[M]', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm'],
+  description: "Lancelot teleports into the air. The horizontal distance depends on the button strength used. All versions can be held which will make Lancelot followup with a overhead plunging attack which is invincible on the way down, but extremely unsafe on block. On counter hit the opponent will bounce, allowing a high damage combo afterwards. Airborne on frame 4.\nTeleports about the distance of two of Lancelot's backdashes.\nMore likely to crossup due to the distance it travels."
+};
+const hChargedTeleport = {
+  moveName: 'H Turbulenz (Charged)', 
+  altName: '22[H]', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h'],
+  description: "Lancelot teleports into the air. The horizontal distance depends on the button strength used. All versions can be held which will make Lancelot followup with a overhead plunging attack which is invincible on the way down, but extremely unsafe on block. On counter hit the opponent will bounce, allowing a high damage combo afterwards. Airborne on frame 4.\nTeleports farther than L/M version, but does not cross up.\nH teleport is the only invulnerable reversal Lancelot has other than his Skybound Arts, but it's often very risky to go for the full plunge because of the very slow startup. You can get by with just doing the teleport portion and either do a falling attack or fastfall to the ground with j.U, but either way leaves you vulnerable to anti-airs, including air throw."
 };
 
 // skybound art
 const sba =  {
   moveName: 'Weiss Flugel', 
   altName: '236236H', 
-  damage: '2500-3500', 
+  damage: '3000', 
   guard: 'mid', 
   startup: '6+5', 
   active: '-', 
@@ -530,13 +621,14 @@ const sba =  {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Minimum damage: 800\nSimple input (236S) damage: 3000\nSimple input minimum damage: 450\nLoses invincibility after the startup but regains it on hit when the cinematic animation begins to play\nLancelot dashes forward with a slash and unleashes a flurry of slashes when he hits. Invincible startup and can travel about half screen if the opponent is far enough, but stops at the opponent's location regardless so it's very punishable on block or whiff. Using the 236236H technical input leaves Lancelot closer to the opponent afterwards, allowing for stronger okizeme."
 };
+
 const ssba =  {
   moveName: 'Schöner Winterhügel', 
   altName: '236236U', 
-  damage: '3500-4500', 
-  guard: 'all', 
+  damage: '4200', 
+  guard: 'Mid', 
   startup: '8+5', 
   active: '-', 
   recovery: '-', 
@@ -545,7 +637,22 @@ const ssba =  {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: ''
+  description: "Minimum damage: 1260\nSimple input (236S+U) damage: 4000\nSimple input minimum damage: 800\nA powerful diving attack with invincible startup.\nGround version automatically locks onto the opponent's position with no additional input, but can be manually angled by holding L (sharp angle, short range), M (shallow angle, far range), or H (shallow angle, full screen range) during startup.\nLancelot is only invincible during the startup when he jumps up to the wall so on the way down he can run into DPs, armored moves, and projectiles, making this a situationally worse reversal compared to 236236H.\nThere is a blind spot where the move can whiff when Lancelot is cornered, but intentionally whiffing 236236U~[H] can be a risky way to escape the corner.\nBecause of the time it takes for Lancelot to travel to the wall and back to the opponent, the opponent may tech out before it hits in some midscreen juggle combo situations when Lancelot's back is too far away from the wall. In this case, either use 236236H or save your meter.\nAir version dives from Lancelot's current position at a sharp angle, similar to a grounded 236236U~[L]. Does not track and cannot be manually aimed like the ground version.\nCan be used as a hard callout to crush anti-air attempts, but is even more unsafe than the ground version."
+};
+const airssba =  {
+  moveName: 'Schöner Winterhügel (Air)', 
+  altName: '236236U', 
+  damage: '4200', 
+  guard: 'All', 
+  startup: '8+5', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-23', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', 'l'],
+  description: "Minimum damage: 1260\nSimple input (236S+U) damage: 4000\nSimple input minimum damage: 800\nA powerful diving attack with invincible startup.\nGround version automatically locks onto the opponent's position with no additional input, but can be manually angled by holding L (sharp angle, short range), M (shallow angle, far range), or H (shallow angle, full screen range) during startup.\nLancelot is only invincible during the startup when he jumps up to the wall so on the way down he can run into DPs, armored moves, and projectiles, making this a situationally worse reversal compared to 236236H.\nThere is a blind spot where the move can whiff when Lancelot is cornered, but intentionally whiffing 236236U~[H] can be a risky way to escape the corner.\nBecause of the time it takes for Lancelot to travel to the wall and back to the opponent, the opponent may tech out before it hits in some midscreen juggle combo situations when Lancelot's back is too far away from the wall. In this case, either use 236236H or save your meter.\nAir version dives from Lancelot's current position at a sharp angle, similar to a grounded 236236U~[L]. Does not track and cannot be manually aimed like the ground version.\nCan be used as a hard callout to crush anti-air attempts, but is even more unsafe than the ground version."
 };
 
 
@@ -556,7 +663,6 @@ export const lanceInfo = [
   closeH,
   auto1,
   auto2,
-  far5L,
   far5M,
   far5H,
   n2L,
@@ -566,7 +672,6 @@ export const lanceInfo = [
   jL,
   jM,
   jH,
-  jU,
   lv1U,
   lv2U,
   lv3U,
@@ -574,6 +679,7 @@ export const lanceInfo = [
   lv5U,
   lv6U,
   groundThrow,
+  backThrow,
   airThrow,
   uOverhead,
   lFireball,
@@ -585,6 +691,13 @@ export const lanceInfo = [
   lRekka,
   mRekka,
   hRekka,
+  lTeleport,
+  mTeleport,
+  hTeleport,
+  lChargedTeleport,
+  mChargedTeleport,
+  hChargedTeleport,
   sba,
+  airssba,
   ssba
 ]

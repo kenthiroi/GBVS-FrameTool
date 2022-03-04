@@ -1,4 +1,5 @@
-// FINAL 
+// DESCRIPTIONS DONE
+// FRAME DATA UNFINISHED 
 
 const general = { char: "Ladiva", health: '10000', prejump: '4F', backdash: '22F' }
 
