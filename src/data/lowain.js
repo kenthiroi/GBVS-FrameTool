@@ -14,12 +14,12 @@ const closeL = {
   onblock: '2',
   onhit: '6',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "Pressure starter. Can go directly into a combo or use links to do frame traps."
 };
 const closeM = {
   moveName: 'Close Medium',
   altName: 'cM',
-  damage: '700',
+  damage: '750',
   guard: 'mid',
   startup: '6',
   active: '3',
@@ -27,12 +27,12 @@ const closeM = {
   onblock: '0',
   onhit: '4',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "Weird anti air/pressure tool. You can use it in combos to make the combo last longer to refresh your moves. Has a shorter proximity activation range than most c.Ms. You might get f.M in situations you think you might get c.M so watch out."
 };
 const closeH = {
   moveName: 'Close Heavy',
   altName: 'cH',
-  damage: '1200',
+  damage: '550x2',
   guard: 'mid',
   startup: '8',
   active: '4',
@@ -40,7 +40,7 @@ const closeH = {
   onblock: '-3',
   onhit: '1',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Combo starter/Juggle tool for bigger punishes. Can be a situational anti air too if they are close but 2H is better."
 };
 
 // auto combos
@@ -55,7 +55,7 @@ const auto1 = {
   onblock: '-3',
   onhit: '1',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Can be used for gapless pressure. Stop prematurely to catch DP spam or on hit you can convert to a combo.\nThe second hit can now be special-cancelled as of patch 1.31."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
@@ -68,7 +68,7 @@ const auto2 = {
   onblock: '-5',
   onhit: '-1',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Can be used for gapless pressure. Stop prematurely to catch DP spam or on hit you can convert to a combo.\nThe second hit can now be special-cancelled as of patch 1.31."
 };
 
 // far normals
@@ -83,7 +83,7 @@ const far5L = {
   onblock: '-3',
   onhit: '1',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "Hit confirm button and fast poke. It’s used in link combos.\nBe careful how you use this, since it will whiff on crouching at farther ranges."
 };
 const far5M = {
   moveName: 'Far Medium',
@@ -96,7 +96,7 @@ const far5M = {
   onblock: '-6',
   onhit: '-2',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "Neutral whiff punish/poke. Has fairly long reach and only punishable by jabs (very safe poke). Can cancel into specials for additional pressure. At max range you can cancel into 214L to become + on block (usually about +1 or +2)."
 };
 const far5H = {
   moveName: 'Far Heavy',
@@ -109,7 +109,7 @@ const far5H = {
   onblock: '-9',
   onhit: '-5',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Combo Tool and situational anti air, but you probably want to use 2H instead. Doesn’t extend his hitbox much so it can also be a good whiff punish tool."
 };
 
 // regular normals
@@ -117,14 +117,14 @@ const n2L = {
   moveName: 'Crouch Light',
   altName: '2L',
   damage: '400',
-  guard: 'mid',
+  guard: 'Low',
   startup: '6',
   active: '3',
   recovery: '6',
   onblock: '2',
   onhit: '6',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Fast low. Good for pressuring and also a hit confirm tool."
 };
 const n2M = {
   moveName: 'Crouch Medium',
@@ -137,7 +137,7 @@ const n2M = {
   onblock: '1',
   onhit: '5',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Neutral whiff punish/poke. A mid that has pretty long reach. Can also use it as a pressure tool to keep people on their toes. Can cancel into specials.\nCan low profile a lot of moves."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
@@ -150,20 +150,20 @@ const n2H = {
   onblock: '-13',
   onhit: '-9',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Anti air that leads into big punishes on hit. Has good vertical range but not much horizontal range in front of him which makes some jump in arcs a bit awkward to anti-air. It does surprisingly anti-air cross ups well. Facilitates a lot of optimal air juggle combos with 2H > 214L. On airborne opponents, this is the only normal that will combo into HPA on it's own. It's usage is very important."
 };
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
   damage: '700',
-  guard: 'mid',
+  guard: 'Low',
   startup: '7',
   active: '6',
   recovery: '21',
   onblock: '-12',
   onhit: 'HKD',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Long range sweep that can lead to oki. When spaced correctly the slide is very hard to punish it will become safe at max range. The slide also has a low profile hurtbox from start to finish and is special cancelable on block and hit."
 };
 
 // jump normals
@@ -178,7 +178,7 @@ const jL = {
   onblock: '-', 
   onhit: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Lowain’s foot sticks out until he lands. Good for calling people out in the air though it can be crouched."
 };
 const jM = { 
   moveName: 'Jump Medium', 
@@ -191,7 +191,7 @@ const jM = {
   onblock: '-', 
   onhit: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Crossup tool. Be wary of the range though since it's pretty short."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
@@ -204,12 +204,12 @@ const jH = {
   onblock: '-', 
   onhit: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "Air to ground attack normal. Has more range than j.b so you can also use it air to air situations or mix up the timing on your jumping attacks."
 };
 const jU = { 
   moveName: 'Jump Unique', 
   altName: 'jU', 
-  damage: '700', 
+  damage: '250xN', 
   guard: 'high', 
   startup: '12', 
   active: '-', 
@@ -217,74 +217,22 @@ const jU = {
   onblock: '-', 
   onhit: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Multihitting happy feet attack. Good for mixups/pressure since every hit counts as an overhead. It also changes the trajectory of your jump a little bit due to increased floatiness. Note that it can only hit an opponent up to 6 times before the active frames are forced to run out."
 };
 
 // unique action
-const lv1U = { 
-  moveName: 'Power Raise Lv1', 
-  altName: '5ULv1', 
-  damage: '1000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
+const s5U = { 
+  moveName: 'Don\'t Mind If I Do', 
+  altName: '5U', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '57', 
+  onblock: '-', 
   onhit: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Cooks up a random food item that'll restore Lowain's health or SBA gauge. It's safest to use at long range or while the foe's knocked down.\nLife: Corn (200), Meat (500), Spaghetti (1000)\nGauge: Salad (8%), Parfait (30%)\nChance of getting each food item: Corn (30%), Meat (20%), Spaghetti (10%), Salad (30%), Parfait (10%)"
 };
 
 const groundThrow = { 
@@ -297,8 +245,21 @@ const groundThrow = {
   onblock: '-', 
   onhit: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "Forward throw is Lowain's best throw. Gives him enough time to set up oki. His backwards throw leaves him plus but he cannot set up any summons. You cannot summon the boys when they're on screen during the throws either."
 };
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  motion: ['l', 'm', 'or', 'l', 'u'],
+  description: "Forward throw is Lowain's best throw. Gives him enough time to set up oki. His backwards throw leaves him plus but he cannot set up any summons. You cannot summon the boys when they're on screen during the throws either."
+};
+
 const airThrow = { 
   moveName: 'Air Throw', 
   damage: '1500', 
@@ -309,7 +270,7 @@ const airThrow = {
   onblock: '-', 
   onhit: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Typical air throw. The distance from which your opponent ends up after the throw varies slightly if you throw them from a higher distance. Air throwing at superjump height will put them further away and some oki setups won't work as well. This throw also has an interesting property where if you air throw an opponent into a summon the summon will hit them during the throw animation and damage them."
 };
 
 const uOverhead = { 
@@ -323,122 +284,109 @@ const uOverhead = {
   onblock: '-4', 
   onhit: '1',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Can be used in unblockable setups or just a general overhead option/throw bait to keep your opponent on their toes. It has foot invul on frame 23 which makes it extremely poor as a low crush option but has the same universal frame 4 throw invul as every other universal overhead."
 };
 
 // fireballs
 const lFireball = { 
-  moveName: 'L Reginleiv', 
+  moveName: 'L Sammy & Tommy', 
   altName: '236L', 
-  damage: '800', 
-  guard: 'all', 
+  damage: '700', 
+  guard: 'Low/Air', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Projectile moves (for some reason) Calls in Sammy/Elsam or Tommy/Tomoi depending on the button you press.\nThis is the key move for setting up unblockables. The slide hits low and Lowain is able to move around before it hits allowing him to setup a jump in or universal overhead to hit his opponent just when Elsam slides. The brofams are very susceptible to active hitboxes. Any hitbox will hit a brofam and their attack will be negated. However, on hit, the brofams will soak up 1 hit of a projectile. Brofams will continue to attack even if Lowain is hit or blocking which makes some trade situations possible. The brofams' attacks come out faster the closer Lowain is to the edge of the screen.\nThe brofams will despawn when performing either of Lowain's supers.\nElsam slides in with a low-hitting attack."
 };
 const mFireball = { 
-  moveName: 'M Reginleiv', 
+  moveName: 'M Sammy & Tommy', 
   altName: '236M', 
-  damage: '400, 800', 
-  guard: 'mid, all', 
+  damage: '700', 
+  guard: 'All', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Projectile moves (for some reason) Calls in Sammy/Elsam or Tommy/Tomoi depending on the button you press.\nThis is the key move for setting up unblockables. The slide hits low and Lowain is able to move around before it hits allowing him to setup a jump in or universal overhead to hit his opponent just when Elsam slides. The brofams are very susceptible to active hitboxes. Any hitbox will hit a brofam and their attack will be negated. However, on hit, the brofams will soak up 1 hit of a projectile. Brofams will continue to attack even if Lowain is hit or blocking which makes some trade situations possible. The brofams' attacks come out faster the closer Lowain is to the edge of the screen.\nThe brofams will despawn when performing either of Lowain's supers.\nTomoi jumps in and splashes on the foe.\nNot all that useful because it hits mid."
 };
 const hFireball = { 
-  moveName: 'H Reginleiv', 
+  moveName: 'H Sammy & Tommy', 
   altName: '236H', 
-  damage: '350 x 3', 
-  guard: 'all', 
+  damage: '700x2', 
+  guard: 'Low/Air, All', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Projectile moves (for some reason) Calls in Sammy/Elsam or Tommy/Tomoi depending on the button you press.\nThis is the key move for setting up unblockables. The slide hits low and Lowain is able to move around before it hits allowing him to setup a jump in or universal overhead to hit his opponent just when Elsam slides. The brofams are very susceptible to active hitboxes. Any hitbox will hit a brofam and their attack will be negated. However, on hit, the brofams will soak up 1 hit of a projectile. Brofams will continue to attack even if Lowain is hit or blocking which makes some trade situations possible. The brofams' attacks come out faster the closer Lowain is to the edge of the screen.\nThe brofams will despawn when performing either of Lowain's supers.\nCalls both at the same time."
 };
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Rising Sword', 
+  moveName: 'L Come at Me, Bro!', 
   altName: '623L', 
-  damage: '700, 300', 
-  guard: 'mid, all', 
+  damage: '1200',
+  guard: 'Unblockable', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-17', 
   onhit: 'KD',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Counters highs and mids.\nLowain's parry. Note that he cannot parry unblockable attacks. His parry is also a guard point type parry which means your opponent can cancel the attack that triggers the parry if they are able to. An aware opponent can protect themselves by cancelling their normals into spotdodge or DP to avoid the parry followup. If they spotdodge, Lowain is left negative but not punishable.\nHe can also combo off of his parries near the corner. You can only combo from parry if they land a high jump in for his L and H parries. M Parry will always give you a chance to follow up if you land it near the corner."
 };
 const mUppercut = { 
-  moveName: 'M Rising Sword', 
+  moveName: 'M Come at Me, Bro!', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
-  guard: 'mid, all', 
+  damage: '1200',
+  guard: 'Unblockable', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'KD',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "Counters low hits.\nLowain's parry. Note that he cannot parry unblockable attacks. His parry is also a guard point type parry which means your opponent can cancel the attack that triggers the parry if they are able to. An aware opponent can protect themselves by cancelling their normals into spotdodge or DP to avoid the parry followup. If they spotdodge, Lowain is left negative but not punishable.\nHe can also combo off of his parries near the corner. You can only combo from parry if they land a high jump in for his L and H parries. M Parry will always give you a chance to follow up if you land it near the corner."
 };
 const hUppercut = { 
-  moveName: 'H Rising Sword', 
+  moveName: 'H Come at Me, Bro!', 
   altName: '623H', 
-  damage: '950~1400', 
-  guard: 'mid, all', 
+  damage: '1200',
+  guard: 'Unblockable', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Counters everything but throws.\nLowain's parry. Note that he cannot parry unblockable attacks. His parry is also a guard point type parry which means your opponent can cancel the attack that triggers the parry if they are able to. An aware opponent can protect themselves by cancelling their normals into spotdodge or DP to avoid the parry followup. If they spotdodge, Lowain is left negative but not punishable.\nHe can also combo off of his parries near the corner. You can only combo from parry if they land a high jump in for his L and H parries. M Parry will always give you a chance to follow up if you land it near the corner."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+  moveName: 'L Awesome Sauce', 
   altName: '214L', 
-  damage: '700', 
+  damage: '800', 
   guard: 'mid', 
   startup: '13', 
   active: '2', 
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
-  motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
-};
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  motion: ['214', 'l', 'or', '4', 'a'],
+  description: "Advancing move. Performs a quick slash attack with fast recovery. This is your major combo extender/ender. All versions become airborne after startup allowing you to go over some low hitting attacks.\nSlow start-up.\nThis is plus on block if spaced/Meaty (up to +5) and in general is unpunishable from any range. As well if done meaty last frame can block 11f DPs."
 };
 const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+  moveName: 'M Awesome Sauce', 
   altName: '214M', 
-  damage: '1200', 
+  damage: '500x2', 
   guard: 'mid', 
   startup: '16', 
   active: '13', 
@@ -446,12 +394,12 @@ const mRekka = {
   onblock: '+2~-10', 
   onhit: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Advancing move. Performs a quick slash attack with fast recovery. This is your major combo extender/ender. All versions become airborne after startup allowing you to go over some low hitting attacks.\nFast start-up and good damage.\nYour primary combo ender if you can combo into it."
 };
 const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+  moveName: 'H Awesome Sauce', 
   altName: '214H', 
-  damage: '1200', 
+  damage: '400x2, 300', 
   guard: 'mid', 
   startup: '13', 
   active: '13', 
@@ -459,12 +407,52 @@ const hRekka = {
   onblock: '+4~-8', 
   onhit: 'HKD',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Advancing move. Performs a quick slash attack with fast recovery. This is your major combo extender/ender. All versions become airborne after startup allowing you to go over some low hitting attacks.\nFast recovery.\nWallbounces in the corner.\nExtremely important for extending combos, but also Lowain's Achilles Heel. Using this will let you set up bros or mechs, but you won't be able to score another knockdown until it comes back."
+};
+
+const lTurret = {
+  moveName: 'L Awesome Sauce', 
+  altName: '22', 
+  damage: '400x2', 
+  guard: 'mid', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: "Summons the mighty (and imaginary) Lady Katapillar into battle. One of your major sources of neutral and okizeme. Listed startup is how long it takes Katapillar to actually do the attack. Lowain can act 34F after inputting the move. The Katerpillar is very susceptible to active hitboxes. Any hitbox will hit Katerpillar and her attack will be negated. Katerpillar will continue to attack even if Lowain is hit or blocking which makes some trade situations possible.\nDoes four small punches forward.\nThe punches can clash projectiles if you're lucky."
+};
+const mTurret = {
+  moveName: 'M Awesome Sauce', 
+  altName: '22', 
+  damage: '800', 
+  guard: 'mid', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
+  description: "Summons the mighty (and imaginary) Lady Katapillar into battle. One of your major sources of neutral and okizeme. Listed startup is how long it takes Katapillar to actually do the attack. Lowain can act 34F after inputting the move. The Katerpillar is very susceptible to active hitboxes. Any hitbox will hit Katerpillar and her attack will be negated. Katerpillar will continue to attack even if Lowain is hit or blocking which makes some trade situations possible.\nFires a thin Aether Beam at slightly upward angle.\nOpponent can duck under it at max range.\nExcellent for zoning and to answer your opponent's projectiles."
+};
+const hTurret = {
+  moveName: 'H Awesome Sauce', 
+  altName: '22', 
+  damage: '170x6', 
+  guard: 'mid', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: "Summons the mighty (and imaginary) Lady Katapillar into battle. One of your major sources of neutral and okizeme. Listed startup is how long it takes Katapillar to actually do the attack. Lowain can act 34F after inputting the move. The Katerpillar is very susceptible to active hitboxes. Any hitbox will hit Katerpillar and her attack will be negated. Katerpillar will continue to attack even if Lowain is hit or blocking which makes some trade situations possible.\nPerforms a rocket barrage.\nThis can instantly give you a free chance to get in if the missiles come out."
 };
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Human! Pyramid! Attack!', 
   altName: '236236H', 
   damage: '2500-3500', 
   guard: 'mid', 
@@ -474,10 +462,10 @@ const sba = {
   onblock: '-13', 
   onhit: 'HKD',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Unleashes the final form of the Lowain Bros. Enters Pyramid stance which grants boosted movement speed but you cannot block in this stance. This has a time limit (shows up as a gauge under Lowain's health bar) before he reverts back to normal. HPA has unlimited armor and he is completely immune to throws of all kinds. Note that if your HP drops to zero Lowain will die.\nHPA is most safely used to end corner combos. If your opponent is unprepared you can use the high and low options to mix up your opponent or to chip them out.\nNote the activation has no armor until after the flash (cannot be used as reversal)."
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Try This on for Size!', 
   altName: '236236U', 
   damage: '3500-4500', 
   guard: 'all', 
@@ -487,7 +475,7 @@ const ssba = {
   onblock: '-23', 
   onhit: 'HKD',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Summons (an imaginary) Yggdrasil into battle in place of Lowain for a time period (a gauge will show up under Lowain's health bar). Also comes with her own moves (see below). Attacks hitting Yggdrasil have 50% of their damage reduced, and she can't be knocked out. Her skills deal big damage at just about any range, so give her a call when it's about time to finish off the foe. All of her attacks can be spotdodged individually or avoided. When the timer runs out Lowain has punishable recovery frames. Make sure you finish them off or you push them far enough to avoid being punished\nYggdrasil can be controlled to move back and fourth slowly, which can be used to fence your opponent in.\nSince it's a knowledge check instead of guaranteed damage, it's slightly less useful against experienced players (you still get ridiculous chip damage) However, Lowain disappears when this move goes active. So it can be used as a very expensive get-out-of-jail-free card if you're in a pinch since it does have frame 1 invincibility.\nNote that using the easy input (236S+U) will result in 10% less damage on all moves."
 };
 
 
@@ -509,12 +497,9 @@ export const lowainInfo = [
   jM,
   jH,
   jU,
-  lv1U,
-  lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
+  s5U,
   groundThrow,
+  backThrow,
   airThrow,
   uOverhead,
   lFireball,
@@ -524,9 +509,11 @@ export const lowainInfo = [
   mUppercut,
   hUppercut,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
+  lTurret,
+  mTurret,
+  hTurret,
   sba,
   ssba
 ]
