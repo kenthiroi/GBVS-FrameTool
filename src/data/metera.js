@@ -500,57 +500,44 @@ const hUppercut = {
 };
 
 // rekka
-const lRekka = { 
-  moveName: 'L Overdrive Surge', 
-  altName: '214L', 
-  damage: '700', 
-  guard: 'mid', 
+const lButterfly = { 
+  moveName: 'L Aetherial Seal', 
+  altName: '22L', 
+  damage: '250x5', 
+  guard: 'All', 
   startup: '13', 
   active: '2', 
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
-  motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: "Hold down the button to make L & M butterflies to fly ~45° upward.\nMoves that trigger explosion: f.H, 2H, 1H, Universal Overhead, Starry Sky (High and Low), and The Great Fall (Initial Arrow).\nDoes ~1.50% chip damage on Single Explosions with easy input and ~2% chip damage with Technical input.\nDoes ~3% chip damage on double Explosions with easy input and ~4% chip damage with Technical input.\nYour setplay tool. Blow a kiss to send out butterfly that flutters across the stage. It does nothing by itself, but can be triggered to explode vertically by hitting it with any of Metera's arrow moves. The butterflies eventually will fizzle out, but the H version is the only version that stops at the stage wall. Butterflies are mostly used to extend combos, especially in corner for many of Metera's high damage routes. It can also be used to deny an opponent's approach, but it's harder to have one set up for that purpose than to have one set up after a knockdown."
 };
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
-};
-const mRekka = { 
-  moveName: 'M Overdrive Surge', 
-  altName: '214M', 
-  damage: '1200', 
-  guard: 'mid', 
+const mButterfly = { 
+  moveName: 'M Aetherial Seal', 
+  altName: '22M', 
+  damage: '250x5', 
+  guard: 'All', 
   startup: '16', 
   active: '13', 
   recovery: '29', 
   onblock: '+2~-10', 
   onhit: '-',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  motion: ['2', '2', 'm', 'or', '2', 'm', 'a'],
+  description: "Hold down the button to make L & M butterflies to fly ~45° upward.\nMoves that trigger explosion: f.H, 2H, 1H, Universal Overhead, Starry Sky (High and Low), and The Great Fall (Initial Arrow).\nDoes ~1.50% chip damage on Single Explosions with easy input and ~2% chip damage with Technical input.\nDoes ~3% chip damage on double Explosions with easy input and ~4% chip damage with Technical input.\nYour setplay tool. Blow a kiss to send out butterfly that flutters across the stage. It does nothing by itself, but can be triggered to explode vertically by hitting it with any of Metera's arrow moves. The butterflies eventually will fizzle out, but the H version is the only version that stops at the stage wall. Butterflies are mostly used to extend combos, especially in corner for many of Metera's high damage routes. It can also be used to deny an opponent's approach, but it's harder to have one set up for that purpose than to have one set up after a knockdown."
 };
-const hRekka = { 
-  moveName: 'H Overdrive Surge', 
-  altName: '214H', 
-  damage: '1200', 
-  guard: 'mid', 
+const hButterfly = { 
+  moveName: 'H Aetherial Seal', 
+  altName: '22H', 
+  damage: '(250x5)x2', 
+  guard: 'All', 
   startup: '13', 
   active: '13', 
   recovery: '37', 
   onblock: '+4~-8', 
   onhit: 'HKD',
-  motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: "Hold down the button to make L & M butterflies to fly ~45° upward.\nMoves that trigger explosion: f.H, 2H, 1H, Universal Overhead, Starry Sky (High and Low), and The Great Fall (Initial Arrow).\nDoes ~1.50% chip damage on Single Explosions with easy input and ~2% chip damage with Technical input.\nDoes ~3% chip damage on double Explosions with easy input and ~4% chip damage with Technical input.\nYour setplay tool. Blow a kiss to send out butterfly that flutters across the stage. It does nothing by itself, but can be triggered to explode vertically by hitting it with any of Metera's arrow moves. The butterflies eventually will fizzle out, but the H version is the only version that stops at the stage wall. Butterflies are mostly used to extend combos, especially in corner for many of Metera's high damage routes. It can also be used to deny an opponent's approach, but it's harder to have one set up for that purpose than to have one set up after a knockdown."
 };
 
 // skybound art
@@ -578,7 +565,7 @@ const ssba = {
   onblock: '-23', 
   onhit: 'HKD',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Metera's Full Screen Projectile super. Used to punish any fireball ball or high recovery move full screen\nAir blockable\nOn the ground the opponent is not able to spot dodge to fully avoid damage\nYou will rarely see this move doing 4500 damage because it almost always drops the opponent down to less than 60% before the last hit lands.\nThe range for the cinematic version is increased by using the technical input.\nThe Last hit will trigger Aetherial Seal\nGood for setting up a chip kill situation from afar.\nDoes ~5% Chip Damage with Easy Input and ~7% with Technical Input."
 };
 
 
@@ -599,25 +586,29 @@ export const meteraInfo = [
   jL,
   jM,
   jH,
-  jU,
   lv1U,
   lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
   groundThrow,
   airThrow,
   uOverhead,
   lFireball,
   mFireball,
   hFireball,
+  lAirFireball,
+  mAirFireball,
+  hAirFireball,
+  lLowFireball,
+  mLowFireball,
+  hLowFireball,
+  lLowAirFireball,
+  mLowAirFireball,
+  hLowAirFireball,
   lUppercut,
   mUppercut,
   hUppercut,
-  lRekka,
-  followupRekka,
-  mRekka,
-  hRekka,
+  lButterfly,
+  mButterfly,
+  hButterfly,
   sba,
   ssba
 ]
