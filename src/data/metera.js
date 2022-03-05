@@ -96,20 +96,20 @@ const far5M = {
   onblock: '-6',
   onhit: '-2',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "Wide and vertical poke, covers a good amount of space and doubles as a pseudo anti-air\nThe pushblock on block gives you enough space to walk backwards to dodge and punish a counterpoke\nGreat for stopping people who jump and block, but has the same clash level as most M air normals\nTrue Blockstring, Note it's range dependent\nf.M > Starry Sky(Low) | f.M > Starry Sky(High) (Very close crouching or Standing only)\nHit Confirms, Each also work off air hit but dependent on their height\nf.M > The Great Fall (H) | f.M > Starry Sky(Low) | f.M > Starry Sky(High) (Very close crouching or Standing only) | f.M > SBA/SSBA\nAir Counter Hit Only :\nf.M > 5U > j.M"
 };
 const far5H = {
   moveName: 'Far Heavy',
   altName: 'f5H',
-  damage: '1000',
-  guard: 'mid',
+  damage: '800',
+  guard: 'All',
   startup: '10',
   active: '5',
   recovery: '20',
   onblock: '-9',
   onhit: '-5',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Your Projective Poke button.\nOn hit or block allows you to cancel into Specials, 5U, Spot Dodge, or Supers on the same frame. (Note on projective clash does not let you special cancel)\nBig Buffer window for specials cancels so your next move will startup the frame they block or get hit.\nTravels half screen allowing you to outrange other characters pokes.\nActives Aetherial Seal\nSlower startup than Starry Sky with the less recovery than Starry Sky\nYou can string into Starry Sky and Great Fall for a true blockstring up close with dashing momentum\nHit Confirms\nf.H > Starry Sky Low(M/H) | f.H > Starry Sky High(M/H)(Very close crouching or Standing only) | f.H > The Great Fall(H)(Very Close standing only) f.H > SBA/SSBA\nAir Counter only Confirms\nf.H > 5U > j.M"
 };
 
 // regular normals
@@ -117,14 +117,14 @@ const n2L = {
   moveName: 'Crouch Light',
   altName: '2L',
   damage: '400',
-  guard: 'mid',
+  guard: 'Low',
   startup: '6',
   active: '3',
   recovery: '6',
   onblock: '2',
   onhit: '6',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Metera's fastest Low\nOff knockdowns you can safe jab 11 frame or slower DP character\nLow Pushback making a good Tick throw button\nTrue Blockstring :\n2L > 2L | 2L > c.L | 2L > f.L (Crouching Only)\nHit Confirms\n2L > 2L | 2L > c.L > Auto Combo | 2L > Starry Sky (High/Low) | 2L > SBA/SSBA\nCounter Hit Confirms\n2L > The Great Fall(H) (Standing Only)"
 };
 const n2M = {
   moveName: 'Crouch Medium',
@@ -137,33 +137,46 @@ const n2M = {
   onblock: '1',
   onhit: '5',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Metera's farthest horizonal poke\nGreat punish button\nTrue Blockstring\n2M > Starry Sky(High/Low) (close range for each version)\nHit confirms\n2M > Starry Sky(Low) | 2M > Starry Sky(High) (Close crouching or Standing only) | 2M > The Great Fall(H) | 2M > SBA/SSBA"
 };
 const n2H = {
-  moveName: 'Crouch Heavy',
+  moveName: 'Crouch Heavy (2H)',
   altName: '2H',
-  damage: '1000',
-  guard: 'mid',
+  damage: '800',
+  guard: 'All',
   startup: '10',
   active: '6',
   recovery: '24',
   onblock: '-13',
   onhit: '-9',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Major anti-air move and combo starter/extender. Is a projectile and can therefore be blocked in the air\nUsing 2H makes the arrow fly in a 45° angle, covers a lot of air space and air stalls\nOn hit or block allows you to cancel into Specials, 5U, Spot Dodge, or Supers. (Note on projective clash does not let you special cancel)\nHuge hitstun on counter hit, they won't recover until they hit the ground. Allows combos like 2H>5U>j.H and impractical links like 2H>2U\nTriggers Aetherial Seal and good for shooting charged Aetherial Seals\nNo pushback on block which can lead to frametraps like 2H > delay The Great Fall(H) or 2H > delay Starry Sky(H)"
 };
+const n1H = {
+  moveName: 'Crouch Heavy (1H)',
+  altName: '1H',
+  damage: '800',
+  guard: 'All',
+  startup: '10',
+  active: '6',
+  recovery: '24',
+  onblock: '-13',
+  onhit: '-9',
+  motion: ['1', 'h'],
+  description: "Mostly identical with 2H only different is the angle it will shoot at.\nGreat at hitting people who jump/superjump on top of you.\nAir Blockable\nOn hit or block allows you to cancel into Specials, 5U, Spot Dodge, or Supers. (Note on projective clash does not let you special cancel)\nHuge hitstun on counter hit, they won't recover until they hit the ground. Allows combos like 1H > 2H > The Great Fall (H) and impractical links like 2H> 2U\nTriggers Aetherial Seal\nNo pushback on block which can lead to frametraps like 1H > delay The Great Fall (H) or 2H > delay Starry Sky(H)"
+}
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
   damage: '700',
-  guard: 'mid',
+  guard: 'Low',
   startup: '7',
   active: '6',
   recovery: '21',
   onblock: '-12',
   onhit: 'HKD',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Mid-range slide that shoots Metera forward and hits Low\nMakes a good whiff punish tool for high recovery moves, also can interrupt some moves from reaching you\nUnable to special cancel from this button\nFrame advantage is better on block the further you initiate the slide.\nKnockdowns on hit which gives you time to setup Aetherial Seal."
 };
 
 // jump normals
@@ -178,12 +191,12 @@ const jL = {
   onblock: '-', 
   onhit: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Metera's fastest air attack.\nClashes with L Normals\nLowest blockstun on block which sets up auto tick throws\nThe frame advantage on block depends on the height. At the highest it's even and at it's lowest it's plus\nHitbox hits extends behind Metera so can be use as a cross up.\nCan special cancel on hit or block into Air Starry Sky(High/Low).\nOn Air counter hit, opponent will not recover until they reach the ground. It's possible to link Air Starry Sky before they land"
 };
 const jM = { 
   moveName: 'Jump Medium', 
   altName: 'jM', 
-  damage: '550', 
+  damage: '300x2', 
   guard: 'high', 
   startup: '6', 
   active: '-', 
@@ -191,7 +204,7 @@ const jM = {
   onblock: '-', 
   onhit: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Metera's j.M is solid air poke with good attack level and fast startup for its range.\nj.M is 2-hit move allows Metera to do solid high/low mixups with slightly changing the timing of j.M.\nBoth Hits clashes with M Normals\nAfter Zephyr into j.M The first hit will bring up for hurtbox and you can jump over some special moves and punish.\nOn hit or block of the 1st hit of j.M, you can special cancel into air starry sky\nOn Air counter hit, opponent will not recover until they reach the ground. It's possible to link Air Starry Sky before they land"
 };
 const jH = { 
   moveName: 'Jump Heavy', 
@@ -204,87 +217,35 @@ const jH = {
   onblock: '-', 
   onhit: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
-};
-const jU = { 
-  moveName: 'Jump Unique', 
-  altName: 'jU', 
-  damage: '700', 
-  guard: 'high', 
-  startup: '12', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '-', 
-  onhit: '-',
-  motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "A air-to-ground move useful for safe-jumps or a pressure reset with 5U.\nMetera j.H is her lowest hitting air normal.\nClashes with M Normals\nCan special cancel on hit or block into Air Starry Sky(High/Low).\nOn Air counter hit, opponent will not recover until they reach the ground. It's possible to link Air Starry Sky before they land"
 };
 
 // unique action
 const lv1U = { 
-  moveName: 'Power Raise Lv1', 
-  altName: '5ULv1', 
-  damage: '1000', 
-  guard: 'mid', 
+  moveName: 'Zephyr', 
+  altName: '5U', 
+  damage: '-', 
+  guard: '-', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Performs a small hop. Hold ← when pressing the button to hop backwards instead.\nThis skill can be used midair to change Metera's jump trajectory (à la double jump) Use it to get out of corner or to cross-up opponents, but be aware that it can get predictable."
 };
 const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
-  guard: 'mid', 
+  moveName: 'Zephyr (Air)', 
+  altName: 'jU', 
+  damage: '-', 
+  guard: '-', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
   onblock: '-5', 
   onhit: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Performs a small hop. Hold ← when pressing the button to hop backwards instead.\nThis skill can be used midair to change Metera's jump trajectory (à la double jump) Use it to get out of corner or to cross-up opponents, but be aware that it can get predictable."
 };
 
 const groundThrow = { 
@@ -297,7 +258,19 @@ const groundThrow = {
   onblock: '-', 
   onhit: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "Hold 4 for a back throw. Gives Metera a hard knockdown, which lets you get a safe Aetherial Seal setup for extended pressure."
+};
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  motion: ['l', 'm', 'or', 'l', 'u'],
+  description: "Hold 4 for a back throw. Gives Metera a hard knockdown, which lets you get a safe Aetherial Seal setup for extended pressure."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
@@ -309,7 +282,7 @@ const airThrow = {
   onblock: '-', 
   onhit: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Hold 4 for a sideswap. Launches your opponent 30 degrees downward and gives you a hard knockdown like her ground throw, but the advantage timing depends on how high you are when throwing your opponent."
 };
 
 const uOverhead = { 
@@ -323,12 +296,12 @@ const uOverhead = {
   onblock: '-4', 
   onhit: '1',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Moves backwards and shoots high.\nOn counter hit in most ranges you can only get UOH > 2M > Starry Sky (Low), With your back in the corner you can get UOH > c.H > Supers\nActivates Aetherial Seal, making it a highly damaging starter. It is also much easier to confirm than the counter hit route."
 };
 
 // fireballs
 const lFireball = { 
-  moveName: 'L Reginleiv', 
+  moveName: 'L Starry Sky (High)', 
   altName: '236L', 
   damage: '800', 
   guard: 'all', 
@@ -338,25 +311,25 @@ const lFireball = {
   onblock: '-7', 
   onhit: '-3',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels higher than a standard projectile, so it won't hit crouching foes at a distance. It will go over lower hitting projectiles\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
 };
 const mFireball = { 
-  moveName: 'M Reginleiv', 
+  moveName: 'M Starry Sky (High)', 
   altName: '236M', 
-  damage: '400, 800', 
-  guard: 'mid, all', 
+  damage: '800', 
+  guard: 'all', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels higher than a standard projectile, so it won't hit crouching foes at a distance. It will go over lower hitting projectiles\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
 };
 const hFireball = { 
-  moveName: 'H Reginleiv', 
+  moveName: 'H Starry Sky (High)', 
   altName: '236H', 
-  damage: '350 x 3', 
+  damage: '350x3', 
   guard: 'all', 
   startup: '15', 
   active: '-', 
@@ -364,7 +337,125 @@ const hFireball = {
   onblock: '+3', 
   onhit: '+7',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels higher than a standard projectile, so it won't hit crouching foes at a distance. It will go over lower hitting projectiles\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
+};
+const lAirFireball = { 
+  moveName: 'L Starry Sky (High)(Air)', 
+  altName: '236L', 
+  damage: '800', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-7', 
+  onhit: '-3',
+  motion: ['236', 'l', 'or', 'a'],
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels higher than a standard projectile, so it won't hit crouching foes at a distance. It will go over lower hitting projectiles\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
+};
+const mAirFireball = { 
+  moveName: 'M Starry Sky (High)(Air)', 
+  altName: '236M', 
+  damage: '800', 
+  guard: 'all', 
+  startup: '13', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-4', 
+  onhit: '0',
+  motion: ['236', 'm', 'or', 'a', 'm'],
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels higher than a standard projectile, so it won't hit crouching foes at a distance. It will go over lower hitting projectiles\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
+};
+const hAirFireball = { 
+  moveName: 'H Starry Sky (High)(Air)', 
+  altName: '236H', 
+  damage: '350x3', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels higher than a standard projectile, so it won't hit crouching foes at a distance. It will go over lower hitting projectiles\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
+};
+
+const lLowFireball = { 
+  moveName: 'L Starry Sky (Low)', 
+  altName: '214L', 
+  damage: '800', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-7', 
+  onhit: '-3',
+  motion: ['236', 'l', 'or', 'a'],
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels lower than a standard projectile, so it will hit crouching foes.\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M Ground & Midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal. The Ground version will not hit the L & M Seals.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
+};
+const mLowFireball = { 
+  moveName: 'M Starry Sky (Low)', 
+  altName: '214M', 
+  damage: '800', 
+  guard: 'all', 
+  startup: '13', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-4', 
+  onhit: '0',
+  motion: ['236', 'm', 'or', 'a', 'm'],
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels lower than a standard projectile, so it will hit crouching foes.\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M Ground & Midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal. The Ground version will not hit the L & M Seals.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
+};
+const hLowFireball = { 
+  moveName: 'H Starry Sky (Low)', 
+  altName: '214H', 
+  damage: '350x3', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels lower than a standard projectile, so it will hit crouching foes.\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M Ground & Midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal. The Ground version will not hit the L & M Seals.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
+};
+const lLowAirFireball = { 
+  moveName: 'L Starry Sky (Low)(Air)', 
+  altName: '214L', 
+  damage: '800', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-7', 
+  onhit: '-3',
+  motion: ['236', 'l', 'or', 'a'],
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels lower than a standard projectile, so it will hit crouching foes.\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M Ground & Midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal. The Ground version will not hit the L & M Seals.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
+};
+const mLowAirFireball = { 
+  moveName: 'M Starry Sky (Low)(Air)', 
+  altName: '214M', 
+  damage: '800', 
+  guard: 'all', 
+  startup: '13', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-4', 
+  onhit: '0',
+  motion: ['236', 'm', 'or', 'a', 'm'],
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels lower than a standard projectile, so it will hit crouching foes.\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M Ground & Midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal. The Ground version will not hit the L & M Seals.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
+};
+const hLowAirFireball = { 
+  moveName: 'H Starry Sky (Low)(Air)', 
+  altName: '214H', 
+  damage: '350x3', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "You cannot fire a new Starry Sky (High/Low) before the former one disappears off screen, gets blocked, or hits the opponent.\nIt travels lower than a standard projectile, so it will hit crouching foes.\nThe L version fires a slower shot, M version fires a faster shot. The H version is used to knock down and for juggle combos.\nWhen used midair, Metera fires at a downward angle. The L & H versions fires at a steep downward shot, M fires a more horizontal shot. Good for counter-pokes.\nThe L & M versions totally cancels your original momentum with a small forward hop, while H version can keep most of it's momentum.\nThe M Ground & Midair arrow will cause a Soft Knock Down on counterhit.\nThe H midair arrow can be combo starter for a 2h hop loop.\nAll versions activates Aetherial Seal. The Ground version will not hit the L & M Seals.\nDoes ~1% Chip Damage with Easy Input and ~1.5% with Technical Input."
 };
 
 // dragon punches
@@ -464,23 +555,23 @@ const hRekka = {
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Dense Caress', 
   altName: '236236H', 
   damage: '2500-3500', 
-  guard: 'mid', 
+  guard: 'Mid', 
   startup: '6+5', 
   active: '-', 
   recovery: '-', 
   onblock: '-13', 
   onhit: 'HKD',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Performs a powerful jumping somersault kick.\nEasy metered air unblockable anti air super. Great for closing out rounds.\nThe range for the cinematic version is increased by using the technical input.\nCan take advantage of the invincible frames and be used as a slow reversal, but the slow startup makes it vulnerable to safe jabs, safe frame traps and safe jumps.\nThe animation is misleading, The super will whiff if an opponent directly above or behind you."
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Rapid Pulverize', 
   altName: '236236U', 
   damage: '3500-4500', 
-  guard: 'all', 
+  guard: 'All', 
   startup: '8+5', 
   active: '-', 
   recovery: '-', 
