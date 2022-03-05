@@ -1,6 +1,6 @@
 // FINAL 
 
-const general = { char: "Metera", health: '10000', prejump: '4F', backdash: '22F' }
+const general = { char: "Metera", health: '9500', prejump: '4F', backdash: '22F' }
 
 // close normals
 const closeL = {
@@ -14,7 +14,7 @@ const closeL = {
   onblock: '2',
   onhit: '6',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "Her fastest standing normal\nOff knockdowns you can safe jab 11 frame or slower DP character\nTrue Blockstrings are:\nc.L > c.2L | c.5L > Auto Combo | c.L > c.L (Strict Timing)\nNormal hit confirms from this button are:\nc.L > Auto Combo | c.L > c.L | c.L > 2L | c.L > f.L (Crouching only) | c.L > Starry Sky(High/Low) | c.L > SBA/SSBA\nCounterhit confirms include the above and also\nc.L > The Great Fall(H) (Standing only)\nAir Counter Hits confirm, very rare but sometimes c.L can interrupt some character moves\nc.L > 2H > loop  - this is the one of the best case route but all the other above work as well"
 };
 const closeM = {
   moveName: 'Close Medium',
@@ -27,12 +27,12 @@ const closeM = {
   onblock: '0',
   onhit: '4',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "Great button for punishes and some character interruptions\nHitbox extending behind Metera head so can hit low crossover attempts, Does not reach above her head so use 1H instead in those situations\nTrue Blockstrings :\nc.M > Auto combo | c.M > Starry Sky(High/Low)\nHit Confirms :\nc.M > Auto Combo | c.M > Starry Sky(High/Low) | c.M > The Great Fall(H) (Standing only) | c.M > SSA/SSBA\nCounter Hit Confirms :\nc.M > c.L | c.M > 2L | c.M > c.M | c.M > 2M\nSituational Counter Hit Air confirms :\nc.M > 5u > j.M | c.M > 2H > AA Route | c.M > 2U"
 };
 const closeH = {
   moveName: 'Close Heavy',
   altName: 'cH',
-  damage: '1200',
+  damage: '400, 300x2',
   guard: 'mid',
   startup: '8',
   active: '4',
@@ -40,14 +40,14 @@ const closeH = {
   onblock: '-3',
   onhit: '1',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Hits 3 times\nSlow and rewarding tool for punishing DPs and SBAs. You can cancel it into specials or auto combos after any hit made.\nStrong on a clash due to it being multi hitting\nHitbox hits up above Metera's head so it can be used as a situational Anti-Air.\nTrue Blockstrings :\nc.H > Auto Combo | c.H > Starry Sky(High/Low) | c.H > The Great Fall(H) (Standing only)\nHit Confirms :\nc.H > Auto Combo | c.H > Starry Sky(High/Low) | c.H > The Great Fall(H) (Standing only) | c.H > SBA/SSBA\nCounter Hit Only Confirms :\nc.H(1 hit) > 5U > j.H | c.H(1 hit) > Universal Overhead\nSituational Air Counter Hit Only Confirms :\nc.H(1 hit) > Aetherial Seal(H) > c.H > Starry Sky High(H)"
 };
 
 // auto combos
 const auto1 = {
   moveName: 'Auto Combo 2nd hit',
   altName: 'cXX',
-  damage: '350',
+  damage: '300',
   guard: 'mid',
   startup: '-',
   active: '-',
@@ -55,12 +55,12 @@ const auto1 = {
   onblock: '-3',
   onhit: '1',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Primary combo that leads to a special move\nC.xx and c.xxx have the same cancel properties\nFor punishes it does less damage scaling if you super cancel after c.XX rather than c.XXX\nOn block doing 4U after auto combo is a simple way to retreat and reset neutral.\nTrue Blockstrings :\nc.xx/c.xxx > Starry Sky(High/Low) | c.xx/c.xxx > The Great Fall(H)\nHit confirms :\nc.xx/c.xxx > Starry Sky(High/Low) | c.xx/c.xxx > The Great Fall(H) (Standing only) | c.xx/c.xxx > SBA/SSBA"
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
   altName: 'cXXX',
-  damage: '350',
+  damage: '300',
   guard: 'mid',
   startup: '-',
   active: '-',
@@ -68,7 +68,7 @@ const auto2 = {
   onblock: '-5',
   onhit: '-1',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Primary combo that leads to a special move\nC.xx and c.xxx have the same cancel properties\nFor punishes it does less damage scaling if you super cancel after c.XX rather than c.XXX\nOn block doing 4U after auto combo is a simple way to retreat and reset neutral.\nTrue Blockstrings :\nc.xx/c.xxx > Starry Sky(High/Low) | c.xx/c.xxx > The Great Fall(H)\nHit confirms :\nc.xx/c.xxx > Starry Sky(High/Low) | c.xx/c.xxx > The Great Fall(H) (Standing only) | c.xx/c.xxx > SBA/SSBA"
 };
 
 // far normals
@@ -76,14 +76,14 @@ const far5L = {
   moveName: 'Far Light',
   altName: 'f5L',
   damage: '400',
-  guard: 'mid',
+  guard: 'Low',
   startup: '6',
   active: '3',
   recovery: '13',
   onblock: '-3',
   onhit: '1',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "Plus on block low hitting poke\nGreat at checking opponent ground movement as well as catching rolls\nCan safe jab 9 frame DPs on their wakeups\nCan interrupt some far reaching specials moves from reaching you\nNo True blockstring from this move\nHit Confirms, Note these can change depending on the range\nf.L > f.L > f.L | f.L > Starry Sky Low (M/H)(L version works still but only hits close) | f.L > Starry Sky High(M/H) (Very close crouching or Standing only) |  f.L > SBA\nCounterhit Confirms : Note these can change depending on the range\nf.L > 2M(Crounching only) | f.L > Starry Sky Low(L) | f.L > The Great Fall(H) | f.L > SSBA"
 };
 const far5M = {
   moveName: 'Far Medium',

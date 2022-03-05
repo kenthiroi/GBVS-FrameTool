@@ -1,4 +1,4 @@
-// FINAL 
+// UNFINISHED: SBA/SSBA Move s 
 
 const general = { char: "Lowain", health: '10000', prejump: '4F', backdash: '22F' }
 
