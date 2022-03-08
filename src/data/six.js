@@ -14,7 +14,7 @@ const closeL = {
   onblock: '2',
   onhit: '6',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "Seox's fastest normal.\nBasic, +2 on block c.L. Useful for abare due to its speed as well as pressure due to its frame advantage. Seox can use two of these in a row and still be in range for a 2L, making his pressure a bit scarier than average."
 };
 const closeM = {
   moveName: 'Close Medium',
@@ -27,12 +27,12 @@ const closeM = {
   onblock: '0',
   onhit: '4',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "Great frametrap button, but frametraps after are difficult.\nLinks into c.L on crouching.\nLinks into c.H on counterhit.\nThe Granblue c.M. Useful as a frame trap from lights as its more rewarding on counterhit."
 };
 const closeH = {
   moveName: 'Close Heavy',
   altName: 'cH',
-  damage: '1200',
+  damage: '700, 300',
   guard: 'mid',
   startup: '8',
   active: '4',
@@ -40,7 +40,7 @@ const closeH = {
   onblock: '-3',
   onhit: '1',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Combos into 236M.\nHigh hitstun c.H that allows for combos not possible from Seox's autocombo without a crouch confirm. Quite safe on block and makes for a high damage combo starter. Any L button into c.H will frame trap 6-frame buttons, but keep in mind that it will leave you minus."
 };
 
 // auto combos
@@ -55,7 +55,7 @@ const auto1 = {
   onblock: '-3',
   onhit: '1',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Mostly relegated to combo and blockstring filler. Seox can effectively frametrap from these with 236M, which in turn can make them useful as pressure reset points once respect is established."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
@@ -68,7 +68,7 @@ const auto2 = {
   onblock: '-5',
   onhit: '-1',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Mostly relegated to combo and blockstring filler. Seox can effectively frametrap from these with 236M, which in turn can make them useful as pressure reset points once respect is established."
 };
 
 // far normals
@@ -83,7 +83,7 @@ const far5L = {
   onblock: '-3',
   onhit: '1',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "Mostly a punish tool for quick-recovering moves as Seox's plus on block lights have comparable range. Using three 2Ls will leave Seox out of range."
 };
 const far5M = {
   moveName: 'Far Medium',
@@ -96,7 +96,7 @@ const far5M = {
   onblock: '-6',
   onhit: '-2',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "Seox's longest poke. Cancel into rekkas for pressure and combos."
 };
 const far5H = {
   moveName: 'Far Heavy',
@@ -109,7 +109,7 @@ const far5H = {
   onblock: '-9',
   onhit: '-5',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Same startup as f.M.\nComparable startup and range to f.M but with higher damage, clash level, and recovery. Excellent as a whiff punish tool as its higher hitstun gives more time to confirm."
 };
 
 // regular normals
@@ -117,14 +117,14 @@ const n2L = {
   moveName: 'Crouch Light',
   altName: '2L',
   damage: '400',
-  guard: 'mid',
+  guard: 'Low',
   startup: '6',
   active: '3',
   recovery: '6',
   onblock: '2',
   onhit: '6',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Excellent pressure tool.\nSeox can fit three of these in a row and still be in range for another frame trap with f.M or 2M. Links into c.M on standing opponents and 2M on crouching opponents."
 };
 const n2M = {
   moveName: 'Crouch Medium',
@@ -137,7 +137,7 @@ const n2M = {
   onblock: '1',
   onhit: '5',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "One frame faster than f.M at the cost of a little reach. Great frame advantage for a 2M normal and quite difficult to whiff punish."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
@@ -150,20 +150,20 @@ const n2H = {
   onblock: '-13',
   onhit: '-9',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Seox's main anti-air.\nConverts into good damage on AA CH and decent damage on normal AA connect."
 };
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
   damage: '700',
-  guard: 'mid',
+  guard: 'Low',
   startup: '7',
   active: '6',
   recovery: '21',
   onblock: '-12',
   onhit: 'HKD',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Fast, but too slow to use as a crouch confirm.\nPrimarily a combo tool due to its long recovery and high disadvantage on block. One frame slower than 2M and the same speed as f.M and f.H gives it a lot of competition as a poke."
 };
 
 // jump normals
@@ -178,7 +178,7 @@ const jL = {
   onblock: '-', 
   onhit: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Active until landing.\nGreat horizontal reach."
 };
 const jM = { 
   moveName: 'Jump Medium', 
@@ -191,7 +191,7 @@ const jM = {
   onblock: '-', 
   onhit: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Seox's crossup normal.\nInstant j.M can hit taller standing characters like Katalina and Percival. Other than that, use this when it's hard to tell what side Seox will land on."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
@@ -204,27 +204,27 @@ const jH = {
   onblock: '-', 
   onhit: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "Seox's primary jump-in.\nj.H has the most downwards reach of all of Seox's air normals and has decent horizontal range too, making it a great jump-in button for fireball punishes."
 };
 const jU = { 
   moveName: 'Jump Unique', 
   altName: 'jU', 
   damage: '700', 
-  guard: 'high', 
+  guard: 'Mid', 
   startup: '12', 
   active: '-', 
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Can be advantageous if it hits an opponent's foot area.\nPretty slow but serves its purpose of throwing off anti-air timings. Leads to a combo if it connects late on a crouching opponent. Part of what makes Seox's approach so good."
 };
 
 // unique action
 const lv1U = { 
-  moveName: 'Power Raise Lv1', 
-  altName: '5ULv1', 
-  damage: '1000', 
+  moveName: 'Demon Step', 
+  altName: '5U', 
+  damage: '800', 
   guard: 'mid', 
   startup: '22', 
   active: '9', 
@@ -232,12 +232,12 @@ const lv1U = {
   onblock: '-5', 
   onhit: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Seox sends out a shadow clone of himself as a projectile. Unlike other projectiles in the game, this projectile can be attacked and will disappear if hit. Holding the button will make Seox teleport to wherever the fireball connects, but will also make him take damage if the fireball is hit by an attack. The held version combos into c.L."
 };
 const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
+  moveName: 'New Perspective', 
+  altName: '5[U]', 
+  damage: '800', 
   guard: 'mid', 
   startup: '22', 
   active: '9', 
@@ -245,46 +245,7 @@ const lv2U = {
   onblock: '-5', 
   onhit: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Seox sends out a shadow clone of himself as a projectile. Unlike other projectiles in the game, this projectile can be attacked and will disappear if hit. Holding the button will make Seox teleport to wherever the fireball connects, but will also make him take damage if the fireball is hit by an attack. The held version combos into c.L."
 };
 
 const groundThrow = { 
@@ -297,7 +258,19 @@ const groundThrow = {
   onblock: '-', 
   onhit: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "",
+};
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  motion: ['4', 'l', 'm', 'or', '4', 'l', 'u'],
+  description: "",
 };
 const airThrow = { 
   moveName: 'Air Throw', 
@@ -323,49 +296,115 @@ const uOverhead = {
   onblock: '-4', 
   onhit: '1',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: ""
 };
 
 // fireballs
-const lFireball = { 
-  moveName: 'L Reginleiv', 
+const lRekka = { 
+  moveName: 'L Six-Claw Execution', 
   altName: '236L', 
-  damage: '800', 
-  guard: 'all', 
+  damage: '400', 
+  guard: 'Mid', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Seox's main special move, a rekka that leads into different follow-ups. Each starter can turn into a myriad of frame traps and pressure resets and is his main pressure and combo tool. Think carefully about when you should spend the EX version.\nHits twice with a blue trail.\nSeox's main combo ender and pressure extender. Combos from pretty much anything. Leads to the 6M follow-up on crouching opponents, which gives Seox more combo options."
 };
-const mFireball = { 
-  moveName: 'M Reginleiv', 
+const mRekka = { 
+  moveName: 'M Six-Claw Execution', 
   altName: '236M', 
-  damage: '400, 800', 
-  guard: 'mid, all', 
+  damage: '600', 
+  guard: 'Mid', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Seox's main special move, a rekka that leads into different follow-ups. Each starter can turn into a myriad of frame traps and pressure resets and is his main pressure and combo tool. Think carefully about when you should spend the EX version.\nHits once with a red trail.\nSituational combo extender and frametrap tool. Combos from autocombo on crouching opponents and c.H always. Always combos into the 6M follow-up."
 };
-const hFireball = { 
-  moveName: 'H Reginleiv', 
+const hRekka = { 
+  moveName: 'H Six-Claw Execution', 
   altName: '236H', 
-  damage: '350 x 3', 
-  guard: 'all', 
+  damage: '800', 
+  guard: 'Mid', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Seox's main special move, a rekka that leads into different follow-ups. Each starter can turn into a myriad of frame traps and pressure resets and is his main pressure and combo tool. Think carefully about when you should spend the EX version.\nYellow effect makes it easy to distinguish.\nCombos from anything and always leads to the 6M follow-up for good damage. Be careful using this as you lose Seox's main combo and pressure tool."
 };
+const rekka = {
+  moveName: 'L Archdemon Kick', 
+  altName: '236X -> 6L', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
+};
+const rekka = {
+  moveName: 'L Archdemon Kick', 
+  altName: '236X -> 6L', 
+  damage: '300', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
+};
+const rekka = {
+  moveName: 'M Archdemon Kick', 
+  altName: '236X -> 6M', 
+  damage: '300', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
+};
+const rekka = {
+  moveName: 'Wolf\'s Howl', 
+  altName: '236X -> 4X', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
+};
+const rekka = {
+  moveName: 'H Six-Claw Execution', 
+  altName: '236H', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
+};
+
 
 // dragon punches
 const lUppercut = { 
