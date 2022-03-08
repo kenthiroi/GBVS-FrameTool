@@ -339,20 +339,7 @@ const hRekka = {
   motion: ['236', 'h', 'or', 'a', 'h'],
   description: "Seox's main special move, a rekka that leads into different follow-ups. Each starter can turn into a myriad of frame traps and pressure resets and is his main pressure and combo tool. Think carefully about when you should spend the EX version.\nYellow effect makes it easy to distinguish.\nCombos from anything and always leads to the 6M follow-up for good damage. Be careful using this as you lose Seox's main combo and pressure tool."
 };
-const rekka = {
-  moveName: 'L Archdemon Kick', 
-  altName: '236X -> 6L', 
-  damage: '800', 
-  guard: 'Mid', 
-  startup: '15', 
-  active: '-', 
-  recovery: '-', 
-  onblock: '+3', 
-  onhit: '+7',
-  motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
-};
-const rekka = {
+const lRekkaKick = {
   moveName: 'L Archdemon Kick', 
   altName: '236X -> 6L', 
   damage: '300', 
@@ -365,7 +352,7 @@ const rekka = {
   motion: ['236', 'h', 'or', 'a', 'h'],
   description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
 };
-const rekka = {
+const mRekkaKick = {
   moveName: 'M Archdemon Kick', 
   altName: '236X -> 6M', 
   damage: '300', 
@@ -378,10 +365,10 @@ const rekka = {
   motion: ['236', 'h', 'or', 'a', 'h'],
   description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
 };
-const rekka = {
-  moveName: 'Wolf\'s Howl', 
-  altName: '236X -> 4X', 
-  damage: '800', 
+const hRekkaKick = {
+  moveName: 'H Archdemon Kick', 
+  altName: '236X -> 6H', 
+  damage: '300', 
   guard: 'Mid', 
   startup: '15', 
   active: '-', 
@@ -391,9 +378,9 @@ const rekka = {
   motion: ['236', 'h', 'or', 'a', 'h'],
   description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
 };
-const rekka = {
-  moveName: 'H Six-Claw Execution', 
-  altName: '236H', 
+const lRekkaEnder = {
+  moveName: 'L Wolf\'s Howl', 
+  altName: '236X -> 4L', 
   damage: '800', 
   guard: 'Mid', 
   startup: '15', 
@@ -402,15 +389,106 @@ const rekka = {
   onblock: '+3', 
   onhit: '+7',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "L version keeps opponent grounded. Blue trail.M version launches on hit. Red trail.\nCancels into any other follow-up.\nSeox's rekka extender. The M version always combos from 236M and 236H, but only combos from 236L on crouching opponents."
+  description: "L version combos from anything.\nM version combos from M Archdemon kick.\nM version wallbounces on counterhit.\nA thrusting attack that sends the opponent flying. L version is your standard ground combo ender. M version works as a frametrap and another potential crouch confirm point. Going for a frametrap with the M version is very dangerous but leads to excellent damage in the corner."
 };
+const mRekkaEnder = {
+  moveName: 'M Wolf\'s Howl',  
+  altName: '236X -> 4M', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version combos from anything.\nM version combos from M Archdemon kick.\nM version wallbounces on counterhit.\nA thrusting attack that sends the opponent flying. L version is your standard ground combo ender. M version works as a frametrap and another potential crouch confirm point. Going for a frametrap with the M version is very dangerous but leads to excellent damage in the corner."
+};
+const hRekkaEnder = {
+  moveName: 'H Wolf\'s Howl',  
+  altName: '236X -> 4H', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version combos from anything.\nM version combos from M Archdemon kick.\nM version wallbounces on counterhit.\nA thrusting attack that sends the opponent flying. L version is your standard ground combo ender. M version works as a frametrap and another potential crouch confirm point. Going for a frametrap with the M version is very dangerous but leads to excellent damage in the corner."
+};
+const lRekkaOverhead = {
+  moveName: 'L Snake Bite',  
+  altName: '236X -> 8L', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version has a blue trail and is a little faster. Links into c.L.\nM version has a red trail and links into c.M.\nSeox's pressure reset option from Six-Claw Execution. Always plus on block and ground bounces from 236H allowing for extended combos. Gives a closer knockdown than M Wolf's Howl on opponents launched from M Archdemon Kick at the cost of damage."
+}
+const mRekkaOverhead = {
+  moveName: 'M Snake Bite',  
+  altName: '236X -> 8M', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version has a blue trail and is a little faster. Links into c.L.\nM version has a red trail and links into c.M.\nSeox's pressure reset option from Six-Claw Execution. Always plus on block and ground bounces from 236H allowing for extended combos. Gives a closer knockdown than M Wolf's Howl on opponents launched from M Archdemon Kick at the cost of damage."
+}
+const hRekkaOverhead = {
+  moveName: 'H Snake Bite',  
+  altName: '236X -> 8H', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "L version has a blue trail and is a little faster. Links into c.L.\nM version has a red trail and links into c.M.\nSeox's pressure reset option from Six-Claw Execution. Always plus on block and ground bounces from 236H allowing for extended combos. Gives a closer knockdown than M Wolf's Howl on opponents launched from M Archdemon Kick at the cost of damage."
+}
+const rekkaTeleport6 = {
+  moveName: 'Shadow Trace (Forward)',  
+  altName: '236X -> 6U', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  motion: ['6', 'u'],
+  description: "Command dash, can phase through opponents.\nA movement option off of Six-Claw Execution. Seox can dash forward or backward based on input. The backdash version is useful for gaining space and is generally quite safe. The forward version is great for sneaking in a pressure reset on an opponent respecting a potential frame trap or looking for Snake Bite."
+}
+const rekkaTeleport4 = {
+  moveName: 'Shadow Trace (Back)',  
+  altName: '236X -> 4U', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  motion: ['4', 'u'],
+  description: "Command dash, can phase through opponents.\nA movement option off of Six-Claw Execution. Seox can dash forward or backward based on input. The backdash version is useful for gaining space and is generally quite safe. The forward version is great for sneaking in a pressure reset on an opponent respecting a potential frame trap or looking for Snake Bite."
+}
 
 
 // dragon punches
-const lUppercut = { 
-  moveName: 'L Rising Sword', 
+const lParry = { 
+  moveName: 'L Thunderflash', 
   altName: '623L', 
-  damage: '700, 300', 
+  damage: '1000', 
   guard: 'mid, all', 
   startup: '9', 
   active: '-', 
@@ -418,12 +496,12 @@ const lUppercut = {
   onblock: '-17', 
   onhit: 'KD',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Seox goes into a counter stance. All strikes can be parried and counterattack against. If you hold the button while parrying an attack, Seox will reposition himself depending on the version.\n\nL version moves forward if held.\nM version moves up if held.\nNot instant but useful to get around predictable things in neutral like fireballs."
 };
-const mUppercut = { 
-  moveName: 'M Rising Sword', 
+const mParry = { 
+  moveName: 'M Thunderflash', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
+  damage: '1000', 
   guard: 'mid, all', 
   startup: '9', 
   active: '-', 
@@ -431,12 +509,12 @@ const mUppercut = {
   onblock: '-26', 
   onhit: 'KD',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "Seox goes into a counter stance. All strikes can be parried and counterattack against. If you hold the button while parrying an attack, Seox will reposition himself depending on the version.\n\nL version moves forward if held.\nM version moves up if held.\nNot instant but useful to get around predictable things in neutral like fireballs."
 };
-const hUppercut = { 
-  moveName: 'H Rising Sword', 
+const hParry = { 
+  moveName: 'H Thunderflash', 
   altName: '623H', 
-  damage: '950~1400', 
+  damage: '1000', 
   guard: 'mid, all', 
   startup: '9', 
   active: '-', 
@@ -444,12 +522,12 @@ const hUppercut = {
   onblock: '-26', 
   onhit: 'HKD',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Seox goes into a counter stance. All strikes can be parried and counterattack against. If you hold the button while parrying an attack, Seox will reposition himself depending on the version.\nMoves forward if held.\nActive from frame 1, but shorter active time than non-EX versions.\nSeox's counter reversal. Vulnerable to throws but beats safejumps and has the added benefit of also being a movement tool."
 };
 
 // rekka
-const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+const lCrossSlash = { 
+  moveName: 'L Gate of Demons', 
   altName: '214L', 
   damage: '700', 
   guard: 'mid', 
@@ -459,23 +537,10 @@ const lRekka = {
   onblock: '-6', 
   onhit: '-2',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
+  description: "Fires a projectile.\nHard to zone with as the projectile moves downwards. Useful as a meaty after a tech flipout or as a way to secure a certain part of the screen."
 };
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
-};
-const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+const mCrossSlash = { 
+  moveName: 'M Gate of Demons', 
   altName: '214M', 
   damage: '1200', 
   guard: 'mid', 
@@ -485,10 +550,10 @@ const mRekka = {
   onblock: '+2~-10', 
   onhit: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Claw dive.\nSeox's best meterless combo out of AA 2H."
 };
-const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+const hCrossSlash = { 
+  moveName: 'H Gate of Demons', 
   altName: '214H', 
   damage: '1200', 
   guard: 'mid', 
@@ -498,14 +563,93 @@ const hRekka = {
   onblock: '+4~-8', 
   onhit: 'HKD',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Two-hit projectile like 214L.\nCombo extender from c.H.\nPlus on block and allows for combo and pressure extensions."
 };
+const lAirCrossSlash = { 
+  moveName: 'L Gate of Demons (Air)', 
+  altName: '214L', 
+  damage: '700', 
+  guard: 'mid', 
+  startup: '13', 
+  active: '2', 
+  recovery: '19', 
+  onblock: '-6', 
+  onhit: '-2',
+  motion: ['214', 'l', 'or', '2', 'a'],
+  description: "Claw strike, bounces back on hit/block."
+};
+const mAirCrossSlash = { 
+  moveName: 'M Gate of Demons (Air)', 
+  altName: '214M', 
+  damage: '1200', 
+  guard: 'mid', 
+  startup: '16', 
+  active: '13', 
+  recovery: '29', 
+  onblock: '+2~-10', 
+  onhit: '-',
+  motion: ['214', 'm', 'or', '4', 'a'],
+  description: "Claw strike, bounces forward on hit/block.\nRetains air options upon connect, allowing for a followup.\nOpens up combo extensions in the air."
+};
+const hAirCrossSlash = { 
+  moveName: 'H Gate of Demons (Air)', 
+  altName: '214H', 
+  damage: '1200', 
+  guard: 'mid', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  motion: ['214', 'h', 'or', '2', 'a', 'h'],
+  description: "Air fireball.\nJust as useful as the ground version. Using it in combos is more difficult but it's a lot more applicable in neutral."
+};
+
+const lWalljump = {
+  moveName: 'L Empty Hand', 
+  altName: '[2]8L', 
+  damage: '1000', 
+  guard: 'mid', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  motion: ['2', '8', 'l', 'or', '2', 'a'],
+  description: "Seox's walldive attack. Has projectile invulnerability can be used to read and punish fireballs. Framedata on block varies depending on the height it hits the opponent. The lower it hits the more plus it becomes.\nDives at a sharp, downwards angle.\nMostly useful as a fakeout to make your opponent whiff an AA."
+};
+const mWalljump = {
+  moveName: 'M Empty Hand', 
+  altName: '[2]8M', 
+  damage: '1000', 
+  guard: 'mid', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  motion: ['2', '8', 'm', 'or', '2', 'a', 'm'],
+  description: "Seox's walldive attack. Has projectile invulnerability can be used to read and punish fireballs. Framedata on block varies depending on the height it hits the opponent. The lower it hits the more plus it becomes.\nDives and travels about halfscreen.\nThis is the best non-EX version to go over fireballs in neutral, but its speed and input makes this difficult to do on reaction."
+};
+const hWalljump = {
+  moveName: 'H Empty Hand', 
+  altName: '[2]8H', 
+  damage: '1000', 
+  guard: 'mid', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  motion: ['2', '8', 'h', 'or', '2', 'a', 'h'],
+  description: "Seox's walldive attack. Has projectile invulnerability can be used to read and punish fireballs. Framedata on block varies depending on the height it hits the opponent. The lower it hits the more plus it becomes.\nDives to opponent.\nCan be held.\nCan lead to a combo if it counterhits but is quite spacing-dependant."
+}
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Void Claws: Terminus', 
   altName: '236236H', 
-  damage: '2500-3500', 
+  damage: '3500', 
   guard: 'mid', 
   startup: '6+5', 
   active: '-', 
@@ -513,12 +657,25 @@ const sba = {
   onblock: '-13', 
   onhit: 'HKD',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "A claw strike with invulnerability. If it hits close, Seox will follow up with a series of cinematic attacks. The range of this super is short compared to other thrust supers and the range that will activate his cinematic is even smaller, around f.M range."
+};
+const installSba = { 
+  moveName: 'Six-Ruin\'s Enlightenment', 
+  altName: '214214H', 
+  damage: '-', 
+  guard: '-', 
+  startup: '6+5', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-13', 
+  onhit: 'HKD',
+  motion: ['214', '214', 'h', 'or', '214', 'a'],
+  description: "Seox creates two shadow clones who will mimic his actions and attack with him. While the Skybound Art is active, Seox's attacks will hit multiple times."
 };
 const ssba = { 
   moveName: 'Catastrophe', 
   altName: '236236U', 
-  damage: '3500-4500', 
+  damage: '4500', 
   guard: 'all', 
   startup: '8+5', 
   active: '-', 
@@ -526,7 +683,7 @@ const ssba = {
   onblock: '-23', 
   onhit: 'HKD',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "An advancing attack will invulnerability. On a close hit, Seox brings out the shadow clones and unleashes a cinematic beatdown."
 };
 
 
@@ -550,22 +707,37 @@ export const sixInfo = [
   jU,
   lv1U,
   lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
   groundThrow,
+  backThrow,
   airThrow,
   uOverhead,
-  lFireball,
-  mFireball,
-  hFireball,
-  lUppercut,
-  mUppercut,
-  hUppercut,
+  lParry,
+  mParry,
+  hParry,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
+  lRekkaKick,
+  mRekkaKick,
+  hRekkaKick,
+  lRekkaOverhead,
+  mRekkaOverhead,
+  hRekkaOverhead,
+  lRekkaEnder,
+  mRekkaEnder,
+  hRekkaEnder,
+  rekkaTeleport4,
+  rekkaTeleport6,
+  lWalljump,
+  mWalljump,
+  hWalljump,
+  lCrossSlash,
+  mCrossSlash,
+  hCrossSlash,
+  lAirCrossSlash,
+  mAirCrossSlash,
+  hAirCrossSlash,
   sba,
+  installSba,
   ssba
 ]
