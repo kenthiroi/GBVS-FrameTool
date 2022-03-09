@@ -424,7 +424,7 @@ const hRekka = {
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Leaping Tiger, Charging Dragon', 
   altName: '236236H', 
   damage: '2500-3500', 
   guard: 'mid', 
@@ -434,7 +434,7 @@ const sba = {
   onblock: '-13', 
   onhit: 'HKD',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "A big punch with invincible startup, making it Soriz's sole reversal. Has short range so you need to be close to the opponent. The first hit can be low-profiled by some characters. The slow startup also makes it susceptible to a lot of safe meaty cl.L setups.\nBracketed numbers indicate the Fundoshi version.\nMin Damages: Technical 875→625, Simple 525→375, Install Technical 1125→625, Install Simple 675→375"
 };
 const ssba = { 
   moveName: 'Catastrophe', 
@@ -447,7 +447,20 @@ const ssba = {
   onblock: '-23', 
   onhit: 'HKD',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Soriz strips down and powers up. The super lasts until the end of the round, and while it's active Soriz gains a few bonuses\n\nDefense buff based on how many Manliness stacks he absorbed with Muscle Fury.\nEnhanced Special moves and Skybound Art\nFollow-ups to Punch the Stars\nAccess to Way of the Fundoshi Fist\nFaster dash\nKeep in mind, Soriz IS NOT invincible during the initial startup frames. Only AFTER the superflash animation is over (Frames 10-14). This is not usable as a reversal option.\n\nWhen cancelled from the following normals Soriz can be plus to continue pressure after activation.\n\nc.XXX = +2\nf.H = +2\nc.H = +4\nDamage modifier during Macho Ultimatum:\n1 stack = 83.3%, 2 stacks = 76.9%, 3 stacks = 71.4%, 4 stacks = 66.7%, 5 stacks = 62.5%"
+};
+const ssbaFinisher = { 
+  moveName: 'Way of the Fundoshi Fist', 
+  altName: '236236U', 
+  damage: '4500', 
+  guard: 'all', 
+  startup: '8+5', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-23', 
+  onhit: 'HKD',
+  motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
+  description: "A Super Skybound Art tied to Macho Ultimatum's activation. Using this super does not cost meter BUT you only get one use. The first hit of the super is a throw, effectively giving Soriz a dodge check. Can be comboed into, but Soriz must be very close to do so. Soriz IS NOT invincible during the startup of this move at all.\nNote 1: The opponent cannot jump, dodge or DP on reaction to the superflash animation, but ONLY if they are in range of the first attack (the stomp).\nNote 2: If easy input is used, the super deals 500 less damage than that of the technical input, dealing 4000 instead of 4500.\nMin Damage: Technical: 1050, Simple 600"
 };
 
 
@@ -481,9 +494,9 @@ export const sorizInfo = [
   mUppercut,
   hUppercut,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
   sba,
-  ssba
+  ssba,
+  ssbaFinisher
 ]
