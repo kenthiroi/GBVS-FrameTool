@@ -13,6 +13,8 @@ const closeL = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
   description: "Anre attacks with cosmic energy. Has very short range. All of Anre's grounded light attacks are 1 frame slower than the standard 5 frames, making Anre weak at mashing out of pressure."
 };
@@ -26,6 +28,8 @@ const closeM = {
   recovery: '10',
   onblock: '0',
   onhit: '4',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
   description: ""
 };
@@ -39,6 +43,8 @@ const closeH = {
   recovery: '18',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: ""
 };
@@ -54,6 +60,8 @@ const auto1 = {
   recovery: '-',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l'],
   description: ""
 };
@@ -67,6 +75,8 @@ const auto2 = {
   recovery: '-',
   onblock: '-5',
   onhit: '-1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'l', 'l'],
   description: ""
 };
@@ -82,6 +92,8 @@ const far5L = {
   recovery: '13',
   onblock: '-3',
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
   description: ""
 };
@@ -95,6 +107,8 @@ const far5M = {
   recovery: '18',
   onblock: '-6',
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
   description: "Max range will not combo into any special moves unless on counter hit"
 };
@@ -108,6 +122,8 @@ const far5H = {
   recovery: '20',
   onblock: '-9',
   onhit: '-5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: "2 hits\nMoves forward a huge distance\nSpecial-cancellable on both hits"
 };
@@ -123,6 +139,8 @@ const n2L = {
   recovery: '6',
   onblock: '2',
   onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'l'],
   description: "Hits low"
 };
@@ -136,6 +154,8 @@ const n2M = {
   recovery: '9',
   onblock: '1',
   onhit: '5',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'm'],
   description: ""
 };
@@ -149,6 +169,8 @@ const n2H = {
   recovery: '24',
   onblock: '-13',
   onhit: '-9',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'h'],
   description: ""
 };
@@ -162,6 +184,8 @@ const n2U = {
   recovery: '21',
   onblock: '-12',
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['2', 'u'],
   description: "Not special cancellable"
 };
@@ -177,6 +201,8 @@ const jL = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l'],
   description: ""
 };
@@ -190,6 +216,8 @@ const jM = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m'],
   description: "Can cross up but the range is very small."
 };
@@ -203,6 +231,8 @@ const jH = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['h'],
   description: "This move is very awkward as a jump-in normal due the angle it is hitting at. When done right off the ground, can anti-air moves, however, 2H is more reliable and can lead to more damage."
 };
@@ -216,6 +246,8 @@ const jU = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
   description: "Anre is able to act immediately after a successful parry. Anre can either parry again, or act with any normal action. A notable use of this is to parry a hit of an uncancelable attack, such as GBVS Charlotta Icon.png Charlotta's Sword of Lumiel, and then hit the opponent before the subsequent hit of their attack comes out. c.H is too slow to counter some attacks, but c.L and c.M are fast enough.\nOpponent appears to be stuck in a form of hitstop on parry while Anre is able to act.\nis a Parry, can do it consecutively with timing"  
 };
@@ -231,6 +263,8 @@ const lv1U = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
   description: "Anre is able to act immediately after a successful parry. Anre can either parry again, or act with any normal action. A notable use of this is to parry a hit of an uncancelable attack, such as GBVS Charlotta Icon.png Charlotta's Sword of Lumiel, and then hit the opponent before the subsequent hit of their attack comes out. c.H is too slow to counter some attacks, but c.L and c.M are fast enough.\nOpponent appears to be stuck in a form of hitstop on parry while Anre is able to act.\nis a Parry, can do it consecutively with timing"  
 };
@@ -244,6 +278,8 @@ const j6u = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['u'],
   description: ""
 }
@@ -257,6 +293,8 @@ const groundThrow = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
   description: ""
 };
@@ -269,6 +307,8 @@ const backThrow = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['4', 'l', 'm', 'or', '4', 'l', 'u'],
   description: ""
 };
@@ -281,6 +321,8 @@ const airThrow = {
   recovery: '-', 
   onblock: '-', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
   description: ""
 };
@@ -295,6 +337,8 @@ const uOverhead = {
   recovery: '-', 
   onblock: '-4', 
   onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['m', 'u'],
   description: ""
 };
@@ -310,6 +354,8 @@ const lFireball = {
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'l', 'or', 'a'],
   description: "Anre's \"laser\", an invaluable neutral tool for controlling space. Cancels out projectiles while Anre stabs forwards with the spear, making it a great anti-fireball tool. Pressing any attack button on hit only will do a followup detonation. Said follow-up does 400 damage from 236M and 500 from 236L/H.\n236L is always safe on block due to pushback. Useful for frame traps at a distance, or just for throwing out in neutral as it's much faster than 236M and doesn't cost a cooldown. Combos from f.M and 2M on CH."
 };
@@ -323,6 +369,8 @@ const mFireball = {
   recovery: '-', 
   onblock: '-4', 
   onhit: '0',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'm', 'or', 'a', 'm'],
   description: "Anre's \"laser\", an invaluable neutral tool for controlling space. Cancels out projectiles while Anre stabs forwards with the spear, making it a great anti-fireball tool. Pressing any attack button on hit only will do a followup detonation. Said follow-up does 400 damage from 236M and 500 from 236L/H.\n236M is extremely slow but also extremely advantageous, and the follow-up launches for a combo in the corner. Very interruptible if used as a pressure reset, but can be used as a meaty and in some CH 2H anti-air combos."
 };
@@ -336,6 +384,8 @@ const hFireball = {
   recovery: '-', 
   onblock: '+3', 
   onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'h', 'or', 'a', 'h'],
   description: "Anre's \"laser\", an invaluable neutral tool for controlling space. Cancels out projectiles while Anre stabs forwards with the spear, making it a great anti-fireball tool. Pressing any attack button on hit only will do a followup detonation. Said follow-up does 400 damage from 236M and 500 from 236L/H.\n236H is the fastest of the three and still quite advantageous on block. It can be used to end or extend combos from full autocombo or f.H, and also to extend pressure."
 };
@@ -349,6 +399,8 @@ const FireballFollowup = {
   recovery: '-', 
   onblock: '-7', 
   onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', 'l', 'or', 'a'],
   description: "Anre's \"laser\", an invaluable neutral tool for controlling space. Cancels out projectiles while Anre stabs forwards with the spear, making it a great anti-fireball tool. Pressing any attack button on hit only will do a followup detonation. Said follow-up does 400 damage from 236M and 500 from 236L/H.\n236L is always safe on block due to pushback. Useful for frame traps at a distance, or just for throwing out in neutral as it's much faster than 236M and doesn't cost a cooldown. Combos from f.M and 2M on CH."
 };
@@ -364,6 +416,8 @@ const lUppercut = {
   recovery: '-', 
   onblock: '-17', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
   description: "Very fast special that can be used to beat fireballs, but generally worse than Anre's other anti-fireball tools for that purpose. Combo filler that can connect from almost any normal but often won't reach due to its short range.\n623L is inferior to 623M in almost every way, but it can hit crouchers, so it sees use then with the 6H follow-up."
 };
@@ -377,6 +431,8 @@ const mUppercut = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
   description: "Very fast special that can be used to beat fireballs, but generally worse than Anre's other anti-fireball tools for that purpose. Combo filler that can connect from almost any normal but often won't reach due to its short range.\n623M has some forward momentum and does more damage than 623L, so it's your midscreen cooldownless combo ender with the 6M follow-up."
 };
@@ -390,6 +446,8 @@ const hUppercut = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
   description: "Very fast special that can be used to beat fireballs, but generally worse than Anre's other anti-fireball tools for that purpose. Combo filler that can connect from almost any normal but often won't reach due to its short range.\n623H is used primarily in Anre's corner combos as it wallbounces with the 6H follow-up. Goes slightly farther than 623M but doesn't move quickly enough to combo from f.M or 2M in most situations."
 };
@@ -403,6 +461,8 @@ const lSpearFollowup = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
   description: "623X-6L travels till it hits a target. It pushes Anre too far out for even Belial 2L to punish, so it sees use as a safe pressure ender after 623L. It can also be delayed to frame trap."
 };
@@ -416,6 +476,8 @@ const mSpearFollowup = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
   description: "623X-6M does slightly more damage than the 6L follow-up and knocks down, making it useful as a combo ender if not used from 623H. Can also be delayed to frame trap."
 };
@@ -429,6 +491,8 @@ const hSpearFollowup = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
   description: "623X-6H is a low and wallbounces when used from 623H, allowing followups in the corner. It also wallbounces on 623L and 623M on CH, so it can be used as a high-risk, high-reward frametrap, but it won't combo from 623L or 623M unless the opponent is crouching."
 };
@@ -442,6 +506,8 @@ const uSpearFollowup = {
   recovery: '-', 
   onblock: '-26', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
   description: "623X-6U is a command dash. It's always unsafe, but it can be used to reset pressure if your opponent is expecting one of the other follow-ups."
 };
@@ -458,6 +524,8 @@ const lRekka = {
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
   description: "M and H versions travel upwards and come back down\nH wallbounces allowing for followups in the corner\nAll versions are safe but will end your turn in pressure"
 };
@@ -471,6 +539,8 @@ const mRekka = {
   recovery: '29', 
   onblock: '+2~-10', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
   description: "M and H versions travel upwards and come back down\nH wallbounces allowing for followups in the corner\nAll versions are safe but will end your turn in pressure"
 };
@@ -484,6 +554,8 @@ const hRekka = {
   recovery: '37', 
   onblock: '+4~-8', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
   description: "M and H versions travel upwards and come back down\nH wallbounces allowing for followups in the corner\nAll versions are safe but will end your turn in pressure"
 };
@@ -497,6 +569,8 @@ const lRekkaAir = {
   recovery: '19', 
   onblock: '-6', 
   onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
   description: "Cooldown is tied to the grounded one.\nIt's a divekick, but he also has one with j.U."
 };
@@ -510,6 +584,8 @@ const mRekkaAir = {
   recovery: '29', 
   onblock: '+2~-10', 
   onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
   description: "Cooldown is tied to the grounded one.\nIt's a divekick, but he also has one with j.U."
 };
@@ -523,6 +599,8 @@ const hRekkaAir = {
   recovery: '37', 
   onblock: '+4~-8', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
   description: "Cooldown is tied to the grounded one.\nIt's a divekick, but he also has one with j.U."
 };
@@ -538,6 +616,8 @@ const sba = {
   recovery: '-', 
   onblock: '-13', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
   description: "Bits will travel full screen"
 };
@@ -551,6 +631,8 @@ const sbaSatelite = {
   recovery: '-', 
   onblock: '-23', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['214', '214', 'h', 'or', '214', 'a'],
   description: "Each bit will fly off when a M or H normal make contact with the opponent. Best in the corner, where it grants him oppressive looping pressure with enhanced c.M.\nBits will do chip damage"
 };
@@ -564,6 +646,8 @@ const ssba = {
   recovery: '-', 
   onblock: '-13', 
   onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
   description: "Full screen projectile\nOnly close range hit will trigger the cinematic for more damage\nCan be super jumped, dodged, or roll to avoid"
 };
