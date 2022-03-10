@@ -1,6 +1,6 @@
 // FINAL 
 
-const general = { char: "Vaseraga", health: '10000', prejump: '4F', backdash: '22F' }
+const general = { char: "Vaseraga", health: '11000', prejump: '5F', backdash: '21F' }
 
 // close normals
 const closeL = {
@@ -330,10 +330,10 @@ const uOverhead = {
 
 // fireballs
 const lFireball = { 
-  moveName: 'L Reginleiv', 
-  altName: '236L', 
+  moveName: 'L Instinction', 
+  altName: '214L', 
   damage: '800', 
-  guard: 'all', 
+  guard: 'All', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
@@ -341,14 +341,14 @@ const lFireball = {
   onhit: '-3',
   oncounterhit: '-',
   clash: '-',
-  motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  motion: ['214', 'l', 'or', 'a'],
+  description: "Fires a ground projectile that travels about half the stage. L/M fireballs do not knockdown without counter hit. M and H versions initiates the skill with a quick close range slash attack. The slash attack launches opponent on hit, giving a knockdown on the M version where it normally wouldn't.\nGood for space control.\nThe light version of the move can be used to control spacing very well in tandem with your long range pokes."
 };
 const mFireball = { 
-  moveName: 'M Reginleiv', 
-  altName: '236M', 
+  moveName: 'M Instinction', 
+  altName: '214M', 
   damage: '400, 800', 
-  guard: 'mid, all', 
+  guard: 'Mid, All', 
   startup: '13', 
   active: '-', 
   recovery: '-', 
@@ -356,14 +356,14 @@ const mFireball = {
   onhit: '0',
   oncounterhit: '-',
   clash: '-',
-  motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  motion: ['214', 'm', 'or', 'a', 'm'],
+  description: "Fires a ground projectile that travels about half the stage. L/M fireballs do not knockdown without counter hit. M and H versions initiates the skill with a quick close range slash attack. The slash attack launches opponent on hit, giving a knockdown on the M version where it normally wouldn't.\nHas a starting hit that launches.\nThe medium version is faster than the light version, allowing you to check certain responses in situations where the light version is too slow."
 };
 const hFireball = { 
-  moveName: 'H Reginleiv', 
-  altName: '236H', 
-  damage: '350 x 3', 
-  guard: 'all', 
+  moveName: 'H Instinction', 
+  altName: '214H', 
+  damage: '400, 800', 
+  guard: 'Mid, All', 
   startup: '15', 
   active: '-', 
   recovery: '-', 
@@ -371,16 +371,16 @@ const hFireball = {
   onhit: '+7',
   oncounterhit: '-',
   clash: '-',
-  motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  motion: ['214', 'h', 'or', 'a', 'h'],
+  description: "Fires a ground projectile that travels about half the stage. L/M fireballs do not knockdown without counter hit. M and H versions initiates the skill with a quick close range slash attack. The slash attack launches opponent on hit, giving a knockdown on the M version where it normally wouldn't.\nHas a starting hit that launches.\nTwo hit EX fireball.\nThe H version is beaten by almost every other H projectile in the game, but is an effective pressure reset since it's so plus."
 };
 
-// dragon punches
-const lUppercut = { 
-  moveName: 'L Rising Sword', 
-  altName: '623L', 
-  damage: '700, 300', 
-  guard: 'mid, all', 
+// Tackle
+const lTackle = { 
+  moveName: 'L Battalions of Fear', 
+  altName: '[4]6L', 
+  damage: '1300', 
+  guard: 'Mid', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -388,14 +388,14 @@ const lUppercut = {
   onhit: 'KD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  motion: ['4', '6', 'l', 'or', '6', 'a'],
+  description: "Charges forward with a tackling attack.\n+9 on block at maximum range.\nFast enough to be used as an ender in certain corner combos, or can be used after certain knockdowns in order to quickly get in top of the enemy before they get up so you can apply okizeme to them."
 };
-const mUppercut = { 
-  moveName: 'M Rising Sword', 
-  altName: '623M', 
-  damage: '700, 300 x 2', 
-  guard: 'mid, all', 
+const mTackle = { 
+  moveName: 'M Battalions of Fear', 
+  altName: '[4]6M', 
+  damage: '1800', 
+  guard: 'Mid', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -403,14 +403,14 @@ const mUppercut = {
   onhit: 'KD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  motion: ['4', '6', 'm', 'or', '6', 'a', 'm'],
+  description: "Charges forward with a tackling attack.\nBriefly delays before charging forward with a tackling attack.\nThis version can be enhanced with Soul Forge armor.\nMedium Battalions is very unsafe on block if you are close to the opponent, so you are best off using this as a counter to a slow poke from the enemy when you have armor ready. As of patch 2.01 it doesn't go as far forward, but has more pushback on block. Making it a safer option at more ranges."
 };
-const hUppercut = { 
-  moveName: 'H Rising Sword', 
-  altName: '623H', 
-  damage: '950~1400', 
-  guard: 'mid, all', 
+const hTackle = { 
+  moveName: 'H Battalions of Fear', 
+  altName: '[4]6H', 
+  damage: '1000x2', 
+  guard: 'Mid', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -418,14 +418,14 @@ const hUppercut = {
   onhit: 'HKD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  motion: ['4', '6', 'h', 'or', '6', 'a', 'h'],
+  description: "Charges forward with a tackling attack.\nBriefly delays before quickly forward with a tackling attack.\nThis version can be enhanced with Soul Forge armor.\nH Battalions travels the farthest of all versions.\n+7 on block at maximum range.\nAlthough H Battalions is less unsafe than M Battalions, it is still fairly negative on block and you will be giving up your turn if you use it."
 };
 
-// rekka
-const lRekka = { 
-  moveName: 'L Overdrive Surge', 
-  altName: '214L', 
+// CmdThrow
+const lCmdThrow = { 
+  moveName: 'L Great Scythe Grynoth', 
+  altName: '632146L', 
   damage: '700', 
   guard: 'mid', 
   startup: '13', 
@@ -436,26 +436,11 @@ const lRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
+  description: "Grabs the opponent using Grynoth and throws them fullscreen. A standard command throw. It's slower than Ladiva's command throws so even 6 framers can consistently mash on it in most situations. You can generally make them block one normal before they get pushed out of command throw range. If you do two or more normals they will be pushed out of range so you will need to walk/run up a bit to get back into range, use Savage Rampage march to get back into range, or use the H version.\n\nDon't forget, you can Great Scythe while in Savage Rampage stance!\nCommand grab."
 };
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
-};
-const mRekka = { 
-  moveName: 'M Overdrive Surge', 
-  altName: '214M', 
+const mCmdThrow = { 
+  moveName: 'M Great Scythe Grynoth', 
+  altName: '632146M', 
   damage: '1200', 
   guard: 'mid', 
   startup: '16', 
@@ -466,11 +451,11 @@ const mRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Grabs the opponent using Grynoth and throws them fullscreen. A standard command throw. It's slower than Ladiva's command throws so even 6 framers can consistently mash on it in most situations. You can generally make them block one normal before they get pushed out of command throw range. If you do two or more normals they will be pushed out of range so you will need to walk/run up a bit to get back into range, use Savage Rampage march to get back into range, or use the H version.\n\nDon't forget, you can Great Scythe while in Savage Rampage stance!\nAnti-air command grab.\nThis move is important because it covers 2H blind spot while also being faster. This version can also be incorporated into combos as a non-EX HKD ender."
 };
-const hRekka = { 
-  moveName: 'H Overdrive Surge', 
-  altName: '214H', 
+const hCmdThrow = { 
+  moveName: 'H Great Scythe Grynoth', 
+  altName: '632146H', 
   damage: '1200', 
   guard: 'mid', 
   startup: '13', 
@@ -481,14 +466,121 @@ const hRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Grabs the opponent using Grynoth and throws them fullscreen. A standard command throw. It's slower than Ladiva's command throws so even 6 framers can consistently mash on it in most situations. You can generally make them block one normal before they get pushed out of command throw range. If you do two or more normals they will be pushed out of range so you will need to walk/run up a bit to get back into range, use Savage Rampage march to get back into range, or use the H version.\n\nDon't forget, you can Great Scythe while in Savage Rampage stance!\nGrabs the opponent using Grynoth and throws them fullscreen.\nThe H version of Great Scythe slides forwards before the command grab becomes active. Massive range but much slower than the L version at 26 frames. You generally want to use this version in situations where marching or running back into range of L command throw will take too long such as a blocked spaced tackle or a blocked EX fireball from not point blank range."
 };
+
+const lStep = {
+  moveName: 'L Savage Rampage', 
+  altName: '22L', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: "Savage Rampage > 66 makes Vaseraga marches forward hitting with each slow step. The slow speed of the steps combined with their low hitstun means that the steps of march will not combo into each other on block or on hit. The EX version of March is faster than the normal version.\nSavage Rampage > 44 makes Vaseraga exits stance.\nInitiates vaseraga's Savage Stance which can be followed up with additional inputs or canceled with 44. Great Scythe Grynoth can be used during Stance, especially scary during EX Stance due to the walking hitboxes.\nTransitions to Stance in place.\nL Savage Rampage is useful in anti-air combos because it allows him to follow up after 2H without putting Savage Rampage on cooldown, and does not move Vaseraga away from the enemy like H version does."
+}
+const mStep = {
+  moveName: 'M Savage Rampage', 
+  altName: '22M', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
+  description: "Savage Rampage > 66 makes Vaseraga marches forward hitting with each slow step. The slow speed of the steps combined with their low hitstun means that the steps of march will not combo into each other on block or on hit. The EX version of March is faster than the normal version.\nSavage Rampage > 44 makes Vaseraga exits stance.\nInitiates vaseraga's Savage Stance which can be followed up with additional inputs or canceled with 44. Great Scythe Grynoth can be used during Stance, especially scary during EX Stance due to the walking hitboxes.\nTakes a slight step backwards while transitioning.\nM Savage Rampage has limited use in combos because it moves Vaseraga away from the enemy, but it is useful in neutral since he can out-range many pokes with his followups."
+}
+const hStep = {
+  moveName: 'H Savage Rampage', 
+  altName: '22H', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: "Savage Rampage > 66 makes Vaseraga marches forward hitting with each slow step. The slow speed of the steps combined with their low hitstun means that the steps of march will not combo into each other on block or on hit. The EX version of March is faster than the normal version.\nSavage Rampage > 44 makes Vaseraga exits stance.\nInitiates vaseraga's Savage Stance which can be followed up with additional inputs or canceled with 44. Great Scythe Grynoth can be used during Stance, especially scary during EX Stance due to the walking hitboxes.\nImmediately begins the 66 stomps after the move begins.\nCan be canceled into followup moves before any stomps come out.\nH Savage Rampage is often used as combo filler because many moves combo into 22H~H which grants a knockdown and leaves Vaseraga close to the enemy for strong okizeme."
+}
+
+const lStepFollowup = {
+  moveName: 'Rising Slash', 
+  altName: '22X -> L', 
+  damage: '1500', 
+  guard: 'Mid', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'l', 'or', '2', 'a', 'l'],
+  description: "Swings Grynoth in a high slash, hitting both airborne foes and those standing nearby. This is the fastest move Vaseraga has from stance. This move does not hit crouching foes. If done from EX stance 22H, it's +8 on block. Due to the low recovery, when used as a frametrap during march, it will often leave you plus on spot dodge, allowing you to keep your turn or in the EX version's case punish the spot dodge\nCan be held to adjust the release timing. Useful for adapting to the opponent's air movement during your startup."
+}
+const mStepFollowup = {
+  moveName: 'Sweeping Slash', 
+  altName: '22X -> M', 
+  damage: '1500', 
+  guard: 'Low', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'm', 'or', '2', 'a', 'm'],
+  description: "Swings Grynoth in a low sweep, knocking down any standing foes nearby. This move can be used to catch a foe attempting to back out range. If done from EX stance 22H, it's safe on block at -4. This is the longest ranged move Vaseraga has in stance. It also has the most active frames, allowing you to tag opponents quite easily for bad spacing/not blocking low."
+}
+const hStepFollowup = {
+  moveName: 'Crushing Strike', 
+  altName: '22X -> H', 
+  damage: '2000', 
+  guard: 'Mid', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'h', 'or', '2', 'a', 'h'],
+  description: "Swings Grynoth in a vertical downward slash, causing guard crush when fully charged.\n22H~H is a very important part of Vaseraga's kit. The move is safe on block and can be granted armor by Soul Forge. These properties encourage the enemy to attempt to poke out of it in order to avoid the guard crush, which you can punish by releasing the button to hit them before they break your armor however there is a specific timing to spotdodge that will allow them to avoid the guard crush and punish. The move is also prominently used as filler in his corner 214X loops, and as an ender in the corner BnB combo. Effective use of this move is essential for Vaseraga players. Outside of combos, it is your main frametrap option while in stance. If this move counter hits the opponent or catch them while airborne it will lead into game ending damage."
+}
+const uStepFollowup = {
+  moveName: 'Ravaging Stomp', 
+  altName: '22X -> U', 
+  damage: '2000', 
+  guard: 'Mid', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'u', 'or', '2', 'a', 'u'],
+  description: "Stomps on Grynoth unleashing a damaging blast. This skill has armor properties independent of Soul Forge and will armor any number of hits until active. This followup is significantly more unsafe on block than the H followup, a property that when combined with its unique armor property, means that it is intended to be used as a bait and punish against enemy reversals when you do not already have armor ready. When you have Soul Forge already, the 2 hits act as a buffer you can use to react to the hitstop of multi-hitting reversals and score a punish. This takes a lot of practice, but it will make Savage Rampage even more threatening.\nThis move also serves as a necessary defense against opponents simply using SBA/SSBA against you in stance. While experienced opponents know better than to try, never forget to simply push U against newcomers trying to beat your stance with supers."
+}
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Bloody Moon', 
   altName: '236236H', 
-  damage: '2500-3500', 
+  damage: '2600-3900', 
   guard: 'mid', 
   startup: '6+5', 
   active: '-', 
@@ -498,12 +590,12 @@ const sba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Charges forward with a powerful advancing attack. If you are close enough, the Skybound Art will go into an animation for max damage. This skill has invincibility properties and advances considerably forward, but it is not the most reliable option against fireballs. This super converts very well from f.L/f.M/f.H so long as you are not at absolute max range, but you will not get max damage in these situations. If you trigger the full animation, it will add a massive amount of damage to his combos. A versatile Skybound Art all things considered."
 };
 const ssba = { 
   moveName: 'Catastrophe', 
   altName: '236236U', 
-  damage: '3500-4500', 
+  damage: '3500-5000', 
   guard: 'all', 
   startup: '8+5', 
   active: '-', 
@@ -513,7 +605,7 @@ const ssba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Moves slightly forward and unleashes a moderately sized vertical burst attack, sending any foes caught in it flying. Has armor during the start-up, which means it is significantly harder to safejump by normal means. However, hitbox is smaller than it appears, especially horizontally, making this super difficult to use in neutral or as a reversal option. Is a poor reversal compared with Bloody Moon, as the armor on the move's start-up is treated the same as blocking an attack. This means that if their button makes contact early enough and can get through hitstop of their attack, the opponent can dodge to avoid the Vaseraga's super and get a significant punish. Despite these flaws, this super does massive damage and is good anti air in a lot of situations his 2H would hit, however you need to be quick to react."
 };
 
 
@@ -536,23 +628,25 @@ export const vaseragaInfo = [
   jH,
   jU,
   lv1U,
-  lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
   groundThrow,
   airThrow,
   uOverhead,
   lFireball,
   mFireball,
   hFireball,
-  lUppercut,
-  mUppercut,
-  hUppercut,
-  lRekka,
-  followupRekka,
-  mRekka,
-  hRekka,
+  lTackle,
+  mTackle,
+  hTackle,
+  lCmdThrow,
+  mCmdThrow,
+  hCmdThrow,
+  lStep,
+  mStep,
+  hStep,
+  lStepFollowup,
+  mStepFollowup,
+  hStepFollowup,
+  uStepFollowup,
   sba,
   ssba
 ]
