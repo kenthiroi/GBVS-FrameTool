@@ -6,8 +6,8 @@ const general = { char: "Vaseraga", health: '10000', prejump: '4F', backdash: '2
 const closeL = {
   moveName: 'Close Light',
   altName: 'cL',
-  damage: '400',
-  guard: 'mid',
+  damage: '500',
+  guard: 'Mid',
   startup: '5',
   active: '3',
   recovery: '6',
@@ -16,13 +16,13 @@ const closeL = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "Close range jab. Slower than typical c.L moves but more plus."
 };
 const closeM = {
   moveName: 'Close Medium',
   altName: 'cM',
-  damage: '700',
-  guard: 'mid',
+  damage: '800',
+  guard: 'Mid',
   startup: '6',
   active: '3',
   recovery: '10',
@@ -31,13 +31,13 @@ const closeM = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "Excellent c.M. Pretty solid range, relatively quick, good damage, plus on block, and great value on counter hit or crouching if you can react fast enough. In patch 2.01, the pushback was reduced. Making it easier to tick throw with and making combos more consistent."
 };
 const closeH = {
   moveName: 'Close Heavy',
   altName: 'cH',
-  damage: '1200',
-  guard: 'mid',
+  damage: '1500',
+  guard: 'Mid',
   startup: '8',
   active: '4',
   recovery: '18',
@@ -46,14 +46,14 @@ const closeH = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Extremely damaging c.H but is equally slow. Charging this move doesn't change any of its properties, however if you have Soul Forge active, the armor will cover you as long as you hold the button (this goes for all charged H normals). One of only two moves that combo into 214L or [4]6M on normal hit, leading to some pretty strong combos. This normal has a massive amount of blockstun, which makes it one of the safest ways on going into Savage Rampage without using the EX version."
 };
 
 // auto combos
 const auto1 = {
   moveName: 'Auto Combo 2nd hit',
   altName: 'cXX',
-  damage: '350',
+  damage: '400',
   guard: 'mid',
   startup: '-',
   active: '-',
@@ -63,12 +63,12 @@ const auto1 = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Nothing too special about these normals. They can be used to set up frame traps with some specials or used to adjust height in juggles, but nothing is too special about them otherwise. Mostly combo and blockstring filler."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
   altName: 'cXXX',
-  damage: '350',
+  damage: '400',
   guard: 'mid',
   startup: '-',
   active: '-',
@@ -78,15 +78,15 @@ const auto2 = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Nothing too special about these normals. They can be used to set up frame traps with some specials or used to adjust height in juggles, but nothing is too special about them otherwise. Mostly combo and blockstring filler."
 };
 
 // far normals
 const far5L = {
   moveName: 'Far Light',
   altName: 'f5L',
-  damage: '400',
-  guard: 'mid',
+  damage: '700',
+  guard: 'Mid',
   startup: '6',
   active: '3',
   recovery: '13',
@@ -95,13 +95,13 @@ const far5L = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "An excellent poke and one of Vaseraga's best attacks. Great range, damage, and recovery. It is highly safe to press f.L at its optimal range and, despite being only +1 block, can often be used successively due to outranging the opponent's quicker pokes. Combos into itself on CH for easy confirms, and can combo into 22H on any hit."
 };
 const far5M = {
   moveName: 'Far Medium',
   altName: 'f5M',
-  damage: '700',
-  guard: 'mid',
+  damage: '900',
+  guard: 'Mid',
   startup: '8',
   active: '3',
   recovery: '18',
@@ -110,13 +110,13 @@ const far5M = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "A slower f.L with slightly more damage and range, but much worse on block and whiff. While it's hard to find links using this move, you do get substantially more damage on counter hit than you do with f.L, so this is mainly used as either a punish button or a ranged poke when you know f.L won't hit."
 };
 const far5H = {
   moveName: 'Far Heavy',
   altName: 'f5H',
-  damage: '1000',
-  guard: 'mid',
+  damage: '1300',
+  guard: 'Mid',
   startup: '10',
   active: '5',
   recovery: '20',
@@ -125,7 +125,7 @@ const far5H = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "High commitment poke with huge range and damage.\nCan be charged to manipulate timing. Soul Forge armor will activate during a charged attack.\nThere is no damage or frame data benefit from charging.\nHits from round start distance, so you can sometimes bully aggressive round start options."
 };
 
 // regular normals
@@ -133,7 +133,7 @@ const n2L = {
   moveName: 'Crouch Light',
   altName: '2L',
   damage: '400',
-  guard: 'mid',
+  guard: 'Mid',
   startup: '6',
   active: '3',
   recovery: '6',
@@ -142,13 +142,13 @@ const n2L = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Vaseraga's fastest normal. Surprisingly good hitbox considering the animation. Not nearly as good of a setup tool as c.L or c.M, but you'll probably use this primarily on abare or some weird combos that need specifically a 6 frame button. Hard to combo after, but does cancel into c.L if you're close enough."
 };
 const n2M = {
   moveName: 'Crouch Medium',
   altName: '2M',
   damage: '700',
-  guard: 'mid',
+  guard: 'Low',
   startup: '7',
   active: '5',
   recovery: '9',
@@ -157,12 +157,12 @@ const n2M = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "2M serves as Vaseraga's practical sweep, as opposed to his 2U input, which is used more for poking. This is one of Vaseraga's best starters midscreen, especially on counter hit."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
   altName: '2H',
-  damage: '1000',
+  damage: '1100',
   guard: 'mid',
   startup: '10',
   active: '6',
@@ -172,12 +172,12 @@ const n2H = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Vaseraga's monster of an anti air.\nExcellent hitbox with one key flaw: it does not cover directly above you. This makes it unable to prevent cross-ups or well-spaced super jumps.\nAlways combos into 22L -> L regardless of counterhit.\nOn counterhit, can be confirmed into the highest damage combos in the game.\nHigh hitstun in combos allows you to combo 22X -> H.\nCan be charged and doing so will activate Soul Forge armor. This feature, combined with Vaseraga's small hurtbox during startup, allows 2H to be used to call out certain DPs when spaced and cover more options when people are jumping at you."
 };
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
-  damage: '700',
+  damage: '900',
   guard: 'mid',
   startup: '7',
   active: '6',
@@ -187,7 +187,7 @@ const n2U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Slow sweep with extremely long range. Gives a good knockdown but the slow startup makes it a poor choice at close range. Great for long ranged pokes, especially since you can cancel it into L Battalions of Fear to close the gap or Savage Rampage to set up some pressure."
 };
 
 // jump normals
@@ -204,12 +204,12 @@ const jL = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Large vertical hitbox and short startup makes this useful for safejumps or scrambles. Has a persisting hitbox but can only hit once per jump.\nThis is the only air normal that will hit behind Vaseraga during a cross-up."
 };
 const jM = { 
   moveName: 'Jump Medium', 
   altName: 'jM', 
-  damage: '550', 
+  damage: '700', 
   guard: 'high', 
   startup: '6', 
   active: '-', 
@@ -219,12 +219,12 @@ const jM = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Vaseraga's primary jumping attack, with large horizontal range. Quick startup for its range allows for easy whiff punishes."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
   altName: 'jH', 
-  damage: '800', 
+  damage: '900', 
   guard: 'high', 
   startup: '7', 
   active: '-', 
@@ -234,12 +234,12 @@ const jH = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "The hitbox starts below Vaseraga but extends far upward. While you will usually opt for j.M, this attack can replace it at closer range for higher damage confirms. In specific matchups this can help prevent an opponent's jump-out attempt as you approach."
 };
 const jU = { 
   moveName: 'Jump Unique', 
   altName: 'jU', 
-  damage: '700', 
+  damage: '800', 
   guard: 'high', 
   startup: '12', 
   active: '-', 
@@ -249,13 +249,13 @@ const jU = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Vaseraga's aerial Unique Action, used only for extremely specific purposes. This move does not normally combo into anything or provide any advantage outside of counter-hit. Its purpose is to give Vaseraga the ability to back out of a jump early in order to avoid predictable anti-airs\n\nVaseraga will briefly stall his air momentum, then falls down. The hitbox comes out when he lands.\nYou can exploit the pause in air momentum to manipulate your fall timing, enabling you to jump over fireballs you wouldn't normally. The most basic technique that utilizes this move is to jump backward then use j.U to prevent a fireball hitting you.\n0 or -1 on depending on how close you are when the hitbox comes out, and is not cancellable."
 };
 
 // unique action
 const lv1U = { 
-  moveName: 'Power Raise Lv1', 
-  altName: '5ULv1', 
+  moveName: 'Soul Forge', 
+  altName: '5U', 
   damage: '1000', 
   guard: 'mid', 
   startup: '22', 
@@ -266,67 +266,7 @@ const lv1U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Activates an aura that gives 2 hits of armor on specific moves. Can be safely used after a knockdown before applying okizeme. Attacks hitting Vaseraga while he's armored will have damage reduced by 50%\n\nThe two hits of armor are activated on any of the following skills or attacks:\n\nCharged grounded H attacks. You can still use them and preserve the armor buff so long as you don't charge them.\nSoul Forge itself\nBattalions of Fear (M/H)\nSavage Rampage (including follow-up Skills and March)\nSoul Forge itself is, in fact, one of the strongest moves to use the armor buff on, as it leads to a full c.H confirm upon successful hit at close range, whether it counters or not -- not to mention it also reapplies armor immediately. It requires a counter-hit to combo on jumping confirms, but it is air unblockable. Combined with 2 hits of armor makes it a effective anti-air when 2H won't cut it.\n\nThe startup until Soul Forge becomes armored is 5F. This is a critical aspect of Vaseraga's matchups, because his fastest jab, 2L, is only 6F."
 };
 
 const groundThrow = { 
@@ -341,7 +281,21 @@ const groundThrow = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: ""
+};
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['4', 'l', 'm', 'or', '4', 'l', 'u'],
+  description: ""
 };
 const airThrow = { 
   moveName: 'Air Throw', 
@@ -371,7 +325,7 @@ const uOverhead = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: ""
 };
 
 // fireballs
