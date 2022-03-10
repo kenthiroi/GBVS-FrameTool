@@ -16,7 +16,7 @@ const closeL = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "Zeta attacks with the back of her spear. Her fastest normal, and a good normal for pressure that allows you link into other moves or hit confirm directly using the autocombo.\n\nLinks into 2L, f.L and c.M on regular hit, and 2U on crouching.\nGenerally requires at least one auto-combo hit to comfortably combo into any specials on cancel."
 };
 const closeM = {
   moveName: 'Close Medium',
@@ -31,7 +31,7 @@ const closeM = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "Knee to the face. Combos from c.L and 2L naturally and is her best route out of a close light hit. The autocombo out of this can be used to hit confirm or end blockstrings safely, but pressing this generally ends your turn."
 };
 const closeH = {
   moveName: 'Close Heavy',
@@ -46,7 +46,7 @@ const closeH = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Zeta's optimal damage starter at close range. Safe on block, so can be occasionally used as a callout meaty or as a delayed frametrap option.\nHas some very niche applications as a close range anti-air, but in general 2H is your go-to option at close range.\nLinks into itself or f.H on counter hit, depending on range.\nCombos into nearly all of Zeta's specials, including meterless Rhapsody followups, but does not combo into H Infinite Wonders (at least one auto-combo hit is still required without counter-hit)."
 };
 
 // auto combos
@@ -63,7 +63,7 @@ const auto1 = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Standard auto combo normals. The first hit of auto combo is generally required to combo into H Infinite Wonders without counter-hit, which somewhat gates her maximum damage. Performing the full auto combo can be occasionally useful in some of Zeta's more specific juggles, but in general it should be avoided in order to not reduce the damage and increase the combo limit\n\nAuto combo on block canceled into 5U is a true blockstring and can be a good way to push the opponent into the corner, even on block.\n2nd hit of autocombo can usually hit airborne opponents, while the 3rd hit tends to whiff due to the hitbox not being high enough.\nUpon hitting an airborne opponent with a close normal, the second hit of autocombo can be used for a bigger confirm window. Confirms into Spear of Arvess (Rise) in this scenario, though other specials may work depending on height. Resolute Strike will whiff on opponents that are too high.\nThis scenario will likely happen against opponents that jump out of pressure or fuzzy jump."  
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
@@ -78,7 +78,7 @@ const auto2 = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Standard auto combo normals. The first hit of auto combo is generally required to combo into H Infinite Wonders without counter-hit, which somewhat gates her maximum damage. Performing the full auto combo can be occasionally useful in some of Zeta's more specific juggles, but in general it should be avoided in order to not reduce the damage and increase the combo limit\n\nAuto combo on block canceled into 5U is a true blockstring and can be a good way to push the opponent into the corner, even on block.\n2nd hit of autocombo can usually hit airborne opponents, while the 3rd hit tends to whiff due to the hitbox not being high enough.\nUpon hitting an airborne opponent with a close normal, the second hit of autocombo can be used for a bigger confirm window. Confirms into Spear of Arvess (Rise) in this scenario, though other specials may work depending on height. Resolute Strike will whiff on opponents that are too high.\nThis scenario will likely happen against opponents that jump out of pressure or fuzzy jump."  
 };
 
 // far normals
@@ -95,7 +95,7 @@ const far5L = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "Zeta kicks in front of her. This normal is fast and has good range for a light normal, but Zeta's foot will whiff on crouchers, low-profiling moves, and shorter characters like Charlotta. Use with caution when poking.\nCombos into L or H Spear of Arvess, with the former being somewhat inconsistent at further ranges."
 };
 const far5M = {
   moveName: 'Far Medium',
@@ -110,7 +110,7 @@ const far5M = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "One of Zeta's main pokes. f.M allows Zeta to control the mid range by poking the opponent and intercepting approach attempts thanks to the range it has. The slow speed can make it somewhat more awkward to use inside of its max range, where other characters' pokes may be faster, but at tip range it can outrange many similar medium pokes from other characters.\n\nCombos into L or H Spear of Arvess. From absolute max range, H Spear of Arvess is required to get a combo.\nCan be cancelled into L Infinite Wonders on block for chip damage, or 5U to harass the opponent for some minor push into the corner."
 };
 const far5H = {
   moveName: 'Far Heavy',
@@ -125,7 +125,7 @@ const far5H = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Very similar f.H to some of the shoto characters like Gran and Djeeta. Being faster than f.M, it is generally one of Zeta's best whiff punish options as well as being useful for crushing lower priority pokes pre-emptively.\nHas applications as a far anti-air against jumps where 2H would whiff, and is surprisingly consistent in this context.\nRange is somewhat worse than f.M and 2M in favor of heavy priority.\nCombos into all versions of Spear of Arvess. M Spear of Arvess is optimal but may not combo from further ranges, so be aware of your spacing."
 };
 
 // regular normals
@@ -133,7 +133,7 @@ const n2L = {
   moveName: 'Crouch Light',
   altName: '2L',
   damage: '400',
-  guard: 'mid',
+  guard: 'Low',
   startup: '6',
   active: '3',
   recovery: '6',
@@ -142,7 +142,7 @@ const n2L = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Zeta's best pressure normal. Hits low, range and can link into itself up to 3 times if started from a running hit. Good use of this in stagger and throw pressure is Zeta's main way of opening up opponents without pogo mixup.\nLinks into c.L, f.L, and c.M on normal hit.\nLinks into 2U on crouching hit. Important for crouching confirms since f.L will whiff on crouchers. Confirming 2 of these normals into f.L or 2U depending on the opponent's standing or crouching state is an important route for Zeta's pressure to be rewarding.\nSees use in pogo okizeme as a surprise low option."
 };
 const n2M = {
   moveName: 'Crouch Medium',
@@ -157,13 +157,13 @@ const n2M = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Zeta's other main poke, in tandem with f.M. This normal has slightly worse range than the standing variant but is faster, and is her main method of checking Cross Overs or dashes from a distance. The faster speed also makes this normal a very strong whiff punish option in tandem with f.H\n\nCombos into L or H Spear of Arvess. L Spear is generally consistent outside of hitting extended hurtboxes, such as on a whiff punish.\nCan be cancelled into L Infinite Wonders on block for chip damage, or 5U to harass the opponent for some minor push into the corner."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
   altName: '2H',
   damage: '1000',
-  guard: 'mid',
+  guard: 'Mid',
   startup: '10',
   active: '6',
   recovery: '24',
@@ -172,13 +172,13 @@ const n2H = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Zeta's main anti-air is scarily consistent at close range. The short horizontal range means it can be baited by far jumps and empty jumps, which can leave you open to whiff punishment, but in close range, it will beat jump attacks.\n\nCombos into Spear of Arvess (Rise) consistently, regardless of counter hit, granting her some of the most consistent anti-air conversions in the game. The version used will depend on the angle the opponent is anti-aired, with L and H being better when the opponent is in front of you, and M being better when the opponent is above or behind you.\nCan juggle into f.H on counter hit, which can be useful for better corner carry or as an alternative conversion if Spear of Arvess (Rise) is on cooldown."
 };
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
-  damage: '700',
-  guard: 'mid',
+  damage: '300, 600',
+  guard: 'Low',
   startup: '7',
   active: '6',
   recovery: '21',
@@ -187,7 +187,7 @@ const n2U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Zeta's sweep. The 2-hit nature of this sweep make it a unique, if somewhat specific move. The long animation makes this move very dangerous to whiff, but the fast startup on the first hit makes this one of Zeta's best close-range punish starters, such as on moves like Charlotta's Holy Ladder. Like most 2Us, this grants a hard knockdown and an easily timed safe jump after, being one of Zeta's preferred combo enders to start her pogo okizeme\n\nBoth hits are a true blockstring and cannot be interrupted, but you must manually block both hits low.\nBoth hits are special cancelable.\nCombos into L and H Spear of Arvess. L Spear tends to be pretty finnicky outside of point blank range, so when in doubt, use H instead.\nCan be kept safe on block by cancelling into L Infinite Wonders, but this cancel can be avoided with Cross Over and punished.\nThe 2 hits make this one of Zeta's easiest single-hit confirms into her Skybound Art."
 };
 
 // jump normals
@@ -204,7 +204,7 @@ const jL = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Relatively standard j.L that is active until landing.\n\nCan be used to catch opponents jumping out of pressure, or moves like Lancelot's H Turbulenz.\nSees some use in Zeta's safe jump okizeme to as an alternative to j.U in order to setup blockstrings into an immediate low, such as j.L into 2U."
 };
 const jM = { 
   moveName: 'Jump Medium', 
@@ -219,7 +219,7 @@ const jM = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Zeta's best crossup normal. Has to hit relatively deep to be able to link into grounded normals.\n\nRhapsody's H followup into this normal can be a somewhat gimmicky method of escaping a bad situation and creating counter-pressure.\nSees use in Zeta's pogo okizeme as a method to confirm into her air Skybound Art or as a frametrap option after a j.U."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
@@ -234,7 +234,7 @@ const jH = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "Zeta's longest ranged, highest damage jump normal. Easiest to link into a combo on landing.\n\nCan be used for some far midscreen safejumps.\nSees use in Zeta's pogo okizeme as a frametrap option after a j.U.\nAlso used as combo filler after combos using Rhapsody's H followup in the corner."
 };
 const jU = { 
   moveName: 'Jump Unique', 
@@ -249,14 +249,14 @@ const jU = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Shades of Chun-Li. This normal can be repeated up to twice on hit or block, but only the first hit is an overhead. This concept forms the crux of Zeta's okizeme and offensive mixup\n\nCarries the opponent up with you on hit, but it only moves you upwards on block.\nWhen performed midscreen, the later j.Us in the sequence can cross-up the opponent, though this can be option selected with the Guard button.\nWhen the first j.U is performed low enough, all 3 j.Us in the sequence will be safe to reversals, and not just the first.\nAny jump normal can be performed after a j.U hits or is blocked, which can create frametraps on block.\nPogo sequence can be dropped, allowing Zeta to land and perform a low-hitting 2L to catch an opponent attempting to block the full sequence.\n2 hits of j.U into j.M can be used to confirm Zeta's air Skybound Art, letting her confirm out of her pogo okizeme very easily without a grounded combo."
 };
 
 // unique action
 const lv1U = { 
-  moveName: 'Power Raise Lv1', 
+  moveName: 'Signo Drive Lv1', 
   altName: '5ULv1', 
-  damage: '1000', 
+  damage: '300, 100xN', 
   guard: 'mid', 
   startup: '22', 
   active: '9', 
@@ -266,12 +266,12 @@ const lv1U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Zeta stabs repeatedly with Arvess. This move's duration can be extended by mashing the input. Signo Drive's main purpose is to push the opponent into the corner and into Zeta's optimal poking range. This leaves the opponent standing, so they can be checked with far normals after to keep them in place\n\nDoes not deal any chip damage on block\nMashing the move fully leaves Zeta plus on block, but generally too far to exploit the frame advantage thoroughly\nFinal hits may begin to whiff if mashed too long on block\nUseful alternative as a cancel from far pokes if Spear of Arvess is on cooldown for extra damage and corner carry\nUsing Rhapsody directly after this is blocked can catch antsy opponents attempting to poke out of Zeta's pressure"
 };
 const lv2U = { 
-  moveName: 'Power Raise Lv2', 
+  moveName: 'Signo Drive Lv2', 
   altName: '5ULv2', 
-  damage: '1200', 
+  damage: '300, 100xN', 
   guard: 'mid', 
   startup: '22', 
   active: '9', 
@@ -281,12 +281,12 @@ const lv2U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Zeta stabs repeatedly with Arvess. This move's duration can be extended by mashing the input. Signo Drive's main purpose is to push the opponent into the corner and into Zeta's optimal poking range. This leaves the opponent standing, so they can be checked with far normals after to keep them in place\n\nDoes not deal any chip damage on block\nMashing the move fully leaves Zeta plus on block, but generally too far to exploit the frame advantage thoroughly\nFinal hits may begin to whiff if mashed too long on block\nUseful alternative as a cancel from far pokes if Spear of Arvess is on cooldown for extra damage and corner carry\nUsing Rhapsody directly after this is blocked can catch antsy opponents attempting to poke out of Zeta's pressure"
 };
 const lv3U = { 
-  moveName: 'Power Raise Lv3', 
+  moveName: 'Signo Drive Lv3', 
   altName: '5ULv3', 
-  damage: '1400', 
+  damage: '300, 100xN', 
   guard: 'mid', 
   startup: '22', 
   active: '9', 
@@ -296,12 +296,12 @@ const lv3U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Zeta stabs repeatedly with Arvess. This move's duration can be extended by mashing the input. Signo Drive's main purpose is to push the opponent into the corner and into Zeta's optimal poking range. This leaves the opponent standing, so they can be checked with far normals after to keep them in place\n\nDoes not deal any chip damage on block\nMashing the move fully leaves Zeta plus on block, but generally too far to exploit the frame advantage thoroughly\nFinal hits may begin to whiff if mashed too long on block\nUseful alternative as a cancel from far pokes if Spear of Arvess is on cooldown for extra damage and corner carry\nUsing Rhapsody directly after this is blocked can catch antsy opponents attempting to poke out of Zeta's pressure"
 };
 const lv4U = { 
-  moveName: 'Power Raise Lv4', 
+  moveName: 'Signo Drive Lv4', 
   altName: '5ULv4', 
-  damage: '1600', 
+  damage: '300, 100xN', 
   guard: 'mid', 
   startup: '22', 
   active: '9', 
@@ -311,12 +311,12 @@ const lv4U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Zeta stabs repeatedly with Arvess. This move's duration can be extended by mashing the input. Signo Drive's main purpose is to push the opponent into the corner and into Zeta's optimal poking range. This leaves the opponent standing, so they can be checked with far normals after to keep them in place\n\nDoes not deal any chip damage on block\nMashing the move fully leaves Zeta plus on block, but generally too far to exploit the frame advantage thoroughly\nFinal hits may begin to whiff if mashed too long on block\nUseful alternative as a cancel from far pokes if Spear of Arvess is on cooldown for extra damage and corner carry\nUsing Rhapsody directly after this is blocked can catch antsy opponents attempting to poke out of Zeta's pressure"
 };
 const lv5U = { 
-  moveName: 'Power Raise Lv5', 
+  moveName: 'Signo Drive Lv5', 
   altName: '5ULv5', 
-  damage: '2000', 
+  damage: '300, 100xN', 
   guard: 'mid', 
   startup: '22', 
   active: '9', 
@@ -326,7 +326,7 @@ const lv5U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Zeta stabs repeatedly with Arvess. This move's duration can be extended by mashing the input. Signo Drive's main purpose is to push the opponent into the corner and into Zeta's optimal poking range. This leaves the opponent standing, so they can be checked with far normals after to keep them in place\n\nDoes not deal any chip damage on block\nMashing the move fully leaves Zeta plus on block, but generally too far to exploit the frame advantage thoroughly\nFinal hits may begin to whiff if mashed too long on block\nUseful alternative as a cancel from far pokes if Spear of Arvess is on cooldown for extra damage and corner carry\nUsing Rhapsody directly after this is blocked can catch antsy opponents attempting to poke out of Zeta's pressure"
 };
 
 const groundThrow = { 
@@ -341,7 +341,21 @@ const groundThrow = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "Zeta kicks and then throws the opponent full screen. Grants a hard knockdown, so she can dash up for okizeme despite the distance. In the corner, an immediate high jump will grant an easy safejump to start pogo okizeme."
+};
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['4', 'l', 'm', 'or', '4', 'l', 'u'],
+  description: "Zeta kicks and then throws the opponent full screen. Grants a hard knockdown, so she can dash up for okizeme despite the distance. In the corner, an immediate high jump will grant an easy safejump to start pogo okizeme."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
@@ -355,7 +369,7 @@ const airThrow = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Zeta throws the opponent down to the ground in front of her. Useful as an air-to-air option or against opponents with strong anti-air baiting options. A neutral jump after this will grant a safejump for pogo okizeme."
 };
 
 const uOverhead = { 
@@ -371,12 +385,12 @@ const uOverhead = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Zeta's overhead. Necessary to use in tandem with her throw to open up opponents without pogo okizeme. Expect to use this a lot.\n\nLike all overheads, will avoid throws and counter hit punish them, leading to massive, optimal combos on a throw bait.\nWill also avoid throws defensively, granting strong punishes on a defensive throw read. Useful, since Zeta's reversal loses to throws.\nIf timed meaty enough, can link into light normals without counter hit."
 };
 
 // fireballs
 const lFireball = { 
-  moveName: 'L Reginleiv', 
+  moveName: 'L Infinite Wonders', 
   altName: '236L', 
   damage: '800', 
   guard: 'all', 
@@ -388,10 +402,10 @@ const lFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Zeta's projectile. The slow startup and recovery make this projectile a high commitment, but the near-instant travel time allows it to blow through every other projectile in the game, even H projectiles. While it is only safe from about 3/4ths screen or further, proper use of this projectile will allow you to get into Zeta's poking range more easily, as you frustrate your opponents out of using their projectile, or entice them to jump. NO LONGER BLOWS THOUGH PROJECTILES AS OF LATEST PATCH\nIt's a beam.\nThe fastest version, in both startup and recovery. Main version to use generically."
 };
 const mFireball = { 
-  moveName: 'M Reginleiv', 
+  moveName: 'M Infinite Wonders', 
   altName: '236M', 
   damage: '400, 800', 
   guard: 'mid, all', 
@@ -403,10 +417,10 @@ const mFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Zeta's projectile. The slow startup and recovery make this projectile a high commitment, but the near-instant travel time allows it to blow through every other projectile in the game, even H projectiles. While it is only safe from about 3/4ths screen or further, proper use of this projectile will allow you to get into Zeta's poking range more easily, as you frustrate your opponents out of using their projectile, or entice them to jump. NO LONGER BLOWS THOUGH PROJECTILES AS OF LATEST PATCH\nSlower startup.\nCan be delayed by holding down the button.\nThe delayed version can catch antsy opponents attempting to Dodge or Cross Over through the beam. Knocks down (and wall-bounces) on counter hit, allowing Zeta to approach."
 };
 const hFireball = { 
-  moveName: 'H Reginleiv', 
+  moveName: 'H Infinite Wonders', 
   altName: '236H', 
   damage: '350 x 3', 
   guard: 'all', 
@@ -418,15 +432,15 @@ const hFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Zeta's projectile. The slow startup and recovery make this projectile a high commitment, but the near-instant travel time allows it to blow through every other projectile in the game, even H projectiles. While it is only safe from about 3/4ths screen or further, proper use of this projectile will allow you to get into Zeta's poking range more easily, as you frustrate your opponents out of using their projectile, or entice them to jump. NO LONGER BLOWS THOUGH PROJECTILES AS OF LATEST PATCH\nHits twice at close range.\nWallbounces in the corner.\nZeta's best launcher, though she has to use at least 1 hit of her auto combo to combo into it. Corner combos starting with the H version of Infinite Wonders are generally long enough for the cooldown to regenerate by the end. In general, having this move on cooldown is very bad for Zeta's neutral, and the H version provides no extra hits from far range unlike other projectiles, so avoid using it outside of corner combos."
 };
 
 // dragon punches
-const lUppercut = { 
-  moveName: 'L Rising Sword', 
-  altName: '623L', 
-  damage: '700, 300', 
-  guard: 'mid, all', 
+const lSpear = { 
+  moveName: 'L Spear of Arvess', 
+  altName: '66L', 
+  damage: '600', 
+  guard: 'Mid', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -434,14 +448,14 @@ const lUppercut = {
   onhit: 'KD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  motion: ['6', '6', 'l', 'or', '6', 'a'],
+  description: "Performs a rush attack that can be canceled into a follow-up attack while in motion. Zeta's main confirm special. Without this move available, Zeta's options from her far pokes are quite limited, so managing this cooldown is quite important.\nAllows for one follow-up.\nThe general version you'll combo into the most. Generally combos consistently from her medium pokes after the 1.2.1 patch."
 };
-const mUppercut = { 
-  moveName: 'M Rising Sword', 
-  altName: '623M', 
-  damage: '700, 300 x 2', 
-  guard: 'mid, all', 
+const mSpear = { 
+  moveName: 'M Spear of Arvess', 
+  altName: '66M', 
+  damage: '800', 
+  guard: 'Mid', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -449,14 +463,14 @@ const mUppercut = {
   onhit: 'KD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  motion: ['6', '6', 'm', 'or', '6', 'a', 'm'],
+  description: "Performs a rush attack that can be canceled into a follow-up attack while in motion. Zeta's main confirm special. Without this move available, Zeta's options from her far pokes are quite limited, so managing this cooldown is quite important.\nAllows for one follow-up.\nSlower, but travels further than the L version. Only combos from f.H or auto combo."
 };
-const hUppercut = { 
-  moveName: 'H Rising Sword', 
-  altName: '623H', 
-  damage: '950~1400', 
-  guard: 'mid, all', 
+const hSpear = { 
+  moveName: 'H Spear of Arvess', 
+  altName: '66H', 
+  damage: '600', 
+  guard: 'Mid', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -464,13 +478,103 @@ const hUppercut = {
   onhit: 'HKD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  motion: ['6', '6', 'h', 'or', '6', 'a', 'h'],
+  description: "Performs a rush attack that can be canceled into a follow-up attack while in motion. Zeta's main confirm special. Without this move available, Zeta's options from her far pokes are quite limited, so managing this cooldown is quite important.\nAllows for two follow-ups instead of just one.\nGreat for corner carry and midscreen pogo okizeme, though be wary of having this move on cooldown."
+};
+const lSpearRise = { 
+  moveName: 'L Spear of Arvess (Rise)', 
+  altName: '22L', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-17', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: "Same as Spear of Arvess, but Zeta attacks upwards for the first hit rather than horizontally. Uses a seperate cooldown from the normal horizontal version.\nAll versions are air unblockable for the first strike, but not for any of the followups.\nCan be used raw as an anti-air for specific jump arcs or far jumps.\nZeta travels diagonally upwards.\nAllows for one follow-up.\nGood for basic anti-air combos."
+};
+const mSpearRise = { 
+  moveName: 'M Spear of Arvess (Rise)', 
+  altName: '22M', 
+  damage: '1000', 
+  guard: 'Mid', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-26', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
+  description: "Same as Spear of Arvess, but Zeta attacks upwards for the first hit rather than horizontally. Uses a seperate cooldown from the normal horizontal version.\nAll versions are air unblockable for the first strike, but not for any of the followups.\nCan be used raw as an anti-air for specific jump arcs or far jumps.\nZeta travels directly upwards.\nAllows for one follow-up.\nGood for some corner combo routes that save cooldowns, or for anti-airs where the opponent is directly above Zeta's head."
+};
+const hSpearRise = { 
+  moveName: 'H Spear of Arvess (Rise)', 
+  altName: '22H', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-26', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: "Same as Spear of Arvess, but Zeta attacks upwards for the first hit rather than horizontally. Uses a seperate cooldown from the normal horizontal version.\nAll versions are air unblockable for the first strike, but not for any of the followups.\nCan be used raw as an anti-air for specific jump arcs or far jumps.\nZeta travels diagonally upwards.\nAllows for two follow-ups, not just one.\nGenerally used in anti-air combos or as corner combo filler."
+};
+const lSpearFall = { 
+  moveName: 'L Spear of Arvess (Fall)', 
+  altName: 'j22L', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-17', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: "Same as Spear of Arvess, but Zeta attacks downwards from the air. Uses the same cooldown as the grounded anti-air version, as of version 2.01. (Rise). Massively unsafe on block, so use with caution. Can be made kinda safe if done not too high by ending in 3X. Can also be superjump-installed by doing 282X. It's really good against Percival's corner pressure as you can jump out of his fireball cancels and smack him with j.22L.\nZeta travels diagonally downwards.\nAllows for one follow-up.\nUseful for some air-to-airs, or baiting anti-airs from far jumps or high jumps over the opponent."
+};
+const mSpearFall = { 
+  moveName: 'M Spear of Arvess (Fall)', 
+  altName: 'j22M', 
+  damage: '1000', 
+  guard: 'Mid', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-26', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
+  description: "Same as Spear of Arvess, but Zeta attacks downwards from the air. Uses the same cooldown as the grounded anti-air version, as of version 2.01. (Rise). Massively unsafe on block, so use with caution. Can be made kinda safe if done not too high by ending in 3X. Can also be superjump-installed by doing 282X. It's really good against Percival's corner pressure as you can jump out of his fireball cancels and smack him with j.22L.\nZeta travels directly downwards.\nAllows for one follow-up.\nMainly just useful for baiting anti-airs while directly above an opponent."
+};
+const hSpearFall = { 
+  moveName: 'H Spear of Arvess (Fall)', 
+  altName: 'j22H', 
+  damage: '800', 
+  guard: 'Mid', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-26', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: "Same as Spear of Arvess, but Zeta attacks downwards from the air. Uses the same cooldown as the grounded anti-air version, as of version 2.01. (Rise). Massively unsafe on block, so use with caution. Can be made kinda safe if done not too high by ending in 3X. Can also be superjump-installed by doing 282X. It's really good against Percival's corner pressure as you can jump out of his fireball cancels and smack him with j.22L.\nZeta travels diagonally downwards.\nAllows for two follow-ups, not just one.\nUsed similarly to the L version to bait anti-airs or escape the corner. The extra followups allow Zeta to keep herself a bit safer on block by dashing away or dashing into the ground as low as possible."
 };
 
-// rekka
-const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+// Parry
+const lParry = { 
+  moveName: 'L Rhapsody', 
   altName: '214L', 
   damage: '700', 
   guard: 'mid', 
@@ -482,25 +586,10 @@ const lRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
+  description: "Zeta turns her back and gets into a defensive stance. She will armor all hits until the move recovery begins, or until she cancels into one of the 3 followups. This is one of the best parry/armor type moves in the game, and is invaluable for Zeta's gameplay\n\nThe armor during Rhapsody allows Zeta to punish specific things that other characters can struggle to deal with, such as Percival's fireball traps.\nUnlike some other armor or parry type moves, spot dodging after your move is armored does not guarantee a punish due to the Knee Assault followup.\nThe followups can be used regardless of if Zeta armors through something, allowing them to be used in combos. Good as an alternative combo ender from a midscreen auto combo hit if Spear of Arvess is on cooldown.\nUnlike some other armored moves in the game, like Katalina's Light Wall, Zeta can actually armor multiple hits.\nNone of the followups have any invincibility or armor, so they can be baited if the opponent uses a multi-hitting move to throw off the timing of her followup, or make it impossible for her to perform one safely.\nGetting hit by a high/low/mid that a version of Rhapsody does not cover leads to taking a counter hit.\nArmors highs and jumping attacks.\nIf you're not using the H version, you'll probably be using this version. Useful as an anti-air alternative for some tricky jump moves, or to call out some forward moving moves in neutral like Gran's Overdrive Surge. Cannot be used to call out low hitting forward moving moves, such as Eustace's Takedown. Especially risky against Percival as counter hit Schneiden leads to combos."
 };
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
-};
-const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+const mParry = { 
+  moveName: 'M Rhapsody', 
   altName: '214M', 
   damage: '1200', 
   guard: 'mid', 
@@ -512,10 +601,10 @@ const mRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Zeta turns her back and gets into a defensive stance. She will armor all hits until the move recovery begins, or until she cancels into one of the 3 followups. This is one of the best parry/armor type moves in the game, and is invaluable for Zeta's gameplay\n\nThe armor during Rhapsody allows Zeta to punish specific things that other characters can struggle to deal with, such as Percival's fireball traps.\nUnlike some other armor or parry type moves, spot dodging after your move is armored does not guarantee a punish due to the Knee Assault followup.\nThe followups can be used regardless of if Zeta armors through something, allowing them to be used in combos. Good as an alternative combo ender from a midscreen auto combo hit if Spear of Arvess is on cooldown.\nUnlike some other armored moves in the game, like Katalina's Light Wall, Zeta can actually armor multiple hits.\nNone of the followups have any invincibility or armor, so they can be baited if the opponent uses a multi-hitting move to throw off the timing of her followup, or make it impossible for her to perform one safely.\nGetting hit by a high/low/mid that a version of Rhapsody does not cover leads to taking a counter hit.\nArmors lows.\nThis version will likely see the least use, and in general if the trajectory of the move you're armoring is ambiguous, you're best just using the H version. As this version loses to mids, it is a very risky and situational callout."
 };
-const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+const hParry = { 
+  moveName: 'H Rhapsody', 
   altName: '214H', 
   damage: '1200', 
   guard: 'mid', 
@@ -527,12 +616,12 @@ const hRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Zeta turns her back and gets into a defensive stance. She will armor all hits until the move recovery begins, or until she cancels into one of the 3 followups. This is one of the best parry/armor type moves in the game, and is invaluable for Zeta's gameplay\n\nThe armor during Rhapsody allows Zeta to punish specific things that other characters can struggle to deal with, such as Percival's fireball traps.\nUnlike some other armor or parry type moves, spot dodging after your move is armored does not guarantee a punish due to the Knee Assault followup.\nThe followups can be used regardless of if Zeta armors through something, allowing them to be used in combos. Good as an alternative combo ender from a midscreen auto combo hit if Spear of Arvess is on cooldown.\nUnlike some other armored moves in the game, like Katalina's Light Wall, Zeta can actually armor multiple hits.\nNone of the followups have any invincibility or armor, so they can be baited if the opponent uses a multi-hitting move to throw off the timing of her followup, or make it impossible for her to perform one safely.\nGetting hit by a high/low/mid that a version of Rhapsody does not cover leads to taking a counter hit.\nArmors all strike and projectile attacks.\nUnlike the L and M versions, this version has frame 1 startup, allowing it to be used as a reversal. Since this is armor, and not invincibility, using H Rhapsody in this manner will lose to throws. However, the armor can beat a number of safejump setups that will be safe to traditional DPs. All of the followups will be enhanced when performed from the H version of Rhapsody. Not recommended for use in neutral since L Rhapsody is good enough and does not put the move on cooldown."
 };
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Resolute Strike', 
   altName: '236236H', 
   damage: '2500-3500', 
   guard: 'mid', 
@@ -544,10 +633,25 @@ const sba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Performs a powerful strike attack. When activated midair, Zeta dives diagonally toward the ground. Since this skill covers a long range, it can be used as a combo finisher from afar\n\nCan be option selected with meaty light normals when used as a reversal.\nCan be confirmed into from all of Zeta's main pokes from max range, granting her a powerful single-hit confirm when she has full meter.\nThe air version can be used to confirm from Zeta's pogo offense while in the air, or as a risky way to bait anti-airs.\nDoes 1000 less damage when connected from far range. Using the technical input will increase the range of the max-damage connect.\nUnfortunately, not amazing as an anti-projectile super unlike other forward moving supers."
+};
+const airSba = { 
+  moveName: 'Resolute Strike (Air)', 
+  altName: 'j236236H', 
+  damage: '2500-3500', 
+  guard: 'mid', 
+  startup: '6+5', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-13', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', '236', 'h', 'or', '236', 'a'],
+  description: "Performs a powerful strike attack. When activated midair, Zeta dives diagonally toward the ground. Since this skill covers a long range, it can be used as a combo finisher from afar\n\nCan be option selected with meaty light normals when used as a reversal.\nCan be confirmed into from all of Zeta's main pokes from max range, granting her a powerful single-hit confirm when she has full meter.\nThe air version can be used to confirm from Zeta's pogo offense while in the air, or as a risky way to bait anti-airs.\nDoes 1000 less damage when connected from far range. Using the technical input will increase the range of the max-damage connect.\nUnfortunately, not amazing as an anti-projectile super unlike other forward moving supers."
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Sirius Roar', 
   altName: '236236U', 
   damage: '3500-4500', 
   guard: 'all', 
@@ -559,7 +663,7 @@ const ssba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Performs a powerful rising attack. If connected at close range, Zeta will perform an enhanced version for increased damage. Aside from the raw damage output, this super is generally worse than Zeta's Skybound Art\n\nCan be option selected with meaty light normals when used as a reversal.\nAlmost never gets the full connect when used as an anti-air, and can easily whiff on many jump angles due to the trajectory.\nAwkward trajectory makes this difficult to use outside of corner combos or autocombo confirms. Cannot be confirmed into from her far normals.\nPlaces Zeta midscreen, quite far from the opponent regardless of easy or technical input, making her okizeme somewhat weak. Try to use this when it will kill the opponent."
 };
 
 
@@ -592,13 +696,19 @@ export const zetaInfo = [
   lFireball,
   mFireball,
   hFireball,
-  lUppercut,
-  mUppercut,
-  hUppercut,
-  lRekka,
-  followupRekka,
-  mRekka,
-  hRekka,
+  lSpear,
+  mSpear,
+  hSpear,
+  lSpearRise,
+  mSpearRise,
+  hSpearRise,
+  lSpearFall,
+  mSpearFall,
+  hSpearFall,
+  lParry,
+  mParry,
+  hParry,
   sba,
+  airSba,
   ssba
 ]
