@@ -585,7 +585,7 @@ const lParry = {
   onhit: '-2',
   oncounterhit: '-',
   clash: '-',
-  motion: ['214', 'l', 'or', '2', 'a'],
+  motion: ['214', 'l', 'or', '4', 'a'],
   description: "Zeta turns her back and gets into a defensive stance. She will armor all hits until the move recovery begins, or until she cancels into one of the 3 followups. This is one of the best parry/armor type moves in the game, and is invaluable for Zeta's gameplay\n\nThe armor during Rhapsody allows Zeta to punish specific things that other characters can struggle to deal with, such as Percival's fireball traps.\nUnlike some other armor or parry type moves, spot dodging after your move is armored does not guarantee a punish due to the Knee Assault followup.\nThe followups can be used regardless of if Zeta armors through something, allowing them to be used in combos. Good as an alternative combo ender from a midscreen auto combo hit if Spear of Arvess is on cooldown.\nUnlike some other armored moves in the game, like Katalina's Light Wall, Zeta can actually armor multiple hits.\nNone of the followups have any invincibility or armor, so they can be baited if the opponent uses a multi-hitting move to throw off the timing of her followup, or make it impossible for her to perform one safely.\nGetting hit by a high/low/mid that a version of Rhapsody does not cover leads to taking a counter hit.\nArmors highs and jumping attacks.\nIf you're not using the H version, you'll probably be using this version. Useful as an anti-air alternative for some tricky jump moves, or to call out some forward moving moves in neutral like Gran's Overdrive Surge. Cannot be used to call out low hitting forward moving moves, such as Eustace's Takedown. Especially risky against Percival as counter hit Schneiden leads to combos."
 };
 const mParry = { 
@@ -603,6 +603,51 @@ const mParry = {
   motion: ['214', 'm', 'or', '4', 'a'],
   description: "Zeta turns her back and gets into a defensive stance. She will armor all hits until the move recovery begins, or until she cancels into one of the 3 followups. This is one of the best parry/armor type moves in the game, and is invaluable for Zeta's gameplay\n\nThe armor during Rhapsody allows Zeta to punish specific things that other characters can struggle to deal with, such as Percival's fireball traps.\nUnlike some other armor or parry type moves, spot dodging after your move is armored does not guarantee a punish due to the Knee Assault followup.\nThe followups can be used regardless of if Zeta armors through something, allowing them to be used in combos. Good as an alternative combo ender from a midscreen auto combo hit if Spear of Arvess is on cooldown.\nUnlike some other armored moves in the game, like Katalina's Light Wall, Zeta can actually armor multiple hits.\nNone of the followups have any invincibility or armor, so they can be baited if the opponent uses a multi-hitting move to throw off the timing of her followup, or make it impossible for her to perform one safely.\nGetting hit by a high/low/mid that a version of Rhapsody does not cover leads to taking a counter hit.\nArmors lows.\nThis version will likely see the least use, and in general if the trajectory of the move you're armoring is ambiguous, you're best just using the H version. As this version loses to mids, it is a very risky and situational callout."
 };
+const lParryFollowup = {
+  moveName: 'Crimson Cleave', 
+  altName: '214X -> L', 
+  damage: '1000', 
+  guard: 'mid', 
+  startup: '16', 
+  active: '13', 
+  recovery: '29', 
+  onblock: '+2~-10', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'l', 'or', '4', 'a', 'l'],
+  description: "Follows up Rhapsody with a horizontal cleave attack. It has a decent reach and can be a handy skill to keep the foe at arm's length.\nFurthest reaching followup from Rhapsody. Difficult to punish when spaced at max range.\nThe slowest Rhapsody followup, so this is most likely to be interrupted by a multi-hitting move or an opponent's special.\nWhen performed from the H version of Rhapsody, will wallbounce on hit in the corner. Important to Zeta's optimal corner combos."
+}
+const mParryFollowup = {
+  moveName: 'Rising Split', 
+  altName: '214X -> M', 
+  damage: '1000', 
+  guard: 'mid', 
+  startup: '16', 
+  active: '13', 
+  recovery: '29', 
+  onblock: '+2~-10', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'm', 'or', '4', 'a', 'm'],
+  description: "Follows up Rhapsody with a vertical slash attack. It has a shorter reach than Crimson Cleave but a much faster start-up. It can be a handy skill to use at close range or as an anti-air.\nBest followup from Rhapsody for dealing with air moves, and can be used occasionally as a raw anti-air without armoring anything.\nOn counter hit, Zeta can dash f.H or f.M midscreen for a followup combo.\nWhen performed from the H version of Rhapsody, launches high enough for combos in the corner without counter hit."
+}
+const hParryFollowup = {
+  moveName: 'Knee Assault', 
+  altName: '214X -> M', 
+  damage: '1000', 
+  guard: 'mid', 
+  startup: '16', 
+  active: '13', 
+  recovery: '29', 
+  onblock: '+2~-10', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'h', 'or', '4', 'a', 'h'],
+  description: "Follows up Rhapsody with a jumping knee attack. Zeta can then perform midair attacks (or block) after jumping. It can be a handy skill to close the gap when going on the offensive.\nFastest followup from Rhapsody, making it the best option in a reversal situation or to beat multi-hitting moves or cancels.\nNot generally a good raw anti-air unless you armor a jumping move first.\nDifficult to punish since Zeta has full air control after the leap. Can be used to escape the corner even if the opponent blocks on Zeta's wakeup since she'll cross behind them at an awkward angle to anti-air.\nCan be used to start pogo offense without a knockdown in the corner against an inattentive opponent, though this can be anti-aired.\nActs as a launcher, with more air untech time on the opponent when performed from the H version. One of Zeta's best options to start corner combos when further away from the corner."
+}
 const hParry = { 
   moveName: 'H Rhapsody', 
   altName: '214H', 
@@ -615,7 +660,7 @@ const hParry = {
   onhit: 'HKD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['214', 'h', 'or', '2', 'a', 'h'],
+  motion: ['214', 'h', 'or', '4', 'a', 'h'],
   description: "Zeta turns her back and gets into a defensive stance. She will armor all hits until the move recovery begins, or until she cancels into one of the 3 followups. This is one of the best parry/armor type moves in the game, and is invaluable for Zeta's gameplay\n\nThe armor during Rhapsody allows Zeta to punish specific things that other characters can struggle to deal with, such as Percival's fireball traps.\nUnlike some other armor or parry type moves, spot dodging after your move is armored does not guarantee a punish due to the Knee Assault followup.\nThe followups can be used regardless of if Zeta armors through something, allowing them to be used in combos. Good as an alternative combo ender from a midscreen auto combo hit if Spear of Arvess is on cooldown.\nUnlike some other armored moves in the game, like Katalina's Light Wall, Zeta can actually armor multiple hits.\nNone of the followups have any invincibility or armor, so they can be baited if the opponent uses a multi-hitting move to throw off the timing of her followup, or make it impossible for her to perform one safely.\nGetting hit by a high/low/mid that a version of Rhapsody does not cover leads to taking a counter hit.\nArmors all strike and projectile attacks.\nUnlike the L and M versions, this version has frame 1 startup, allowing it to be used as a reversal. Since this is armor, and not invincibility, using H Rhapsody in this manner will lose to throws. However, the armor can beat a number of safejump setups that will be safe to traditional DPs. All of the followups will be enhanced when performed from the H version of Rhapsody. Not recommended for use in neutral since L Rhapsody is good enough and does not put the move on cooldown."
 };
 
@@ -691,6 +736,7 @@ export const zetaInfo = [
   lv4U,
   lv5U,
   groundThrow,
+  backThrow,
   airThrow,
   uOverhead,
   lFireball,
@@ -708,6 +754,9 @@ export const zetaInfo = [
   lParry,
   mParry,
   hParry,
+  lParryFollowup,
+  mParryFollowup,
+  hParryFollowup,
   sba,
   airSba,
   ssba
