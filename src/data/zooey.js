@@ -16,7 +16,7 @@ const closeL = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "One of Zooey's two plus on block normals.\nThe Granblue c.L. Go-to pressure and abare button due to its fast overall speed. Also offers frame advantage on block for tick throws and pressure resets."
 };
 const closeM = {
   moveName: 'Close Medium',
@@ -31,7 +31,7 @@ const closeM = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "0 on block, only useful as a frame trap if a light is used after.\nDoes not link into c.H on counterhit.\nPretty average c.M button. Frame traps from all light buttons if it's in activation range."
 };
 const closeH = {
   moveName: 'Close Heavy',
@@ -46,7 +46,7 @@ const closeH = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "-5 but safe due to pushback.\nLinks into itself on Counter Hit.\nNot a frame trap after c.L/2L.\nStrictly a punish starter due to its bad frame advantage. Some characters may not be able to punish this move but c.M is a better pressure option anyway. Leads to great damage should it counterhit."
 };
 
 // auto combos
@@ -63,7 +63,7 @@ const auto1 = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Combo filler midscreen, but not much besides that. You can use it as an ender in the corner if you don't have any Hard Knockdown tools available, as the juggle height will typically still leave you plus after you cancel into Thunder or Summon Dragon."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
@@ -78,7 +78,7 @@ const auto2 = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "Combo filler midscreen, but not much besides that. You can use it as an ender in the corner if you don't have any Hard Knockdown tools available, as the juggle height will typically still leave you plus after you cancel into Thunder or Summon Dragon."
 };
 
 // far normals
@@ -95,7 +95,7 @@ const far5L = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
+  description: "Ranged anti-air and punish normal.\nDecent range normal can cancel into most of her moves and SSBA. This will punish things like Gran 214L and lead to a knockdown."
 };
 const far5M = {
   moveName: 'Far Medium',
@@ -110,7 +110,7 @@ const far5M = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "Zooey's main poking normal.\nAll things considered, this is a pretty good poke. It combos into all of her knockdown enders and can be made safe and even plus at some distances with L Summon Dragon."
 };
 const far5H = {
   moveName: 'Far Heavy',
@@ -125,7 +125,7 @@ const far5H = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Shorter than f.M.\nGood counterpoking normal due to a slight step back during startup. Deals high damage and combos into M Spinning Slash for a bit of extra damage."
 };
 
 // regular normals
@@ -142,7 +142,7 @@ const n2L = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Plus on block low.\nZooey's other plus on block normal. Unlike c.L, this has no distance requirement and hits low, making it a more useful pressure tool."
 };
 const n2M = {
   moveName: 'Crouch Medium',
@@ -157,7 +157,7 @@ const n2M = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Stops rolls where f.M does not.\nNot actually a low, but stops low approaches and rolls where f.M would lose. Combos into all of the same options while also starting up a frame faster. Zooey can't actually use her 2M as a crouch confirm from 2L, but it will still frame trap due to its Clash level."
 };
 const n2H = {
   moveName: 'Crouch Heavy',
@@ -172,13 +172,13 @@ const n2H = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "5U cancels builds Wyvern meter and cut recovery.\nZooey's main anti-air. Leads to devastating damage and a setup with an air CH and has a high hitbox, but is a little slow to come out."
 };
 const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
   damage: '700',
-  guard: 'mid',
+  guard: 'Low',
   startup: '7',
   active: '6',
   recovery: '21',
@@ -187,7 +187,7 @@ const n2U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Easy hard knockdown ender.\nUseful as an ender to set up her Thunder okizeme. It has less range than it looks, but it can low-profile some reversals if it's used as a meaty. Weirdly enough, this move is faster than her 2M and makes for a highly rewarding crouch confirm."
 };
 
 // jump normals
@@ -204,7 +204,7 @@ const jL = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Active until landing.\nZooey's fastest air normal. It has a high hitbox but is otherwise pretty unremarkable."
 };
 const jM = { 
   moveName: 'Jump Medium', 
@@ -219,7 +219,7 @@ const jM = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Zooey's crossup button.\nDoes what it looks like on the tin. Use this if you want a left/right as it hits on both sides."
 };
 const jH = { 
   moveName: 'Jump Heavy', 
@@ -234,12 +234,12 @@ const jH = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "Good downwards hitbox.\nThis is Zooey's highest-damage jump-in, making it exceptional for things like punishing bad fireballs."
 };
 const jU = { 
   moveName: 'Jump Unique', 
   altName: 'jU', 
-  damage: '700', 
+  damage: '800', 
   guard: 'high', 
   startup: '12', 
   active: '-', 
@@ -249,15 +249,15 @@ const jU = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "Combo tool.\nLaunches on hit.\nWallbounces on counterhit.\nFunctions like Sol Badguy's j.D from Guilty Gear in that it recovers mid-air if it hits as early as possible after rising, allowing you to link another j.U while falling. Sadly, it launches at a shallow enough angle that you can usually get two j.U's in a combo before the opponent is too low for any more."
 };
 
 // unique action
 const lv1U = { 
-  moveName: 'Power Raise Lv1', 
-  altName: '5ULv1', 
-  damage: '1000', 
-  guard: 'mid', 
+  moveName: 'Convergence', 
+  altName: '5U', 
+  damage: '-', 
+  guard: '-', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
@@ -266,13 +266,13 @@ const lv1U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Minimum 5U charge duration is 23 frames total and gains 8.5% Dragon Gauge\nEarliest The Last Wish cancel from 5U is on frame 16 (Total startup: 20)\nHolding Convergence will recharge Zooey's Dragon Gauge. The Last Wish (press 6L/M/H while charging) has strike invincibility and one hit of projectile clash, and will also charge 50% of the Dragon Gauge on hit.\nWhile Lyrn is active or in cooldown, 5U charge speed is halved and The Last Wish on hit only charges for 16.7%. Exact values for Dragon Gauge can be found in Zooey's Frame Data page."
 };
 const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
-  guard: 'mid', 
+  moveName: 'The Last Wish', 
+  altName: '5U -> 6L/M/H', 
+  damage: '700', 
+  guard: 'Mid', 
   startup: '22', 
   active: '9', 
   recovery: '13', 
@@ -280,59 +280,14 @@ const lv2U = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  motion: ['u', '6', 'l'],
+  description: "Minimum 5U charge duration is 23 frames total and gains 8.5% Dragon Gauge\nEarliest The Last Wish cancel from 5U is on frame 16 (Total startup: 20)\nHolding Convergence will recharge Zooey's Dragon Gauge. The Last Wish (press 6L/M/H while charging) has strike invincibility and one hit of projectile clash, and will also charge 50% of the Dragon Gauge on hit.\nWhile Lyrn is active or in cooldown, 5U charge speed is halved and The Last Wish on hit only charges for 16.7%. Exact values for Dragon Gauge can be found in Zooey's Frame Data page."
 };
 
 const groundThrow = { 
   moveName: 'Ground Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '7', 
   active: '-', 
   recovery: '-', 
@@ -341,12 +296,26 @@ const groundThrow = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "Situationally can lead to a combo.\nThunder will not allow for a combo.\nZooey can combo off her forward throw in the corner with H Summon Dragon, making this throw significantly scarier than most. Even if she doesn't get a combo, hard knockdowns are absolutely necessary for Zooey to get her game going."
+};
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'Throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['4', 'l', 'm', 'or', '4', 'l', 'u'],
+  description: "Situationally can lead to a combo.\nThunder will not allow for a combo.\nZooey can combo off her forward throw in the corner with H Summon Dragon, making this throw significantly scarier than most. Even if she doesn't get a combo, hard knockdowns are absolutely necessary for Zooey to get her game going."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '5', 
   active: '-', 
   recovery: '-', 
@@ -355,7 +324,7 @@ const airThrow = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Very situationally can lead to a combo.\nThis throw can also be picked up after like her ground throw, but it's much harder due to the natural variance in timing of it being an airthrow. The hard knockdown will allow for Thunder or Summon Dragon, but it may not be perfectly meaty."
 };
 
 const uOverhead = { 
@@ -371,12 +340,12 @@ const uOverhead = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Situationally can lead to a combo.\nZooey performs a short hop before hitting the opponent on the head with her sword. Has exceptional range for a Universal Overhead. Just like her throws, Zooey can set up Summon Dragon and use this in between lasers for a perfectly safe overhead. She can also use a negative edge Thunder release to make it plus on block or to start a combo on hit."
 };
 
 // fireballs
 const lFireball = { 
-  moveName: 'L Reginleiv', 
+  moveName: 'Immortal Thrust', 
   altName: '236L', 
   damage: '800', 
   guard: 'all', 
@@ -388,10 +357,10 @@ const lFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Zooey calls Lyrn to perform one of three actions. Each action takes a certain amount of Zooey's Dragon Gauge, and can be done for as long as the gauge is not empty. Lyrn will despawn once the gauge is fully depleted and go on 12 second cooldown. All three of these specials will set Lyrn in place wherever he stops for about three seconds. Afterwards, Lyrn returns to float by Zooey's side. While set or floating by Zooey, Lyrn cannot be hit.\nCosts 6.66% of the Dragon meter.\nExtremely fast projectile.\nAlways teleports Lyrn to Zooey's position before launching.\nClashes with other projectiles and repositions Lyrn. Immortal Thrust has amazing frame advantage for a projectile and will usually be plus at Zooey's maximum poking range."
 };
 const mFireball = { 
-  moveName: 'M Reginleiv', 
+  moveName: 'M Summon Dragon', 
   altName: '236M', 
   damage: '400, 800', 
   guard: 'mid, all', 
@@ -403,10 +372,10 @@ const mFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Zooey calls Lyrn to perform one of three actions. Each action takes a certain amount of Zooey's Dragon Gauge, and can be done for as long as the gauge is not empty. Lyrn will despawn once the gauge is fully depleted and go on 12 second cooldown. All three of these specials will set Lyrn in place wherever he stops for about three seconds. Afterwards, Lyrn returns to float by Zooey's side. While set or floating by Zooey, Lyrn cannot be hit.\nCosts 12.5% of the Dragon meter.\nLaunches on hit, allowing for juggles.\nActivates at Lyrn's position unless Zooey is closer.\nLyrn will also teleport to Zooey if he is behind the opponent and farther than half screen.\nWill correct for the corner so the entire move can connect.\nEven though the startup is 34 frames, Zooey cannot move until frame 50.\nWhile Sweeping Beam is better for mixups, Heavy Breath is best used midscreen after Bisection. If the opponent doesn't have a reversal or chooses not to, Zooey becomes very plus. If they do reversal, Zooey will be far enough away that it should whiff."
 };
 const hFireball = { 
-  moveName: 'H Reginleiv', 
+  moveName: 'H Summon Dragon', 
   altName: '236H', 
   damage: '350 x 3', 
   guard: 'all', 
@@ -418,15 +387,15 @@ const hFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Zooey calls Lyrn to perform one of three actions. Each action takes a certain amount of Zooey's Dragon Gauge, and can be done for as long as the gauge is not empty. Lyrn will despawn once the gauge is fully depleted and go on 12 second cooldown. All three of these specials will set Lyrn in place wherever he stops for about three seconds. Afterwards, Lyrn returns to float by Zooey's side. While set or floating by Zooey, Lyrn cannot be hit.\nCosts 25% of the Dragon meter.\nActivates at Lyrn's position unless Zooey is closer.\nLyrn will also teleport to Zooey if he is behind the opponent and farther than half screen.\nWill correct for the corner so the entire move can connect.\nCannot move until frame 44.\nWhile Sweeping Beam is slow, it is by far Zooey's most powerful summon. It persists if Zooey blocks, but will go away if Zooey is hit or techs a throw. Sweeping Beam allows for combos from Zooey's Throw and Universal Overhead, as well as stronger combos off her low options like 2L or 2U. It also has some usage to stop approaches, but the beam doesn't quite hit at full screen."
 };
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Rising Sword', 
+  moveName: 'L Aerial Spinning Slash', 
   altName: '623L', 
-  damage: '700, 300', 
-  guard: 'mid, all', 
+  damage: '250x4', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -435,13 +404,13 @@ const lUppercut = {
   oncounterhit: '-',
   clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "Value in [] is when the rising portion whiffs.\nZooey leaps into the air before crashing down to the ground. The L version has no hitbox while rising and is generally useless. The M and H versions make for good anti-airs, as they have some Head invincibility and combo into the descending hits on air connect. The H version will also lead to a hard knockdown, providing an alternate to 214H when it's on cooldown."
 };
 const mUppercut = { 
-  moveName: 'M Rising Sword', 
+  moveName: 'M Aerial Spinning Slash', 
   altName: '623M', 
-  damage: '700, 300 x 2', 
-  guard: 'mid, all', 
+  damage: '300, 200x5', 
+  guard: 'All', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -450,13 +419,13 @@ const mUppercut = {
   oncounterhit: '-',
   clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "Value in [] is when the rising portion whiffs.\nZooey leaps into the air before crashing down to the ground. The L version has no hitbox while rising and is generally useless. The M and H versions make for good anti-airs, as they have some Head invincibility and combo into the descending hits on air connect. The H version will also lead to a hard knockdown, providing an alternate to 214H when it's on cooldown."
 };
 const hUppercut = { 
-  moveName: 'H Rising Sword', 
+  moveName: 'H Aerial Spinning Slash', 
   altName: '623H', 
-  damage: '950~1400', 
-  guard: 'mid, all', 
+  damage: '300, 200x5', 
+  guard: 'Mid, all', 
   startup: '9', 
   active: '-', 
   recovery: '-', 
@@ -465,12 +434,12 @@ const hUppercut = {
   oncounterhit: '-',
   clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "Value in [] is when the rising portion whiffs.\nZooey leaps into the air before crashing down to the ground. The L version has no hitbox while rising and is generally useless. The M and H versions make for good anti-airs, as they have some Head invincibility and combo into the descending hits on air connect. The H version will also lead to a hard knockdown, providing an alternate to 214H when it's on cooldown."
 };
 
 // rekka
 const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+  moveName: 'L Spinning Slash', 
   altName: '214L', 
   damage: '700', 
   guard: 'mid', 
@@ -481,13 +450,13 @@ const lRekka = {
   onhit: '-2',
   oncounterhit: '-',
   clash: '-',
-  motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
+  motion: ['214', 'l', 'or', '4', 'a'],
+  description: "Zooey moves forward and swings her blade. The distance covered changes depending on the button pressed; L moves the least distance, M and H move the same distance. Chains into two different followups, allowing for confirms into knockdown or frame traps.\nGo-to version\nCombos from all buttons except c.L and 2L (even on CH)."
 };
 const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
+  moveName: 'Ray Strike', 
+  altName: '214X -> L/M/H', 
+  damage: '400', 
   guard: 'mid', 
   startup: '-', 
   active: '13', 
@@ -496,11 +465,26 @@ const followupRekka = {
   onhit: 'KD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  motion: ['214', 'l', 'or', '4', 'a'],
+  description: "Combos naturally from all three versions of Spinning Slash. The followup itself does not change regardless of which attack button was used, unless it was used from the H version where it will grant a hard knockdown. There will always be a gap between Spinning Slash and Ray Strike. Even though this hits low, there's no good reason to use it instead of Bisection."
+};
+const followupRekkaForward = { 
+  moveName: 'Bisection', 
+  altName: '214X -> 6L/M/H', 
+  damage: '600', 
+  guard: 'mid', 
+  startup: '-', 
+  active: '13', 
+  recovery: '29', 
+  onblock: '-10', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'or', '4', 'a'],
+  description: "Combos from all versions of Spinning Slash. There will always be a gap between Spinning Slash and Bisection. The followup itself does not change regardless of which attack button was used, unless it was used from the H version. The H version launches high enough to link a c.M in the corner. Deals more damage than the other follow-up and has more advantage on hit, outclassing it entirely."
 };
 const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+  moveName: 'M Spinning Slash', 
   altName: '214M', 
   damage: '1200', 
   guard: 'mid', 
@@ -511,11 +495,11 @@ const mRekka = {
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  motion: ['214', 'm', 'or', '4', 'a', 'm'],
+  description: "Zooey moves forward and swings her blade. The distance covered changes depending on the button pressed; L moves the least distance, M and H move the same distance. Chains into two different followups, allowing for confirms into knockdown or frame traps.\nCounterhit/crouch confirm.\nCan only be cancelled into for a natural combo from c.H, f.H, and 2H. It can be cancelled into for a natural combo from c.M, f.M, and 2M on CH or if it hits a crouching opponent, and it can be cancelled into for a natural combo from f.L if the attack hits crouching and is a CH."
 };
 const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+  moveName: 'H Spinning Slash', 
   altName: '214H', 
   damage: '1200', 
   guard: 'mid', 
@@ -526,16 +510,110 @@ const hRekka = {
   onhit: 'HKD',
   oncounterhit: '-',
   clash: '-',
-  motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  motion: ['214', 'h', 'or', '4', 'a', 'h'],
+  description: "Zooey moves forward and swings her blade. The distance covered changes depending on the button pressed; L moves the least distance, M and H move the same distance. Chains into two different followups, allowing for confirms into knockdown or frame traps.\nBest of both worlds.\nLinks to c.H on counter hit.\nUse this if you're lazy or want the knockdown/launch."
 };
+
+// trap
+const lTrap = {
+  moveName: 'L Thunder', 
+  altName: '22L', 
+  damage: '400, 700', 
+  guard: 'Mid, All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: "Earliest possible lightning happens after the 15 frame startup of the sword hit and the 19 frame startup of the lightning itself (34).\nc.XXX > 22L is -2 on block and +2 on hit.\nZooey strikes the ground with her blade and calls down lightning in one of three areas. The blade strike itself has a hitbox. The strike point for the lightning depends on which button was pressed, marked by a glowing group of sparks on the ground. The minimum range on the L and M versions makes the lightning summon harmlessly offscreen when done in the corner.\nThe lightning strike itself can be delayed by holding L, M, H, or the Skill Button and will fall shortly after Zooey is no longer holding an attack button (except U) or after about three seconds of holding, allowing Zooey to coordinate with the strikes to extend her pressure. The button(s) being held can be switched freely without the lightning striking as long as at least one of the attack buttons is held.\nL version calls lightning closest to Zooey.\nGeneral purpose blockstring ender."
+}
+const mTrap = {
+  moveName: 'M Thunder', 
+  altName: '22M', 
+  damage: '400, 700', 
+  guard: 'Mid, All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
+  description: "Earliest possible lightning happens after the 15 frame startup of the sword hit and the 19 frame startup of the lightning itself (34).\nc.XXX > 22L is -2 on block and +2 on hit.\nZooey strikes the ground with her blade and calls down lightning in one of three areas. The blade strike itself has a hitbox. The strike point for the lightning depends on which button was pressed, marked by a glowing group of sparks on the ground. The minimum range on the L and M versions makes the lightning summon harmlessly offscreen when done in the corner.\nThe lightning strike itself can be delayed by holding L, M, H, or the Skill Button and will fall shortly after Zooey is no longer holding an attack button (except U) or after about three seconds of holding, allowing Zooey to coordinate with the strikes to extend her pressure. The button(s) being held can be switched freely without the lightning striking as long as at least one of the attack buttons is held.\nCalls lightning farther out.\nWeirdly enough, M version has the longest range, going out further than the H version."
+}
+const hTrap = {
+  moveName: 'H Thunder', 
+  altName: '22H', 
+  damage: '400, 350x3', 
+  guard: 'Mid, All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: "Earliest possible lightning happens after the 15 frame startup of the sword hit and the 19 frame startup of the lightning itself (34).\nc.XXX > 22L is -2 on block and +2 on hit.\nZooey strikes the ground with her blade and calls down lightning in one of three areas. The blade strike itself has a hitbox. The strike point for the lightning depends on which button was pressed, marked by a glowing group of sparks on the ground. The minimum range on the L and M versions makes the lightning summon harmlessly offscreen when done in the corner.\nThe lightning strike itself can be delayed by holding L, M, H, or the Skill Button and will fall shortly after Zooey is no longer holding an attack button (except U) or after about three seconds of holding, allowing Zooey to coordinate with the strikes to extend her pressure. The button(s) being held can be switched freely without the lightning striking as long as at least one of the attack buttons is held.\nHits multiple times, starting close to Zooey and traveling outwards.\nPushes opponent away.\nCovers the area between the front of Zooey and the area just slightly before M lightning range."
+}
+
+const lTrapAir = {
+  moveName: 'L Thunder (Air)', 
+  altName: 'j22L', 
+  damage: '700', 
+  guard: 'All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'or', 'a'],
+  description: "Zooey fires lightning down at an angle. The L version fires the projectile close to her while the M version fires it further away. The H version fires both at once, and also goes even further than M version. Zooey's momentum is stalled while using this, so it is very useful as anti-anti-air or as a tool to keep the opponent on the ground. The H version will only hard knockdown on airborne opponents."
+}
+const mTrapAir = {
+  moveName: 'M Thunder (Air)', 
+  altName: 'j22M', 
+  damage: '700', 
+  guard: 'All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'or', 'a', 'm'],
+  description: "Zooey fires lightning down at an angle. The L version fires the projectile close to her while the M version fires it further away. The H version fires both at once, and also goes even further than M version. Zooey's momentum is stalled while using this, so it is very useful as anti-anti-air or as a tool to keep the opponent on the ground. The H version will only hard knockdown on airborne opponents."
+}
+const hTrapAir = {
+  moveName: 'H Thunder (Air)', 
+  altName: 'j22H', 
+  damage: '700', 
+  guard: 'All', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'h', 'or', 'a', 'h'],
+  description: "Zooey fires lightning down at an angle. The L version fires the projectile close to her while the M version fires it further away. The H version fires both at once, and also goes even further than M version. Zooey's momentum is stalled while using this, so it is very useful as anti-anti-air or as a tool to keep the opponent on the ground. The H version will only hard knockdown on airborne opponents."
+}
+
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'Gamma Ray', 
   altName: '236236H', 
-  damage: '2500-3500', 
-  guard: 'mid', 
+  damage: '3500', 
+  guard: 'Mid', 
   startup: '6+5', 
   active: '-', 
   recovery: '-', 
@@ -544,7 +622,7 @@ const sba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Advances forwards after superflash with a tall hitbox.\nZooey's generic combo ender super, but this time with a Gundam reference. Gives a good knockdown for a setup or a safejump."
 };
 const ssba = { 
   moveName: 'Catastrophe', 
@@ -559,7 +637,7 @@ const ssba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "Unusually high blockstun.\nZooey reveals her true form as the Grand Order, then rushing forward and hit the opponent. Very slow but deals good damage as a combo ender"
 };
 
 
@@ -583,10 +661,8 @@ export const zooeyInfo = [
   jU,
   lv1U,
   lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
   groundThrow,
+  backThrow,
   airThrow,
   uOverhead,
   lFireball,
@@ -597,8 +673,15 @@ export const zooeyInfo = [
   hUppercut,
   lRekka,
   followupRekka,
+  followupRekkaForward,
   mRekka,
   hRekka,
+  lTrap,
+  mTrap,
+  hTrap,
+  lTrapAir,
+  mTrapAir,
+  hTrapAir,
   sba,
   ssba
 ]
