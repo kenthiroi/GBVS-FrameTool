@@ -195,10 +195,10 @@ const kaguraFar5H = {
 
 // Crouch normals
 // Genji
-const n2L = {
-  moveName: 'Crouch Light',
-  altName: '2L',
-  damage: '400',
+const genji2L = {
+  moveName: 'Crouch Light (Genji)',
+  altName: 'Genji 2L',
+  damage: '350',
   guard: 'mid',
   startup: '6',
   active: '3',
@@ -208,12 +208,12 @@ const n2L = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Staple, self-chaining pressure tool\nMight as well be the exact same move in each stance, but the Genji version has slightly bigger range. Both versions are staple pressure tools due to their high frame advantage."  
 };
-const n2M = {
-  moveName: 'Crouch Medium',
-  altName: '2M',
-  damage: '700',
+const genji2M = {
+  moveName: 'Crouch Medium (Genji)',
+  altName: 'Genji 2M',
+  damage: '600',
   guard: 'mid',
   startup: '7',
   active: '5',
@@ -223,12 +223,12 @@ const n2M = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Safest, shortest range poke\nLow-ish profile\nImportant secondary poke compared to Genji f.M. Narmaya's only poke that catches rolls and has no large extended hurtbox."
 };
-const n2H = {
-  moveName: 'Crouch Heavy',
-  altName: '2H',
-  damage: '1000',
+const genji2H = {
+  moveName: 'Crouch Heavy (Genji)',
+  altName: 'Genji 2H',
+  damage: '900',
   guard: 'mid',
   startup: '10',
   active: '6',
@@ -240,9 +240,9 @@ const n2H = {
   motion: ['2', 'h'],
   description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
 };
-const n2U = {
-  moveName: 'Crouch Unique',
-  altName: '2U',
+const genji2U = {
+  moveName: 'Crouch Unique (Genji)',
+  altName: 'Genji 2U',
   damage: '700',
   guard: 'mid',
   startup: '7',
@@ -253,14 +253,14 @@ const n2U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Long-range low snipe\nLow profile, good hitbox to hurtbox ratio\nUnsafe on block or whiff\n2U and dash 2U are a risky, but effective option to snipe enemies walking back, which Narmaya otherwise has trouble dealing with."
 };
 
 // Kagura
-const n2L = {
-  moveName: 'Crouch Light',
-  altName: '2L',
-  damage: '400',
+const kagura2L = {
+  moveName: 'Crouch Light (Kagura)',
+  altName: 'Kagura 2L',
+  damage: '350',
   guard: 'mid',
   startup: '6',
   active: '3',
@@ -270,12 +270,12 @@ const n2L = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'l'],
-  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+  description: "Staple, self-chaining pressure tool\nHas the exact same framedata as the Genji version but a little less range."
 };
-const n2M = {
-  moveName: 'Crouch Medium',
-  altName: '2M',
-  damage: '700',
+const kagura2M = {
+  moveName: 'Crouch Medium (Kagura)',
+  altName: 'Kagura 2M',
+  damage: '600',
   guard: 'mid',
   startup: '7',
   active: '5',
@@ -285,12 +285,12 @@ const n2M = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'm'],
-  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+  description: "Main pressure tool, plus on block with high counterhit reward\nCore pressure move that is plus on block, frametraps into itself, and leads to pain at any range on counter hit. Use, abuse and keep resetting pressure with microdash Kagura 2M."
 };
-const n2H = {
-  moveName: 'Crouch Heavy',
-  altName: '2H',
-  damage: '1000',
+const kagura2H = {
+  moveName: 'Crouch Heavy (Kagura)',
+  altName: 'Kagura 2H',
+  damage: '900',
   guard: 'mid',
   startup: '10',
   active: '6',
@@ -300,11 +300,11 @@ const n2H = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'h'],
-  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+  description: "Highest reward anti-air in pressure\nThe stronger 2H. Reliable, highly active and extremely good at stuffing cross-ups. The bane of anyone trying to jump out of your pressure."
 };
-const n2U = {
-  moveName: 'Crouch Unique',
-  altName: '2U',
+const kagura2U = {
+  moveName: 'Crouch Unique (Kagura)',
+  altName: 'Kagura 2U',
   damage: '700',
   guard: 'mid',
   startup: '7',
@@ -315,13 +315,14 @@ const n2U = {
   oncounterhit: '-',
   clash: '-',
   motion: ['2', 'u'],
-  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+  description: "Low profile\nUnsafe on block or whiff\nUsed for optimal crouch confirms and 7f punishes, but the worse range disqualifies it as a poke and it is harder to use it safely than Genji 2U. Can sometimes use in pressure to call out walking back."
 };
 
 // jump normals
-const jL = { 
-  moveName: 'Jump Light', 
-  altName: 'jL', 
+// Genji
+const genjiJL = { 
+  moveName: 'Jump Light (Genji)', 
+  altName: 'Genji jL', 
   damage: '400', 
   guard: 'high', 
   startup: '5', 
@@ -332,11 +333,11 @@ const jL = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "Gran's fastest air normal. Has active frames from startup until it hits the ground."
+  description: "Air-to-air\nPretty generic jumping light with infinite active frames. Usable as air-to-air."
 };
-const jM = { 
-  moveName: 'Jump Medium', 
-  altName: 'jM', 
+const genjiJM = { 
+  moveName: 'Jump Medium (Genji)', 
+  altName: 'Genji jM', 
   damage: '550', 
   guard: 'high', 
   startup: '6', 
@@ -347,11 +348,73 @@ const jM = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "Gran's best air-to-air normal. Has a small cross-up hitbox at the very beginning. It's use as a crossup is mostly outshined by j.U, but it's good to know that it's there."
+  description: "Jump-in, can cross up\nYour button in Genji when jumping on your enemies' heads. Can hit cross-up, but not too far."
 };
-const jH = { 
-  moveName: 'Jump Heavy', 
-  altName: 'jH', 
+const genjiJH = { 
+  moveName: 'Jump Heavy (Genji)', 
+  altName: 'Genji jH', 
+  damage: '700', 
+  guard: 'high', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['h'],
+  description: "All-round jump in\nAll-purpose jump-in that doesn't hit behind Narmaya despite what the animation suggests."
+};
+const genjiJU = { 
+  moveName: 'Jump Unique (Genji)', 
+  altName: 'Genji jU', 
+  damage: '800', 
+  guard: 'high', 
+  startup: '12', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['u'],
+  description: "Spaced jump-in and air-to-air\nHard coded to whiff on crouchers\nJumping button with high horizontal range. Excellent when well spaced, but can be low profiled, or beat with far-range antiairs."
+};
+
+// Kagura
+const kaguraJL = { 
+  moveName: 'Jump Light (Kagura)', 
+  altName: 'Kagura jL', 
+  damage: '400', 
+  guard: 'high', 
+  startup: '5', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['l'],
+  description: "Air-to-air\nA straight upgrade over the Genji version, with better disjoint, a stronger air-to-air angle and a cancel into Kagura j.214H for possible conversions, or plus frames on block."
+};
+const kaguraJM = { 
+  moveName: 'Jump Medium (Kagura)', 
+  altName: 'Kagura jM', 
+  damage: '550', 
+  guard: 'high', 
+  startup: '6', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['m'],
+  description: "Jump-in, dedicated cross-up\nSacrifices frontal range for a large crossup hitbox. Cancelling into j.214H make this button plus from any height, and yields a strong conversion from crossup jumpins."
+};
+const kaguraJH = { 
+  moveName: 'Jump Heavy (Kagura)', 
+  altName: 'Kagura jH', 
   damage: '800', 
   guard: 'high', 
   startup: '7', 
@@ -362,12 +425,12 @@ const jH = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Gran's longest reaching and most damaging jump-in. Hitbox is smaller/further up the closer it is to Gran's body."
+  description: "Highest attack level jump in\nExclusively used in safejumps and deep jump-ins. Hits very high above Narmaya, but Kagura j.U is better at covering that angle."
 };
-const jU = { 
-  moveName: 'Jump Unique', 
-  altName: 'jU', 
-  damage: '700', 
+const kaguraJU = { 
+  moveName: 'Jump Unique (Kagura)', 
+  altName: 'Kagura jU', 
+  damage: '800', 
   guard: 'high', 
   startup: '12', 
   active: '-', 
@@ -377,86 +440,25 @@ const jU = {
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "Gran's j.U is a ridiculous jump-in and crossup attack. It hits all around him, which makes it by far his best jump in and arguably the best jump-in attack in the game. Use it after safejumps, use it whenever you're in the air. It's just that good. It's only real fault is that it's slower than most air normals, so you will have to use something else to air-to-air."
+  description: "All-purpose air button\nUseful all-purpose jumping button, usable both as air-to-air and as a jump in."
 };
 
 // unique action
 const lv1U = { 
-  moveName: 'Power Raise Lv1', 
-  altName: '5ULv1', 
-  damage: '1000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
+  moveName: 'Butterfly Effect', 
+  altName: '5U', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
   onhit: '-',
   oncounterhit: '-',
   clash: '-',
   motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
+  description: "Narmaya changes from Genji stance to Kagura stance or vice-versa, changing her normals and special moves.\nIf swapping to Kagura stance, a red butterfly will be shown, and if swapping to Genji stance, a blue butterfly will be shown.\nWhen done alone, the swapping has a bit of a lengthy recovery time, but that can be canceled into anything except for walking after ~9 frames. This can be used to change stances in neutral, by pressing 5U and then quickly tapping the guard button to cancel the recovery.\nIts most important property, however, is that this can be used while you're in the middle of a move. If used in this way, Narmaya has no extra recovery at all, and as soon as she returns to neutral, she'll be in the other stance. Mastering this is a core part of her corner combos and her pressure.\nFor those familiar with Jojo:HFTF, the idea behind each stance is similar to Chaka's Stand ON/OFF. With long-range tools such as f.M and Setsuna, Genji stance is an excellent neutral stance, whereas Kagura's faster normals with higher frame advantage make it an ideal stance for close ranges."
 };
-const lv2U = { 
-  moveName: 'Power Raise Lv2', 
-  altName: '5ULv2', 
-  damage: '1200', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv3U = { 
-  moveName: 'Power Raise Lv3', 
-  altName: '5ULv3', 
-  damage: '1400', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv4U = { 
-  moveName: 'Power Raise Lv4', 
-  altName: '5ULv4', 
-  damage: '1600', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-const lv5U = { 
-  moveName: 'Power Raise Lv5', 
-  altName: '5ULv5', 
-  damage: '2000', 
-  guard: 'mid', 
-  startup: '22', 
-  active: '9', 
-  recovery: '13', 
-  onblock: '-5', 
-  onhit: '-',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['u'],
-  description: "A chargable slash attack. Can be charged up to five levels and gains invulnerability at level five. Each level will also increase in damage and range. \nCharge can be cancelled with L/M/H. Level is stored and resumes charging from the same level when using 5U again. Gran will auto cancel charge after Level 5, and once he's at Level 5, he can still delay the attack by holding 5U or cancel it like normal. \nLevel 4 and 5 will cause a wallbounce in the corner allowing for combo extensions. \nIt\'s also a decent pressure tool as it\'s 0 on block when spaced at the tip and also pulls Gran's hurtbox back a bit. \nCan be used in some corner combos if an opponent is high enough after 2H."
-};
-
 const groundThrow = { 
   moveName: 'Ground Throw', 
   damage: '1500', 
@@ -469,7 +471,21 @@ const groundThrow = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: "Forward throw knocks opponent far away, but untech time is long enough so you can run in for a meaty or jump in. Great for driving your opponent towards the corner. \nBack throw switches sides. Useful if you want to stick close to your opponent after as you will recover closer up than if you were to forward throw. \nBetween buttons such as c.L, 2L, c.M, and 2M, throw is a particularly strong mix-up option for Gran as it offers many tick throw opportunities. Gran's ability to convert the opponent's whiffed throw techs into enormous damage also serves to make his throw mix up game all the more scary."
+  description: "Narmaya's forward throw gives her an auto-timed safejump in the corner by holding up-forward directly after it finishes, or even midscreen with an instant super jump Kagura j.H. The back throw has higher recovery and doesn't allow for safe jumps."
+};
+const backThrow = { 
+  moveName: 'Back Throw', 
+  damage: '1500', 
+  guard: 'throw', 
+  startup: '7', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['4', 'l', 'm', 'or', '4', 'l', 'u'],
+  description: "Narmaya's forward throw gives her an auto-timed safejump in the corner by holding up-forward directly after it finishes, or even midscreen with an instant super jump Kagura j.H. The back throw has higher recovery and doesn't allow for safe jumps."
 };
 const airThrow = { 
   moveName: 'Air Throw', 
@@ -483,7 +499,7 @@ const airThrow = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'm', 'or', 'l', 'u'],
-  description: ""
+  description: "Air-to-air when anticipating air stall\nGeneric air throw. Usable as a preemptive or reactive air-to-air. Air throw is allowed to side swap in this game, which makes it a more valuable option if you can gain the corner with it."
 };
 
 const uOverhead = { 
@@ -499,12 +515,12 @@ const uOverhead = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m', 'u'],
-  description: "Same use as most overheads, checking for low blocks and getting counter hits on late buttons or throws. Gran gets really good reward off of CH Overhead in the corner due to his explosive corner damage, enough to end the round from half health with all specials and super. As of 2.0 Patch Gran can get a stronger Midscreen combo thanks to the changes to H Reginleiv, allowing for follow-ups and better damage."
+  description: "Goes over throws and low attacks, for high counterhit reward\nUniversal overhead. An educational conditioning tool that teaches your opponent not to tech throws with the regular throw tech, especially close to the corner, unless they want to die. This makes your opponent more likely to try and mash out or jump out against your throw threats, which you can then abuse in other ways."
 };
 
 // fireballs
 const lFireball = { 
-  moveName: 'L Reginleiv', 
+  moveName: 'L Setsuna', 
   altName: '236L', 
   damage: '800', 
   guard: 'all', 
@@ -516,10 +532,10 @@ const lFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', 'l', 'or', 'a'],
-  description: "Standard fireball. \nTravels fairly fast and across the screen. Serves as a safe ender for his block strings and pokes."
+  description: "Long range high whiff recovery projectile that clashes with projectiles.\nNarmaya does a far-reaching horizontal slash forwards. Clashes with single hit projectiles. Multi-hit projectiles, such as Gran's H Reginleiv which has 3 hits, will only have one of their 'hits' canceled. At close to medium range, both the L and M versions will send the opponent up into the air slightly before putting them into a soft knockdown, whereas hitting them at medium to far range with this move will only make the opponent slightly recoil with no knockdown. The H version will follow the first behavior regardless of distance, however, results in a hard knockdown, and can wallbounce at close to medium range if the opponent is to the corner. All versions suffer reduced damage if hit at medium to far range.\nFast startup, high recovery.\nThe L version is a pretty swift slash, making it a long-range poke useful for keeping your opponent at bay in neutral, stuffing fireball attempts, punishing a zoning attempt, or a whiffed move. But it is also a move you have to be careful with, since it yields you little damage if it hits, but has enough recovery to eat a high-damage punish if your opponent jumps over it or rolls through it."
 };
 const mFireball = { 
-  moveName: 'M Reginleiv', 
+  moveName: 'M Setsuna', 
   altName: '236M', 
   damage: '400, 800', 
   guard: 'mid, all', 
@@ -531,10 +547,11 @@ const mFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', 'm', 'or', 'a', 'm'],
-  description: "Gran slashes upward before shooting out a projectile. \nFirst slash cancels out projectiles. \nUseful to turn projectile wars more in your favor as you can cancel out incoming projectiles with the upward slash before throwing out a projectile of your own. Also is helpful in throwing off your opponent\'s timing when trying to dodge 236L. Serves as a better blockstring ender than 236L, and as of the 2.0 Patch there\'s no Gap in-between the two hits."
+  description: "Long range high whiff recovery projectile that clashes with projectiles.\nNarmaya does a far-reaching horizontal slash forwards. Clashes with single hit projectiles. Multi-hit projectiles, such as Gran's H Reginleiv which has 3 hits, will only have one of their 'hits' canceled. At close to medium range, both the L and M versions will send the opponent up into the air slightly before putting them into a soft knockdown, whereas hitting them at medium to far range with this move will only make the opponent slightly recoil with no knockdown. The H version will follow the first behavior regardless of distance, however, results in a hard knockdown, and can wallbounce at close to medium range if the opponent is to the corner. All versions suffer reduced damage if hit at medium to far range.\nSlow startup, short recovery.\nLinks into most pokes on hit.\nExtended counter hit hitstun.\nThe M version has a longer startup, can be delayed even longer and is very plus on block. You can mix it up with the L version to throw off your opponent's rhythm, or use it as a pressure reset against overly respectful opponents. Useful in neutral against opponents happy to roll through the L version, but still loses to jumps. Do not use against characters with an long-range invincible super on deck."
+
 };
 const hFireball = { 
-  moveName: 'H Reginleiv', 
+  moveName: 'H Setsuna', 
   altName: '236H', 
   damage: '350 x 3', 
   guard: 'all', 
@@ -546,12 +563,60 @@ const hFireball = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', 'h', 'or', 'a', 'h'],
-  description: "3-hit fireball. \nHard knockdown on airhit. \nA grown man 3-hit fireball. As of the 2.0 Patch H Reginleiv does NOT knockdown, but instead leaves them standing. Depending on distance and the state of the opponent, it allows for combos afterwards. At least +7 on hit, allowing for follow-ups even midscreen provided that the opponent is close enough to be hit. Primarily a combo and pressure tool, as it has lost a lot of its neutral prowess due to the nerf. Worth throwing out when applying pressure in the corner, however. H Reginleiv can also frame trap from cXX, albeit in a rather tight window."
+  description: "Long range high whiff recovery projectile that clashes with projectiles.\nNarmaya does a far-reaching horizontal slash forwards. Clashes with single hit projectiles. Multi-hit projectiles, such as Gran's H Reginleiv which has 3 hits, will only have one of their 'hits' canceled. At close to medium range, both the L and M versions will send the opponent up into the air slightly before putting them into a soft knockdown, whereas hitting them at medium to far range with this move will only make the opponent slightly recoil with no knockdown. The H version will follow the first behavior regardless of distance, however, results in a hard knockdown, and can wallbounce at close to medium range if the opponent is to the corner. All versions suffer reduced damage if hit at medium to far range.\nBest of both worlds.\nCounterhit conversion into Genji f.M midscreen.\nWallbounce conversions in the corner.\nThe H version combines frame advantage, speed and higher safety on whiff. It is plus on block, fast enough to frametrap, extends corner combos and can just be thrown out there to fish for unreactable hard knockdowns from mid screen. Use and abuse."
 };
+
+const lSlashes = { 
+  moveName: 'L Kyokasuigetsu', 
+  altName: '236L', 
+  damage: '800', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-7', 
+  onhit: '-3',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'l', 'or', 'a'],
+  description: "Main combo ender, or close to corner combo starter\nFaster startup when canceled into from a Transient (214X) command dash\nL Version\nHits once.\nThe 2.70 patch changes turn this move into a safe poke or approach when spaced, in exchange for losing the knockdown. On hit, it now air resets, with enough time to dash up with a meaty."
+};
+const mSlashes = { 
+  moveName: 'M Kyokasuigetsu', 
+  altName: '236M', 
+  damage: '400, 800', 
+  guard: 'mid, all', 
+  startup: '13', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-4', 
+  onhit: '0',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'm', 'or', 'a', 'm'],
+  description: "Main combo ender, or close to corner combo starter\nFaster startup when canceled into from a Transient (214X) command dash\nHits twice for more damage and covers more ground.\nYour EX-less hit confirm and combo ender of choice. Good damage, and good knockdown that leaves more than enough time to run in with any meaty or throw you want. Do not use on block."
+
+};
+const hSlashes = { 
+  moveName: 'H Kyokasuigetsu', 
+  altName: '236H', 
+  damage: '350 x 3', 
+  guard: 'all', 
+  startup: '15', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '+3', 
+  onhit: '+7',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['236', 'h', 'or', 'a', 'h'],
+  description: "Main combo ender, or close to corner combo starter\nFaster startup when canceled into from a Transient (214X) command dash\nHits three times.\nLeads to a combo in the corner, or a safejump midscreen. Most characters can now punish it on block, with the exception of Ferry, Metera and Narmaya in Genji stance. Extremely important cooldown to start her corner combos, Narmaya will be far less threatening in pressure during Kagura stance if she does not have this cooldown."
+};
+
 
 // dragon punches
 const lUppercut = { 
-  moveName: 'L Rising Sword', 
+  moveName: 'L Absolute Horizon', 
   altName: '623L', 
   damage: '700, 300', 
   guard: 'mid, all', 
@@ -563,10 +628,10 @@ const lUppercut = {
   oncounterhit: '-',
   clash: '-',
   motion: ['623', 'l', 'or', '6', 'a'],
-  description: "Invincible reversal. \nAir unblockable during the early active frames. Technically the least unsafe on block and can be difficult to punish at far ranges due to the pushback and shorter recovery than the other versions, but don't count on it. As of 2.0 Patch L version is slower and has increased Recovery, making it much easier punish."
+  description: "True reversal\nEmergency or fallback anti-air, but bad at hitting cross-ups\nA classic reversal DP. Also your staple fallback anti-air in Genji if you have no time for 2H, or no confidence it'll win. All versions are air unblockable on the first hit, and EX is fully air unblockable. If you use it as a reactive anti-air, either use the easy input version or buffer the DP motion ahead of time. If only the second hit of the M version hits as a high counter hit, you get a combo off it - this can happen against high anti-antiairs like Percival j.U."
 };
 const mUppercut = { 
-  moveName: 'M Rising Sword', 
+  moveName: 'M Absolute Horizon', 
   altName: '623M', 
   damage: '700, 300 x 2', 
   guard: 'mid, all', 
@@ -578,10 +643,10 @@ const mUppercut = {
   oncounterhit: '-',
   clash: '-',
   motion: ['623', 'm', 'or', '6', 'a', 'm'],
-  description: "Also an invincible reversal. \nStandard non-H combo ender for damage. Also air unblockable during the early active frames."
+  description: "True reversal\nEmergency or fallback anti-air, but bad at hitting cross-ups\nA classic reversal DP. Also your staple fallback anti-air in Genji if you have no time for 2H, or no confidence it'll win. All versions are air unblockable on the first hit, and EX is fully air unblockable. If you use it as a reactive anti-air, either use the easy input version or buffer the DP motion ahead of time. If only the second hit of the M version hits as a high counter hit, you get a combo off it - this can happen against high anti-antiairs like Percival j.U."
 };
 const hUppercut = { 
-  moveName: 'H Rising Sword', 
+  moveName: 'H Absolute Horizon', 
   altName: '623H', 
   damage: '950~1400', 
   guard: 'mid, all', 
@@ -593,12 +658,58 @@ const hUppercut = {
   oncounterhit: '-',
   clash: '-',
   motion: ['623', 'h', 'or', '6', 'a', 'h'],
-  description: "Oops, all reversals. \nDouble the uppercuts. Hard knockdown. There is a small gap in-between the two strikes. The entire first strike is air unblockable, however invincibility wears off before the second strike."
+  description: "True reversal\nEmergency or fallback anti-air, but bad at hitting cross-ups\nA classic reversal DP. Also your staple fallback anti-air in Genji if you have no time for 2H, or no confidence it'll win. All versions are air unblockable on the first hit, and EX is fully air unblockable. If you use it as a reactive anti-air, either use the easy input version or buffer the DP motion ahead of time. If only the second hit of the M version hits as a high counter hit, you get a combo off it - this can happen against high anti-antiairs like Percival j.U."
 };
 
-// rekka
-const lRekka = { 
-  moveName: 'L Overdrive Surge', 
+const lParrycut = { 
+  moveName: 'L Mugenkagura', 
+  altName: '623L', 
+  damage: '700, 300', 
+  guard: 'mid, all', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-17', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['623', 'l', 'or', '6', 'a'],
+  description: "High/mid parry that beats safejumps\nAutoguard stance that parries highs and mids. Follows up with a counter slash after parrying an attack, or after some time passes. Usable as a reaction to slow specials or a last resort anti-air that loses to empty jumps. Freezes the opponent on parry, allowing it to win against safe jumps.\nQuick startup.\nYou can combo into it off close autocombos."
+};
+const mParrycut = { 
+  moveName: 'M Mugenkagura', 
+  altName: '623M', 
+  damage: '700, 300 x 2', 
+  guard: 'mid, all', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-26', 
+  onhit: 'KD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['623', 'm', 'or', '6', 'a', 'm'],
+  description: "High/mid parry that beats safejumps\nAutoguard stance that parries highs and mids. Follows up with a counter slash after parrying an attack, or after some time passes. Usable as a reaction to slow specials or a last resort anti-air that loses to empty jumps. Freezes the opponent on parry, allowing it to win against safe jumps.\nSlower.\nMore damage.\nBasically impossible to combo into, only used for hard reads when you really need the extra parry time."
+};
+const hParrycut = { 
+  moveName: 'H Mugenkagura', 
+  altName: '623H', 
+  damage: '950~1400', 
+  guard: 'mid, all', 
+  startup: '9', 
+  active: '-', 
+  recovery: '-', 
+  onblock: '-26', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['623', 'h', 'or', '6', 'a', 'h'],
+  description: "High/mid parry that beats safejumps\nAutoguard stance that parries highs and mids. Follows up with a counter slash after parrying an attack, or after some time passes. Usable as a reaction to slow specials or a last resort anti-air that loses to empty jumps. Freezes the opponent on parry, allowing it to win against safe jumps.\nNot actually as fast as the L version. Still fast enough for combo uses, and Narmaya's staple ender for full corner combos.\nHard knockdown on hit."
+};
+
+// 214 motion (Rekka)
+const lCmdDash = { 
+  moveName: 'L Transient', 
   altName: '214L', 
   damage: '700', 
   guard: 'mid', 
@@ -610,25 +721,10 @@ const lRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'l', 'or', '2', 'a'],
-  description: "Has a follow-up version of 214M that knocks down. \nGran dashes forward with a slash. Safest version of 214X at point blank. Can cancel into 214M on hit or block. On hit, 214L > 214M serves as his standard meterless combo ender. On block can be used to test your opponent's willingness to mash after 214L lest they risk a Counter Hit 214M. As of 2.0 Patch follow-up causes no Wall Bounce on Counter Hit, only knocks down."
+  description: "Command dash that cancels into other specials, main hit confirm tool\nA forward command dash. All versions can be canceled into Kagura stance specials, SBA or SSBA. Canceling into Kagura specials will also switch your stance to Kagura automatically.\nL and M version have the same earliest cancel point, but M can cross up. The H version can be canceled earlier than L or M, allowing better confirms off more buttons, and is usually your command dash of choice for hit confirms. For confirms, you will usually confirm into 236M midscreen for good pressure, or 236H for Narmaya's full, high damage corner combo. On good counter hits, combos into SBA are possible. If you missed a hit confirm, you can cancel into 214X instead to keep yourself safe.\nWhen crossing up with the M and H versions, keep in mind that your followup input will be interpreted from the side before you crossed up. For example, to get Kyokasuigetsu (236X) after crossing up, you would technically input 214X."
 };
-const followupRekka = { 
-  moveName: 'M Overdrive Surge(follow up)', 
-  altName: '214L -> 214M', 
-  damage: '500', 
-  guard: 'mid', 
-  startup: '-', 
-  active: '13', 
-  recovery: '29', 
-  onblock: '-10', 
-  onhit: 'KD',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Gran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
-};
-const mRekka = { 
-  moveName: 'M Overdrive Surge', 
+const mCmdDash = { 
+  moveName: 'M Transient', 
   altName: '214M', 
   damage: '1200', 
   guard: 'mid', 
@@ -640,10 +736,10 @@ const mRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'm', 'or', '4', 'a'],
-  description: "Does not knock down. \nGran dashes forward with his foot out. Covers a lot of horizontal space in front of him. As of 2.21 Patch no longer punishable on hit from point blank, but still negative enough to lose your turn. On block safety ranges depending on the range used. At point blank, Gran is punishable. However at farther lengths it can be spaced out to be safe and at most be 0 on block. On Counter Hit causes extended hitstun for a follow-up combo, but doesn't allow for a combo at point blank. Doesn't reliably combo from far pokes and the reduced hitbox and increased hurtbox with weak reward on hit makes it in the current meta a very mediocre move."
+  description: "Command dash that cancels into other specials, main hit confirm tool\nA forward command dash. All versions can be canceled into Kagura stance specials, SBA or SSBA. Canceling into Kagura specials will also switch your stance to Kagura automatically.\nL and M version have the same earliest cancel point, but M can cross up. The H version can be canceled earlier than L or M, allowing better confirms off more buttons, and is usually your command dash of choice for hit confirms. For confirms, you will usually confirm into 236M midscreen for good pressure, or 236H for Narmaya's full, high damage corner combo. On good counter hits, combos into SBA are possible. If you missed a hit confirm, you can cancel into 214X instead to keep yourself safe.\nWhen crossing up with the M and H versions, keep in mind that your followup input will be interpreted from the side before you crossed up. For example, to get Kyokasuigetsu (236X) after crossing up, you would technically input 214X."
 };
-const hRekka = { 
-  moveName: 'H Overdrive Surge', 
+const hCmdDash = { 
+  moveName: 'H Transient', 
   altName: '214H', 
   damage: '1200', 
   guard: 'mid', 
@@ -655,14 +751,106 @@ const hRekka = {
   oncounterhit: '-',
   clash: '-',
   motion: ['214', 'h', 'or', '2', 'a', 'h'],
-  description: "Wallbounces in the corner. \nGran's primary juggle starter. \nSimilar to 214M, but Gran dashes forward faster. Cannot be canceled into from 214L. Causes a wall bounce in the corner on hit regardless of counter hit, allowing for additional follow ups. Exercise caution as depending on the opponent's height when used, it can cause them to fall behind Gran after the wall bounce, possibly causing a side switch with yourself in the corner."
+  description: "Command dash that cancels into other specials, main hit confirm tool\nA forward command dash. All versions can be canceled into Kagura stance specials, SBA or SSBA. Canceling into Kagura specials will also switch your stance to Kagura automatically.\nL and M version have the same earliest cancel point, but M can cross up. The H version can be canceled earlier than L or M, allowing better confirms off more buttons, and is usually your command dash of choice for hit confirms. For confirms, you will usually confirm into 236M midscreen for good pressure, or 236H for Narmaya's full, high damage corner combo. On good counter hits, combos into SBA are possible. If you missed a hit confirm, you can cancel into 214X instead to keep yourself safe.\nWhen crossing up with the M and H versions, keep in mind that your followup input will be interpreted from the side before you crossed up. For example, to get Kyokasuigetsu (236X) after crossing up, you would technically input 214X."
+};
+
+const lTsubame = { 
+  moveName: 'L Crescent Moon', 
+  altName: '214L', 
+  damage: '700', 
+  guard: 'mid', 
+  startup: '13', 
+  active: '2', 
+  recovery: '19', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'or', '2', 'a'],
+  description: "Safe-on-block frametrap that crushes ground buttons\nNot an overhead, but has more frame advantage if blocked crouching. Has a built-in jump on startup, so it crushes most grounded buttons, but the reward for it isn't high and a waiting opponent can anti-air Narmaya out of the flip.\nSlower.\nFlips forward a short distance, almost never crosses up.\nCan be plus when spaced at the very tip of its range." 
+};
+const mTsubame = { 
+  moveName: 'M Crescent Moon', 
+  altName: '214M', 
+  damage: '1200', 
+  guard: 'mid', 
+  startup: '16', 
+  active: '13', 
+  recovery: '29', 
+  onblock: '+2~-10', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'm', 'or', '4', 'a'],
+  description: "Safe-on-block frametrap that crushes ground buttons\nNot an overhead, but has more frame advantage if blocked crouching. Has a built-in jump on startup, so it crushes most grounded buttons, but the reward for it isn't high and a waiting opponent can anti-air Narmaya out of the flip.\nSlower.\nMoves Narmaya farther than the L version, crosses up at close range.\nCan be plus when spaced as a deep cross-up."
+};
+const hTsubame = { 
+  moveName: 'H Crescent Moon', 
+  altName: '214H', 
+  damage: '1200', 
+  guard: 'mid', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'h', 'or', '2', 'a', 'h'],
+  description: "Always plus.\nFaster than L or M versions.\nCan be steered by holding [6], to follow the M versions trajectory instead of the L version's.\nSkips neutral if opponent focuses too much on the ground game."
+};
+
+const lAirTsubame = { 
+  moveName: 'L Crescent Moon (Air)', 
+  altName: '214L', 
+  damage: '700', 
+  guard: 'mid', 
+  startup: '13', 
+  active: '2', 
+  recovery: '19', 
+  onblock: '-6', 
+  onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'l', 'or', '2', 'a'],
+  description: "Anti-anti air and ground button whiff punish\nGives better jump-in or air-to-air confirms\nPressure tool when done as TK, especially the EX\nBounces backward\nBetter and faster at hitting in front\nHuge downward hitbox, can be used as anti-anti-air\nSlightly stalls before landing, lowest possible version is +4 on block and leads to counterhit confirms"  
+};
+const mAirTsubame = { 
+  moveName: 'M Crescent Moon (Air)', 
+  altName: '214M', 
+  damage: '1200', 
+  guard: 'mid', 
+  startup: '16', 
+  active: '13', 
+  recovery: '29', 
+  onblock: '+2~-10', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'm', 'or', '4', 'a'],
+  description: "Anti-anti air and ground button whiff punish\nGives better jump-in or air-to-air confirms\nPressure tool when done as TK, especially the EX\nBounces forwardBetter and faster at hitting behind\nUsually not plus"  
+};
+const hAirTsubame = { 
+  moveName: 'H Crescent Moon (Air)', 
+  altName: '214H', 
+  damage: '1200', 
+  guard: 'mid', 
+  startup: '13', 
+  active: '13', 
+  recovery: '37', 
+  onblock: '+4~-8', 
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['214', 'h', 'or', '2', 'a', 'h'],
+  description: "Anti-anti air and ground button whiff punish\nGives better jump-in or air-to-air confirms\nPressure tool when done as TK, especially the EX\nAlways plus, especially on air block\nBehaves similarily to M version, not L version\nWhen done as TK, strong pressure reset and throw bait that is 9f of startup including jump startup, +2 on block and on counterhit combos midscreen into Genji f.M\nMidscreen combos when used as crossup jump-in\nStaple corner combo tool\nAir special. All versions change air momentum on hit, which gives them useful properties done just above the ground as TK specials. Comes out very fast as it does not have the jump that the ground version has. Can be used to combo off air-to-air hits or off jump-ins that would normally be too high.\nValues in [] are for the Tiger Knee'd version"  
 };
 
 // skybound art
 const sba = { 
-  moveName: 'Tempest Blade', 
+  moveName: 'One Hundred Cloudscapes', 
   altName: '236236H', 
-  damage: '2500-3500', 
+  damage: '1000-3500', 
   guard: 'mid', 
   startup: '6+5', 
   active: '-', 
@@ -672,10 +860,10 @@ const sba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
-  description: "Metered advancing invulnerable move. Deals big damage but has a short reach. Try using it when you're close to your opponent."
+  description: "Short-range, fast confirm super\nGreat anti-air\nLaunches the opponent up and catches them with an elegant sword spin on the way down. Has a large vertical hitbox but short horizontal reach, making it difficult to connect in some situations but also an excellent anti-air. To increase the range, you can cancel into it from Utakata (214X[g]).\nIf you hold down the button on hit, only the initial launching attack will come out. This lets you continue with your own combo, or take time to create various mixups. Usually, this is not worth it compared to the full animation, but it can be used if you would otherwise not get a full combo at all."
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Butterfly Effect: Ame-no-Uzume', 
   altName: '236236U', 
   damage: '3500-4500', 
   guard: 'all', 
@@ -687,7 +875,7 @@ const ssba = {
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
-  description: "Gran charges and throws out an invulnerable projectile move. It can travel across the screen, however if used at point blank it will be followed by a massive blast by the summoned Proto Bahamut. Deals a lot of chip damage on block which can setup for a chip kill afterwards. After 2.0 Patch, extremely unsafe to the point where Vaseraga gets a free f.H for punish."
+  description: "High horizontal range and damage, combos off any poke\nCrosses up on animation\nInvincible startup, with a far, far longer range than 236236H. Activates a cinematic that deals more damage and switches sides if it hits at close range. You can combo off a lot of different pokes or use it in close-to-corner juggles where nothing else would reach."
 };
 
 
@@ -713,28 +901,40 @@ export const narmayaInfo = [
   kagura2M,
   kagura2H,
   kagura2U,
-  jL,
-  jM,
-  jH,
-  jU,
+  genjiJL,
+  genjiJM,
+  genjiJH,
+  genjiJU,
+  kaguraJL,
+  kaguraJM,
+  kaguraJH,
+  kaguraJU,
   lv1U,
-  lv2U,
-  lv3U,
-  lv4U,
-  lv5U,
   groundThrow,
+  backThrow,
   airThrow,
   uOverhead,
   lFireball,
   mFireball,
   hFireball,
+  lSlashes,
+  mSlashes,
+  hSlashes,
   lUppercut,
   mUppercut,
   hUppercut,
-  lRekka,
-  followupRekka,
-  mRekka,
-  hRekka,
+  lParrycut,
+  mParrycut,
+  hParrycut,
+  lCmdDash,
+  mCmdDash,
+  hCmdDash,
+  lTsubame,
+  mTsubame,
+  hTsubame,
+  lAirTsubame,
+  mAirTsubame,
+  hAirTsubame,
   sba,
   ssba
 ]
