@@ -2,11 +2,11 @@
 
 const general = { char: "Narmaya", health: '10000', prejump: '4F', backdash: '22F' }
 
-// close normals
-const closeL = {
-  moveName: 'Close Light',
-  altName: 'cL',
-  damage: '400',
+// Genji
+const genjiCloseL = {
+  moveName: 'Close Light (Genji)',
+  altName: 'Genji cL',
+  damage: '300',
   guard: 'mid',
   startup: '5',
   active: '3',
@@ -16,12 +16,12 @@ const closeL = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l'],
-  description: "Gran's fastest button for pressure, great for frame traps and tick throws. It can link into c.M on regular hit for a hitconfirm. When done meaty, it can avoid some of the slower reversals."
+  description: "There is no close version of this normal.\nNegative on block but leads into auto combo at all ranges.\nA quick poke forward with the pommel of Narmaya's blade. This move is slower and covers less range than Kagura 5L."
 };
-const closeM = {
-  moveName: 'Close Medium',
-  altName: 'cM',
-  damage: '700',
+const genjiCloseM = {
+  moveName: 'Close Medium (Genji)',
+  altName: 'Genji cM',
+  damage: '650',
   guard: 'mid',
   startup: '6',
   active: '3',
@@ -31,12 +31,12 @@ const closeM = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "A good upclose tool, post-nerf it is mostly combo filler but can frametrap against 6f c.L characters due to attack level. Can link into c.L on crouching hit."
+  description: "Slower and less advantageous than Kagura c.M.\nMostly used for punishes where 5H is too slow.\nCombos into Kagura 5M on counterhit.\nA generic starter. It can be used in pressure situations with autocombos, but is poor for staggering."
 };
-const closeH = {
-  moveName: 'Close Heavy',
-  altName: 'cH',
-  damage: '1200',
+const genjiCloseH = {
+  moveName: 'Close Heavy (Genji)',
+  altName: 'Genji cH',
+  damage: '450, 350',
   guard: 'mid',
   startup: '8',
   active: '4',
@@ -46,7 +46,54 @@ const closeH = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Highest damage button that goes into auto combo, better choice for combo filler for the extra damage when applicable. Puts the opponent in huge hitstun on Counter Hit, so much so that it can link into either itself or f.H depending on distance, allowing for a high damage combo in the corner. Has large active frames, so can be meatied late for plus frames on oki."
+  description: "Less damage than Kagura c.H, but faster.\nClose anti-air, hits farther behind her than Genji 2H.\nHits twice for easy confirms and high enough to catch jumpers.\nIn Genji, this is Narmaya's main combo filler and strongest punish starter, and also an useful frametrap tool that can be made safe or even plus with auto combo or Genji 236H on block."
+};
+
+// Kagura
+const kaguraCloseL = {
+  moveName: 'Close Light (Kagura)',
+  altName: 'Kagura cL',
+  damage: '300',
+  guard: 'mid',
+  startup: '5',
+  active: '3',
+  recovery: '6',
+  onblock: '2',
+  onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['l'],
+  description: "There is no close version of this normal.\nOnly even on block, but leads to auto combo at all ranges.\nDoes not reach full range on first active frame. Plus at full range.\nA stab forward with the actual blade. Narmaya's only 5f normal. It has slightly more range than Genji 5L and is a frame faster."
+};
+const kaguraCloseM = {
+  moveName: 'Close Medium (Kagura)',
+  altName: 'Kagura cM',
+  damage: '650',
+  guard: 'mid',
+  startup: '6',
+  active: '3',
+  recovery: '10',
+  onblock: '0',
+  onhit: '4',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['m'],
+  description: "General pressure tool.\nCombos from 2L from either stance.\nCH confirms into M buttons and Genji 5H on crouching CH.\nA faster alternative to Kagura 2M that leads into autocombo and is better at catching jumpouts, but can be contested on block."
+};
+const kaguraCloseH = {
+  moveName: 'Close Heavy (Kagura)',
+  altName: 'Kagura cH',
+  damage: '1100',
+  guard: 'mid',
+  startup: '8',
+  active: '4',
+  recovery: '18',
+  onblock: '-3',
+  onhit: '1',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['h'],
+  description: "Slightly slower than Genji c.H, but higher damage.\nCombos into itself on CH.\nGood at catching jump-outs but not very good as anti-air.\nCan be plus when timed meaty. If the hitstop shows the blade touching the ground, it is plus.\nOne of Narmaya's strongest normals. This move leads to big combos on counterhit and is strong in general pressure situations. This is Narmaya's highest damage starter, so it should be used for punishes whenever possible."
 };
 
 // auto combos
@@ -63,7 +110,7 @@ const auto1 = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "A Granblue autocombo like any other. In Genji, autocombo is a valid pressure option thanks to the threat of 236H. Try to avoid using them in short combos into super, as that'll reduce the damage. 5L c.XX can sometimes be a frame trap, but the timing is tough."
 };
 const auto2 = {
   moveName: 'Auto Combo 3rd hit',
@@ -78,29 +125,15 @@ const auto2 = {
   oncounterhit: '-',
   clash: '-',
   motion: ['l', 'l', 'l'],
-  description: "Despite being airborne, the second hit can be canceled into grounded attacks on the first few active frames. On clash, Gran can delay his button to get c.XX > j.L, but this is slower than c.XX > c.XXX. Because of his speed, the second hit of Gran\'s autocombo can also be used as a soft reset point. While pausing here isn\'t safe, you are left close enough to your opponent to go into a low, throw, or overhead mixup if you\'re willing to take the risk that your opponent is mashing here or buffering DP. You can also use this point in the autocombo to stop and block(to bait a DP) or insert your own DP here to punish mashers. Against stronger or more paitent players, this point can also be used to transition into 2L pressure."
+  description: "A Granblue autocombo like any other. In Genji, autocombo is a valid pressure option thanks to the threat of 236H. Try to avoid using them in short combos into super, as that'll reduce the damage. 5L c.XX can sometimes be a frame trap, but the timing is tough."
 };
 
 // far normals
-const far5L = {
-  moveName: 'Far Light',
-  altName: 'f5L',
-  damage: '400',
-  guard: 'mid',
-  startup: '6',
-  active: '3',
-  recovery: '13',
-  onblock: '-3',
-  onhit: '1',
-  oncounterhit: '-',
-  clash: '-',
-  motion: ['l'],
-  description: "A faster close range poke at 6 frames, so it can punish some things from further away. Can combo into 214L>214M to round out a punish, but the cancel window is fairly tight."
-};
-const far5M = {
-  moveName: 'Far Medium',
-  altName: 'f5M',
-  damage: '700',
+// Genji
+const genjiFar5M = {
+  moveName: 'Far Medium (Genji)',
+  altName: 'Genji f5M',
+  damage: '600',
   guard: 'mid',
   startup: '8',
   active: '3',
@@ -110,11 +143,43 @@ const far5M = {
   oncounterhit: '-',
   clash: '-',
   motion: ['m'],
-  description: "His go to poke. Has the farthest reach of his normals and reaches far for its speed."
+  description: "A fast, long-reaching poke. This is the main button you'll be using in neutral.\nAlso your whiff punish of choice.\nDecent far anti air, but it's no Katalina f.H.\nCombos into SSBA at every range, making it quite deadly when Narmaya has full meter and is at low health.\nA strong, safe poke that should be a mainstay of your poking game. Cancel into 214H or SSBA for a hit confirm into knockdown."
 };
-const far5H = {
-  moveName: 'Far Heavy',
-  altName: 'f5H',
+const genjiFar5H = {
+  moveName: 'Far Heavy (Genji)',
+  altName: 'Genji f5H',
+  damage: '900',
+  guard: 'mid',
+  startup: '10',
+  active: '5',
+  recovery: '20',
+  onblock: '-9',
+  onhit: '-5',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['h'],
+  description: "Powerful, but high recovery poke\nThe big brother of f.M. Slightly slower and slightly more range. Should mainly use it as a preemptive running poke, where the combination of high attack level, fast run speed and long range is difficult to deal with, and leads to easier hit confirms into stronger combos. Try to not whiff it, it isn't hard to whiff punish."
+};
+
+// Kagura
+const kaguraFar5M = {
+  moveName: 'Far Medium (Kagura)',
+  altName: 'Kagura f5M',
+  damage: '600',
+  guard: 'mid',
+  startup: '8',
+  active: '3',
+  recovery: '18',
+  onblock: '-6',
+  onhit: '-2',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['m'],
+  description: "OK poke, punish and pressure tool.\nAlso a decent far anti air.\nYour only real poke in Kagura, but inferior to Genji pokes. More useful for counter hit confirms and punishes due to its range and speed."
+};
+const kaguraFar5H = {
+  moveName: 'Far Heavy (Kagura)',
+  altName: 'Kagura f5H',
   damage: '1000',
   guard: 'mid',
   startup: '10',
@@ -125,10 +190,73 @@ const far5H = {
   oncounterhit: '-',
   clash: '-',
   motion: ['h'],
-  description: "Has slightly less range than his f.M, but pulls his hurtbox back a bit. Great for counter poking. It has enough range to hit after you end your string with a fireball and doing so can catch mashing, but it's not recommended to do all the time because there are moves that will beat it."
+  description: "Essentially an highly active wall of hitbox that excels at crushing weaker pokes or mashes. Easy to confirm on hit, but also easy to whiff punish."
 };
 
-// regular normals
+// Crouch normals
+// Genji
+const n2L = {
+  moveName: 'Crouch Light',
+  altName: '2L',
+  damage: '400',
+  guard: 'mid',
+  startup: '6',
+  active: '3',
+  recovery: '6',
+  onblock: '2',
+  onhit: '6',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', 'l'],
+  description: "Good range 2L that can link into itself as well as c.L and c.M. Really strong pressure tool as it works for low mixup and a frame trap. Can confirm into 214L>214M for knockdown"
+};
+const n2M = {
+  moveName: 'Crouch Medium',
+  altName: '2M',
+  damage: '700',
+  guard: 'mid',
+  startup: '7',
+  active: '5',
+  recovery: '9',
+  onblock: '1',
+  onhit: '5',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', 'm'],
+  description: "Good poke and common combo tool. +1 on block, making it a decent choice to use post c.M nerf as a pressure tool."
+};
+const n2H = {
+  moveName: 'Crouch Heavy',
+  altName: '2H',
+  damage: '1000',
+  guard: 'mid',
+  startup: '10',
+  active: '6',
+  recovery: '24',
+  onblock: '-13',
+  onhit: '-9',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', 'h'],
+  description: "Really strong anti-air with a good hitbox in front and behind Gran, allowing him to beat out opponents jumping behind him. On CH, whiff 214L> 2H> 214M is a good damage combo with great corner carry, but when they're closer to the ground/to you you'll need to go for an alternate route. As of 2.0 Patch the increased start-up and the nerfs to many of Gran's other moves have made many corner combos unreliable at best or impossible to do. Notably corner 2H> 5U is not only harder to go into but can't loop into itself reliably anymore."
+};
+const n2U = {
+  moveName: 'Crouch Unique',
+  altName: '2U',
+  damage: '700',
+  guard: 'mid',
+  startup: '7',
+  active: '6',
+  recovery: '21',
+  onblock: '-12',
+  onhit: 'HKD',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', 'u'],
+  description: "Gran's sweep is very fast and very evasive. It goes under a lot more things than even it's animation would suggest. Sets up for a safejump on its own and after combos. As of 2.0 Patch, 2U > SSBA is an increadibly unsafe poke at any point. It still combos into high damage, but with how unsafe SSBA is and ease to Evade it's a High Risk option to go for. 2U by itself have also been nerfed by being less evasive than before, but still works as a strong low profile."
+};
+
+// Kagura
 const n2L = {
   moveName: 'Crouch Light',
   altName: '2L',
@@ -565,18 +693,26 @@ const ssba = {
 
 export const narmayaInfo = [
   general,
-  closeL,
-  closeM,
-  closeH,
+  genjiCloseL,
+  genjiCloseM,
+  genjiCloseH,
+  kaguraCloseL,
+  kaguraCloseM,
+  kaguraCloseH,
   auto1,
   auto2,
-  far5L,
-  far5M,
-  far5H,
-  n2L,
-  n2M,
-  n2H,
-  n2U,
+  genjiFar5M,
+  genjiFar5H,
+  kaguraFar5M,
+  kaguraFar5H,
+  genji2L,
+  genji2M,
+  genji2H,
+  genji2U,
+  kagura2L,
+  kagura2M,
+  kagura2H,
+  kagura2U,
   jL,
   jM,
   jH,
