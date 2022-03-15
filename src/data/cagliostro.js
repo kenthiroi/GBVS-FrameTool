@@ -847,6 +847,9 @@ export const cagInfo = [
   lTeleport,
   mTeleport,
   hTeleport,
+  lTeleportAir,
+  mTeleportAir,
+  hTeleportAir,
   sba,
   ssba
 ]
