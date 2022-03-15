@@ -719,6 +719,54 @@ const hTeleport = {
   description: 'Cagliostro creates a fake body and teleports somewhere. All versions of this move have some invuln while Cagliostro isn\'t on the screen, but none of them start at frame one. You can perform this move instantly in the air by performing it as 282X, 272X, or 292x, depending on if you want to do it out of a neutral, backward, or forward jump. Neither the M or H versions of this move will allow you to cross up the opponent if they are in the corner.\nCagliostro performs a hit before teleporting forward, directly behind the opponent.\nThe hit has extremely short range, but is +1 on block and launches straight up on hit. Can also be used as a reversal-safe meaty.'
 };
 
+const lTeleportAir = {
+  moveName: 'L Spare Body (Air)', 
+  altName: '22L', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '34 (Entire move)', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: 'Cagliostro creates a fake body and teleports somewhere. All versions of this move have some invuln while Cagliostro isn\'t on the screen, but none of them start at frame one. You can perform this move instantly in the air by performing it as 282X, 272X, or 292x, depending on if you want to do it out of a neutral, backward, or forward jump. Neither the M or H versions of this move will allow you to cross up the opponent if they are in the corner.\nCagliostro teleports backwards around backdash length.\nMainly used as a fakeout tool to bait the opponent into pressing something after using 22M.'
+};
+
+const mTeleportAir = {
+  moveName: 'M Spare Body (Air)', 
+  altName: '22M', 
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '39 (Entire move)',  
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
+  description: 'Cagliostro creates a fake body and teleports somewhere. All versions of this move have some invuln while Cagliostro isn\'t on the screen, but none of them start at frame one. You can perform this move instantly in the air by performing it as 282X, 272X, or 292x, depending on if you want to do it out of a neutral, backward, or forward jump. Neither the M or H versions of this move will allow you to cross up the opponent if they are in the corner.\nCagliostro teleports a set distance forward.\nThis move can cross up depending on how close or far away the opponent is.'
+};
+
+const hTeleportAir = {
+  moveName: 'H Spare Body (Air)', 
+  altName: '22H', 
+  damage: '1000', 
+  guard: 'All', 
+  startup: '13', 
+  active: '5', 
+  recovery: '17', 
+  onblock: '+3', 
+  onhit: 'HKD',
+  oncounterhit: 'HKD',
+  clash: '-',
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: 'Cagliostro creates a fake body and teleports somewhere. All versions of this move have some invuln while Cagliostro isn\'t on the screen, but none of them start at frame one. You can perform this move instantly in the air by performing it as 282X, 272X, or 292x, depending on if you want to do it out of a neutral, backward, or forward jump. Neither the M or H versions of this move will allow you to cross up the opponent if they are in the corner.\nCagliostro performs a hit before teleporting forward, directly behind the opponent.\nThe hit has extremely short range, but is +1 on block and launches straight up on hit. Can also be used as a reversal-safe meaty.'
+};
+
 // skybound art
 const sba = { 
   moveName: 'Ars Magna', 
