@@ -13,8 +13,8 @@ const closeL = {
   recovery: '6',
   onblock: '+2',
   onhit: '+6',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '+6',
+  clash: '1',
   motion: ['l'],
   description: "Granblue Fantasy Versus c.L. +2 on block, +6 on hit, links into itself, 2L and c.M on regular hit, and 2M on crouching hit."
 };
@@ -28,8 +28,8 @@ const closeM = {
   recovery: '12',
   onblock: '0',
   onhit: '+4',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '+8',
+  clash: '3',
   motion: ['m'],
   description: "A standard Granblue c.M, frame traps from c.L and 2L. Due to being 0 on block and 6 frame start up, when pressed again, can crush far light normals when spaced correctly. Good for pressure due to this, but otherwise pretty unremarkable."
 };
@@ -43,8 +43,8 @@ const closeH = {
   recovery: '19',
   onblock: '-5',
   onhit: '-1',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '+11',
+  clash: '5',
   motion: ['h'],
   description: "Mostly combo filler, but can function as an anti-air if opponent is above you."
 };
@@ -55,13 +55,13 @@ const auto1 = {
   altName: 'cXX',
   damage: '350',
   guard: 'All',
-  startup: '-',
-  active: '-',
-  recovery: '-',
+  startup: '9',
+  active: '3',
+  recovery: '15',
   onblock: '-3',
   onhit: '+1',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '+5',
+  clash: '3',
   motion: ['l', 'l'],
   description: ""
 };
@@ -70,13 +70,13 @@ const auto2 = {
   altName: 'cXXX',
   damage: '350',
   guard: 'All',
-  startup: '-',
-  active: '-',
-  recovery: '-',
+  startup: '12',
+  active: '3',
+  recovery: '18',
   onblock: '-4',
   onhit: '0',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '+8',
+  clash: '4',
   motion: ['l', 'l', 'l'],
   description: ""
 };
@@ -92,8 +92,8 @@ const far5L = {
   recovery: '12',
   onblock: '-4',
   onhit: '0',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '+2',
+  clash: '2',
   motion: ['l'],
   description: "Links from 2L much more consistently than f.M, making it a great way to confirm into 214H from that normal. Somewhat useful as a poke."
 };
@@ -102,15 +102,15 @@ const far5M = {
   altName: 'f5M',
   damage: '300, 500',
   guard: 'All',
-  startup: '6(8)',
+  startup: '6',
   active: '5',
   recovery: '14',
   onblock: '-2',
   onhit: '+2',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '+2',
+  clash: '3',
   motion: ['m'],
-  description: "Deals 2 Hits if you're close enough\nStrong pressure tool, links from 2L and c.L if close enough and frame traps from them no matter the distance. Easy to confirm from due to being 2 hits, which would matter far more if Belial's confirm tools were actually unsafe."
+  description: "+6 on counter hit on the second hitbox.\nDeals 2 Hits if you're close enough\nStrong pressure tool, links from 2L and c.L if close enough and frame traps from them no matter the distance. Easy to confirm from due to being 2 hits, which would matter far more if Belial's confirm tools were actually unsafe."
 };
 const far5H = {
   moveName: 'Far Heavy',
@@ -118,14 +118,14 @@ const far5H = {
   damage: '500, 500',
   guard: 'All',
   startup: '9',
-  active: '2,X',
-  recovery: '10',
+  active: '2(13)2',
+  recovery: '18',
   onblock: '-5',
-  onhit: '-1',
-  oncounterhit: '-',
-  clash: '-',
+  onhit: '0',
+  oncounterhit: '0',
+  clash: '4, 3',
   motion: ['h'],
-  description: "2 hit natural combo\n2nd hit does NOT cancel, only the first hit can\nCombos into 236H on first hit, useful in combos to extend into 214X. No longer combos on second hit CH, and you'll lose your turn on regular hit. Otherwise a pretty decent pressure button due to its range and forward momentum. Despite being -5 on block the only character who can actually punish it is Belial himself, using 2L. Still an extremely strong normal in neutral. Allows combos that would otherwise be impossible, thanks to Belial moving forward an absurd distance during its startup."
+  description: "Forces crouching on second hit.\n+4 on counter hit on the second hitbox.\n2 hit natural combo\n2nd hit does NOT cancel, only the first hit can\nCombos into 236H on first hit, useful in combos to extend into 214X. No longer combos on second hit CH, and you'll lose your turn on regular hit. Otherwise a pretty decent pressure button due to its range and forward momentum. Despite being -5 on block the only character who can actually punish it is Belial himself, using 2L. Still an extremely strong normal in neutral. Allows combos that would otherwise be impossible, thanks to Belial moving forward an absurd distance during its startup."
 };
 
 // regular normals
@@ -136,11 +136,11 @@ const n2L = {
   guard: 'All',
   startup: '5',
   active: '3',
-  recovery: '6',
+  recovery: '8',
   onblock: '0',
-  onhit: '+6',
-  oncounterhit: '-',
-  clash: '-',
+  onhit: '+4',
+  oncounterhit: '+6',
+  clash: '1',
   motion: ['2', 'l'],
   description: "Not a low but nonetheless one of Belial's strongest defensive tools. It goes extremely far on its first active frame, significantly further than Lancelot's or either of Narmaya's 5L, allowing it to punish or beat moves that even those normals aren't capable of."
 };
@@ -154,8 +154,8 @@ const n2M = {
   recovery: '11',
   onblock: '+1',
   onhit: '+5',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '+9',
+  clash: '3',
   motion: ['2', 'm'],
   description: "Hits low, +1 on block, decent range. The hitbox is extremely close to the ground, which can be exploited, but otherwise one of the most absurd normals in the game. Staple for pressure as it frame traps into 2L, c.L itself, f.M, and f.H depending on spacing and matchup. Also combos into 2L and c.L on normal hit, c.M on crouching hit, and f.M, C.H and f.H on counter hit."
 };
@@ -169,8 +169,8 @@ const n2H = {
   recovery: '23',
   onblock: '-12',
   onhit: '-8',
-  oncounterhit: '-',
-  clash: '-',
+  oncounterhit: '0',
+  clash: '4',
   motion: ['2', 'h'],
   description: "Belial's designated anti-air normal, hitbox isn't as bad as it might seem. Combos from this tend to be finicky, and you might want to use c.H instead, but it's still useful to swat people out of the air."
 };
@@ -183,9 +183,9 @@ const n2U = {
   active: '6',
   recovery: '20',
   onblock: '-11',
-  onhit: 'HKD',
-  oncounterhit: '-',
-  clash: '-',
+  onhit: 'HKD (+44)',
+  oncounterhit: 'HKD (+48)',
+  clash: '3',
   motion: ['2', 'u'],
   description: "Much longer than the average sweep in exchange for being significantly slower. Useful poke."
 };
