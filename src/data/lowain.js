@@ -548,6 +548,8 @@ const ssba = {
   description: "Summons (an imaginary) Yggdrasil into battle in place of Lowain for a time period (a gauge will show up under Lowain's health bar). Also comes with her own moves (see below). Attacks hitting Yggdrasil have 50% of their damage reduced, and she can't be knocked out. Her skills deal big damage at just about any range, so give her a call when it's about time to finish off the foe. All of her attacks can be spotdodged individually or avoided. When the timer runs out Lowain has punishable recovery frames. Make sure you finish them off or you push them far enough to avoid being punished\nYggdrasil can be controlled to move back and fourth slowly, which can be used to fence your opponent in.\nSince it's a knowledge check instead of guaranteed damage, it's slightly less useful against experienced players (you still get ridiculous chip damage) However, Lowain disappears when this move goes active. So it can be used as a very expensive get-out-of-jail-free card if you're in a pinch since it does have frame 1 invincibility.\nNote that using the easy input (236S+U) will result in 10% less damage on all moves."
 };
 
+//still need individual moves for sba/ssba forms
+
 
 export const lowainInfo = [
   general,
