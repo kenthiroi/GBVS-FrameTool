@@ -690,7 +690,6 @@ export const djeetaInfo = [
   mUppercut,
   hUppercut,
   lRekka,
-  followupRekka,
   mRekka,
   hRekka,
   sba,
