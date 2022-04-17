@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const sandwichIcon = document.getElementById("sandwich-icon");
   sandwichIcon.addEventListener("click", function(){
     document.getElementById("sandwich").style.width = "250px";
-    document.getElementById("char-body").style.marginLeft = "250px";
+    // document.getElementById("char-body").style.marginLeft = "250px";
   });
   const closeIcon = document.getElementById("close-btn");
   closeIcon.addEventListener("click", function(){
     document.getElementById("sandwich").style.width = "0";
-    document.getElementById("char-body").style.marginLeft = "0";
+    // document.getElementById("char-body").style.marginLeft = "0";
   })
 
   const charselect = document.getElementsByClassName("char-select")[0];
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("char-body").style.marginLeft = "0";
   });
 
-  const charIcons = document.getElementsByClassName("char");
+  const charIcons = document.getElementsByClassName("char-icon");
   const charArr = [...charIcons];
 
   window.addEventListener("click", function(event){
