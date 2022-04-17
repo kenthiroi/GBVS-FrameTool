@@ -695,7 +695,7 @@ const ssba = {
   active: '6x5', 
   recovery: '39', 
   onblock: '-26', 
-  onhit: 'HKD (T: +50, S: +40)',
+  onhit: 'HKD (T:+50, S:+40)',
   oncounterhit: '-',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],

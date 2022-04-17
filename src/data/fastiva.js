@@ -1,7 +1,7 @@
 // DESCRIPTIONS DONE
 // FRAME DATA UNFINISHED 
 
-const general = { char: "Ladiva", health: '10000', prejump: '4F', backdash: '22F' }
+const general = { char: "Ladiva", health: '11000', prejump: '4F', backdash: '22F' }
 
 // close normals
 const closeL = {
@@ -385,7 +385,7 @@ const lAirSPD = {
   guard: 'Throw', 
   startup: '7', 
   active: '3', 
-  recovery: '16 after landing', 
+  recovery: '16 (On landing)', 
   onblock: '-', 
   onhit: 'HKD (+46)',
   oncounterhit: '-',
@@ -400,7 +400,7 @@ const mAirSPD = {
   guard: 'Throw', 
   startup: '9', 
   active: '3', 
-  recovery: '38', 
+  recovery: '16 (On landing)', 
   onblock: '-', 
   onhit: 'HKD (+56)',
   oncounterhit: '-',
@@ -413,11 +413,11 @@ const hAirSPD = {
   altName: 'j360H', 
   damage: '3000', 
   guard: 'Throw', 
-  startup: '6', 
+  startup: '4', 
   active: '3', 
-  recovery: '38', 
+  recovery: '16 (On landing)', 
   onblock: '-', 
-  onhit: 'HKD (+56)',
+  onhit: 'HKD (+57)',
   oncounterhit: '-',
   clash: '-',
   motion: ['2', '6', '8', '4', 'h', 'or', 'a', 'h'],

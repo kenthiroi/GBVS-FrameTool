@@ -617,8 +617,8 @@ const ssba = {
   active: '3x10', 
   recovery: '40', 
   onblock: '-24', 
-  onhit: 'HKD (Simple: +33/Tech: +43)',
-  oncounterhit: 'HKD (Simple: +33/Tech: +43)',
+  onhit: 'HKD (S:+33, T:+43)',
+  oncounterhit: 'HKD (S:+33, T:+43)',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
   description: "Vacuums even on whiff, but the cinematic will only play if the opponent is drawn in and hit during the first few moments of the animation. The long animation will catch attempted Evades."

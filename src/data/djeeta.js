@@ -632,7 +632,7 @@ const sba = {
   recovery: '-', 
   onblock: '-13', 
   onhit: 'HKD (T:+44, S:+34)',
-  oncounterhit: '-',
+  oncounterhit: 'HKD (T:+44, S:+34)',
   clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
   description: "Has some invulnerability. On simple input, it will unleash Reginleiv Azimuth (the Conqueror of the Eternals skin CA) when hit close. With technical input, you can Reginleiv Zenith (the Guiders to the Eternal Edge skin CA) from any hit by doing a rave-style input.\nThe rave input is L, L, M, M, H, H, L, M, H, 214U. This CAN be done on block, but doing so will not make the super any safer; each hit is still punishable on block. When done using the simple input, the rave will automatically be executed on hit at close range, but not on block.\nAllows Djeeta to confirm into her max damage Skybound Art from much further than most characters due to the technical input granting the full super animation as long as the first hit of the lunge collides with ANY hurtbox, including extended hurtboxes, well outside of it's intended clean hit window. Confirm this from f.M, 2M, or f.H for great returns on a single hit confirm.\nThis super doubles as a utility for punishing the opponent's projectiles at range, though it is not as consistent as some other supers at doing this due to it's lunge speed. Easy input is quick and great for reacting to close projectiles, while technical input is harder to do but rewards even greater damage from further out as long as the first hit of the lunge connects.\nGreat for heavily discouraging the opponent's projectiles, potentially putting the opposing character at a noticeable disadvantage in the neutral.\nThis super outside of SSBAs is the hardest hitting super in the game.\nBase damage for Reginleiv Azimuth (easy input) is 3500; minimum damage is 513. Base damage for Reginleiv Zenith (technical input) is 3700; minimum damage is 935.\nIn close to point-blank scenarios, delaying the 1st follow up as long as possible after the first is blocked can create a frame trap.\nSimple input super never grants a safe jump.\nDjeeta is +4 if she fails to complete the deadly rave at any follow-up."
@@ -647,7 +647,7 @@ const ssba = {
   recovery: '42', 
   onblock: '-52', 
   onhit: 'HKD (T:+45, S:+35)',
-  oncounterhit: '-',
+  oncounterhit: 'HKD (T:+45, S:+35)',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
   description: "Djeeta performs a rising uppercut like Katalina's SSBA (contrast with Gran's projectile SSBA). If it hits properly, the attack finishes with Proto Bahamut. If the cinematic doesn't connect, the attack finishes with a big sword slice that sends the opponent back to the ground.\nNot a good reversal; can be option selected with meaty lights.\nNot a bad option as a raw anti-air, though Djeeta moves quite far forward during the uppercut, making the effective range somewhat awkward. Will combo consistently from 2H regardless of counter hit.\nUppercut nature of the super makes it highly unsafe on block and more or less impossible to confirm into from max range pokes. Generally sees use to end her corner combos when Djeeta is below 30% health.\nMinimum Damage:\nTechnical Input: 1350→1050\nSimple Input: 900→700"
