@@ -1,6 +1,6 @@
 // FINAL 
 
-const general = { char: "Avatar Belial", health: '10000', prejump: '4F', backdash: '26F' }
+const general = { char: "Avatar Belial", health: '9000', prejump: '4F', backdash: '26F' }
 
 // close normals
 const closeL = {
