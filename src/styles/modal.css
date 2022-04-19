@@ -63,23 +63,15 @@
   animation-duration: 0.2s;
 }
 
-#altname {
-  /* position: relative; */
-  text-align: left;
-  /* display: inline-block; */
-  /* padding-left: 20px; */
-  margin-left: 32px;
-}
-
 #dmg-guard {
   display: flex;
   /* float: left; */
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 #dmg-guard span {
-  padding: 10px;
-  width: 70px;
+  /* padding: 10px; */
+  width: 100%;
 }
 
 #description {
@@ -88,8 +80,8 @@
 
 #frame-adv {
   display: flex;
-  width: 165px;
-  margin-left: 20px;
+  /* width: 100%; */
+  /* margin-left: 20px; */
 }
 
 #frame-adv div {
@@ -128,15 +120,16 @@
 
 #sar {
   display: flex;
-  width: 30px;
+  width: 100%;
 }
 
 #sar div {
-  padding: 10px;
+  width: 100%;
 }
 
-#startup, #active, #onblock, #damage {
-  border-right: 1px rgb(41, 41, 41) solid;
+#startup, #active, #onblock, #damage, #altname, #recovery, #guard, #onhit{
+  padding: 10px;
+  border: 1px rgb(41, 41, 41) solid;
 }
 
 @keyframes fadeinfromtop {
