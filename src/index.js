@@ -28,8 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const aboutDiv = document.getElementById("about");
   const homeDiv = document.getElementById("homepage");
   const charInfoDiv = document.getElementById("char-info");
+  const body = document.body;
+  // const body = document.getElementById("test-body");
   openCSS.addEventListener("click", function(){
     charselect.style.display = "block";
+    body.style.position = "fixed";
   });
   
   glossaryBtn.addEventListener("click", function(){
@@ -61,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       event.target.style.display = "none";
       document.getElementById("sandwich").style.width = "0";
       document.getElementById("char-body").style.marginLeft = "0";
+      body.style.position = "";
     }
     if (charArr.includes(event.target)){ 
       homeDiv.style.display = "none";
@@ -68,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       glossaryDiv.style.display = "none";
       aboutDiv.style.display = "none";
       charInfoDiv.style.display = "block";
+      body.style.position = "";
       document.getElementById("sandwich").style.width = "0";
       document.getElementById("char-body").style.marginLeft = "0";
     }

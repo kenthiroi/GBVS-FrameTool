@@ -471,6 +471,83 @@ const hAirThrow = {
   description: "Ladiva's antiair command grab. Will not work on opponents on the ground, but can be used against an opponent in hitstun who is in the air. Too short to anti-air usually, but can catch jump outs in pressure or work as a combo ender. Using 623L can score combo pickups that 623H cannot."
 };
 
+// headbutt
+const lHeadbutt = {
+  moveName: 'L Headbutt of Love', 
+  altName: '236L', 
+  damage: '1000', 
+  guard: 'Mid', 
+  startup: '18', 
+  active: '3', 
+  recovery: '14', 
+  onblock: '-2', 
+  onhit: '+3',
+  oncounterhit: '+7',
+  clash: '3',
+  motion: ['236', 'l', 'or', '6', 'a'],
+  description: "This attack has the ability to negate projectiles. Rewards you with 15% meter (2% for using headbutt and then 13% for hitting the fireball) (spot dodging is almost always preferred though). The M version is plus on block and gives a combo on hit, making it something the opponent has to look out for as plus frames are very scary against Ladiva. The H version groundbounces and can lead to combo extensions.\nMinus on block.\nLadiva's only non-EX standing combo ender."
+};
+const mHeadbutt = {
+  moveName: 'M Headbutt of Love', 
+  altName: '236M', 
+  damage: '1200', 
+  guard: 'Mid', 
+  startup: '28', 
+  active: '6', 
+  recovery: '11', 
+  onblock: '+2', 
+  onhit: '+7',
+  oncounterhit: '+11',
+  clash: '5',
+  motion: ['236', 'm', 'or', '6', 'm', 'a'],
+  description: "This attack has the ability to negate projectiles. Rewards you with 15% meter (2% for using headbutt and then 13% for hitting the fireball) (spot dodging is almost always preferred though). The M version is plus on block and gives a combo on hit, making it something the opponent has to look out for as plus frames are very scary against Ladiva. The H version groundbounces and can lead to combo extensions.\nPlus on block.\nPressure reset tool. Leaves you plus on block right next to your opponent, exactly what you want."
+};
+const hHeadbutt = {
+  moveName: 'H Headbutt of Love', 
+  altName: '236H', 
+  damage: '500', 
+  guard: 'Mid', 
+  startup: '18', 
+  active: '6', 
+  recovery: '11', 
+  onblock: '+2', 
+  onhit: '+12',
+  oncounterhit: '+16',
+  clash: '5',
+  motion: ['236', 'h', 'or', '6', 'h', 'a'],
+  description: "This attack has the ability to negate projectiles. Rewards you with 15% meter (2% for using headbutt and then 13% for hitting the fireball) (spot dodging is almost always preferred though). The M version is plus on block and gives a combo on hit, making it something the opponent has to look out for as plus frames are very scary against Ladiva. The H version groundbounces and can lead to combo extensions.\nCan be followed up twice with 6H\nVery plus on hit for the first two headbutts, but progressively less plus on block."
+};
+const hHeadbutt2 = {
+  moveName: 'H Headbutt of Love (2nd hit)', 
+  altName: '236H > 6H', 
+  damage: '700', 
+  guard: 'Mid', 
+  startup: '17', 
+  active: '6', 
+  recovery: '13', 
+  onblock: '0', 
+  onhit: '+10',
+  oncounterhit: '+14',
+  clash: '5',
+  motion: ['236', 'h', '6', 'h', 'or', '6', 'h', 'a', '6', 'h'],
+  description: "This attack has the ability to negate projectiles. Rewards you with 15% meter (2% for using headbutt and then 13% for hitting the fireball) (spot dodging is almost always preferred though). The M version is plus on block and gives a combo on hit, making it something the opponent has to look out for as plus frames are very scary against Ladiva. The H version groundbounces and can lead to combo extensions.\nCan be followed up twice with 6H\nVery plus on hit for the first two headbutts, but progressively less plus on block."
+};
+const hHeadbutt3 = {
+  moveName: 'H Headbutt of Love (3rd hit)', 
+  altName: '236H > 6H > 6H', 
+  damage: '1000', 
+  guard: 'Mid', 
+  startup: '17', 
+  active: '6', 
+  recovery: '15', 
+  onblock: '-2', 
+  onhit: 'HKD (+32)',
+  oncounterhit: 'HKD (+36)',
+  clash: '5',
+  motion: ['236', 'h', '6', 'h', '6', 'h', 'or', '6', 'h', 'a', '6', 'h', '6', 'h'],
+  description: "This attack has the ability to negate projectiles. Rewards you with 15% meter (2% for using headbutt and then 13% for hitting the fireball) (spot dodging is almost always preferred though). The M version is plus on block and gives a combo on hit, making it something the opponent has to look out for as plus frames are very scary against Ladiva. The H version groundbounces and can lead to combo extensions.\nCan be followed up twice with 6H\nVery plus on hit for the first two headbutts, but progressively less plus on block."
+};
+
 // rekka
 const lRekka = { 
   moveName: 'L Elegant Lariat', 
@@ -598,6 +675,11 @@ export const fastivaInfo = [
   lAirThrow,
   mAirThrow,
   hAirThrow,
+  lHeadbutt,
+  mHeadbutt,
+  hHeadbutt,
+  hHeadbutt2,
+  hHeadbutt3,
   lRekka,
   mRekka,
   hRekka,
