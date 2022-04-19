@@ -1,6 +1,5 @@
 .char-icon {
   width: 100%;
-  
 }
 
 .icon-div {
@@ -8,6 +7,7 @@
   min-width: 250px;
   max-width: 500px;
   width: 15vw;
+  border: 2px solid #888;
 }
 
 .icon-div:hover{
@@ -51,6 +51,7 @@
   padding: 20px;
   border: 1px solid #888;
   width: 70%;
+  max-width: 1000px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
