@@ -619,7 +619,7 @@ const sba = {
   recovery: '40', 
   onblock: '-27', 
   onhit: 'HKD (S:+36, T:+46)',
-  oncounterhit: '-',
+  oncounterhit: 'HKD (S:+36, T:+46)',
   clash: '-',
   motion: ['236', '236', 'h', 'or', '236', 'a'],
   description: "Advances forwards after superflash with a tall hitbox.\nZooey's generic combo ender super, but this time with a Gundam reference. Gives a good knockdown for a setup or a safejump."
@@ -634,7 +634,7 @@ const ssba = {
   recovery: '61', 
   onblock: '-25', 
   onhit: 'HKD (S:+36, T:+46)',
-  oncounterhit: '-',
+  oncounterhit: 'HKD (S:+36, T:+46)',
   clash: '-',
   motion: ['236', '236', 'u', 'or', '236', 'a', 'u'],
   description: "Unusually high blockstun.\nZooey reveals her true form as the Grand Order, then rushing forward and hit the opponent. Very slow but deals good damage as a combo ender"
