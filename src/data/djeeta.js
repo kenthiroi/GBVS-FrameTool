@@ -691,7 +691,10 @@ export const djeetaInfo = [
   hUppercut,
   lRekka,
   mRekka,
+  rekkaEnder,
   hRekka,
+  hRekkaFollowUp,
+  hRekkaEnder,
   sba,
   ssba
 ]
