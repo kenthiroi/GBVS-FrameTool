@@ -395,7 +395,7 @@ const lUppercut = {
   moveName: 'L Roundhouse Fang', 
   altName: '623L', 
   damage: '1000', 
-  guard: 'mid, all', 
+  guard: 'Mid', 
   startup: '7', 
   active: '6', 
   recovery: '18', 
@@ -410,7 +410,7 @@ const mUppercut = {
   moveName: 'M Roundhouse Fang', 
   altName: '623M', 
   damage: '1000', 
-  guard: 'mid, all', 
+  guard: 'Mid', 
   startup: '7', 
   active: '6', 
   recovery: '20', 
@@ -425,7 +425,7 @@ const hUppercut = {
   moveName: 'H Roundhouse Fang', 
   altName: '623H', 
   damage: '1000', 
-  guard: 'mid, all', 
+  guard: 'Mid', 
   startup: '6', 
   active: '7', 
   recovery: '19', 
@@ -442,7 +442,7 @@ const lRekka = {
   moveName: 'L Punch the Stars', 
   altName: '214L', 
   damage: '250x4', 
-  guard: 'mid', 
+  guard: 'Mid', 
   startup: '13', 
   active: '2(3)2(3)2(3)2', 
   recovery: '14', 
@@ -450,14 +450,14 @@ const lRekka = {
   onhit: '+3',
   oncounterhit: '+3',
   clash: '3',
-  motion: ['214', 'l', 'or', '2', 'a'],
+  motion: ['214', 'l', 'or', '4', 'a'],
   description: "Soriz releases a flurry of blows. L version moves him forward slightly, M and H advance farther forward. In Macho Ultimatum, the move deals more hits and can be followed up by Tenacious Will or Bravado Bullet.\nBracketed numbers indicate the Fundoshi version."
 };
 const mRekka = { 
   moveName: 'M Punch the Stars', 
   altName: '214M', 
   damage: '300x4', 
-  guard: 'mid', 
+  guard: 'Mid', 
   startup: '20', 
   active: '2(3)2(3)2(3)2', 
   recovery: '14', 
@@ -465,14 +465,14 @@ const mRekka = {
   onhit: '+3',
   oncounterhit: '+3',
   clash: '3',
-  motion: ['214', 'm', 'or', '4', 'a'],
+  motion: ['214', 'm', 'or', '4', 'a', 'm'],
   description: "Soriz releases a flurry of blows. L version moves him forward slightly, M and H advance farther forward. In Macho Ultimatum, the move deals more hits and can be followed up by Tenacious Will or Bravado Bullet.\nBracketed numbers indicate the Fundoshi version."
 };
 const hRekka = { 
   moveName: 'H Punch the Stars', 
   altName: '214H', 
   damage: '300x4', 
-  guard: 'mid', 
+  guard: 'Mid', 
   startup: '13', 
   active: '2(3)2(3)2(3)2', 
   recovery: '12', 
@@ -480,9 +480,56 @@ const hRekka = {
   onhit: '+5',
   oncounterhit: '+5',
   clash: '3',
-  motion: ['214', 'h', 'or', '2', 'a', 'h'],
+  motion: ['214', 'h', 'or', '4', 'a', 'h'],
   description: "Soriz releases a flurry of blows. L version moves him forward slightly, M and H advance farther forward. In Macho Ultimatum, the move deals more hits and can be followed up by Tenacious Will or Bravado Bullet.\nBracketed numbers indicate the Fundoshi version."
 };
+
+const lSlam = { 
+  moveName: 'L Rock Smash', 
+  altName: '22L', 
+  damage: '900', 
+  guard: 'Mid', 
+  startup: '18', 
+  active: '6', 
+  recovery: '17', 
+  onblock: '-2', 
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: 'Projectile',
+  motion: ['2', '2', 'l', 'or', '2', 'a'],
+  description: 'Soriz punches the ground really hard and produces a column of flames. Can be used to stop single-hit projectiles. All 3 versions have bigger hitboxes in Macho Ultimatum.\nAll Versions lose 100 damage when doing them with simple input, 800/1100/1000 instead of 900/1200/1100.\nFast startup, but minus on block.\nGenerally used to knockdown the opponent when nothing else is available. Can also be used as a conditioning tool on block since it\'s only -3 when used in conjunction with 5U. Can lead to meaty 22M in the corner.'
+};
+const mSlam = { 
+  moveName: 'M Rock Smash', 
+  altName: '22M', 
+  damage: '1200', 
+  guard: 'Mid', 
+  startup: '28', 
+  active: '6', 
+  recovery: '13', 
+  onblock: '+8', 
+  onhit: 'KD',
+  oncounterhit: 'KD',
+  clash: 'Projectile',
+  motion: ['2', '2', 'm', 'or', '2', 'a', 'm'],
+  description: 'Soriz punches the ground really hard and produces a column of flames. Can be used to stop single-hit projectiles. All 3 versions have bigger hitboxes in Macho Ultimatum.\nAll Versions lose 100 damage when doing them with simple input, 800/1100/1000 instead of 900/1200/1100.\nSlow startup, but high adv. on block.\nUsed to reset pressure on opponents scared to contest your blockstrings. Can start combos in the corner.'
+};
+const hSlam = { 
+  moveName: 'H Rock Smash', 
+  altName: '22H', 
+  damage: '1100', 
+  guard: 'Mid', 
+  startup: '15', 
+  active: '6', 
+  recovery: '11', 
+  onblock: '+4', 
+  onhit: 'HKD (+63)',
+  oncounterhit: 'HKD (+67)',
+  clash: 'Projectile',
+  motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
+  description: 'Soriz punches the ground really hard and produces a column of flames. Can be used to stop single-hit projectiles. All 3 versions have bigger hitboxes in Macho Ultimatum.\nAll Versions lose 100 damage when doing them with simple input, 800/1100/1000 instead of 900/1200/1100.\nBest of both worlds, but less plus than the M version.\nThe centerpiece starter for most of Soriz\'s high damage corner combos. On block, it can be used as a guaranteed way to reset pressure and continue your blockstring.'
+};
+
 
 // skybound art
 const sba = { 
@@ -565,6 +612,9 @@ export const sorizInfo = [
   lRekka,
   mRekka,
   hRekka,
+  lSlam,
+  mSlam,
+  hSlam,
   sba,
   ssba,
   ssbaFinisher
