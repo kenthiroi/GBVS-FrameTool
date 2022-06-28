@@ -144,7 +144,7 @@ const far5H = {
 };
 const far5HHold = {
   moveName: 'Far Heavy (Hold)',
-  altName: 'f5H (Hold)',
+  altName: 'f5[H]',
   damage: '1300',
   guard: 'Mid',
   startup: '20⇒37',
@@ -223,7 +223,7 @@ const n2U = {
   moveName: 'Crouch Unique',
   altName: '2U',
   damage: '900',
-  guard: 'mid',
+  guard: 'Low',
   startup: '16',
   active: '3',
   recovery: '24',
@@ -240,7 +240,7 @@ const jL = {
   moveName: 'Jump Light', 
   altName: 'jL', 
   damage: '400', 
-  guard: 'high', 
+  guard: 'High', 
   startup: '5', 
   active: '-', 
   recovery: '-', 
@@ -255,7 +255,7 @@ const jM = {
   moveName: 'Jump Medium', 
   altName: 'jM', 
   damage: '700', 
-  guard: 'high', 
+  guard: 'High', 
   startup: '12', 
   active: '6', 
   recovery: '-', 
@@ -270,7 +270,7 @@ const jH = {
   moveName: 'Jump Heavy', 
   altName: 'jH', 
   damage: '900', 
-  guard: 'high', 
+  guard: 'High', 
   startup: '12', 
   active: '6', 
   recovery: '-', 
@@ -285,7 +285,7 @@ const jU = {
   moveName: 'Jump Unique', 
   altName: 'jU', 
   damage: '800', 
-  guard: 'high', 
+  guard: 'Mid', 
   startup: '2 (On landing)', 
   active: '3', 
   recovery: '15', 
@@ -302,7 +302,7 @@ const lv1U = {
   moveName: 'Soul Forge', 
   altName: '5U', 
   damage: '1000', 
-  guard: 'mid', 
+  guard: 'Mid', 
   startup: '21', 
   active: '3', 
   recovery: '22', 
@@ -317,7 +317,7 @@ const lv1U = {
 const groundThrow = { 
   moveName: 'Ground Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '7', 
   active: '3', 
   recovery: '31', 
@@ -331,7 +331,7 @@ const groundThrow = {
 const backThrow = { 
   moveName: 'Back Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '7', 
   active: '3', 
   recovery: '31', 
@@ -345,7 +345,7 @@ const backThrow = {
 const airThrow = { 
   moveName: 'Air Throw', 
   damage: '1500', 
-  guard: 'throw', 
+  guard: 'Throw', 
   startup: '5', 
   active: '5', 
   recovery: '-', 
@@ -361,7 +361,7 @@ const uOverhead = {
   moveName: 'Overhead', 
   altName: 'UOH', 
   damage: '1000', 
-  guard: 'high', 
+  guard: 'High', 
   startup: '26', 
   active: '6', 
   recovery: '17', 
@@ -471,8 +471,8 @@ const hTackle = {
 const lCmdThrow = { 
   moveName: 'L Great Scythe Grynoth', 
   altName: '632146L', 
-  damage: '700', 
-  guard: 'Mid', 
+  damage: '2000', 
+  guard: 'Throw', 
   startup: '12', 
   active: '3', 
   recovery: '39', 
@@ -486,8 +486,8 @@ const lCmdThrow = {
 const mCmdThrow = { 
   moveName: 'M Great Scythe Grynoth', 
   altName: '632146M', 
-  damage: '1200', 
-  guard: 'Mid', 
+  damage: '2500', 
+  guard: 'Throw', 
   startup: '9', 
   active: '3', 
   recovery: '39', 
@@ -501,8 +501,8 @@ const mCmdThrow = {
 const hCmdThrow = { 
   moveName: 'H Great Scythe Grynoth', 
   altName: '632146H', 
-  damage: '1200', 
-  guard: 'Mid', 
+  damage: '2000', 
+  guard: 'Throw', 
   startup: '26', 
   active: '3', 
   recovery: '39', 
@@ -558,6 +558,21 @@ const hStep = {
   clash: '2',
   motion: ['2', '2', 'h', 'or', '2', 'a', 'h'],
   description: "Savage Rampage > 66 makes Vaseraga marches forward hitting with each slow step. The slow speed of the steps combined with their low hitstun means that the steps of march will not combo into each other on block or on hit. The EX version of March is faster than the normal version.\nSavage Rampage > 44 makes Vaseraga exits stance.\nInitiates vaseraga's Savage Stance which can be followed up with additional inputs or canceled with 44. Great Scythe Grynoth can be used during Stance, especially scary during EX Stance due to the walking hitboxes.\nImmediately begins the 66 stomps after the move begins.\nCan be canceled into followup moves before any stomps come out.\nH Savage Rampage is often used as combo filler because many moves combo into 22H~H which grants a knockdown and leaves Vaseraga close to the enemy for strong okizeme."
+}
+const stepToStep = {
+  moveName: 'Savage Rampage (March)', 
+  altName: '22X 66', 
+  damage: '500x4', 
+  guard: 'Mid', 
+  startup: '-', 
+  active: '-', 
+  recovery: '18', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['2', '2', 'l', '6', '6', 'or', '2', 'a', '6', '6'],
+  description: "Savage Rampage > 66 makes Vaseraga marches forward hitting with each slow step. The slow speed of the steps combined with their low hitstun means that the steps of march will not combo into each other on block or on hit. The EX version of March is faster than the normal version.\nSavage Rampage > 44 makes Vaseraga exits stance.\nInitiates vaseraga's Savage Stance which can be followed up with additional inputs or canceled with 44. Great Scythe Grynoth can be used during Stance, especially scary during EX Stance due to the walking hitboxes."
 }
 
 const lStepFollowup = {
@@ -641,7 +656,7 @@ const sba = {
   moveName: 'Bloody Moon', 
   altName: '236236H', 
   damage: '2600-3900', 
-  guard: 'mid', 
+  guard: 'Mid', 
   startup: '13', 
   active: '3⇒18→(5)3', 
   recovery: '44 (Whiffed: 40)', 
@@ -653,10 +668,10 @@ const sba = {
   description: "Charges forward with a powerful advancing attack. If you are close enough, the Skybound Art will go into an animation for max damage. This skill has invincibility properties and advances considerably forward, but it is not the most reliable option against fireballs. This super converts very well from f.L/f.M/f.H so long as you are not at absolute max range, but you will not get max damage in these situations. If you trigger the full animation, it will add a massive amount of damage to his combos. A versatile Skybound Art all things considered."
 };
 const ssba = { 
-  moveName: 'Catastrophe', 
+  moveName: 'Aftermath', 
   altName: '236236U', 
   damage: '3500-5000', 
-  guard: 'all', 
+  guard: 'Mid', 
   startup: '15', 
   active: '6', 
   recovery: '52', 
@@ -707,6 +722,7 @@ export const vaseragaInfo = [
   lStep,
   mStep,
   hStep,
+  stepToStep,
   lStepFollowup,
   mStepFollowup,
   hStepFollowup,
