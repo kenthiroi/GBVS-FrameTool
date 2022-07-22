@@ -332,6 +332,68 @@ const uOverhead = {
   description: "Dodges low hitboxes very well.\nGood reach.\nPositive if blocked late enough into the active frames.\nOne of the better universal overheads. Extremely high reward on counter hit with c.H. Also useful to counter hit opponents anticipating a throw thanks to its airborne property. You can even combo into it after 22H."
 };
 
+//Tactical moves
+
+const tacticalRush = {
+  moveName: 'Rush (Normal)',
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '68 (Entire move)', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['6', 'm', 'h'],
+  description: '',
+}
+
+const tacticalRushCancel = {
+  moveName: 'Rush (Cancel)',
+  damage: '-', 
+  guard: '-', 
+  startup: '8', 
+  active: '15', 
+  recovery: '20', 
+  onblock: '+4', 
+  onhit: 'KD (+22)',
+  oncounterhit: 'KD (+22)',
+  clash: '-',
+  motion: ['6', 'm', 'h'],
+  description: 'Strike invulnerable on frame 1-22.',
+}
+
+const tacticalShift = {
+  moveName: 'Back Shift',
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '30', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['4', 'm', 'h'],
+  description: 'Invincible on frame 1-15.',
+}
+
+const overdriveActivation = {
+  moveName: 'Overdrive',
+  damage: '-', 
+  guard: 'Unblockable', 
+  startup: '26', 
+  active: '3', 
+  recovery: '33', 
+  onblock: '+19', 
+  onhit: 'KD (+19)',
+  oncounterhit: 'KD (+19)',
+  clash: '-',
+  motion: ['m', 'h'],
+  description: 'Invincible on frame 1-28, counterhit state on frame 29-61.'
+}
+
 // fireballs
 const lFireballLvl1 = { 
   moveName: 'L Black Flies Lvl 1', 
@@ -742,6 +804,10 @@ export const bubzInfo = [
   backThrow,
   airThrow,
   uOverhead,
+  tacticalRush,
+  tacticalRushCancel,
+  tacticalShift,
+  overdriveActivation,
   lFireballLvl1,
   lFireballLvl2,
   mFireballLvl1,
