@@ -321,7 +321,7 @@ const uOverhead = {
   altName: 'UOH', 
   damage: '1000', 
   guard: 'High', 
-  startup: '26', 
+  startup: '26 (OD:24)', 
   active: '6', 
   recovery: '17', 
   onblock: '-4', 
