@@ -335,7 +335,7 @@ const uOverhead = {
   altName: 'UOH', 
   damage: '1000', 
   guard: 'High', 
-  startup: '26', 
+  startup: '26 (OD:24)', 
   active: '6', 
   recovery: '17', 
   onblock: '-4', 
@@ -345,6 +345,69 @@ const uOverhead = {
   motion: ['m', 'u'],
   description: "Probably one of the worse universal overhead attacks in the game, due to it moving Ferry back as opposed to forward, making it hard to utilize in pressure. Luckily, it isn’t that big of a deal, as Ferry has a better overhead mixup anyway."
 };
+
+
+//Tactical moves
+
+const tacticalRush = {
+  moveName: 'Rush (Normal)',
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '68 (Entire move)', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['6', 'm', 'h'],
+  description: '',
+}
+
+const tacticalRushCancel = {
+  moveName: 'Rush (Cancel)',
+  damage: '-', 
+  guard: '-', 
+  startup: '8', 
+  active: '15', 
+  recovery: '20', 
+  onblock: '+4', 
+  onhit: 'KD (+22)',
+  oncounterhit: 'KD (+22)',
+  clash: '-',
+  motion: ['6', 'm', 'h'],
+  description: 'Strike invulnerable on frame 1-22.',
+}
+
+const tacticalShift = {
+  moveName: 'Back Shift',
+  damage: '-', 
+  guard: '-', 
+  startup: '-', 
+  active: '-', 
+  recovery: '30', 
+  onblock: '-', 
+  onhit: '-',
+  oncounterhit: '-',
+  clash: '-',
+  motion: ['4', 'm', 'h'],
+  description: 'Invincible on frame 1-15.',
+}
+
+const overdriveActivation = {
+  moveName: 'Overdrive',
+  damage: '-', 
+  guard: 'Unblockable', 
+  startup: '26', 
+  active: '3', 
+  recovery: '33', 
+  onblock: '+19', 
+  onhit: 'KD (+19)',
+  oncounterhit: 'KD (+19)',
+  clash: '-',
+  motion: ['m', 'h'],
+  description: 'Invincible on frame 1-28, counterhit state on frame 29-61.'
+}
 
 // fireballs
 const lFireball = { 
@@ -699,6 +762,10 @@ export const ferryInfo = [
   backThrow,
   airThrow,
   uOverhead,
+  tacticalRush,
+  tacticalRushCancel,
+  tacticalShift,
+  overdriveActivation,
   lFireball,
   mFireball,
   hFireball,
